@@ -50,16 +50,3 @@ function isLoggedIn()
         return false;
     }
 }
-    function isvendor()
-    {
-        if (isset($_SESSION['user_id'])) {
-            if ($_SESSION['usertype']=='vendor') {
-                return true;
-            }else {
-                return false;
-            }
-            
-        } else {
-            return false;
-        }
-}
