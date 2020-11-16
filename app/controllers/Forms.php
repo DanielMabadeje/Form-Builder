@@ -41,7 +41,7 @@ class Forms extends Controller
     {
         if ($var) {
             $view=$this->formModel->getForm($var);
-            $this->view('forms/edit');
+            $this->view('forms/edit', $view);
         } else {
             # code...
         }
