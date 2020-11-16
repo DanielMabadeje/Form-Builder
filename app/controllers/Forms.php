@@ -16,17 +16,20 @@ class Forms extends Controller
     public function add($var = null)
     {
         if (isLoggedIn() && $this->user) {
-            $uniqueId=generateUniqueId();
-            $title='New Form';
-            $description='Description of your form';
-            $form_options = array(
-                
+            $data=[];
+            $data['uniqueId']=generateUniqueId();
+            $data['title']='New Form';
+            $data['description']='Description of your form';
+            $data['form_options'] = array(
+
                 array(
                     'id' => 'submit',
                     'type' => 'submit',
                     'name' => 'submit'
                 ),
             );
+
+            $this->formModel->add($data);
         } else {
             redirect('/');
         }
