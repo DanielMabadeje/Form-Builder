@@ -17,8 +17,18 @@ class Forms extends Controller
     {
         if (isLoggedIn() && $this->user) {
             $uniqueId=generateUniqueId();
+            $title='New Form';
+            $description='Description of your form';
+            $form_options = array(
+                
+                array(
+                    'id' => 'submit',
+                    'type' => 'submit',
+                    'name' => 'submit'
+                ),
+            );
         } else {
-            # code...
+            redirect('/');
         }
     }
     public function edit($var)
