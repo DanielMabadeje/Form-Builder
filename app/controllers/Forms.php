@@ -14,7 +14,7 @@ class Forms extends Controller
 
     public function add($var = null)
     {
-        # code...
+        $uniqueId=generateUniqueId();
     }
     public function edit($var)
     {
