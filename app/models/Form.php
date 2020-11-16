@@ -34,7 +34,11 @@ class Form
 
     public function getForm($id)
     {
-        # code...
+        $this->db->query('SELECT * FROM forms WHERE form_id= :form_id');
+        $this->db->bind(':form_id', $id);
+
+        $row = $this->db->single();
+        return $row;
     }
 
 

@@ -39,7 +39,11 @@ class Forms extends Controller
     }
     public function edit($var)
     {
-        # code...
+        if ($var) {
+            $this->view('forms/edit');
+        } else {
+            # code...
+        }
     }
     public function views($var = null)
     {
