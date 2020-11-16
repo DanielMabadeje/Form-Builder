@@ -1,6 +1,6 @@
 <?php
 // namespace App\Models;
-class User
+class Form
 {
     private $db;
 
@@ -15,6 +15,19 @@ class User
 
     public function add($data)
     {
+
+        $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:name, :email, :password, :usertype)');
+        $this->db->bind(':form_id', $data['uniqueId']);
+        $this->db->bind(':user_id', $data['user_id']);
+        $this->db->bind(':form_array', $data['form_options']);
+        $this->db->bind(':form_name', $data['title']);
+        $this->db->bind(':description', $data['description']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
         var_dump($data);
         die;
     }
