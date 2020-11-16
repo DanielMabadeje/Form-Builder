@@ -18,6 +18,7 @@ class Forms extends Controller
         if (isLoggedIn() && $this->user) {
             $data=[];
             $data['uniqueId']=generateUniqueId();
+            $data['user_id']=$this->user;
             $data['title']='New Form';
             $data['description']='Description of your form';
             $data['form_options'] = array(
