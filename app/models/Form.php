@@ -32,5 +32,10 @@ class Form
         }
     }
 
+    public function getForm($id)
+    {
+        # code...
+    }
+
 
 }
