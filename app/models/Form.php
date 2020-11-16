@@ -30,8 +30,6 @@ class Form
         } else {
             return false;
         }
-        var_dump($data);
-        die;
     }
 
 

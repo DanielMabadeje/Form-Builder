@@ -30,7 +30,9 @@ class Forms extends Controller
                 ),
             );
 
-            $this->formModel->add($data);
+            if ($this->formModel->add($data)) {
+                redirect('/forms/edit/'.$data['uniqueId']);
+            }
         } else {
             redirect('/');
         }
