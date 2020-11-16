@@ -40,6 +40,7 @@ class Forms extends Controller
     public function edit($var)
     {
         if ($var) {
+            $view=$this->formModel->getForm($var);
             $this->view('forms/edit');
         } else {
             # code...
