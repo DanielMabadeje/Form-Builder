@@ -16,7 +16,7 @@ class Form
     public function add($data)
     {
 
-        $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:name, :email, :password, :usertype)');
+        $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:form_id, :user_id, :form_array, :form_name, :description)');
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':form_array', $data['form_options']);
