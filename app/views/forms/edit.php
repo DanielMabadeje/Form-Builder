@@ -14,8 +14,11 @@
 
 
 $form_options=$data->form_array;
-var_dump(json_decode($form_options));
-$form_options=json_decode(json_decode($form_options));
+// var_dump(json_decode($form_options));
+echo "<pre>";
+ print_r($form_options); 
+echo "</pre>";
+
 die;
 
     // $this->form->rule('required', $data->required_fields)->message('Required: {field} cannot be empty');

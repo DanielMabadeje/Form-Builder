@@ -51,6 +51,9 @@ class Database
                 case is_null($value):
                     $type = PDO::PARAM_NULL;
                     break;
+                case is_array($value):
+                    $type = PDO::PARAM_LOB;
+                    break;
                 default:
                     $type = PDO::PARAM_STR;
             }
@@ -70,6 +73,11 @@ class Database
     {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+    public function arraysingle()
+    {
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
     public function rowCount()
     {
