@@ -3,7 +3,7 @@
 
 class Forms extends Controller
 {
-    private $form;
+    public $form;
 
 
     public function __construct()
@@ -22,7 +22,11 @@ class Forms extends Controller
             $data['title']='New Form';
             $data['description']='Description of your form';
             $data['form_options'] = array(
-
+                array(
+                    'id' => 'first_name', // if 'name' param is not given. Then by default 'id' will be considered as 'name'.
+                    'placeholder' => 'First Name',
+                    'label' => 'First Name',
+                ),
                 array(
                     'id' => 'submit',
                     'type' => 'submit',
@@ -40,8 +44,10 @@ class Forms extends Controller
     public function edit($var)
     {
         if ($var) {
-            $view=$this->formModel->getForm($var);
-            $this->view('forms/edit', $view);
+            $data=$this->formModel->getForm($var);
+            // var_dump($data);
+            // die;
+            $this->view('forms/edit', $data);
         } else {
             # code...
         }
