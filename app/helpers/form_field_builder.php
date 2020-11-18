@@ -1,15 +1,16 @@
 <?php
-Class Sample_Form_Creator{
-	
-	private $config = array(/* Config array - can be overrided by passing in array in ini() */
+class Sample_Form_Creator
+{
+
+    private $config = array(/* Config array - can be overrided by passing in array in ini() */
         'default_input_type' => 'form_input'
     );
     private $func; /* Global function holder - used in switches */
-	private $print_string = ''; /* An output buffer */
-	private $data_source; /* Global holder for the source of the data */
+    private $print_string = ''; /* An output buffer */
+    private $data_source; /* Global holder for the source of the data */
     private $elm_options; /* Global options holder */
-	
-	const ERROR_DEFAULT = 'Invalid';
+
+    const ERROR_DEFAULT = 'Invalid';
     protected $_fields = array();
     protected $_errors = array();
     protected $_validations = array();
@@ -18,405 +19,361 @@ Class Sample_Form_Creator{
     protected static $_ruleMessages = array();
     protected $validUrlPrefixes = array('http://', 'https://', 'ftp://');
 
-	public function __construct($data = array(), $fields = array()){
-		if(empty($data)){
-			$data = $_REQUEST;
-		}
+    public function __construct($data = array(), $fields = array())
+    {
+        if (empty($data)) {
+            $data = $_REQUEST;
+        }
         $this->_fields = !empty($fields) ? array_intersect_key($data, array_flip($fields)) : $data;
-		
-		// print_r($this->_fields);
-	}
-	
-	/**
-	 * Text Input Field
-	 *
-	 * @param	mixed
-	 * @param	string
-	 * @param	mixed
-	 * @return	string
-	 */	
-	function form_input($data = '', $value = '', $extra = '')
-	{
-		$defaults = array(
-			'type' => 'text',
-			'name' => is_array($data) ? '' : $data,
-			'value' => $value
-		);
 
-		return '<input '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra)." />\n";
-		
-		
-		return '<input '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra)." />\n";
-		
-	}
+        // print_r($this->_fields);
+    }
 
-	/**
-	 * Hidden Input Field
-	 *
-	 * Generates hidden fields. You can pass a simple key/value string or
-	 * an associative array with multiple values.
-	 *
-	 * @param	mixed	$name		Field name
-	 * @param	string	$value		Field value
-	 * @param	bool	$recursing
-	 * @return	string
-	 */	
-	function form_hidden($name, $value = '', $recursing = FALSE)
-	{
-		static $form;
+    /**
+     * Text Input Field
+     *
+     * @param	mixed
+     * @param	string
+     * @param	mixed
+     * @return	string
+     */
+    function form_input($data = '', $value = '', $extra = '')
+    {
+        $defaults = array(
+            'type' => 'text',
+            'name' => is_array($data) ? '' : $data,
+            'value' => $value
+        );
 
-		if ($recursing === FALSE)
-		{
-			$form = "\n";
-		}
+        return '<input class="form-input form-control-has-validation" ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
 
-		if (is_array($name))
-		{
-			foreach ($name as $key => $val)
-			{
-				$this->form_hidden($key, $val, TRUE);
-			}
 
-			return $form;
-		}
+        return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+    }
 
-		if ( ! is_array($value))
-		{
-			$form .= '<input type="hidden" name="'.$name.'" value="'.$this->html_escape($value)."\" />\n";
-		}
+    /**
+     * Hidden Input Field
+     *
+     * Generates hidden fields. You can pass a simple key/value string or
+     * an associative array with multiple values.
+     *
+     * @param	mixed	$name		Field name
+     * @param	string	$value		Field value
+     * @param	bool	$recursing
+     * @return	string
+     */
+    function form_hidden($name, $value = '', $recursing = FALSE)
+    {
+        static $form;
 
-		return $form;
-	}
-	
-	/**
-	 * Drop-down Menu
-	 *
-	 * @param	mixed	$data
-	 * @param	mixed	$options
-	 * @param	mixed	$selected
-	 * @param	mixed	$extra
-	 * @return	string
-	 */	 
-	function form_dropdown($data = '', $options = array(), $selected = array(), $extra = '')
-	{
-		$defaults = array();
+        if ($recursing === FALSE) {
+            $form = "\n";
+        }
 
-		if (is_array($data))
-		{
-			if (isset($data['selected']))
-			{
-				$selected = $data['selected'];
-				unset($data['selected']); // select tags don't have a selected attribute
-			}
+        if (is_array($name)) {
+            foreach ($name as $key => $val) {
+                $this->form_hidden($key, $val, TRUE);
+            }
 
-			if (isset($data['options']))
-			{
-				$options = $data['options'];
-				unset($data['options']); // select tags don't use an options attribute
-			}
-		}
-		else
-		{
-			$defaults = array('name' => $data);
-		}
+            return $form;
+        }
 
-		is_array($selected) OR $selected = array($selected);
-		is_array($options) OR $options = array($options);
+        if (!is_array($value)) {
+            $form .= '<input type="hidden" name="' . $name . '" value="' . $this->html_escape($value) . "\" />\n";
+        }
 
-		// If no selected state was submitted we will attempt to set it automatically
-		if (empty($selected))
-		{
-			if (is_array($data))
-			{
-				if (isset($data['name'], $_POST[$data['name']]))
-				{
-					$selected = array($_POST[$data['name']]);
-				}
-			}
-			elseif (isset($_POST[$data]))
-			{
-				$selected = array($_POST[$data]);
-			}
-		}
+        return $form;
+    }
 
-		$extra = $this->_form_attributes_to_string($extra);
+    /**
+     * Drop-down Menu
+     *
+     * @param	mixed	$data
+     * @param	mixed	$options
+     * @param	mixed	$selected
+     * @param	mixed	$extra
+     * @return	string
+     */
+    function form_dropdown($data = '', $options = array(), $selected = array(), $extra = '')
+    {
+        $defaults = array();
 
-		$multiple = (count($selected) > 1 && stripos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
+        if (is_array($data)) {
+            if (isset($data['selected'])) {
+                $selected = $data['selected'];
+                unset($data['selected']); // select tags don't have a selected attribute
+            }
 
-		$form = '<select '.rtrim($this->_form_field_attributesl($data, $defaults)).$extra.$multiple.">\n";
+            if (isset($data['options'])) {
+                $options = $data['options'];
+                unset($data['options']); // select tags don't use an options attribute
+            }
+        } else {
+            $defaults = array('name' => $data);
+        }
 
-		foreach ($options as $key => $val)
-		{
-			$key = (string) $key;
+        is_array($selected) or $selected = array($selected);
+        is_array($options) or $options = array($options);
 
-			if (is_array($val))
-			{
-				if (empty($val))
-				{
-					continue;
-				}
+        // If no selected state was submitted we will attempt to set it automatically
+        if (empty($selected)) {
+            if (is_array($data)) {
+                if (isset($data['name'], $_POST[$data['name']])) {
+                    $selected = array($_POST[$data['name']]);
+                }
+            } elseif (isset($_POST[$data])) {
+                $selected = array($_POST[$data]);
+            }
+        }
 
-				$form .= '<optgroup label="'.$key."\">\n";
+        $extra = $this->_form_attributes_to_string($extra);
 
-				foreach ($val as $optgroup_key => $optgroup_val)
-				{
-					$sel = in_array($optgroup_key, $selected) ? ' selected="selected"' : '';
-					$form .= '<option value="'.$this->html_escape($optgroup_key).'"'.$sel.'>'
-						.(string) $optgroup_val."</option>\n";
-				}
+        $multiple = (count($selected) > 1 && stripos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
 
-				$form .= "</optgroup>\n";
-			}
-			else
-			{
-				$form .= '<option value="'.$this->html_escape($key).'"'
-					.(in_array($key, $selected) ? ' selected="selected"' : '').'>'
-					.(string) $val."</option>\n";
-			}
-		}
+        $form = '<select ' . rtrim($this->_form_field_attributesl($data, $defaults)) . $extra . $multiple . ">\n";
 
-		return $form."</select>\n";
-	}
-	
-	/**
-	 * Checkbox Field
-	 *
-	 * @param	mixed
-	 * @param	string
-	 * @param	bool
-	 * @param	mixed
-	 * @return	string
-	 */
-	function form_checkbox($data = '', $value = '', $checked = FALSE, $extra = '')
-	{
-		$defaults = array('type' => 'checkbox', 'name' => ( ! is_array($data) ? $data : ''), 'value' => $value);
+        foreach ($options as $key => $val) {
+            $key = (string) $key;
 
-		if (is_array($data) && array_key_exists('checked', $data))
-		{
-			$checked = $data['checked'];
+            if (is_array($val)) {
+                if (empty($val)) {
+                    continue;
+                }
 
-			if ($checked == FALSE)
-			{
-				unset($data['checked']);
-			}
-			else
-			{
-				$data['checked'] = 'checked';
-			}
-		}
+                $form .= '<optgroup label="' . $key . "\">\n";
 
-		if ($checked == TRUE)
-		{
-			$defaults['checked'] = 'checked';
-		}
-		else
-		{
-			unset($defaults['checked']);
-		}
+                foreach ($val as $optgroup_key => $optgroup_val) {
+                    $sel = in_array($optgroup_key, $selected) ? ' selected="selected"' : '';
+                    $form .= '<option value="' . $this->html_escape($optgroup_key) . '"' . $sel . '>'
+                        . (string) $optgroup_val . "</option>\n";
+                }
 
-		return '<input '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra)." />\n";
-	}
-	
-	/**
-	 * Set Radio
-	 *
-	 * Let's you set the selected value of a radio field via info in the POST array.
-	 * If Form Validation is active it retrieves the info from the validation class
-	 *
-	 * @param	string	$field
-	 * @param	string	$value
-	 * @param	bool	$default
-	 * @return	string
-	 */
-	function form_radio($data = '', $value = '', $checked = FALSE, $extra = '')
-	{
-		$defaults = array('type' => 'radio', 'name' => ( ! is_array($data) ? $data : ''), 'value' => $value);
+                $form .= "</optgroup>\n";
+            } else {
+                $form .= '<option value="' . $this->html_escape($key) . '"'
+                    . (in_array($key, $selected) ? ' selected="selected"' : '') . '>'
+                    . (string) $val . "</option>\n";
+            }
+        }
 
-		if (is_array($data) && array_key_exists('checked', $data))
-		{
-			$checked = $data['checked'];
+        return $form . "</select>\n";
+    }
 
-			if ($checked == FALSE)
-			{
-				unset($data['checked']);
-			}
-			else
-			{
-				$data['checked'] = 'checked';
-			}
-		}
+    /**
+     * Checkbox Field
+     *
+     * @param	mixed
+     * @param	string
+     * @param	bool
+     * @param	mixed
+     * @return	string
+     */
+    function form_checkbox($data = '', $value = '', $checked = FALSE, $extra = '')
+    {
+        $defaults = array('type' => 'checkbox', 'name' => (!is_array($data) ? $data : ''), 'value' => $value);
 
-		if ($checked == TRUE)
-		{
-			$defaults['checked'] = 'checked';
-		}
-		else
-		{
-			unset($defaults['checked']);
-		}
+        if (is_array($data) && array_key_exists('checked', $data)) {
+            $checked = $data['checked'];
 
-		return '<input '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra)." />\n";
-	}
+            if ($checked == FALSE) {
+                unset($data['checked']);
+            } else {
+                $data['checked'] = 'checked';
+            }
+        }
 
-	/**
-	 * Textarea field
-	 *
-	 * @param	mixed	$data
-	 * @param	string	$value
-	 * @param	mixed	$extra
-	 * @return	string
-	 */	
-	function form_textarea($data = '', $value = '', $extra = '')
-	{
-		$defaults = array(
-			'name' => is_array($data) ? '' : $data,
-			'cols' => '40',
-			'rows' => '10'
-		);
+        if ($checked == TRUE) {
+            $defaults['checked'] = 'checked';
+        } else {
+            unset($defaults['checked']);
+        }
 
-		if ( ! is_array($data) OR ! isset($data['value']))
-		{
-			$val = $value;
-		}
-		else
-		{
-			$val = $data['value'];
-			unset($data['value']); // textareas don't use the value attribute
-		}
+        return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+    }
 
-		return '<textarea '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra).'>'
-			.$this->html_escape($val)
-			."</textarea>\n";
-	}
-	
-	/**
-	 * Form Label Tag
-	 *
-	 * @param	string	The text to appear onscreen
-	 * @param	string	The id the label applies to
-	 * @param	string	Additional attributes
-	 * @return	string
-	 */
-	function form_label($label_text = '', $id = '', $attributes = array())
-	{
+    /**
+     * Set Radio
+     *
+     * Let's you set the selected value of a radio field via info in the POST array.
+     * If Form Validation is active it retrieves the info from the validation class
+     *
+     * @param	string	$field
+     * @param	string	$value
+     * @param	bool	$default
+     * @return	string
+     */
+    function form_radio($data = '', $value = '', $checked = FALSE, $extra = '')
+    {
+        $defaults = array('type' => 'radio', 'name' => (!is_array($data) ? $data : ''), 'value' => $value);
 
-		$label = '<label';
+        if (is_array($data) && array_key_exists('checked', $data)) {
+            $checked = $data['checked'];
 
-		if ($id !== '')
-		{
-			$label .= ' for="'.$id.'"';
-		}
+            if ($checked == FALSE) {
+                unset($data['checked']);
+            } else {
+                $data['checked'] = 'checked';
+            }
+        }
 
-		if (is_array($attributes) && count($attributes) > 0)
-		{
-			foreach ($attributes as $key => $val)
-			{
-				$label .= ' '.$key.'="'.$val.'"';
-			}
-		}
+        if ($checked == TRUE) {
+            $defaults['checked'] = 'checked';
+        } else {
+            unset($defaults['checked']);
+        }
 
-		return $label.'>'.$label_text.'</label>';
-	}
-	
-	/**
-	 * Submit Button
-	 *
-	 * @param	mixed
-	 * @param	string
-	 * @param	mixed
-	 * @return	string
-	 */
-	function form_submit($data = '', $value = '', $extra = '')
-	{
-		$defaults = array(
-			'type' => 'submit',
-			'name' => is_array($data) ? '' : $data,
-			'value' => $value
-		);
+        return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+    }
 
-		return '<input '.$this->_form_field_attributesl($data, $defaults).$this->_form_attributes_to_string($extra)." />\n";
-	}
-	
-	/**
-	 * Form Declaration
-	 *
-	 * Creates the opening portion of the form.
-	 *
-	 * @param	string	the URI segments of the form destination
-	 * @param	array	a key/value pair of attributes
-	 * @param	array	a key/value pair hidden data
-	 * @return	string
-	 */
-	function _form_open($action = '', $attributes = array(), $hidden = array())
-	{
+    /**
+     * Textarea field
+     *
+     * @param	mixed	$data
+     * @param	string	$value
+     * @param	mixed	$extra
+     * @return	string
+     */
+    function form_textarea($data = '', $value = '', $extra = '')
+    {
+        $defaults = array(
+            'name' => is_array($data) ? '' : $data,
+            'cols' => '40',
+            'rows' => '10'
+        );
 
-		// If no action is provided then set to the current url
-		if ( ! $action)
-		{
-			$action = $this->base_url();
-		}
-		
+        if (!is_array($data) or !isset($data['value'])) {
+            $val = $value;
+        } else {
+            $val = $data['value'];
+            unset($data['value']); // textareas don't use the value attribute
+        }
 
-		$attributes = $this->_form_attributes_to_string($attributes);
+        return '<textarea ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . '>'
+            . $this->html_escape($val)
+            . "</textarea>\n";
+    }
 
-		if (stripos($attributes, 'method=') === FALSE)
-		{
-			$attributes .= ' method="post"';
-		}
+    /**
+     * Form Label Tag
+     *
+     * @param	string	The text to appear onscreen
+     * @param	string	The id the label applies to
+     * @param	string	Additional attributes
+     * @return	string
+     */
+    function form_label($label_text = '', $id = '', $attributes = array())
+    {
 
-		if (stripos($attributes, 'accept-charset=') === FALSE)
-		{
-			$attributes .= ' accept-charset="'.strtolower('charset').'"';
-		}
+        $label = '<label';
 
-		$form = '<form action="'.$action.'"'.$attributes.">\n";
+        if ($id !== '') {
+            $label .= ' for="' . $id . '"';
+        }
 
-		return $form;
-	}
-	
-	/**
-	 * Form Close Tag
-	 *
-	 * @param	string
-	 * @return	string
-	 */
-	function _form_close($extra = '')
-	{
-		return '</form>'.$extra;
-	}
-	
-	/**
-	 * Anchor Link
-	 *
-	 * Creates an anchor based on the local URL.
-	 *
-	 * @param	string	the URL
-	 * @param	string	the link title
-	 * @param	mixed	any attributes
-	 * @return	string
-	 */
-	function anchor($uri = '', $title = '', $attributes = '')
-	{
-		$title = (string) $title;
+        if (is_array($attributes) && count($attributes) > 0) {
+            foreach ($attributes as $key => $val) {
+                $label .= ' ' . $key . '="' . $val . '"';
+            }
+        }
 
-		$site_url = is_array($uri)
-			? ($uri)
-			: (preg_match('#^(\w+:)?//#i', $uri) ? $uri : ($uri));
+        return $label . '>' . $label_text . '</label>';
+    }
 
-		if ($title === '')
-		{
-			$title = $site_url;
-		}
+    /**
+     * Submit Button
+     *
+     * @param	mixed
+     * @param	string
+     * @param	mixed
+     * @return	string
+     */
+    function form_submit($data = '', $value = '', $extra = '')
+    {
+        $defaults = array(
+            'type' => 'submit',
+            'name' => is_array($data) ? '' : $data,
+            'value' => $value
+        );
 
-		if ($attributes !== '')
-		{
-			$attributes = $this->_form_attributes_to_string($attributes);
-		}
+        return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+    }
 
-		return '<a href="'.$site_url.'"'.$attributes.'>'.$title.'</a>';
-	}
-	
-	private function _label() {
+    /**
+     * Form Declaration
+     *
+     * Creates the opening portion of the form.
+     *
+     * @param	string	the URI segments of the form destination
+     * @param	array	a key/value pair of attributes
+     * @param	array	a key/value pair hidden data
+     * @return	string
+     */
+    function _form_open($action = '', $attributes = array(), $hidden = array())
+    {
+
+        // If no action is provided then set to the current url
+        if (!$action) {
+            $action = $this->base_url();
+        }
+
+
+        $attributes = $this->_form_attributes_to_string($attributes);
+
+        if (stripos($attributes, 'method=') === FALSE) {
+            $attributes .= ' method="post"';
+        }
+
+        if (stripos($attributes, 'accept-charset=') === FALSE) {
+            $attributes .= ' accept-charset="' . strtolower('charset') . '"';
+        }
+
+        $form = '<form action="' . $action . '"' . $attributes . ">\n";
+
+        return $form;
+    }
+
+    /**
+     * Form Close Tag
+     *
+     * @param	string
+     * @return	string
+     */
+    function _form_close($extra = '')
+    {
+        return '</form>' . $extra;
+    }
+
+    /**
+     * Anchor Link
+     *
+     * Creates an anchor based on the local URL.
+     *
+     * @param	string	the URL
+     * @param	string	the link title
+     * @param	mixed	any attributes
+     * @return	string
+     */
+    function anchor($uri = '', $title = '', $attributes = '')
+    {
+        $title = (string) $title;
+
+        $site_url = is_array($uri)
+            ? ($uri)
+            : (preg_match('#^(\w+:)?//#i', $uri) ? $uri : ($uri));
+
+        if ($title === '') {
+            $title = $site_url;
+        }
+
+        if ($attributes !== '') {
+            $attributes = $this->_form_attributes_to_string($attributes);
+        }
+
+        return '<a href="' . $site_url . '"' . $attributes . '>' . $title . '</a>';
+    }
+
+    private function _label()
+    {
         $label = '';
         if (isset($this->elm_options['label']) && $this->elm_options['label'] == 'none') {
             return ''; /* the keyword none */
@@ -435,36 +392,39 @@ Class Sample_Form_Creator{
         ));
     }
 
-    private function _make_field_label($str) {
+    private function _make_field_label($str)
+    {
         return ucwords(str_replace(array('_', '-', '[', ']'), array(' ', ' ', ' ', ' '), $str));
     }
-	
-	private function _reset_field_builder() {
+
+    private function _reset_field_builder()
+    {
         $this->print_string = '';
     }
-	
-	/**
-	 * build_form_field_input function builds all the form options(input types like select, text, radio, checkbox etc.,) 
-	 *
-	 */
-	
-	function form_field_creation($options, $data_source = array()) {
+
+    /**
+     * build_form_field_input function builds all the form options(input types like select, text, radio, checkbox etc.,) 
+     *
+     */
+
+    function form_field_creation($options, $data_source = array())
+    {
         $this->_reset_field_builder();
         $this->data_source = (array) $data_source;
-		$this->validate();
-		if(!$this->errors() && $_SERVER['REQUEST_METHOD'] == 'POST'){
-			$this->print_string .= 'Form Submitted Successfully';
-		}
+        $this->validate();
+        if (!$this->errors() && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->print_string .= 'Form Submitted Successfully';
+        }
         foreach ($options as $elm_options) {
             $this->elm_options = $elm_options;
-	
+
             if (is_array($this->elm_options)) {
-				if(isset($this->elm_options['name'])){
-					$name_val = $this->elm_options['name'];
-				}else{
-					$name_val = $this->elm_options['id'];
-				}
-				$this->print_string .= '<div class="field_container '.$name_val.'">';
+                if (isset($this->elm_options['name'])) {
+                    $name_val = $this->elm_options['name'];
+                } else {
+                    $name_val = $this->elm_options['id'];
+                }
+                $this->print_string .= '<div class="field_container ' . $name_val . '">';
                 $this->_form_field_prep_options();
                 switch ($this->func) {
                     case 'form_hidden':
@@ -474,7 +434,7 @@ Class Sample_Form_Creator{
                     case 'form_radio':
                         $id = $this->elm_options['id'];
                         $this->elm_options['id'] = '';
-						
+
                         $this->print_string .= $this->_label();
 
                         $this->elm_options['id'] = $id;
@@ -488,56 +448,56 @@ Class Sample_Form_Creator{
                             // Set value as label if no label is set
                             array_key_exists('label', $this->elm_options) || $this->elm_options['label'] = $this->elm_options['value'];
 
-                            $label_class = substr($this->func, 5).'-inline';
+                            $label_class = substr($this->func, 5) . '-inline';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<label class="'.$label_class.'">';
+                            $this->print_string .= '<label class="' . $label_class . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
-                            $this->print_string .= $this->elm_options['label'].'</label>';
+                            $this->print_string .= $this->elm_options['label'] . '</label>';
                         }
                         $this->elm_options = $all_elm_options;
-						if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($this->func == 'form_checkbox' || $this->func == 'form_radio')){
-							if(isset($this->elm_options['name'])){
-								$name_val = $this->elm_options['name'];
-							}else{
-								$name_val = $this->elm_options['id'];
-							}
-							foreach($this->errors() as $key=>$value){
-								if($name_val == $key){
-									$this->print_string .= '<span class="error">'.($value[0]).'</span>';
-								}
-							}
-						}
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($this->func == 'form_checkbox' || $this->func == 'form_radio')) {
+                            if (isset($this->elm_options['name'])) {
+                                $name_val = $this->elm_options['name'];
+                            } else {
+                                $name_val = $this->elm_options['id'];
+                            }
+                            foreach ($this->errors() as $key => $value) {
+                                if ($name_val == $key) {
+                                    $this->print_string .= '<span class="error">' . ($value[0]) . '</span>';
+                                }
+                            }
+                        }
                         break;
                     default:
                         $this->print_string .= $this->_label();
                         $this->print_string .= $this->_build_form_field_input();
-						if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($this->func == 'form_checkbox' || $this->func == 'form_radio')){
-							if(isset($this->elm_options['name'])){
-								$name_val = $this->elm_options['name'];
-							}else{
-								$name_val = $this->elm_options['id'];
-							}
-							foreach($this->errors() as $key=>$value){
-								if($name_val == $key){
-									$this->print_string .= '<span class="error">'.($value[0]).'</span>';
-								}
-							}
-						}
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($this->func == 'form_checkbox' || $this->func == 'form_radio')) {
+                            if (isset($this->elm_options['name'])) {
+                                $name_val = $this->elm_options['name'];
+                            } else {
+                                $name_val = $this->elm_options['id'];
+                            }
+                            foreach ($this->errors() as $key => $value) {
+                                if ($name_val == $key) {
+                                    $this->print_string .= '<span class="error">' . ($value[0]) . '</span>';
+                                }
+                            }
+                        }
                         break;
                 }
-				$this->print_string .= '</div>';
+                $this->print_string .= '</div>';
             }
         }
         return $this->squish_HTML($this->print_string);
     }
 
 
-	
-	private function _build_form_field_input($include_pre_post = true)
-	{
+
+    private function _build_form_field_input($include_pre_post = true)
+    {
         $input_html_string = '';
-        
+
         if ($this->func == 'form_combine') {
             if (!isset($this->elm_options['elements'])) {
                 // dump($this->elm_options);
@@ -560,13 +520,13 @@ Class Sample_Form_Creator{
             $this->elm_options = $elm_options_backup; /* We put our options back */
             $this->_form_field_prep_options(); /* Run Prep to restore the state in which we begain */
         } else {
-            
+
             switch ($this->func) {
-            
+
                 case 'form_button':
                 case 'form_anchor':
                 case 'form_a':
-                
+
                     $value = $this->elm_options['label'];
                     unset($this->elm_options['label']);
 
@@ -631,7 +591,7 @@ Class Sample_Form_Creator{
                 case 'form_radio':
                     $input_html_string = $this->form_radio($this->elm_options);
                     break;
-				
+
                 default:
                     if (function_exists($this->func)) {
                         $input_html_string = call_user_func($this->func, $this->elm_options);
@@ -643,33 +603,35 @@ Class Sample_Form_Creator{
         }
         $ret_string = '';
         $ret_string .= (empty($input_html_string)) ? '' : $input_html_string;
-	
-		if ($_SERVER['REQUEST_METHOD'] == 'POST' && $this->func != 'field_checkbox' && $this->func != 'field_radio'){
-			if(isset($this->elm_options['name'])){
-				$name_val = $this->elm_options['name'];
-			}else{
-				$name_val = $this->elm_options['id'];
-			}
-			foreach($this->errors() as $key=>$value){
-				if($name_val == $key){
-					$ret_string .= '<span class="error">'.($value[0]).'</span>';
-				}
-			}
-		}
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && $this->func != 'field_checkbox' && $this->func != 'field_radio') {
+            if (isset($this->elm_options['name'])) {
+                $name_val = $this->elm_options['name'];
+            } else {
+                $name_val = $this->elm_options['id'];
+            }
+            foreach ($this->errors() as $key => $value) {
+                if ($name_val == $key) {
+                    $ret_string .= '<span class="error">' . ($value[0]) . '</span>';
+                }
+            }
+        }
 
         return $ret_string;
     }
-	
-	/* added for dropdown */
-	private function _form_field_create_extra_string() {
+
+    /* added for dropdown */
+    private function _form_field_create_extra_string()
+    {
         $extra = '';
         foreach ($this->elm_options as $k => $v) {
             $extra .= " {$k}=\"{$v}\"";
         }
         return trim($extra);
     }
-	
-	private function _form_field_prep_options() {
+
+    private function _form_field_prep_options()
+    {
         foreach ($this->elm_options as &$opt) {
             /* trying again to change everything to an array */
             if (is_object($opt)) {
@@ -684,8 +646,8 @@ Class Sample_Form_Creator{
         } else {
             $this->func = $this->config['default_input_type'];
         }
-		
-		/* make sure there is a name' attribute */
+
+        /* make sure there is a name' attribute */
         if (!isset($this->elm_options['name'])) {
             /* put the id as the name by default - makes smaller 'config' arrays */
             if (isset($this->elm_options['id'])) {
@@ -694,81 +656,69 @@ Class Sample_Form_Creator{
                 $this->elm_options['name'] = '';
             }
         }
-		
-		return;
-	}
-	
-	function _form_field_attributesl($attributes, $default)
-	{
-		if (is_array($attributes))
-		{
-			foreach ($default as $key => $val)
-			{
-				if (isset($attributes[$key]))
-				{
-					$default[$key] = $attributes[$key];
-					unset($attributes[$key]);
-				}
-			}
 
-			if (count($attributes) > 0)
-			{
-				$default = array_merge($default, $attributes);
-			}
-		}
+        return;
+    }
 
-		$att = '';
+    function _form_field_attributesl($attributes, $default)
+    {
+        if (is_array($attributes)) {
+            foreach ($default as $key => $val) {
+                if (isset($attributes[$key])) {
+                    $default[$key] = $attributes[$key];
+                    unset($attributes[$key]);
+                }
+            }
 
-		foreach ($default as $key => $val)
-		{
-			if ($key === 'value')
-			{
-				$val = $this->html_escape($val);
-			}
-			elseif ($key === 'name' && ! strlen($default['name']))
-			{
-				continue;
-			}
+            if (count($attributes) > 0) {
+                $default = array_merge($default, $attributes);
+            }
+        }
 
-			$att .= $key.'="'.$val.'" ';
-		}
+        $att = '';
 
-		return $att;
-	}
+        foreach ($default as $key => $val) {
+            if ($key === 'value') {
+                $val = $this->html_escape($val);
+            } elseif ($key === 'name' && !strlen($default['name'])) {
+                continue;
+            }
 
-	function _form_attributes_to_string($attributes)
-	{
-		if (empty($attributes))
-		{
-			return '';
-		}
+            $att .= $key . '="' . $val . '" ';
+        }
 
-		if (is_object($attributes))
-		{
-			$attributes = (array) $attributes;
-		}
+        return $att;
+    }
 
-		if (is_array($attributes))
-		{
-			$atts = '';
+    function _form_attributes_to_string($attributes)
+    {
+        if (empty($attributes)) {
+            return '';
+        }
 
-			foreach ($attributes as $key => $val)
-			{
-				$atts .= ' '.$key.'="'.$val.'"';
-			}
+        if (is_object($attributes)) {
+            $attributes = (array) $attributes;
+        }
 
-			return $atts;
-		}
+        if (is_array($attributes)) {
+            $atts = '';
 
-		if (is_string($attributes))
-		{
-			return ' '.$attributes;
-		}
+            foreach ($attributes as $key => $val) {
+                $atts .= ' ' . $key . '="' . $val . '"';
+            }
 
-		return FALSE;
-	}
-	
-	function squish_HTML($html) {
+            return $atts;
+        }
+
+        if (is_string($attributes)) {
+            return ' ' . $attributes;
+        }
+
+        return FALSE;
+    }
+
+    function squish_HTML($html)
+    {
         $re = '%# Collapse whitespace everywhere but in blacklisted elements.
         (?>             # Match all whitespans other than single space.
             [^\S ]\s*     # Either one [\t\r\n\f\v] and zero or more ws,
@@ -794,26 +744,26 @@ Class Sample_Form_Creator{
         }
         return $text;
     }
-	
-	function base_url(){
-	  return sprintf(
-		"%s://%s%s",
-		isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-		$_SERVER['HTTP_HOST'],
-		$_SERVER['REQUEST_URI']
-	  );
-	}
-	
-	function html_escape($var)
-	{
-		if (empty($var))
-		{
-			return $var;
-		}
-		return htmlspecialchars($var, ENT_QUOTES);
-	}
-	
-	/**
+
+    function base_url()
+    {
+        return sprintf(
+            "%s://%s%s",
+            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+            $_SERVER['HTTP_HOST'],
+            $_SERVER['REQUEST_URI']
+        );
+    }
+
+    function html_escape($var)
+    {
+        if (empty($var)) {
+            return $var;
+        }
+        return htmlspecialchars($var, ENT_QUOTES);
+    }
+
+    /**
      * Required field validator
      *
      * @param  string $field
@@ -957,7 +907,7 @@ Class Sample_Form_Creator{
      */
     protected function validateEmail($field, $value)
     {
-		return filter_var($value, \FILTER_VALIDATE_EMAIL) !== false;
+        return filter_var($value, \FILTER_VALIDATE_EMAIL) !== false;
     }
 
     /**
@@ -1126,7 +1076,7 @@ Class Sample_Form_Creator{
         }
 
         // Dead end, abort
-        elseif ($identifier === NULL || ! isset($data[$identifier])) {
+        elseif ($identifier === NULL || !isset($data[$identifier])) {
             return array(null, false);
         }
 
@@ -1150,12 +1100,12 @@ Class Sample_Form_Creator{
     {
         foreach ($this->_validations as $v) {
             foreach ($v['fields'] as $field) {
-                 list($values, $multiple) = $this->getPart($this->_fields, explode('.', $field));
+                list($values, $multiple) = $this->getPart($this->_fields, explode('.', $field));
 
                 // Don't validate if the field is not required and the value is empty
                 if ($this->hasRule('optional', $field) && isset($values)) {
                     //Continue with execution below if statement
-                } elseif ($v['rule'] !== 'required' && !$this->hasRule('required', $field) && (! isset($values) || $values === '' || ($multiple && count($values) == 0))) {
+                } elseif ($v['rule'] !== 'required' && !$this->hasRule('required', $field) && (!isset($values) || $values === '' || ($multiple && count($values) == 0))) {
                     continue;
                 }
 
@@ -1234,7 +1184,7 @@ Class Sample_Form_Creator{
     {
         if (!isset(static::$_rules[$rule])) {
             $ruleMethod = 'validate' . ucfirst($rule);
-			// var_dump(!method_exists($this, $ruleMethod));
+            // var_dump(!method_exists($this, $ruleMethod));
             if (!method_exists($this, $ruleMethod)) {
                 throw new \InvalidArgumentException("Rule '" . $rule . "' has not been registered with " . __CLASS__ . "::addRule().");
             }
@@ -1294,7 +1244,7 @@ Class Sample_Form_Creator{
             if (is_array($params)) {
                 $i = 1;
                 foreach ($params as $k => $v) {
-                    $tag = '{field'. $i .'}';
+                    $tag = '{field' . $i . '}';
                     $label = isset($params[$k]) && (is_numeric($params[$k]) || is_string($params[$k])) && isset($this->_labels[$params[$k]]) ? $this->_labels[$params[$k]] : $tag;
                     $msg = str_replace($tag, $label, $msg);
                     $i++;

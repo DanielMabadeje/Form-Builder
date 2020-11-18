@@ -1,35 +1,114 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<div style="text-align:center; margin-top:14%;">
+<style>
+    body {
+        background: #fbfafafa;
+    }
+
+    .border-radius-none {
+        border-radius: 0;
+    }
+
+    .border-none {
+        border: none;
+    }
+
+    input[type=submit] {
+        background-color: #343a40;
+        color: white;
+        width: 50%;
+        border: none;
+        padding: 2%;
+    }
 
 
-<div class="card col-md-9">
-    <div class="card-title" contenteditable="true">
-        <h1><?= $data->form_name; ?></h1>
-        <h5><?= $data->description; ?></h5>
-    </div>
 
-    <div class="card-body">
-    
-    <?php
+    .form-wrap {
+        position: relative;
+    }
+
+    @media screen and(min-width: 768px) {
+        .form-input {
+            font-size: 15px;
+            min-height: 60px;
+            padding: 17px 0;
+        }
+    }
+
+    .form-input {
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: .1em;
+        font-family: poppins, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif;
+        color: #151515;
+        background-color: transparent;
+        background-image: none;
+        border-radius: 0;
+        -webkit-appearance: none;
+        transition: .3s ease-in-out;
+        border: 1px solid #e1e1e1;
+        border-width: 0 0 1px;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        outline: none;
+    }
+
+    button,
+    input {
+        overflow: visible;
+    }
+</style>
+<div style="text-align:center; margin-top:10%;">
 
 
-$form_options=$data->form_array;
-// var_dump(json_decode($form_options));
-echo "<pre>";
- print_r($form_options); 
-echo "</pre>";
+    <section class="col-md-12 d-md-flex">
+        <div class="card border-radius-none border-none col-md-9 text-left p-3">
+            <div class="card-title" contenteditable="true">
+                <h1><?= $data->form_name; ?></h1>
+                <br>
+                <h5><?= $data->description; ?></h5>
+            </div>
 
-die;
+            <div class="card-body">
+                <!-- <div class="form-wrap">
+                    <input class="form-input form-control-has-validation" placeholder="Full Name" value="mabz" id="checkout-first-name-2" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span><span class="form-validation"></span>
+                    <label class="form-label rd-input-label" for="checkout-first-name-2">Full Name</label>
+                </div> -->
+                <?php
 
-    // $this->form->rule('required', $data->required_fields)->message('Required: {field} cannot be empty');
-    // $this->form->rule('email', 'email');
-    // $this->form->rule('equals', 'confirm_email', 'email');
-        echo $this->form->_form_open();
-        echo $this->form->form_field_creation($form_options);
-        echo $this->form->_form_close();
-    ?>
-    </div>
-</div>
+
+                $form_options = $data->form_array;
+                $form_options = json_decode($form_options);
+
+                foreach ($form_options as $key => $datas) {
+                    $form_options[$key] = (array)$datas;
+                }
+
+
+                $this->form->rule('required', $data->required_fields)->message('Required: {field} cannot be empty');
+                $this->form->rule('email', 'email');
+                // $this->form->rule('equals', 'confirm_email', 'email');
+                echo $this->form->_form_open();
+                echo $this->form->form_field_creation($form_options);
+                echo $this->form->_form_close();
+                ?>
+            </div>
+        </div>
+
+        <div class="col-md-3 card ml-3 border-radius-none border-none p-3">
+            <div class="text-right">
+                <button class="btn btn-secondary border-radius-none"> <i class="fa fa-plus"></i> Add</button>
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
