@@ -15,4 +15,11 @@ class Forms extends Controller
     {
         # code...
     }
+
+    public function getform($api, $param)
+    {
+        if ($param) {
+            $data=$this->formModel->getForm($param);
+        }
+    }
 }
