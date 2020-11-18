@@ -9,6 +9,7 @@ class Forms extends Controller
     public function __construct()
     {
         $this->form = new Sample_Form_Creator();
+        $this->formModel=$this->model('Form');
     }
 
     public function edit($var = null)
@@ -20,6 +21,9 @@ class Forms extends Controller
     {
         if ($param) {
             $data=$this->formModel->getForm($param);
+            // $data=json_encode($data);
+            // print_r($data);
+            // die;
         }
     }
 }

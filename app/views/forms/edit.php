@@ -77,10 +77,10 @@
 
     <section class="col-md-12 d-md-flex">
         <div class="card border-radius-none border-none col-md-9 text-left p-3">
-            <div class="card-title" contenteditable="true">
-                <h1><?= $data->form_name; ?></h1>
+            <div class="card-title" >
+                <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                 <br>
-                <h5><?= $data->description; ?></h5>
+                <h5 contenteditable="true"><?= $data->description; ?></h5>
             </div>
 
             <div class="card-body">
@@ -118,7 +118,7 @@
 </div>
 
 <script>
-// var formarray=<?php print_r($data);  ?>
+var formarray=<?php print_r(json_encode($data));  ?>
 </script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
