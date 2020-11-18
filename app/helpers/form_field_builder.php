@@ -327,7 +327,7 @@ class Sample_Form_Creator
             $attributes .= ' accept-charset="' . strtolower('charset') . '"';
         }
 
-        $form = '<form action="' . $action . '"' . $attributes . ">\n";
+        $form = '<form id="form" action="' . $action . '"' . $attributes . ">\n";
 
         return $form;
     }

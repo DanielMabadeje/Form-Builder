@@ -165,7 +165,7 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary border-radius-none"> <i class="fa fa-plus"></i> Add</button>
                     <div id="myDropdown" class="dropdown-content text-left">
-                        <div>Short Answer</div>
+                        <div onclick="appendHtml()">Short Answer</div>
                         <div>TextArea</div>
                         <div>Date</div>
                         <div>Checkbox</div>

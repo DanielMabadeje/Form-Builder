@@ -40,6 +40,38 @@ function save() {
 }
 
 
+function editFormHtml(params) {
+    
+}
+
+
+function appendHtml(params) {
+
+    let inputs=document.getElementsByClassName('field_container').length-1
+
+    var para = document.createElement("div");
+
+    para.classList.add('field_container')
+
+
+
+    var label=document.createElement("label");
+
+    var node = document.createTextNode("This is new.");
+    var input =document.createElement("input");
+
+    input.classList.add('form-input');
+    input.classList.add('form-control-has-validation');
+    label.appendChild(node);
+    para.appendChild(label)
+    para.appendChild(input)
+    
+
+    var form = document.getElementById("form");
+    var child = document.getElementsByClassName('field_container')[inputs];
+    form.insertBefore(para,child);
+
+}
 
 
 
