@@ -66,6 +66,12 @@
         overflow: visible;
     }
 </style>
+
+<?php 
+// var_dump($data);
+
+// die;
+?>
 <div style="text-align:center; margin-top:10%;">
 
 
@@ -111,4 +117,8 @@
     </section>
 </div>
 
+<script>
+// var formarray=<?php print_r($data);  ?>
+</script>
+<script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
