@@ -264,7 +264,7 @@ class Sample_Form_Creator
     function form_label($label_text = '', $id = '', $attributes = array())
     {
 
-        $label = '<label';
+        $label = '<label class="form-label rd-input-label" contenteditable="true"';
 
         if ($id !== '') {
             $label .= ' for="' . $id . '"';
@@ -451,7 +451,7 @@ class Sample_Form_Creator
                             $label_class = substr($this->func, 5) . '-inline';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<label class="' . $label_class . '">';
+                            $this->print_string .= '<label contenteditable="true" class="' . $label_class . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
                             $this->print_string .= $this->elm_options['label'] . '</label>';
                         }

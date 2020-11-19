@@ -27,7 +27,15 @@ function removeItemFromForm(param) {
 }
 
 function addItemToForm(params) {
-    
+    console.log(formarray.form_array);
+    var newobject={}
+
+    // if (condition) {
+      
+    // } else {
+      
+    // }
+    appendHtml();
 }
 
 function editItem(param, value) {
@@ -36,7 +44,9 @@ function editItem(param, value) {
 }
 
 function save() {
-    
+
+  console.log('saved');
+  
 }
 
 
@@ -60,8 +70,11 @@ function appendHtml(params) {
     var node = document.createTextNode("This is new.");
     var input =document.createElement("input");
 
+    // adding classes,placeholders and contenteditable
+    label.contentEditable=true;
     input.classList.add('form-input');
     input.classList.add('form-control-has-validation');
+    input.placeholder='This is New'
     label.appendChild(node);
     para.appendChild(label)
     para.appendChild(input)

@@ -73,51 +73,56 @@
 
 
     .dropbtn {
-    /* background-color: #4CAF50;
+        /* background-color: #4CAF50;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none; */
-    cursor: pointer;
-}
+        cursor: pointer;
+    }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    /* background-color: #3e8e41; */
-    color:white;
-}
+    /* Dropdown button on hover & focus */
+    .dropbtn:hover,
+    .dropbtn:focus {
+        /* background-color: #3e8e41; */
+        color: white;
+    }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
 
-/* Links inside the dropdown */
-.dropdown-content div {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+    /* Links inside the dropdown */
+    .dropdown-content div {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-/* Change color of dropdown links on hover */
-.dropdown-content div:hover {background-color: #f1f1f1}
+    /* Change color of dropdown links on hover */
+    .dropdown-content div:hover {
+        background-color: #f1f1f1
+    }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        display: block;
+    }
 </style>
 
-<?php 
+<?php
 // var_dump($data);
 
 // die;
@@ -127,7 +132,7 @@
 
     <section class="col-md-12 d-md-flex">
         <div class="card border-radius-none border-none col-md-9 text-left p-3">
-            <div class="card-title" >
+            <div class="card-title">
                 <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                 <br>
                 <h5 contenteditable="true"><?= $data->description; ?></h5>
@@ -165,7 +170,7 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary border-radius-none"> <i class="fa fa-plus"></i> Add</button>
                     <div id="myDropdown" class="dropdown-content text-left">
-                        <div onclick="appendHtml()">Short Answer</div>
+                        <div onclick="shortAnswer()">Short Answer</div>
                         <div>TextArea</div>
                         <div>Date</div>
                         <div>Checkbox</div>
@@ -180,7 +185,7 @@
 </div>
 
 <script>
-var formarray=<?php print_r(json_encode($data));  ?>
+    var formarray = <?php print_r(json_encode($data));  ?>
 </script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
