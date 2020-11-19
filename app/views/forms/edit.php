@@ -21,6 +21,10 @@
     }
 
 
+.field_container:focus, .field_container:active{
+    border:1px gray solid;
+}
+
 
     .form-wrap {
         position: relative;
