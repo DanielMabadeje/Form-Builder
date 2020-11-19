@@ -27,15 +27,52 @@ function removeItemFromForm(param) {
 }
 
 function addItemToForm(params) {
-    console.log(formarray.form_array);
+    // console.log(formarray.form_array);
     var newobject={}
 
-    // if (condition) {
+    // if (condition) { 
       
     // } else {
       
     // }
-    appendHtml();
+    var inputtype=params
+    switch (inputtype) {
+      case 'email':
+        shortAnswer('email');
+        console.log('shortanswer')
+        break;
+      case 'shortanswer':
+        shortAnswer();
+        console.log('shortanswer')
+        break;
+      case 'longanswer':
+        longAnswer();
+        console.log('longanswer')
+        break;
+
+      case 'dropdown':
+        dropdownAnswer();
+        console.log('dropdown')
+        break;
+      // case 'dropdown':
+      //   dropdownAnswer();
+      //   console.log('date')
+      //   break;
+      case 'date':
+        dateAnswer();
+        console.log('date')
+        break;
+      case 'singleoption':
+        singleOptionAnswer();
+        console.log('date')
+          
+        break;
+    
+      default:
+        console.log('fd')
+        break;
+    }
+    // appendHtml();
 }
 
 function editItem(param, value) {
@@ -55,9 +92,14 @@ function editFormHtml(params) {
 }
 
 
-function appendHtml(params) {
+// function appendHtml(params) {
 
-    let inputs=document.getElementsByClassName('field_container').length-1
+    
+// }
+
+
+function shortAnswer(params) {
+  let inputs=document.getElementsByClassName('field_container').length-1
 
     var para = document.createElement("div");
 
@@ -72,6 +114,145 @@ function appendHtml(params) {
 
     // adding classes,placeholders and contenteditable
     label.contentEditable=true;
+    if (params!==null || params !=='') {
+      input.type=params
+    }
+    input.classList.add('form-input');
+    input.classList.add('form-control-has-validation');
+    input.placeholder='This is New'
+    label.appendChild(node);
+    para.appendChild(label)
+    para.appendChild(input)
+    
+
+    var form = document.getElementById("form");
+    var child = document.getElementsByClassName('field_container')[inputs];
+    form.insertBefore(para,child);
+
+}
+
+function longAnswer(params) {
+  let inputs=document.getElementsByClassName('field_container').length-1
+
+  var para = document.createElement("div");
+
+  para.classList.add('field_container')
+
+
+
+  var label=document.createElement("label");
+
+  var node = document.createTextNode("This is new.");
+  var input =document.createElement("textarea");
+
+  // adding classes,placeholders and contenteditable
+  label.contentEditable=true;
+  // input.type='textarea'
+  // input
+  input.rows="5"
+  input.cols="30"
+  input.classList.add('form-input');
+  input.classList.add('form-control-has-validation');
+  input.placeholder='This is New'
+  label.appendChild(node);
+  para.appendChild(label)
+  para.appendChild(input)
+  
+
+  var form = document.getElementById("form");
+  var child = document.getElementsByClassName('field_container')[inputs];
+  form.insertBefore(para,child);
+
+}
+
+function dateAnswer(params) {
+  let inputs=document.getElementsByClassName('field_container').length-1
+
+  var para = document.createElement("div");
+
+  para.classList.add('field_container')
+
+
+
+  var label=document.createElement("label");
+
+  var node = document.createTextNode("This is new.");
+  var input =document.createElement("input");
+
+  // adding classes,placeholders and contenteditable
+  label.contentEditable=true;
+  input.classList.add('form-input');
+  input.type='date'
+  input.classList.add('form-control-has-validation');
+  input.placeholder='This is New'
+  label.appendChild(node);
+  para.appendChild(label)
+  para.appendChild(input)
+  
+
+  var form = document.getElementById("form");
+  var child = document.getElementsByClassName('field_container')[inputs];
+  form.insertBefore(para,child);
+
+}
+
+function dropdownAnswer(params) {
+ 
+let inputs=document.getElementsByClassName('field_container').length-1
+
+var para = document.createElement("div");
+
+para.classList.add('field_container')
+
+
+
+var label=document.createElement("label");
+
+var node = document.createTextNode("This is new.");
+var input =document.createElement("select");
+var option=document.createElement("option");
+
+// adding classes,placeholders and contenteditable
+label.contentEditable=true;
+input.classList.add('form-input');
+input.classList.add('form-control-has-validation');
+var optionvalue = document.createTextNode("First List in Dropdown");
+
+option.value=optionvalue
+option.appendChild(optionvalue)
+
+input.appendChild(option);
+label.appendChild(node);
+para.appendChild(label)
+para.appendChild(input)
+
+
+var form = document.getElementById("form");
+var child = document.getElementsByClassName('field_container')[inputs];
+form.insertBefore(para,child);
+
+ 
+}
+
+function multichoiceAnswer(params) {
+  let inputs=document.getElementsByClassName('field_container').length-1
+
+    var para = document.createElement("div");
+
+    para.classList.add('field_container')
+
+
+
+    var label=document.createElement("label");
+
+    var node = document.createTextNode("This is new.");
+    var input =document.createElement("input");
+
+    // adding classes,placeholders and contenteditable
+    label.contentEditable=true;
+    if (params!==null || params !=='') {
+      input.type=params
+    }
     input.classList.add('form-input');
     input.classList.add('form-control-has-validation');
     input.placeholder='This is New'
@@ -87,7 +268,45 @@ function appendHtml(params) {
 }
 
 
+function singleOptionAnswer(params) {
+  let inputs=document.getElementsByClassName('field_container').length-1
 
+    var para = document.createElement("div");
+
+    para.classList.add('field_container')
+
+
+
+    var label=document.createElement("label");
+    var innerlabel=document.createElement("label");
+    var innerlabel1=document.createElement("label");
+    var node = document.createTextNode("This is new.");
+    var input =document.createElement("input");
+
+    // adding classes,placeholders and contenteditable
+    label.contentEditable=true;
+    input.type='radio'
+    input.classList.add('form-input');
+    // input.classList.add('form-control-has-validation');
+    input.name='firstradio'
+
+    input.appendChild(node)
+    label.appendChild(node);
+    innerlabel.appendChild(input)
+    innerlabel.appendChild(node)
+
+
+    innerlabel1.appendChild(input)
+    innerlabel1.appendChild(node)
+    para.appendChild(label)
+    para.appendChild(innerlabel)
+    
+
+    var form = document.getElementById("form");
+    var child = document.getElementsByClassName('field_container')[inputs];
+    form.insertBefore(para,child);
+
+}
 
 
 // for dropdown
@@ -112,3 +331,8 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+
+// form adding and removing of active classes
+

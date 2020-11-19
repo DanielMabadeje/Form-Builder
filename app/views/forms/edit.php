@@ -28,6 +28,9 @@
 .field_container:focus, .field_container:active{
     border:1px gray solid;
 }
+.field_container{
+    margin-top: 5%;
+}
 
 
     .form-wrap {
@@ -128,6 +131,9 @@
     .show {
         display: block;
     }
+    input[type="radio"]{
+        width: 1px;
+    }
 </style>
 
 <?php
@@ -139,7 +145,7 @@
 
 
     <section class="col-md-12 d-md-flex">
-        <div class="card border-radius-none border-none col-md-9 text-left p-3">
+        <div class="card border-radius-none border-none col-md-10 text-left p-3">
             <div class="card-title">
                 <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                 <br>
@@ -172,16 +178,18 @@
             </div>
         </div>
 
-        <div class="col-md-3 card ml-3 border-radius-none border-none p-3">
+        <div class="col-md-2 height ml-3 border-radius-none border-none p-3">
             <div class="text-right">
                 <!-- <button class="btn btn-secondary border-radius-none"> <i class="fa fa-plus"></i> Add</button> -->
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary border-radius-none"> <i class="fa fa-plus"></i> Add</button>
                     <div id="myDropdown" class="dropdown-content text-left">
-                        <div onclick="shortAnswer()">Short Answer</div>
-                        <div>TextArea</div>
-                        <div>Date</div>
-                        <div>Checkbox</div>
+                        <div onclick="addItemToForm('email')">Email</div>
+                        <div onclick="addItemToForm('shortanswer')">Short Answer</div>
+                        <div onclick="addItemToForm('longanswer')">TextArea</div>
+                        <div onclick="addItemToForm('dropdown')">Dropdown</div>
+                        <div onclick="addItemToForm('date')">Date</div>
+                        <div onclick="addItemToForm('singleoption')">Single Option</div>
                         <div>MultiChoice Answer</div>
                         <div>File</div>
                         <!-- input -->
