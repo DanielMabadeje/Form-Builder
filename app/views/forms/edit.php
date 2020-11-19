@@ -18,6 +18,10 @@
         width: 50%;
         border: none;
         padding: 2%;
+        margin-top: 3%;
+        align-self: center;
+        margin-right: auto;
+        margin-left: auto;
     }
 
 
