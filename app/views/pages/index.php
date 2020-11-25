@@ -16,8 +16,31 @@
     <div class="col-8 mx-auto">
         <h4>Collect Data of Any Size</h4>
         <h2 class="display-4 font-weight-normal">We can handle a lot of date <br> before you know it</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor amet adipisci corporis labore vel doloremque illum hic maxime, aliquid nam enim aspernatur, reprehenderit repellendus omnis impedit, at perferendis optio accusamus mollitia.</p>
     </div>
 
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="display-4">Create</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
+
+            </div>
+            <div class="col-md-6"></div>
+
+
+            <div class="col-md-6"></div>
+
+
+            <div class="col-md-6">
+                <h3 class="diplay-4">Edit Flexibly</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
+                
+            </div>
+        </div>
+    </div>
 
     <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
