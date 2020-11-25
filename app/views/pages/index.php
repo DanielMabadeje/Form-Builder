@@ -64,6 +64,19 @@
             <a href="#" class="btn btn-primary">View All Templates</a>
         </div>
     </div>
+
+    <div class="col-12 p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <h2 class="display-4">Powerful Features</h2>
+
+                    <div class="accordion"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
