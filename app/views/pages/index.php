@@ -22,35 +22,37 @@
 
 
     <div class="col-12">
-        <div class="row text-left pt-4">
-            <div class="col-md-6">
-                <h3 class="display-4">Create</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
+        <div class="container">
+            <div class="row text-left pt-4">
+                <div class="col-md-6">
+                    <h3 class="display-4">Create</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
 
-            </div>
-            <div class="col-md-6"></div>
-
-
-            <div class="col-md-6"></div>
+                </div>
+                <div class="col-md-6"></div>
 
 
-            <div class="col-md-6">
-                <h3 class="display-4">Edit Flexibly</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
-
-            </div>
+                <div class="col-md-6"></div>
 
 
-            <div class="col-md-6">
-                <h3 class="display-4">Share</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
-            </div>
+                <div class="col-md-6">
+                    <h3 class="display-4">Edit Flexibly</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
 
-            <div class="col-md-6"></div>
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
-                <h3 class="display-4">Analyse</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h3 class="display-4">Share</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
+                </div>
+
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <h3 class="display-4">Analyse</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
+                </div>
             </div>
         </div>
     </div>
