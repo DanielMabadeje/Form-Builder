@@ -132,7 +132,15 @@
         display: block;
     }
     input[type="radio"]{
-        width: 1px;
+        /* width: 1px; */
+        background-color: initial;
+    cursor: default;
+    appearance: radio;
+    box-sizing: border-box;
+    /* margin: 3px 3px 0px 5px; */
+    /* padding: 0; */
+    min-height:18px;
+    border: initial;
     }
 </style>
 

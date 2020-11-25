@@ -109,17 +109,19 @@ function shortAnswer(params) {
 
     var label=document.createElement("label");
 
-    var node = document.createTextNode("This is new.");
+    var node = document.createTextNode("Email");
     var input =document.createElement("input");
 
     // adding classes,placeholders and contenteditable
+    input.placeholder='This is New'
     label.contentEditable=true;
     if (params!==null || params !=='') {
       input.type=params
+      input.placeholder='Your Email..'
     }
     input.classList.add('form-input');
     input.classList.add('form-control-has-validation');
-    input.placeholder='This is New'
+    
     label.appendChild(node);
     para.appendChild(label)
     para.appendChild(input)
@@ -278,28 +280,33 @@ function singleOptionAnswer(params) {
 
 
     var label=document.createElement("label");
-    var innerlabel=document.createElement("label");
-    var innerlabel1=document.createElement("label");
+    // var innerlabel=document.createElement("label");
+    // var innerlabel1=document.createElement("label");
     var node = document.createTextNode("This is new.");
     var input =document.createElement("input");
+    var input2 =document.createElement("input");
 
     // adding classes,placeholders and contenteditable
     label.contentEditable=true;
     input.type='radio'
+    input2.type='radio'
     input.classList.add('form-input');
-    // input.classList.add('form-control-has-validation');
+    input2.classList.add('form-input');
+    input.classList.add('form-control-has-validation');
     input.name='firstradio'
+    input2.name='firstradio'
 
     input.appendChild(node)
     label.appendChild(node);
-    innerlabel.appendChild(input)
-    innerlabel.appendChild(node)
+    // innerlabel.appendChild(input)
+    // innerlabel.appendChild(node)
 
 
-    innerlabel1.appendChild(input)
-    innerlabel1.appendChild(node)
+    // innerlabel1.appendChild(input)
+    // innerlabel1.appendChild(node)
     para.appendChild(label)
-    para.appendChild(innerlabel)
+    para.appendChild(input)
+    para.appendChild(input2)
     
 
     var form = document.getElementById("form");
