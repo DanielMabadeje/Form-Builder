@@ -178,7 +178,12 @@
   </div>
 
   <div class="bg-white col-12 p-5 text-left">
-    
+    <div class="row">
+      <div class="col-5">
+        <h3 class="display-4">Android app coming soon</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
+      </div>
+    </div>
   </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
