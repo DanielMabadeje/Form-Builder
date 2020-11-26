@@ -176,6 +176,10 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
     </div>
   </div>
+
+  <div class="bg-white col-12 p-5 text-left">
+    
+  </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
