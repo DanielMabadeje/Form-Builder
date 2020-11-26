@@ -192,9 +192,9 @@
   </div>
 
 
-  <div class="col-12 bg-dark p-0 pt-5 pb-5 mt-4">
-    <div class="col-7 mx-auto text-center text-white">
-      <h2>You can experience Form Builder even before Registration</h2>
+  <div class="col-12  p-0 pt-5 pb-5 mt-4" style="background:black;">
+    <div class="col-7 mx-auto text-center p-5 text-white">
+      <h4>You can experience Form Builder even before Registration</h4>
       <a href="" class="btn btn-primary">Quick Start</a>
     </div>
   </div>
