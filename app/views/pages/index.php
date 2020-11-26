@@ -173,7 +173,7 @@
     <div class="pt-md-5">
     <h3 class="displ">Integrations</h3>
     <h3 class="display-4">Form Builder is more than just a  <br> great online tool</h3>
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
     </div>
   </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
