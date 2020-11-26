@@ -179,15 +179,16 @@
 
   <div class="bg-white col-12 p-5 text-left">
     <div class="row">
-      <div class="col-5">
-        <h3 class="display-4">Android app coming soon</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
-      </div>
-      <div class="col-7">
+    <div class="col-7">
         <!-- <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12"> -->
         <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987.jpg" alt="" class="col-12">
         
       </div>
+      <div class="col-5">
+        <h3 class="display-4">Android app coming soon</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
+      </div>
+      
     </div>
   </div>
 
@@ -203,7 +204,7 @@
 
 <div class="footer">
   <footer>
-    
+
   </footer>
 </div>
 
