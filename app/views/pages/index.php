@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <div style="text-align:center;">
   <!-- <h1><?php echo $data['title'] ?></h1> -->
-  <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="background: linear-gradient(rgb(253, 251, 251), rgba(253, 249, 249, 0.8)), url('http://localhost/cubbiccle/img/rahul-chakraborty-xsGxhtAsfSA-unsplash.jpg'); background-size:100%; height:100%;">
+  <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="background: linear-gradient(to bottom right, rgb(253, 251, 251),rgb(253, 251, 251), rgba(253, 249, 249, 0.8)), url('http://localhost/cubbiccle/img/rahul-chakraborty-xsGxhtAsfSA-unsplash.jpg'); background-size:cover; height:100%;">
     <div class="col-md-7 p-lg-5 my-5 text-dark mx-auto">
       <h5 class=" text-main-color m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And an even wittier subheading to boot. </p>
