@@ -201,4 +201,10 @@
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
+<div class="footer">
+  <footer>
+    
+  </footer>
+</div>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>
