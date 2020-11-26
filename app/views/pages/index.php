@@ -183,6 +183,9 @@
         <h3 class="display-4">Android app coming soon</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
       </div>
+      <div class="col-7">
+        <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12">
+      </div>
     </div>
   </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
