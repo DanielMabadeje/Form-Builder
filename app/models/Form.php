@@ -45,7 +45,18 @@ class Form
 
 
     public function createFormQuestion($form_id, $question_id){
-        $this->db->query('INSERT INTO form_questions (form_id, label, type, name, placeholder) VALUES(:form_id, :user_id, :form_array, :form_name, :description)');
+        $this->db->query('INSERT INTO 
+                            form_questions 
+                            (form_id, label, type, name, placeholder, id)
+                             VALUES(:form_id, :label, :form_array, :form_name, :description)');
+
+
+        $this->db->bind(':form_id', $data['uniqueId']);
+        $this->db->bind(':user_id', $data['user_id']);
+        $this->db->bind(':form_array', $data['form_options']);
+        $this->db->bind(':form_name', $data['title']);
+        $this->db->bind(':description', $data['description']);
+        
     }
 
 }
