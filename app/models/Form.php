@@ -28,7 +28,7 @@ class Form
         if ($this->db->execute()) {
 
             foreach ($data['form_options'] as $question) {
-                $param['question']=$question;
+                $param['questions']=$question;
             }
             // return true;
         } else {
