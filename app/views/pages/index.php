@@ -204,7 +204,14 @@
 
 <div class="footer">
   <footer>
+    <div class="col-md-12">
+    </div>
 
+
+    <div class="copyright text-center bg-light">
+
+      <h3>&copy; CopyRight <?php echo date('Y'); ?></h3>
+    </div>
   </footer>
 </div>
 
