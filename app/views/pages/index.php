@@ -219,6 +219,10 @@
               <i class="fa fa-linkedin"></i>
             </h4>
           </div>
+          <div class="">
+            <span>Playstore</span>
+            <span>AppleStore</span>
+          </div>
         </div>
       </div>
     </div>
