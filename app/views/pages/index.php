@@ -211,6 +211,14 @@
             <?= SITENAME; ?>
           </h2>
           <br>
+          <div class="socials">
+            <h4>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+            </h4>
+          </div>
         </div>
       </div>
     </div>
