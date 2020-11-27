@@ -205,12 +205,21 @@
 <div class="footer">
   <footer>
     <div class="col-md-12">
+      <div class="d-md-flex">
+        <div class="col-4">
+          <h2 class="display-4">
+            <?= SITENAME; ?>
+          </h2>
+          <br>
+        </div>
+      </div>
     </div>
 
 
     <div class="copyright text-center bg-light">
 
-      <h3>&copy; CopyRight <?php echo date('Y'); ?></h3>
+      <h5 class="text-dark">&copy; CopyRight <?php echo date('Y'); ?>
+      </h5>
     </div>
   </footer>
 </div>
