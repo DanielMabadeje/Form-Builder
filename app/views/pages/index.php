@@ -202,6 +202,6 @@
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
-
+<?php require APPROOT . '/views/inc/pagesfooter.php'; ?>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
