@@ -264,12 +264,11 @@
         <div class="col">
           <h3>Compare</h3>
           <ul class="navbar-nav">
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Google Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">TypeForm</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Forms App</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Survey Monkey</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Form Builder</a></li>
           </ul>
         </div>
 
