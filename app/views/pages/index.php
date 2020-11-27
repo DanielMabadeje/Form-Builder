@@ -246,6 +246,7 @@
             <li class="nav-item mb-2"><a href="" class="text-dark">Integrations</a></li>
             <li class="nav-item mb-2"><a href="" class="text-dark">About Us</a></li>
             <li class="nav-item mb-2"><a href="" class="text-dark">Login</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Register</a></li>
           </ul>
         </div>
 
