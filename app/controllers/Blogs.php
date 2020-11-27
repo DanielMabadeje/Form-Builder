@@ -7,7 +7,12 @@
  */
 class Blogs extends Controller
 {
-    public function __construct(Type $var = null)
+    public function __construct($var = null)
+    {
+        # code...
+    }
+
+    public function Index(Type $var = null)
     {
         # code...
     }
