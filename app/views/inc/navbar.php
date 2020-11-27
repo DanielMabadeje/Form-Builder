@@ -20,7 +20,7 @@
                     <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Pricing</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Blog</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
