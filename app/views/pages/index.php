@@ -229,11 +229,11 @@
           <h3>Buisness</h3>
           <ul class="navbar-nav">
             <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Home</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Features</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Template</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Blog</a></li>
           </ul>
         </div>
 
