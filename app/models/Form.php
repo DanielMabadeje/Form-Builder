@@ -30,6 +30,11 @@ class Form
             foreach ($data['form_options'] as $question) {
                 $param['questions']=$question;
                 $param['uniqueId']=$data['uniqueId'];
+                if (condition) {
+                    # code...
+                } else {
+                    # code...
+                }
             }
             // return true;
         } else {
