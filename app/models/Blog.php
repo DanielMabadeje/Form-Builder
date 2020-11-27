@@ -26,6 +26,13 @@ class Blog
 
     public function count($value = null)
     {
-        # code...
+        if ($value !== null) {
+            $this->db->query("SELECT COUNT(*) AS count FROM blog WHERE title=:title");
+            $this->db->bind(':title', $value);
+        } else {
+            
+        }
+        $result = $this->db->resultSet();
+        return $result[0]->count;
     }
 }
