@@ -55,7 +55,7 @@ class Form
         $this->db->bind(':label', $data['label']);
         $this->db->bind(':type', $data['type']);
         $this->db->bind(':name', $data['name']);
-        $this->db->bind(':description', $data['placholder']);
+        $this->db->bind(':description', $data['placeholder']);
         
     }
 
