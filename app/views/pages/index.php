@@ -285,7 +285,7 @@
 
     <div class="copyright text-center bg-light pt-4 pb-4 col-12">
 
-      <h5 class="text-dark">&copy; CopyRight <?php echo date('Y'); ?>
+      <h5 class="text-dark">&copy; CopyRight <?php echo date('Y'); ?> All Right Reserved
       </h5>
     </div>
   </footer>
