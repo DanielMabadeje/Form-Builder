@@ -37,7 +37,7 @@ class Pages extends Controller
         # code...
     }
 
-    public function features(Type $var = null)
+    public function features( $var = null)
     {
         # code...
     }
