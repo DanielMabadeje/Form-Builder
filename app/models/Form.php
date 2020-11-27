@@ -26,7 +26,11 @@ class Form
         $this->db->bind(':description', $data['description']);
 
         if ($this->db->execute()) {
-            return true;
+
+            foreach ($data['form_options'] as $key => $value) {
+                echo'hi';
+            }
+            // return true;
         } else {
             return false;
         }
