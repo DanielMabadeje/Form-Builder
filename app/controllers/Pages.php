@@ -18,7 +18,7 @@ class Pages extends Controller
         $this->view('pages/about', $data);
         # code...
     }
-    public function Index(Type $var = null)
+    public function Index( $var = null)
     {
 
         $data = [
