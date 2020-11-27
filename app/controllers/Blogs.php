@@ -12,7 +12,7 @@ class Blogs extends Controller
         # code...
     }
 
-    public function Index(Type $var = null)
+    public function Index($var = null)
     {
         # code...
     }
