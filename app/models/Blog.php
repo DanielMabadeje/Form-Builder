@@ -23,4 +23,9 @@ class Blog
         $results = $this->db->resultSet();
         return $results;
     }
+
+    public function count($value = null)
+    {
+        # code...
+    }
 }
