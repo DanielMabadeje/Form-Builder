@@ -14,7 +14,7 @@
                     <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">About</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Pricing</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
