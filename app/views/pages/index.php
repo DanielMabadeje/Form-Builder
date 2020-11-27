@@ -171,24 +171,24 @@
 
   <div class="col-12 p-5 bg-light mt-4 text-left">
     <div class="pt-md-5 col-md-8">
-    <h3 class="displ">Integrations</h3>
-    <h3 class="display-4">Form Builder is more than just a  <br> great online tool</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
+      <h3 class="displ">Integrations</h3>
+      <h3 class="display-4">Form Builder is more than just a <br> great online tool</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
     </div>
   </div>
 
   <div class="bg-white col-12 p-5 text-left">
     <div class="row">
-    <div class="col-7">
+      <div class="col-7">
         <!-- <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12"> -->
-        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-preview.png" alt="" class="">
-        
+        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-previewed.png" alt="" class="">
+
       </div>
       <div class="col-5">
         <h3 class="display-4">Android app coming soon</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
       </div>
-      
+
     </div>
   </div>
 
