@@ -251,7 +251,7 @@
         </div>
 
         <div class="col">
-          <h3>Support</h3>
+          <h4>Support</h4>
           <ul class="navbar-nav">
             <li class="nav-item mb-2"><a href="" class="text-dark">Help</a></li>
             <li class="nav-item mb-2"><a href="" class="text-dark">Packages</a></li>
