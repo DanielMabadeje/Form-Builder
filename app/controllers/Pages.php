@@ -32,7 +32,7 @@ class Pages extends Controller
     {
     }
 
-    public function pricing(Type $var = null)
+    public function pricing( $var = null)
     {
         # code...
     }
