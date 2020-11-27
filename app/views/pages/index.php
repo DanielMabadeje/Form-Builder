@@ -202,7 +202,7 @@
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
-<div class="footer p-md-5 pb-0 bg-white">
+<div class="footer pt-md-5 pb-0 mb-0 bg-white">
   <footer class="pt-md-5">
     <div class="col-md-12">
       <div class="d-md-flex">
@@ -236,11 +236,23 @@
             <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
           </ul>
         </div>
+
+        <div class="col">
+          <h3>Buisness</h3>
+          <ul class="navbar-nav">
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
 
-    <div class="copyright text-center bg-light">
+    <div class="copyright text-center bg-light pt-4 pb-4 col-12">
 
       <h5 class="text-dark">&copy; CopyRight <?php echo date('Y'); ?>
       </h5>
