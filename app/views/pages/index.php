@@ -276,7 +276,7 @@
         <div class="col">
           <h3>Legal</h3>
           <ul class="navbar-nav">
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Privacy Policy</a></li>
             <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
           </ul>
         </div>
