@@ -36,4 +36,9 @@ class Pages extends Controller
     {
         # code...
     }
+
+    public function features(Type $var = null)
+    {
+        # code...
+    }
 }
