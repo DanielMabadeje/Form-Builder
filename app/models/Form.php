@@ -27,7 +27,7 @@ class Form
 
         if ($this->db->execute()) {
 
-            foreach ($data['form_options'] as $key => $value) {
+            foreach ($data['form_options'] as $question) {
                 echo'hi';
             }
             // return true;
