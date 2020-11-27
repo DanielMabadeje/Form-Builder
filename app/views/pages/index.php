@@ -229,7 +229,7 @@
           <h3>Buisness</h3>
           <ul>
             <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
-            <li><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
             <li><a href="" class="text-dark">My Forms</a></li>
             <li><a href="" class="text-dark">My Forms</a></li>
             <li><a href="" class="text-dark">My Forms</a></li>
