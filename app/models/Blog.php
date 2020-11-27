@@ -15,10 +15,11 @@ class Blog
 
     public function index($var = null)
     {
-        $this->db->query('SELECT *
+        $this->db->query("SELECT *
                           FROM blogs
-                          ORDER BY blogs.created_at DESC
-                          ');
+                          LIMIT $offset, $no_of_records_per_page
+                        --   ORDER BY blogs.created_at DESC
+                          ");
         $results = $this->db->resultSet();
         return $results;
     }
