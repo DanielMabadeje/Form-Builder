@@ -9,7 +9,7 @@ class Blogs extends Controller
 {
     public function __construct($var = null)
     {
-        # code...
+        $this->blogModel=$this->model('Blog');
     }
 
     public function Index($var = null)
