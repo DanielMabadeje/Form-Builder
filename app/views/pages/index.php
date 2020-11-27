@@ -13,7 +13,7 @@
   </div>
 
 
-  <div class="col-8 mx-auto pt-5 mt-5">
+  <div class="col-md-8 mx-auto pt-5 mt-5">
     <h4>Collect Data of Any Size</h4>
     <h2 class="display-4 font-weight-normal">We can handle a lot of date <br> before you know it</h2>
     <br>
