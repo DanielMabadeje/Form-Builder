@@ -19,5 +19,21 @@ class Blogs extends Controller
         } else {
             # code...
         }
+
+
+        if (is_numeric($limit)) {
+            // echo 'j';
+            $pageno = $limit;
+        } else {
+            // echo 'uu';
+            $pageno = 1;
+        }
+        $no_of_records_per_page = 12;
+        // die($pageno - 1);
+        $offset = ($pageno - 1) * $no_of_records_per_page;
+        $total_rows = $this->blogModel->count();
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+        
+        
     }
 }
