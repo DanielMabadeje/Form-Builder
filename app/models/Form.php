@@ -31,9 +31,9 @@ class Form
                 $param['questions']=$question;
                 $param['uniqueId']=$data['uniqueId'];
                 if ($this->createFormQuestion($param)) {
-                    # code...
+                    return true;
                 } else {
-                    # code...
+                    return false;
                 }
             }
             // return true;
