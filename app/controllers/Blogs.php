@@ -30,7 +30,7 @@ class Blogs extends Controller
 
         $data=[
             'posts'=>$posts,
-        ]
+        ];
 
         $this->view('blog/index', $data);
         
