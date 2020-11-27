@@ -15,6 +15,10 @@ class Blog
 
     public function index($var = null)
     {
-        # code...
+        $this->db->query('SELECT *
+                          FROM blogs
+                          ORDER BY blogs.created_at DESC
+                          ');
+        
     }
 }
