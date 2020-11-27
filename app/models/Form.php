@@ -48,14 +48,14 @@ class Form
         $this->db->query('INSERT INTO 
                             form_questions 
                             (form_id, label, type, name, placeholder, id)
-                             VALUES(:form_id, :label, :type, :name, :description)');
+                             VALUES(:form_id, :label, :type, :name, :placeholder)');
 
 
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':label', $data['label']);
         $this->db->bind(':type', $data['type']);
         $this->db->bind(':name', $data['name']);
-        $this->db->bind(':description', $data['description']);
+        $this->db->bind(':description', $data['placholder']);
         
     }
 
