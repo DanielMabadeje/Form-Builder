@@ -13,7 +13,7 @@ class Blog
         $this->db = new Database;
     }
 
-    public function index(Type $var = null)
+    public function index($var = null)
     {
         # code...
     }
