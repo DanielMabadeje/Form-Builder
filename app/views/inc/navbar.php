@@ -6,7 +6,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>">Home</a>
                 </li>
