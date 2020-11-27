@@ -181,7 +181,7 @@
     <div class="row">
     <div class="col-7">
         <!-- <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12"> -->
-        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987.jpg" alt="" class="col-12">
+        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-preview.png" alt="" class="">
         
       </div>
       <div class="col-5">
