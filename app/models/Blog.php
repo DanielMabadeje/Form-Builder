@@ -19,6 +19,7 @@ class Blog
                           FROM blogs
                           ORDER BY blogs.created_at DESC
                           ');
-        
+        $results = $this->db->resultSet();
+        return $results;
     }
 }
