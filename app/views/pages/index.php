@@ -205,8 +205,8 @@
 <div class="footer pt-md-5 pb-0 mb-0 bg-white">
   <footer class="pt-md-5">
     <div class="col-md-12">
-      <div class="d-md-flex">
-        <div class="col-4">
+      <div class="row">
+        <div class="col-md-4">
           <h2 class="display-4">
             <?= SITENAME; ?>
           </h2>
