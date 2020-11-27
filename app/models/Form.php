@@ -30,7 +30,7 @@ class Form
             foreach ($data['form_options'] as $question) {
                 $param['questions']=$question;
                 $param['uniqueId']=$data['uniqueId'];
-                if (createFormQuestion($param)) {
+                if ($this->createFormQuestion($param)) {
                     # code...
                 } else {
                     # code...
