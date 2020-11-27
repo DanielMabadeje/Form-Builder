@@ -13,7 +13,7 @@ class Blog
         $this->db = new Database;
     }
 
-    public function index($var = null)
+    public function index($offset, $no_of_records_per_page)
     {
         $this->db->query("SELECT *
                           FROM blogs
