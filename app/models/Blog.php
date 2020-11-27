@@ -30,7 +30,7 @@ class Blog
             $this->db->query("SELECT COUNT(*) AS count FROM blog WHERE title=:title");
             $this->db->bind(':title', $value);
         } else {
-            
+            $this->db->query("SELECT COUNT(*) AS count FROM blog");
         }
         $result = $this->db->resultSet();
         return $result[0]->count;
