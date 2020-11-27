@@ -28,6 +28,10 @@ class Blogs extends Controller
 
         $posts = $this->blogModel->index($offset, $no_of_records_per_page);
 
+        $data=[
+            'posts'=>$posts,
+        ]
+
         $this->view('blog/index', $data);
         
         
