@@ -19,6 +19,17 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Features</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Templates
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="http://hakintech.com">V1</a>
+                        <a class="dropdown-item" href="pages/hakintech/v2/index.html">V2</a>
+                        <div class="dropdown-divider"></div>
+                        <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Blog</a>
                 </li>
