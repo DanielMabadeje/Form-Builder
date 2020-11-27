@@ -28,5 +28,12 @@ class Pages extends Controller
     }
 
 
-    fun
+    public function contact()
+    {
+    }
+
+    public function pricing(Type $var = null)
+    {
+        # code...
+    }
 }
