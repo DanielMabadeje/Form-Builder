@@ -55,6 +55,8 @@ class Form
 
 
     public function createFormQuestion($data){
+
+        
         $this->db->query('INSERT INTO 
                             form_questions 
                             (form_id, label, type, name, placeholder, id)
@@ -62,11 +64,17 @@ class Form
 
 
         $this->db->bind(':form_id', $data['uniqueId']);
-        $this->db->bind(':label', $data['label']);
+        $this->db->bind(':label', $data['questions']);
         $this->db->bind(':type', $data['type']);
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':placeholder', $data['placeholder']);
         $this->db->bind(':id', $data['id']);
+
+        if ($this->db->execute()) {
+            return true;
+        else{
+            return false;
+        }
         
     }
 
