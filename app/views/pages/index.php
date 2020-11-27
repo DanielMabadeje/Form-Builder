@@ -262,7 +262,7 @@
         </div>
 
         <div class="col">
-          <h3>Compare</h3>
+          <h4>Compare</h4>
           <ul class="navbar-nav">
             <li class="nav-item mb-2"><a href="" class="text-dark">Google Forms</a></li>
             <li class="nav-item mb-2"><a href="" class="text-dark">TypeForm</a></li>
