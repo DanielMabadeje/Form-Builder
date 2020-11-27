@@ -238,14 +238,14 @@
         </div>
 
         <div class="col">
-          <h3>Buisness</h3>
+          <h4><?= SITENAME; ?></h4>
           <ul class="navbar-nav">
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
-            <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Download</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Survey Maker</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Design</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Integrations</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">About Us</a></li>
+            <li class="nav-item mb-2"><a href="" class="text-dark">Login</a></li>
           </ul>
         </div>
 
