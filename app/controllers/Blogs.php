@@ -14,6 +14,10 @@ class Blogs extends Controller
 
     public function Index($var = null)
     {
-        # code...
+        if (isset($_GET['pages'])) {
+            $page=$_GET['pages']
+        } else {
+            # code...
+        }
     }
 }
