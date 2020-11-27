@@ -24,8 +24,8 @@
                         Templates
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="http://hakintech.com">V1</a>
-                        <a class="dropdown-item" href="pages/hakintech/v2/index.html">V2</a>
+                        <a class="dropdown-item" href="">V1</a>
+                        <a class="dropdown-item" href="">V2</a>
                         <div class="dropdown-divider"></div>
                         <!-- <a class="dropdown-item" href="#">Something else here</a> -->
                     </div>
