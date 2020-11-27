@@ -202,8 +202,8 @@
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
-<div class="footer">
-  <footer>
+<div class="footer p-md-5 pb-0 bg-white">
+  <footer class="pt-md-5">
     <div class="col-md-12">
       <div class="d-md-flex">
         <div class="col-4">
