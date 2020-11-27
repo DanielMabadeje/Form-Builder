@@ -9,16 +9,18 @@ class Pages extends Controller
 {
     public function __construct()
     {
-        
     }
-    public function about($id)
+    public function about($id = null)
     {
-        echo 'hello' . $id;
+        $data = [
+            'title' => "Mabadeje's Framework",
+        ];
+        $this->view('pages/about', $data);
         # code...
     }
     public function Index(Type $var = null)
     {
-        
+
         $data = [
             'title' => "Mabadeje's Framework",
         ];
