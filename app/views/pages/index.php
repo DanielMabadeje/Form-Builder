@@ -231,7 +231,7 @@
             <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
             <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
             <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
-            <li><a href="" class="text-dark">My Forms</a></li>
+            <li class="nav-item"><a href="" class="text-dark">My Forms</a></li>
             <li><a href="" class="text-dark">My Forms</a></li>
             <li><a href="" class="text-dark">My Forms</a></li>
           </ul>
