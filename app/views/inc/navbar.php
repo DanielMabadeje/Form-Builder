@@ -11,13 +11,13 @@
                     <a class="nav-link text-dark" href="<?= URLROOT ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">About</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Pricing</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Features</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Features</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,10 +31,10 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Blog</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">Help</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Help</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
