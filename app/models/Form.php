@@ -54,7 +54,7 @@ class Form
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':label', $data['label']);
         $this->db->bind(':type', $data['type']);
-        $this->db->bind(':form_name', $data['title']);
+        $this->db->bind(':name', $data['name']);
         $this->db->bind(':description', $data['description']);
         
     }
