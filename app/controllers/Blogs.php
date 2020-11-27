@@ -14,21 +14,13 @@ class Blogs extends Controller
 
     public function Index($var = null)
     {
-        if (isset($_GET['pages'])) {
-            $page=$_GET['pages']
+        if (isset($_GET['page']) && is_numeric($_GET['page'])) {
+            $pageno=$_GET['pages'];
         } else {
-            # code...
+            $pageno=1;
         }
 
-
-        if (is_numeric($limit)) {
-            // echo 'j';
-            $pageno = $limit;
-        } else {
-            // echo 'uu';
-            $pageno = 1;
-        }
-        $no_of_records_per_page = 12;
+        $no_of_records_per_page = 15;
         // die($pageno - 1);
         $offset = ($pageno - 1) * $no_of_records_per_page;
         $total_rows = $this->blogModel->count();
