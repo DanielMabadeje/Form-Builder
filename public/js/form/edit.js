@@ -345,6 +345,7 @@ window.onclick = function(event) {
 
 // form adding and removing of active classes
 
+inputDivs.addEventListener()
 
 
 function addingOptions(params) {
