@@ -66,7 +66,7 @@ class Form
 
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':label', $data['questions']['label']);
-        $this->db->bind(':type', $data['questions']->type);
+        $this->db->bind(':type', $data['questions']['type']);
         $this->db->bind(':name', $data['questions']->name);
         $this->db->bind(':placeholder', $data['questions']->placeholder);
         $this->db->bind(':id', $data['questions']->id);
