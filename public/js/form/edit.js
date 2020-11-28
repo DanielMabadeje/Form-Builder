@@ -353,5 +353,5 @@ for (let index = 0; index < inputDivs.length; index++) {
 
 
 function addingOptions(params) {
-  
+  console.log('mouse reach here')
 }
