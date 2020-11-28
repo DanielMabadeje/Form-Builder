@@ -28,7 +28,7 @@ class Form
 
         if ($this->db->execute()) {
 
-            foreach ($data['form_options'] as $question) {
+            foreach ($form as $question) {
                 $param['questions']=$question;
                 $param['uniqueId']=$data['uniqueId'];
                 if ($this->createFormQuestion($param)) {
