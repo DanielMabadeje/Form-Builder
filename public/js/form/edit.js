@@ -1,6 +1,8 @@
 var title=document.getElementsByTagName('h1')[0];
 var description=document.getElementsByTagName('h5')[0];
 
+ocument.getElementsByClassName('field_container');
+
 
 
 function getvalue() {
@@ -343,3 +345,8 @@ window.onclick = function(event) {
 
 // form adding and removing of active classes
 
+
+
+function addingOptions(params) {
+  
+}
