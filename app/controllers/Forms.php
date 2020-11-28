@@ -27,6 +27,7 @@ class Forms extends Controller
                     'id' => 'first_name', // if 'name' param is not given. Then by default 'id' will be considered as 'name'.
                     'placeholder' => 'First Name',
                     'label' => 'First Name',
+                    'type'=>null
                 ),
                 array(
                     'id' => 'submit',
