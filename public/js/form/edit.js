@@ -347,7 +347,7 @@ window.onclick = function(event) {
 
 for (let index = 0; index < inputDivs.length; index++) {
   // const element = array[index];
-  inputDivs.addEventListener('mouseover' addingOptions);
+  inputDivs.addEventListener('mouseover', addingOptions);
   
 }
 
