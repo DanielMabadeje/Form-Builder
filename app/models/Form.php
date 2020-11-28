@@ -16,6 +16,7 @@ class Form
     public function add($data)
     {
 
+        $form =$data['form_options'];
         $data['form_options']=json_encode($data['form_options']);
 
         $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:form_id, :user_id, :form_array, :form_name, :description)');
@@ -70,6 +71,8 @@ class Form
         $this->db->bind(':placeholder', $data['questions']->placeholder);
         $this->db->bind(':id', $data['questions']->id);
 
+
+        var_dump($data);
         if ($this->db->execute()) {
             return true;
         }
