@@ -1,7 +1,7 @@
 var title=document.getElementsByTagName('h1')[0];
 var description=document.getElementsByTagName('h5')[0];
 
-document.getElementsByClassName('field_container');
+var inputDivs=document.getElementsByClassName('field_container');
 
 
 
