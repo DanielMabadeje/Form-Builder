@@ -149,7 +149,7 @@
 
 // die;
 ?>
-<div style="text-align:center; margin-top:10%;">
+<div class="container"  style="text-align:center; margin-top:10%;">
 
 
     <section class="col-md-12 d-md-flex">
