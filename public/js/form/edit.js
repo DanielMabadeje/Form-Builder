@@ -345,7 +345,7 @@ window.onclick = function(event) {
 
 // form adding and removing of active classes
 
-inputDivs.addEventListener()
+inputDivs.addEventListener('mouseover' addingOptions)
 
 
 function addingOptions(params) {
