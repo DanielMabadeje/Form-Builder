@@ -69,7 +69,7 @@ class Form
         $this->db->bind(':type', $data['questions']['type']);
         $this->db->bind(':name', $data['questions']['name']);
         $this->db->bind(':placeholder', $data['questions']['placeholder']);
-        $this->db->bind(':id', $data['questions']->id);
+        $this->db->bind(':id', $data['questions']['id']);
 
 
         var_dump($data);
