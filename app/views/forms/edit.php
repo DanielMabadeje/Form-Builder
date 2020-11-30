@@ -210,7 +210,7 @@
 </div>
 
 <script>
-    var formarray = <?php print_r(json_encode($data));  ?>
+    var formarray=<?php echo json_encode($data); ?>
 </script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
