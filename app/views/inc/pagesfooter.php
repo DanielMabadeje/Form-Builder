@@ -8,12 +8,12 @@
                     </h2>
                     <br>
                     <div class="socials">
-                        <h4>
+                        <h5>
                             <i class="fa fa-facebook"></i>
                             <i class="fa fa-instagram"></i>
                             <i class="fa fa-twitter"></i>
                             <i class="fa fa-linkedin"></i>
-                        </h4>
+                        </h5>
                     </div>
                     <div class="">
                         <!-- <span>Playstore</span> -->
