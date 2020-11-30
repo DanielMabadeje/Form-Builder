@@ -9,10 +9,10 @@
                     <br>
                     <div class="socials">
                         <h5>
-                            <i class="fa fa-facebook"></i>
-                            <i class="fa fa-instagram"></i>
-                            <i class="fa fa-twitter"></i>
-                            <i class="fa fa-linkedin"></i>
+                            <a href="" class="nav-lin m-2"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="m-2"><i class="fa fa-instagram"></i></a>
+                            <a href="" class="m-2"><i class="fa fa-twitter"></i></a>
+                            <a href="" class="m-2"><i class="fa fa-linkedin"></i></a>
                         </h5>
                     </div>
                     <div class="">
