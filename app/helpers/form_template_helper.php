@@ -19,3 +19,5 @@ function blankForm(){
 }
 
 function contactForm(){}
+
+function rsvpForm(){}
