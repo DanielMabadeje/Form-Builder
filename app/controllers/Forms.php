@@ -60,8 +60,8 @@ class Forms extends Controller
     {
         if ($var) {
             $data=$this->formModel->getForm($var);
-            // var_dump($data);
-            // die;
+            var_dump($data);
+            die;
             $this->view('forms/edit', $data);
         } else {
             # code...
