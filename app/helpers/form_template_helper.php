@@ -17,3 +17,5 @@ function blankForm(){
         ),
     );
 }
+
+function contactForm(){}
