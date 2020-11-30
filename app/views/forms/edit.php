@@ -227,9 +227,9 @@ input:checked + .slider:before {
                     <div class="d-flex">
                         <div class="pr-3"><h5 class="text-dark">Allowing Responses</h5></div>
                         <div>
-                            <?php if(): ?>
+                            <?php if($data->allowing_responses == 'no'): ?>
                                 <label class="switch ml-auto pt-2">
-                                <input type="checkbox" checked>
+                                <input type="checkbox">
                                 <div class="slider round"></div>
                                 </label>
                             <?php else: ?>
@@ -237,7 +237,7 @@ input:checked + .slider:before {
                                 <input type="checkbox" checked>
                                 <div class="slider round"></div>
                             </label>
-                            <?php
+                            <?php endif; ?>
                         </div>
                     </div>
                         
