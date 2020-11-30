@@ -227,10 +227,17 @@ input:checked + .slider:before {
                     <div class="d-flex">
                         <div class="pr-3"><h5 class="text-dark">Allowing Responses</h5></div>
                         <div>
-                            <label class="switch ml-auto pt-2">
+                            <?php if(): ?>
+                                <label class="switch ml-auto pt-2">
+                                <input type="checkbox" checked>
+                                <div class="slider round"></div>
+                                </label>
+                            <?php else: ?>
+                                <label class="switch ml-auto pt-2">
                                 <input type="checkbox" checked>
                                 <div class="slider round"></div>
                             </label>
+                            <?php
                         </div>
                     </div>
                         
