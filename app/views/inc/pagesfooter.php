@@ -16,7 +16,8 @@
                         </h4>
                     </div>
                     <div class="">
-                        <span>Playstore</span>
+                        <!-- <span>Playstore</span> -->
+                        <a href="#" disabled><img src="<?= URLROOT; ?>/img/app-store-logo.png" alt=""></a>
                         <span>AppleStore</span>
                     </div>
                 </div>
