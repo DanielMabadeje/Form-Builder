@@ -85,6 +85,7 @@ class Form
 
 
     public function getFormQuestion($id){
-
+        $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id');
+        
     }
 }
