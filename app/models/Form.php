@@ -19,7 +19,7 @@ class Form
         $form =$data['form_options'];
         $data['form_options']=json_encode($data['form_options']);
 
-        $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:form_id, :user_id, :form_array, :form_name, :description)');
+        $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description) VALUES(:form_id, :user_id, :form_name, :description)');
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':user_id', $data['user_id']);
         // $this->db->bind(':form_array', $data['form_options']);
