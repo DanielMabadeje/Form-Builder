@@ -170,7 +170,7 @@
 
                 // $form_options = $data->form_array;
                 $form_options = $data->form;
-                $form_options = json_decode($form_options);
+                // $form_options = json_decode($form_options);
 
                 foreach ($form_options as $key => $datas) {
                     $form_options[$key] = (array)$datas;
