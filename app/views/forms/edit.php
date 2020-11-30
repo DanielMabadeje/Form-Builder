@@ -220,15 +220,20 @@ input:checked + .slider:before {
         <div class="card border-radius-none border-none col-md-10 text-left p-3">
             <div class="card-title">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-8">
                         <h1 contenteditable="true"><?= $data->form_name; ?></h1> 
                     </div>
                     <div class="col">
-                    <label class="text-dark">Allowing Responses</label>
-                        <label class="switch ml-auto pt-2">
-                            <input type="checkbox" checked>
-                            <div class="slider round"></div>
-                        </label>
+                    <div class="d-flex">
+                        <div class="pr-3"><h5 class="text-dark">Allowing Responses</h5></div>
+                        <div>
+                            <label class="switch ml-auto pt-2">
+                                <input type="checkbox" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                    </div>
+                        
                     </div>
                 </div>
 
