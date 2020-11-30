@@ -22,7 +22,7 @@ class Form
         $this->db->query('INSERT INTO forms (form_id, user_id, form_array, form_name, description) VALUES(:form_id, :user_id, :form_array, :form_name, :description)');
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':user_id', $data['user_id']);
-        $this->db->bind(':form_array', $data['form_options']);
+        // $this->db->bind(':form_array', $data['form_options']);
         $this->db->bind(':form_name', $data['title']);
         $this->db->bind(':description', $data['description']);
 
@@ -34,7 +34,7 @@ class Form
                 $this->createFormQuestion($param);
                 
             }
-            // return true;
+            return true;
         } else {
             return false;
         }
