@@ -7,6 +7,8 @@ require_once '../app/config/config.php';
 // loading helpers
 require_once '../app/helpers/form_field_builder.php';
 require_once '../app/helpers/value_generator_helper.php';
+require_once '../app/helpers/form_template_helper.php';
+
 require_once '../app/helpers/session_helper.php';
 require_once '../app/helpers/url_helper.php';
 
