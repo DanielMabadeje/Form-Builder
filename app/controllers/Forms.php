@@ -32,6 +32,7 @@ class Forms extends Controller
                 ),
                 array(
                     'id' => 'submit',
+                    'label' => 'submit',
                     'type' => 'submit',
                     'name' => 'submit'
                 ),
