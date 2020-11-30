@@ -25,12 +25,14 @@
     }
 
 
-.field_container:focus, .field_container:active{
-    border:1px gray solid;
-}
-.field_container{
-    margin-top: 5%;
-}
+    .field_container:focus,
+    .field_container:active {
+        border: 1px gray solid;
+    }
+
+    .field_container {
+        margin-top: 5%;
+    }
 
 
     .form-wrap {
@@ -131,17 +133,79 @@
     .show {
         display: block;
     }
-    input[type="radio"]{
+
+    input[type="radio"] {
         /* width: 1px; */
         background-color: initial;
-    cursor: default;
-    appearance: radio;
-    box-sizing: border-box;
-    /* margin: 3px 3px 0px 5px; */
-    /* padding: 0; */
-    min-height:18px;
-    border: initial;
+        cursor: default;
+        appearance: radio;
+        box-sizing: border-box;
+        /* margin: 3px 3px 0px 5px; */
+        /* padding: 0; */
+        min-height: 18px;
+        border: initial;
     }
+
+
+
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 </style>
 
 <?php
@@ -149,13 +213,14 @@
 
 // die;
 ?>
-<div class="container"  style="text-align:center; margin-top:10%;">
+<div class="container" style="text-align:center; margin-top:10%;">
 
 
     <section class="col-md-12 d-md-flex">
         <div class="card border-radius-none border-none col-md-10 text-left p-3">
             <div class="card-title">
-                <h1 contenteditable="true"><?= $data->form_name; ?></h1>
+                <h1 contenteditable="true"><?= $data->form_name; ?></h1> 
+
                 <br>
                 <h5 contenteditable="true"><?= $data->description; ?></h5>
             </div>
@@ -210,7 +275,7 @@
 </div>
 
 <script>
-    var formarray=<?php echo json_encode($data); ?>
+    var formarray = <?php echo json_encode($data); ?>
 </script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
