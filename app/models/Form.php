@@ -50,6 +50,7 @@ class Form
         $this->db->bind(':form_id', $id);
 
         $row = $this->db->single();
+        $row->form=$this->getFormQuestion($id);
         return $row;
     }
 
