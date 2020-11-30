@@ -31,11 +31,8 @@ class Form
             foreach ($form as $question) {
                 $param['questions']=$question;
                 $param['uniqueId']=$data['uniqueId'];
-                if ($this->createFormQuestion($param)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                $this->createFormQuestion($param);
+                
             }
             // return true;
         } else {
