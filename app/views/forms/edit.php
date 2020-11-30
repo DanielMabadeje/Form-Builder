@@ -219,11 +219,10 @@ input:checked + .slider:before {
     <section class="col-md-12 d-md-flex">
         <div class="card border-radius-none border-none col-md-10 text-left p-3">
             <div class="card-title">
-                <h1 contenteditable="true"><?= $data->form_name; ?> 
-                    
-                </h1> 
                 <div class="row">
-                <div class="col-8"></div>
+                <div class="col-8">
+                <h1 contenteditable="true"><?= $data->form_name; ?></h1> 
+                </div>
                 <div class="col-4">
                 <label class="switch ml-auto">
                         <input type="checkbox">
