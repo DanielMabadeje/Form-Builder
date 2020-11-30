@@ -15,7 +15,7 @@
                             <a href="" class="m-2"><i class="fa fa-linkedin"></i></a>
                         </h5>
                     </div>
-                    <div class="">
+                    <div class="pt-3">
                         <!-- <span>Playstore</span> -->
                         <a href="#" disabled><img src="<?= URLROOT; ?>/img/app-store-logo.png" alt=""></a>
                         <!-- <span>AppleStore</span> -->
