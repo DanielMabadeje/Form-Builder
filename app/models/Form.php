@@ -84,7 +84,7 @@ class Form
     }
 
 
-    public function getFormQuestion(){
-        
+    public function getFormQuestion($id){
+
     }
 }
