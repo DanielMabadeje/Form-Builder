@@ -16,9 +16,9 @@
                         </h5>
                     </div>
                     <div class="pt-3">
-                        <!-- <span>Playstore</span> -->
+                        
                         <a href="#" disabled><img src="<?= URLROOT; ?>/img/app-store-logo.png" alt=""></a>
-                        <!-- <span>AppleStore</span> -->
+                        
                         <a href=""><img src="<?= URLROOT; ?>/img/google-play-logo.png" alt=""></a>
                     </div>
                 </div>
