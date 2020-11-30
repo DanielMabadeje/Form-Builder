@@ -88,5 +88,8 @@ class Form
         $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id');
         $this->db->bind(':form_id', $id);
         
+
+        $result=$this->db->resultSet();
+        // return $
     }
 }
