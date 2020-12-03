@@ -44,6 +44,7 @@ class Forms extends ApiController
         // die;
         if ($data = $this->formModel->editAllowingResponses($data)) {
             $this->success($data);
+            die;
         } else {
             $this->fail();
         }

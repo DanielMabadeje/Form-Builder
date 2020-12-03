@@ -39,7 +39,7 @@ class ApiController
     {
         if (is_numeric($statusCode))
             http_response_code($statusCode);
-        die(json_encode(['success' => ['code' => $statusCode, 'message' => $data]]));
+        return json_encode(['success' => ['code' => $statusCode, 'message' => $data]]);
     }
 
     public function unauthorizedresponse($data)

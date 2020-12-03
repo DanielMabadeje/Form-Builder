@@ -395,7 +395,7 @@ function editAllowingResponses() {
 
   $.ajax(settings).done(function (response) {
     // let updatedAt=response.success.message.updated_at
-    let updatedAt=response.success
+    let updatedAt=response
 
     console.log(updatedAt);
     return;
