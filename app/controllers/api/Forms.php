@@ -24,6 +24,7 @@ class Forms extends ApiController
     {
         if ($param) {
             $data = $this->formModel->getForm($param);
+            $this->success($data);
             // $data=json_encode($data);
             // print_r($data);
             // die;
