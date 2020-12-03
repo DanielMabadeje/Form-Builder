@@ -32,7 +32,7 @@ class ApiController
     {
         $statusCode = 200;
         http_response_code($statusCode);
-        return  json_encode(['success' => ['code' => $statusCode, 'message' => $data]]);
+        die(json_encode(['success' => ['code' => $statusCode, 'message' => $data]]));
     }
 
     public function returnjson($data = null, $statusCode = null)
