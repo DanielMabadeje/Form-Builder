@@ -378,6 +378,11 @@ function saveInputLabel(index) {
 }
 
 
+function editAllowingResponses(params) {
+  
+}
+
+
 function showSaveProgress(params) {
   savingProgress.innerHTML='Saving...'
 }
