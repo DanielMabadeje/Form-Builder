@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/forms/inc/editheader.php'; ?>
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/form/edit.css">
 <div class="container" style="text-align:center; margin-top:10%;">
 
