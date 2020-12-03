@@ -27,4 +27,14 @@ class ApiController
             die('view does not exist');
         }
     }
+
+    public function success($var)
+    {
+        # code...
+    }
+
+    public function returnjson($var = null, $statuscode)
+    {
+        # code...
+    }
 }
