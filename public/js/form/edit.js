@@ -4,6 +4,7 @@ var description=document.getElementsByTagName('h5')[0];
 var inputDivs=document.getElementsByClassName('field_container');
 var inputLabels=document.getElementsByClassName('form-label');
 var savingProgress=document.getElementsByClassName('save')[0];
+var responseSwitch=document.getElementById('switch');
 
 
 function getvalue() {
@@ -379,7 +380,13 @@ function saveInputLabel(index) {
 
 
 function editAllowingResponses(params) {
-  
+  if (responseSwitch.checked ==true) {
+    console.log('true');
+  }else if(responseSwitch.checked == false){
+    console.log('false');
+  }else{
+    console.log('undefined');
+  }
 }
 
 
@@ -398,4 +405,6 @@ function showSaveSuccess(params) {
 
 
 
-document.getElementById('switch')
+
+
+responseSwitch.addEventListener('click', editAllowingResponses);
