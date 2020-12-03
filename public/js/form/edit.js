@@ -414,6 +414,9 @@ function showSaveSuccess(params) {
   // setTimeout(showLastSaved, timeout);
 }
 
+function showLastSaved(param) {
+  savingProgress.innerHTML='Last Updated at '+param
+}
 
 // console.log(formarray);
 
