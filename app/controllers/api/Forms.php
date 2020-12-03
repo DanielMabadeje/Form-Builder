@@ -1,7 +1,7 @@
 <?php
 
 
-class Forms extends Controller
+class Forms extends ApiController
 {
     private $form;
 
@@ -45,7 +45,7 @@ class Forms extends Controller
         if ($this->formModel->editAllowingResponses($data)) {
             echo 'yes';
         } else {
-            echo 'no';
+            $this->fail();
         }
     }
 
