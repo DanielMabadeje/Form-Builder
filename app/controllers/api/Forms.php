@@ -36,6 +36,8 @@ class Forms extends Controller
 
     public function editAllowResponse($api, $id, $allow)
     {
+        var_dump($id);
+        die;
         $data = [
             'form_id' => $id,
             'allow' => $this->returntrueorfalse($allow)

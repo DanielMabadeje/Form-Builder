@@ -382,14 +382,17 @@ function saveInputLabel(index) {
 function editAllowingResponses() {
 
   showSaveProgress();
+  // console.log(formarray)
+  var form_id=formarray.form_id
+  console.log(form_id)
 
 
   if (responseSwitch.checked ==true) {
-    settings.url=base_url+'/api/forms/editallowresponse/true'
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/true'
   }else if(responseSwitch.checked == false){
-    settings.url=base_url+'/api/forms/editallowresponse/false'
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/false'
   }else{
-    settings.url=base_url+'/api/forms/editallowresponse/false'
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/false'
   }
 
   $.ajax(settings).done(function (response) {
