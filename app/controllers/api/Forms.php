@@ -33,4 +33,19 @@ class Forms extends Controller
             # code...
         }
     }
+
+    public function editAllowResponse($api, $id, $allow)
+    {
+        $data = [
+            'form_id' => $id,
+            'allow' => $allow
+        ];
+        // var_dump($data);
+        // die;
+        if ($this->formModel->editAllowingResponses($data)) {
+            echo 'yes';
+        } else {
+            echo 'no';
+        }
+    }
 }

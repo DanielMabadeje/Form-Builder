@@ -107,6 +107,12 @@ class Form
     {
         $this->db->query("UPDATE forms SET allowing_responses=:allowing WHERE form_id=:form_id");
         $this->db->bind(':form_id', $data['form_id']);
-        $this->db->bind(':allowing', $data['allowing']);
+        $this->db->bind(':allowing', $data['allow']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
