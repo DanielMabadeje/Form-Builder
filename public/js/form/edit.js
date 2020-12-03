@@ -374,7 +374,7 @@ function saveInputLabel(index) {
   currentobject.label=labelName.innerHTML
   console.log(currentobject)
 
-  
+  showSaveProgress();
 }
 
 
