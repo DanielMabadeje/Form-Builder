@@ -115,4 +115,9 @@ class Form
             return false;
         }
     }
+
+    private function getUpdatedAt($var = null)
+    {
+        # code...
+    }
 }
