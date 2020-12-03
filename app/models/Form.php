@@ -120,5 +120,8 @@ class Form
     {
         $this->db->query("SELECT updated_at FROM forms WHERE form_id=:form_id");
         $this->db->bind(':form_id', $data['form_id']);
+
+        $row = $this->db->single();
+        return $row;
     }
 }
