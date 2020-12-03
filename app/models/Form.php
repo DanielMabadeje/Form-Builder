@@ -105,6 +105,7 @@ class Form
 
     public function editAllowingResponses($data)
     {
-        $this->db->query("UPDATE form_question SET status=`data` WHERE reference=:reference AND user_id=:user_id");
+        $this->db->query("UPDATE forms SET allowing_responses=$data WHERE form_id=:form_id");
+        $this->db->bind(':form_id', $data['form_id']);
     }
 }
