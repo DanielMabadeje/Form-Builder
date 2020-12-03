@@ -1,6 +1,9 @@
+<hr>
+
 <div class="col-12 bg-white">
-<div class="text-dark">
-<div class="col">
+    <div class="text-dark container">
+        <div class="d-flex">
+        <div class="col">
                         <span class="save">Last Edit Was at <?= $data->updated_at; ?></span>
                     </div>
                     <div class="col">
@@ -26,4 +29,5 @@
 
                     </div>
 </div>
+    </div>
 </div>
