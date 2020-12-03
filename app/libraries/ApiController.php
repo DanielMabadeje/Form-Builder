@@ -41,4 +41,11 @@ class ApiController
             http_response_code($statusCode);
         return  json_encode(['success' => ['code' => $statusCode, 'message' => $data]]);
     }
+
+    public function unauthorizedresponse($data)
+    {
+        $statusCode = 401;
+        http_response_code($statusCode);
+        return  json_encode(['success' => ['code' => $statusCode, 'message' => $data]]);
+    }
 }
