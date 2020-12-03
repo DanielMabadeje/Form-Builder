@@ -33,8 +33,10 @@ class ApiController
         # code...
     }
 
-    public function returnjson($var = null, $statuscode)
+    public function returnjson($data = null, $statusCode = null)
     {
-        # code...
+        if (is_numeric($statusCode))
+            http_response_code($statusCode);
+        return  json_encode(['success' => ['code' => $statusCode, 'message' => $data]]);
     }
 }
