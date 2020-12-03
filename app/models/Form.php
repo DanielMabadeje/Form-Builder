@@ -102,4 +102,9 @@ class Form
         $this->db->bind(':reference', $data['reference']);
         $this->db->bind(':user_id', $data['user_id']);
     }
+
+    public function editAllowingResponses($data)
+    {
+        $this->db->query("UPDATE form_question SET status=`data` WHERE reference=:reference AND user_id=:user_id");
+    }
 }
