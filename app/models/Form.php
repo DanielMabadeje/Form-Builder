@@ -116,8 +116,9 @@ class Form
         }
     }
 
-    private function getUpdatedAt($var = null)
+    private function getUpdatedAt($data)
     {
-        # code...
+        $this->db->query("SELECT updated_at FROM forms WHERE form_id=:form_id");
+        $this->db->bind(':form_id', $data['form_id']);
     }
 }
