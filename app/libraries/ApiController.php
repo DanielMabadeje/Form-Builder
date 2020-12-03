@@ -30,7 +30,7 @@ class ApiController
 
     public function success($var)
     {
-        # code...
+        http_response_code(200);
     }
 
     public function returnjson($data = null, $statusCode = null)
