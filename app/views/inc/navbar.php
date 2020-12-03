@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white text-dark  mb-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-white text-dark  pb-3">
     <div class="container">
         <a class="navbar-brand text-dark" href="<?= URLROOT ?>"><?php echo SITENAME; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
