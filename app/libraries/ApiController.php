@@ -48,4 +48,10 @@ class ApiController
         http_response_code($statusCode);
         die(json_encode(['success' => ['code' => $statusCode, 'message' => $data]]));
     }
+
+    public function fail($data = 'Internal Server Error', $statusCode = 500)
+    {
+        http_response_code($statusCode);
+        die(json_encode(['success' => ['code' => $statusCode, 'message' => $data]]));
+    }
 }
