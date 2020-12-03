@@ -382,9 +382,7 @@ function saveInputLabel(index) {
 function editAllowingResponses() {
 
   showSaveProgress();
-  // console.log(formarray)
   var form_id=formarray.form_id
-  console.log(form_id)
 
 
   if (responseSwitch.checked ==true) {
