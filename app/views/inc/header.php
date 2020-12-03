@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
 
-    <script src="<?php echo URLROOT; ?>/js/jquery.js"></script>
-
+    <!-- script config -->
+    <script src="<?php echo URLROOT ?>/js/jquery.js"></script>
     <script>
-        const base_url = <?= URLROOT ?>
+        const base_url = '<?= URLROOT ?>'
     </script>
+    <script src="<?php echo URLROOT ?>/js/config.js"></script>
+
+
+
 </head>
 
 <body>

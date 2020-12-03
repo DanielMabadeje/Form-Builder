@@ -379,14 +379,22 @@ function saveInputLabel(index) {
 }
 
 
-function editAllowingResponses(params) {
+function editAllowingResponses() {
+
+  showSaveProgress();
+
+
   if (responseSwitch.checked ==true) {
-    console.log('true');
+    settings.url=base_url+'/api/forms/editallowresponse/true'
   }else if(responseSwitch.checked == false){
-    console.log('false');
+    settings.url=base_url+'/api/forms/editallowresponse/false'
   }else{
-    console.log('undefined');
+    settings.url=base_url+'/api/forms/editallowresponse/false'
   }
+
+  $.ajax(settings).done(function (response) {
+    showSaveSuccess();
+  })
 }
 
 
@@ -400,6 +408,8 @@ function showSaveFailure(params) {
 
 function showSaveSuccess(params) {
   savingProgress.innerHTML='Saved Successfully'
+
+  // setTimeout(showLastSaved, timeout);
 }
 // console.log(formarray);
 
