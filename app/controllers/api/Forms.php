@@ -10,6 +10,9 @@ class Forms extends ApiController
     {
         $this->form = new Sample_Form_Creator();
         $this->formModel = $this->model('Form');
+
+        header("access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+        header("Content-Type: application/json; charset=UTF-8");
     }
 
     public function edit($var = null)

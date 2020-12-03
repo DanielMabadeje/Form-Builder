@@ -10,7 +10,8 @@ class ApiController
 
     public function __construct()
     {
-        # code...
+        header("access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+        header("Content-Type: application/json; charset=UTF-8");
     }
     //Load Model
     public function model($model)
