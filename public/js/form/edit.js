@@ -394,11 +394,8 @@ function editAllowingResponses() {
   }
 
   $.ajax(settings).done(function (response) {
-    // let updatedAt=response.success.message.updated_at
-    let updatedAt=response
-
-    console.log(updatedAt);
-    return;
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
     showSaveSuccess(updatedAt);
   })
 }
@@ -412,10 +409,12 @@ function showSaveFailure(params) {
   savingProgress.innerHTML='<span class="text-danger">Unable to save..Check connection</span>'
 }
 
-function showSaveSuccess(params) {
+function showSaveSuccess(param) {
   savingProgress.innerHTML='Saved Successfully'
 
-  setTimeout(showLastSaved, 4000);
+  setTimeout(() => {
+    showLastSaved
+  }, 4000);
 }
 
 function showLastSaved(param) {
