@@ -10,10 +10,12 @@
                     <div class="col-7">
                         <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                     </div>
-                    <div class="col"><span class="save">Saving</span></div>
+                    <div class="col">
+                        <span class="save">Last Edit Was at<?= $data->updated_at; ?></span>
+                    </div>
                     <div class="col">
                         <div class="d-flex">
-                        
+
                             <div class="pr-3">
                                 <h5 class="text-dark">Allowing Responses</h5>
                             </div>

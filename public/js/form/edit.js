@@ -3,7 +3,7 @@ var description=document.getElementsByTagName('h5')[0];
 
 var inputDivs=document.getElementsByClassName('field_container');
 var inputLabels=document.getElementsByClassName('form-label');
-var savingProgress=document.getElementsByClassName('save');
+var savingProgress=document.getElementsByClassName('save')[0];
 
 
 function getvalue() {
