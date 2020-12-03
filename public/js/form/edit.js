@@ -380,6 +380,14 @@ function saveInputLabel(index) {
 
 function updateForm() {
   settings.url=base_url+'/api/forms/updateform'
+  settings.method='POST'
+  settings.data=formarray
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
+    showSaveSuccess(updatedAt);
+  })
 }
 
 function editAllowingResponses() {
