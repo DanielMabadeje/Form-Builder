@@ -55,9 +55,13 @@ class Forms extends ApiController
     }
 
 
-    public function updateForm(Type $var = null)
+    public function updateForm()
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            # code...
+        } else {
+            $this->fail($_SERVER['REQUEST_METHOD'] . ' given instead of POST', 405);
+        }
     }
 
     private function returntrueorfalse($data)

@@ -17,8 +17,30 @@ class Form
     {
 
         $form = $data['form_options'];
-        $data['form_options'] = json_encode($data['form_options']);
+        // $data['form_options'] = json_encode($data['form_options']);
 
+        $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
+        $this->db->bind(':form_id', $data['uniqueId']);
+        $this->db->bind(':user_id', $data['user_id']);
+        $this->db->bind(':form_type', $data['form_type']);
+        $this->db->bind(':form_name', $data['title']);
+        $this->db->bind(':description', $data['description']);
+
+        if ($this->db->execute()) {
+
+            foreach ($form as $question) {
+                $param['questions'] = $question;
+                $param['uniqueId'] = $data['uniqueId'];
+                $this->createFormQuestion($param);
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function updateForm($data)
+    {
         $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
         $this->db->bind(':form_id', $data['uniqueId']);
         $this->db->bind(':user_id', $data['user_id']);
