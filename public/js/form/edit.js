@@ -413,7 +413,7 @@ function showSaveSuccess(param) {
   savingProgress.innerHTML='Saved Successfully'
 
   setTimeout(() => {
-    showLastSaved
+    showLastSaved(param)
   }, 4000);
 }
 
