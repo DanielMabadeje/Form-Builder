@@ -7,6 +7,11 @@
  */
 class ApiController
 {
+
+    public function __construct()
+    {
+        # code...
+    }
     //Load Model
     public function model($model)
     {
