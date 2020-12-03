@@ -96,8 +96,10 @@ class Form
     }
 
 
-    private function editQuestion(Type $var = null)
+    private function editQuestion($data)
     {
-        # code...
+        $this->db->query("UPDATE form_question SET status=`completed` WHERE reference=:reference AND user_id=:user_id");
+        $this->db->bind(':reference', $data['reference']);
+        $this->db->bind(':user_id', $data['user_id']);
     }
 }
