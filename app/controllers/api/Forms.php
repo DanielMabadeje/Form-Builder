@@ -58,7 +58,7 @@ class Forms extends ApiController
     public function updateForm()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            # code...
+            $this->sanitizePost();
         } else {
             $this->fail($_SERVER['REQUEST_METHOD'] . ' given instead of POST', 405);
         }

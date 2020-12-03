@@ -43,8 +43,8 @@ class Form
     {
 
         $form = $data['form'];
-        $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
-        $this->db->bind(':form_id', $data['uniqueId']);
+        $this->db->query('UPDATE forms SET (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
+        $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':form_type', $data['form_type']);
         $this->db->bind(':form_name', $data['title']);
@@ -55,9 +55,10 @@ class Form
             foreach ($form as $question) {
                 $param['questions'] = $question;
                 $param['uniqueId'] = $data['uniqueId'];
-                $this->createFormQuestion($param);
+                $this->updateFormQuestion($param);
             }
-            return true;
+            // $data['form_id']=
+            return $this->getUpdatedAt($data);
         } else {
             return false;
         }
@@ -113,8 +114,9 @@ class Form
     {
 
 
-        $this->db->query('INSERT INTO 
+        $this->db->query('UPDATE
                             form_questions 
+                            SET
                             (form_id, label, type, name, placeholder, id)
                              VALUES(:form_id, :label, :type, :name, :placeholder, :id)');
 
@@ -135,7 +137,6 @@ class Form
         $this->db->bind(':id', $data['questions']['id']);
 
 
-        var_dump($data);
         if ($this->db->execute()) {
             return true;
         } else {

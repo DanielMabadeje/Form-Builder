@@ -13,6 +13,11 @@ class ApiController
         header("access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         header("Content-Type: application/json; charset=UTF-8");
     }
+
+    public function sanitizePost()
+    {
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    }
     //Load Model
     public function model($model)
     {

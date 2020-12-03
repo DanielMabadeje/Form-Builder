@@ -373,7 +373,9 @@ function saveInputLabel(index) {
   var labelName=inputLabels[index];
   var currentobject=formarray.form[index]
   currentobject.label=labelName.innerHTML
-  console.log(currentobject)
+  // console.log(currentobject)
+
+  updateForm();
 
   showSaveProgress();
 }
