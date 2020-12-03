@@ -110,7 +110,7 @@ class Form
         $this->db->bind(':allowing', $data['allow']);
 
         if ($this->db->execute()) {
-            return true;
+            return $this->getUpdatedAt($data);
         } else {
             return false;
         }
