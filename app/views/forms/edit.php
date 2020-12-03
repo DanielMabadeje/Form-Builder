@@ -11,7 +11,7 @@
                     <div class="col-12">
                         <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                     </div>
-                    
+
                 </div>
 
                 <br>
@@ -78,5 +78,7 @@
 <script>
     var formarray = <?php echo json_encode($data); ?>
 </script>
+
+<script src="<?= URLROOT; ?>/js/jquery.js"></script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
