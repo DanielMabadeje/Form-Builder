@@ -50,9 +50,6 @@ class Form
         return $row;
     }
 
-
-
-
     public function createFormQuestion($data)
     {
 
@@ -96,5 +93,11 @@ class Form
 
         $result = $this->db->resultSet();
         return $result;
+    }
+
+
+    private function editQuestion(Type $var = null)
+    {
+        # code...
     }
 }
