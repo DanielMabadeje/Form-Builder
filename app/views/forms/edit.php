@@ -7,11 +7,11 @@
         <div class="card border-radius-none border-none col-md-10 text-left p-3">
             <div class="card-title">
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-6">
                         <h1 contenteditable="true"><?= $data->form_name; ?></h1>
                     </div>
                     <div class="col">
-                        <span class="save">Last Edit Was at<?= $data->updated_at; ?></span>
+                        <span class="save">Last Edit Was at <?= $data->updated_at; ?></span>
                     </div>
                     <div class="col">
                         <div class="d-flex">
