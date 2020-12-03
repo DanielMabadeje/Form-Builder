@@ -379,7 +379,7 @@ function saveInputLabel(index) {
 }
 
 function updateForm() {
-  
+  settings.url=base_url+'/api/forms/updateform'
 }
 
 function editAllowingResponses() {
