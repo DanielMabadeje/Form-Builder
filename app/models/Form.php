@@ -42,19 +42,26 @@ class Form
     public function updateForm($data)
     {
 
+        // var_dump($data);
+        // die;
         $form = $data['form'];
-        $this->db->query('UPDATE forms SET (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
+        // $this->db->query("UPDATE forms SET (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)");
+
+        $this->db->query("UPDATE forms 
+                          SET form_id=:form_id, user_id=:user_id, form_name=:form_name, description=:description, form_type=:form_type 
+                          
+                          WHERE form_id=:form_id");
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':form_type', $data['form_type']);
-        $this->db->bind(':form_name', $data['title']);
+        $this->db->bind(':form_name', $data['form_name']);
         $this->db->bind(':description', $data['description']);
 
         if ($this->db->execute()) {
 
             foreach ($form as $question) {
                 $param['questions'] = $question;
-                $param['uniqueId'] = $data['uniqueId'];
+                $param['form_id'] = $data['form_id'];
                 $this->updateFormQuestion($param);
             }
             // $data['form_id']=
@@ -114,14 +121,16 @@ class Form
     {
 
 
-        $this->db->query('UPDATE
+        $this->db->query("UPDATE
                             form_questions 
                             SET
-                            (form_id, label, type, name, placeholder, id)
-                             VALUES(:form_id, :label, :type, :name, :placeholder, :id)');
+                            form_id=:form_id, label=:label, type=:type, name=:name, placeholder=:placeholder, id=:id
+                            --  VALUES(:form_id, :label, :type, :name, :placeholder, :id)
+                             WHERE form_id=:form_id AND question_id=:question_id");
 
 
-        $this->db->bind(':form_id', $data['uniqueId']);
+        $this->db->bind(':form_id', $data['form_id']);
+        $this->db->bind(':question_id', $data['questions']['question_id']);
         if (isset($data['questions']['label'])) {
             $this->db->bind(':label', $data['questions']['label']);
         } else {
