@@ -55,6 +55,11 @@ class Forms extends ApiController
     }
 
 
+    public function updateForm(Type $var = null)
+    {
+        # code...
+    }
+
     private function returntrueorfalse($data)
     {
         if ($data == 'false') {

@@ -378,6 +378,9 @@ function saveInputLabel(index) {
   showSaveProgress();
 }
 
+function updateForm() {
+  
+}
 
 function editAllowingResponses() {
 
