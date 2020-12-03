@@ -38,7 +38,7 @@ class Forms extends Controller
     {
         $data = [
             'form_id' => $id,
-            'allow' => $allow
+            'allow' => $this->returntrueorfalse($allow)
         ];
         // var_dump($data);
         // die;
@@ -46,6 +46,18 @@ class Forms extends Controller
             echo 'yes';
         } else {
             echo 'no';
+        }
+    }
+
+
+    private function returntrueorfalse($data)
+    {
+        if ($data == 'false') {
+            return false;
+        } elseif ($data == 'true') {
+            return true;
+        } else {
+            return false;
         }
     }
 }

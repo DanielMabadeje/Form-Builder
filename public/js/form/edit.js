@@ -395,3 +395,7 @@ function showSaveSuccess(params) {
   savingProgress.innerHTML='Saved Successfully'
 }
 // console.log(formarray);
+
+
+
+document.getElementById('switch')

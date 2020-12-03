@@ -11,14 +11,14 @@
                         <h5 class="text-dark">Allowing Responses</h5>
                     </div>
                     <div>
-                        <?php if ($data->allowing_responses == 'no') : ?>
+                        <?php if ($data->allowing_responses == 'false') : ?>
                             <label class="switch ml-auto pt-2">
-                                <input type="checkbox">
+                                <input type="checkbox" id="switch">
                                 <div class="slider round"></div>
                             </label>
                         <?php else : ?>
                             <label class="switch ml-auto pt-2">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" checked id="switch">
                                 <div class="slider round"></div>
                             </label>
                         <?php endif; ?>
