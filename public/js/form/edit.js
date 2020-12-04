@@ -102,18 +102,24 @@ function editFormHtml(params) {
 // }
 
 
+var newformarray={
+  "question_id":"",
+  "form_id":"5fc979f797741",
+  "label":"Email",
+  "type":"email",
+  "name":"email",
+  "placeholder":"Email",
+  "id":"email",
+}
+
+
 function shortAnswer(params) {
   let inputs=document.getElementsByClassName('field_container').length-1
-
-    var para = document.createElement("div");
-
-    para.classList.add('field_container')
-
-
+  var para = document.createElement("div");
+  para.classList.add('field_container')
 
     var label=document.createElement("label");
-
-    var node = document.createTextNode("Email");
+    var node = document.createTextNode("Short Answer");
     var input =document.createElement("input");
 
     // adding classes,placeholders and contenteditable
@@ -121,7 +127,7 @@ function shortAnswer(params) {
     label.contentEditable=true;
     if (params!==null || params !=='') {
       input.type=params
-      input.placeholder='Your Email..'
+      input.placeholder='Your Short Answer..'
     }
     input.classList.add('form-input');
     input.classList.add('form-control-has-validation');
@@ -134,6 +140,8 @@ function shortAnswer(params) {
     var form = document.getElementById("form");
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
+
+    console.log(Number('4'));
 
 }
 
