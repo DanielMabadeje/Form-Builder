@@ -1,8 +1,14 @@
 var title=document.getElementsByTagName('h1')[0];
-var description=document.getElementsByTagName('h5')[0];
+// var description=document.getElementsByTagName('h5')[0];
+var description=document.getElementsByClassName('description_h5')[0];
 
 var inputDivs=document.getElementsByClassName('field_container');
+var inputLabels=document.getElementsByClassName('form-label');
+var savingProgress=document.getElementsByClassName('save')[0];
+var responseSwitch=document.getElementById('switch');
+var mainform=formarray.form;
 
+var formarrayform=``
 
 
 function getvalue() {
@@ -41,28 +47,24 @@ function addItemToForm(params) {
     switch (inputtype) {
       case 'email':
         shortAnswer('email');
-        console.log('shortanswer')
+        appendArray('email', 'email')
         break;
       case 'shortanswer':
         shortAnswer();
-        console.log('shortanswer')
+        appendArray('shortanswer', null)
         break;
       case 'longanswer':
         longAnswer();
-        console.log('longanswer')
+        appendArray('longanswer', 'textarea')
         break;
 
       case 'dropdown':
         dropdownAnswer();
-        console.log('dropdown')
+        appendArray('Dropdown', 'dropdown')
         break;
-      // case 'dropdown':
-      //   dropdownAnswer();
-      //   console.log('date')
-      //   break;
       case 'date':
         dateAnswer();
-        console.log('date')
+        appendArray('date', 'date')
         break;
       case 'singleoption':
         singleOptionAnswer();
@@ -84,7 +86,7 @@ function editItem(param, value) {
 
 function save() {
 
-  console.log('saved');
+  updateForm();
   
 }
 
@@ -100,26 +102,112 @@ function editFormHtml(params) {
 // }
 
 
+var newformarray={
+  "question_id":"",
+  "form_id":"",
+  "label":"Email",
+  "type":"",
+  "name":"email",
+  "placeholder":"Email",
+  "id":"email",
+}
+
+function appendArray(param, type){
+  newformarray.type=type
+  if (checkArray(type)) {
+    var number=getNumberOfInputType(type);
+    number=number+1;
+
+    newformarray.form_id=formarray.form_id
+    newformarray.label=formarrayform
+    newformarray.name=param+number;
+    newformarray.id=param+number;
+    newformarray.placeholder=formarrayform+'...'
+  } else {
+    newformarray.form_id=formarray.form_id
+    newformarray.name=param;
+    newformarray.id=param;
+    newformarray.label=formarrayform
+    newformarray.placeholder='Your '+formarrayform+'...'
+  }
+
+
+  var array_length=mainform.length
+  
+addQuestionToApi(newformarray);
+mainform.splice(array_length,0, newformarray)
+}
+
+function addQuestionToApi(params) {
+  settings.url=base_url+'/api/forms/addquestion'
+  settings.method="POST"
+  settings.data=params
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    let question_id=response.success.message.question_id
+    // let updatedAt=response.success.m
+    newformarray.question_id=question_id
+    
+    showSaveSuccess(updatedAt);
+    return question_id;
+  })
+}
+
+function checkArray(params) {
+  for (let index = 0; index < mainform.length; index++) {
+    if (mainform[index].type == params){
+      return true;
+    }  else {}
+    // mainform[index]
+    
+  }
+}
+
+function getNumberOfInputType(params) {
+  var numberOfInputs=0;
+  for (let index = 0; index < mainform.length; index++) {
+    if (mainform[index].type == params){
+       numberOfInputs=numberOfInputs+1;
+      
+    }  else {}
+  }
+
+  return numberOfInputs;
+}
+
 function shortAnswer(params) {
   let inputs=document.getElementsByClassName('field_container').length-1
-
-    var para = document.createElement("div");
-
-    para.classList.add('field_container')
-
-
+  var para = document.createElement("div");
+  para.classList.add('field_container')
 
     var label=document.createElement("label");
+    if (params!==null) {
+      if (params == 'email'){
+        var node = document.createTextNode("Email");
+        var nodetext='Email'
+      }  
+      else {
+        var node = document.createTextNode("Short Answer");
+        var nodetext='ShortAnswer'
+      }
+    }else{
+      var nodetext='Short Answer'
+    }
 
-    var node = document.createTextNode("Email");
+    formarrayform=nodetext;
     var input =document.createElement("input");
 
     // adding classes,placeholders and contenteditable
-    input.placeholder='This is New'
+    input.placeholder='Email'
     label.contentEditable=true;
     if (params!==null || params !=='') {
       input.type=params
-      input.placeholder='Your Email..'
+      if (params == 'email') {
+        input.placeholder='Email'
+      } else {
+        input.placeholder='Your Short Answer..'
+      }
     }
     input.classList.add('form-input');
     input.classList.add('form-control-has-validation');
@@ -132,6 +220,8 @@ function shortAnswer(params) {
     var form = document.getElementById("form");
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
+
+    // console.log(Number('4'));
 
 }
 
@@ -147,6 +237,8 @@ function longAnswer(params) {
   var label=document.createElement("label");
 
   var node = document.createTextNode("This is new.");
+
+  formarrayform=node;
   var input =document.createElement("textarea");
 
   // adding classes,placeholders and contenteditable
@@ -181,6 +273,8 @@ function dateAnswer(params) {
   var label=document.createElement("label");
 
   var node = document.createTextNode("This is new.");
+
+  formarrayform=node;
   var input =document.createElement("input");
 
   // adding classes,placeholders and contenteditable
@@ -213,6 +307,8 @@ para.classList.add('field_container')
 var label=document.createElement("label");
 
 var node = document.createTextNode("This is new.");
+
+formarrayform=node;
 var input =document.createElement("select");
 var option=document.createElement("option");
 
@@ -250,6 +346,8 @@ function multichoiceAnswer(params) {
     var label=document.createElement("label");
 
     var node = document.createTextNode("This is new.");
+
+    formarrayform=node;
     var input =document.createElement("input");
 
     // adding classes,placeholders and contenteditable
@@ -285,6 +383,8 @@ function singleOptionAnswer(params) {
     // var innerlabel=document.createElement("label");
     // var innerlabel1=document.createElement("label");
     var node = document.createTextNode("This is new.");
+
+    formarrayform=node;
     var input =document.createElement("input");
     var input2 =document.createElement("input");
 
@@ -348,11 +448,158 @@ window.onclick = function(event) {
 for (let index = 0; index < inputDivs.length; index++) {
   // const element = array[index];
   inputDivs[index].addEventListener('mouseover', addingOptions);
-  
+  inputDivs[index].addEventListener('mouseout', removingOptions);
 }
 
 
 function addingOptions(params) {
-  console.log('mouse reach here')
+
+
+  if (document.getElementsByClassName("showoptions")[0] == true) {
+    
+  } else {
+    var containerDiv = document.createElement("div");
+    var innerDiv=document.createElement("div")
+    var btnOne=document.createElement("button")
+    var btnTwo=document.createElement("button")
+    var deleteOption=document.createElement("i")
+    var editOption=document.createElement("i")
+  
+  
+    containerDiv.classList.add('col-md-12')
+  
+    innerDiv.classList.add('col-md-7')
+    innerDiv.classList.add('ml-auto')
+    innerDiv.classList.add('text-dark')
+    innerDiv.classList.add('text-right')
+  
+    deleteOption.classList.add('fa');
+    deleteOption.classList.add('fa-bin');
+  
+    editOption.classList.add('fa');
+    editOption.classList.add('fa-pen');
+  
+    btnOne.classList.add('btn')
+    btnTwo.classList.add('btn')
+  
+    btnOne.classList.add('m-2')
+    btnTwo.classList.add('m-2')
+  
+    btnOne.classList.add('mt-0')
+    btnTwo.classList.add('mt-0')
+  
+    btnOne.classList.add('pt-0')
+    btnTwo.classList.add('pt-0')
+  
+    btnOne.classList.add('pl-4')
+    btnTwo.classList.add('pl-4')
+  
+    btnOne.appendChild(editOption);
+    btnTwo.appendChild(deleteOption);
+  
+    innerDiv.appendChild(btnOne)
+    innerDiv.appendChild(btnTwo);
+    
+  
+  // var node = document.createTextNode("This is new.");
+  containerDiv.appendChild(innerDiv);
+  // containerDiv.appendChild(node);
+  
+  containerDiv.classList.add('showoptions')
+  var child = this.getElementsByTagName('label')[0];
+  this.insertBefore(containerDiv,child);  
+  }
+
+
+  
 }
-console.log(formarray);
+
+function removingOptions(){
+
+// var child = document.getElementsByClassName("showoptions")[0];
+// this.removeChild(child)
+}
+
+// console.log(inputLabels);
+
+for (let index = 0; index < inputLabels.length; index++) {
+  index=index;
+  // inputLabels[index].addEventListener('keyup', saveInputLabel);
+  inputLabels[index].addEventListener('keyup',  function(){
+    saveInputLabel(index)
+}, false);
+  
+}
+
+function saveInputLabel(index) {
+  var labelName=inputLabels[index];
+  var currentobject=formarray.form[index]
+  currentobject.label=labelName.innerHTML
+  // console.log(currentobject)
+
+  updateForm();
+
+  showSaveProgress();
+}
+
+function updateForm() {
+  settings.url=base_url+'/api/forms/updateform'
+  settings.method='POST'
+  settings.data=formarray
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
+    showSaveSuccess(updatedAt);
+  })
+}
+
+function editAllowingResponses() {
+
+  showSaveProgress();
+  var form_id=formarray.form_id
+
+
+  if (responseSwitch.checked ==true) {
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/true'
+  }else if(responseSwitch.checked == false){
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/false'
+  }else{
+    settings.url=base_url+'/api/forms/editallowresponse/'+form_id+'/false'
+  }
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
+    showSaveSuccess(updatedAt);
+  })
+}
+
+
+function showSaveProgress(params) {
+  savingProgress.innerHTML='Saving...'
+}
+
+function showSaveFailure(params) {
+  savingProgress.innerHTML='<span class="text-danger">Unable to save..Check connection</span>'
+}
+
+function showSaveSuccess(param) {
+  savingProgress.innerHTML='Saved Successfully'
+
+  setTimeout(() => {
+    showLastSaved(param)
+  }, 4000);
+}
+
+function showLastSaved(param) {
+  savingProgress.innerHTML='Last Updated at '+param
+}
+
+// console.log(formarray);
+
+
+
+
+
+responseSwitch.addEventListener('click', editAllowingResponses);

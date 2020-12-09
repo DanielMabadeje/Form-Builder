@@ -15,7 +15,7 @@
 
   <div class="col-md-8 mx-auto pt-5 mt-5">
     <h4>Collect Data of Any Size</h4>
-    <h2 class="display-4 font-weight-normal">We can handle a lot of date <br> before you know it</h2>
+    <h2 class="display-4 font-weight-normal">We can handle a lot of data <br> before you know it</h2>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor amet adipisci corporis labore vel doloremque illum hic maxime, aliquid nam enim aspernatur, reprehenderit repellendus omnis impedit, at perferendis optio accusamus mollitia.</p>
   </div>

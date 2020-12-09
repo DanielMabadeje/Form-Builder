@@ -83,4 +83,14 @@ class Database
     {
         return $this->stmt->rowCount();
     }
+
+    public function getLastId()
+    {
+        // return $this->stmt->lastInsertId();
+        try {
+            return $this->dbh->lastInsertId();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
