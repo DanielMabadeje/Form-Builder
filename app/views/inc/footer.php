@@ -5,6 +5,9 @@
 
 <script src="<?= URLROOT ?>/js/jquery.js"></script>
 <script src="<?= URLROOT ?>/js/bootstrap.js"></script>
+
+<script src="https://use.fontawesome.com/3ce931e28e.js"></script>
+
 </body>
 
 </html>
