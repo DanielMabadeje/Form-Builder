@@ -20,7 +20,7 @@ class Forms extends ApiController
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->sanitizePost();
             if ($data = $this->formModel->updateQuestion($form_id, $question_id)) {
-                # code...
+                $this->success('Question Edited Successfuly');
             }
         } else {
             $this->fail('Its not a POST Request', 405);
