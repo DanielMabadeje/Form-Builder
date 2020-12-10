@@ -519,9 +519,14 @@ function addingOptions(params, element) {
 
 function removingOptions(params, element){
 
+  var bookdiv=element.target.parentElement;
+
+  console.log(bookdiv)
+  return;
   var child = document.getElementsByClassName("showoptions")[params];
   // console.log(element)
-  element.removeChild(child)
+  // element.removeChild(child)
+  child.remove();
 }
 
 function deleteItem(param){
