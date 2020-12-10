@@ -467,7 +467,7 @@ function addingOptions(params, element) {
     innerDiv.classList.add('text-right')
   
     deleteOption.classList.add('fa');
-    deleteOption.classList.add('fa-bin');
+    deleteOption.classList.add('fa-trash');
 
     innerDiv.id=params
   
