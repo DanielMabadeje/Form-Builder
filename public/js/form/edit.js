@@ -202,6 +202,8 @@ function shortAnswer(params) {
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
 
+    addOrRemoveOptions();
+
     // console.log(Number('4'));
 
 }
@@ -240,6 +242,8 @@ function longAnswer(params) {
   var child = document.getElementsByClassName('field_container')[inputs];
   form.insertBefore(para,child);
 
+  addOrRemoveOptions();
+
 }
 
 function dateAnswer(params) {
@@ -272,6 +276,8 @@ function dateAnswer(params) {
   var form = document.getElementById("form");
   var child = document.getElementsByClassName('field_container')[inputs];
   form.insertBefore(para,child);
+
+  addOrRemoveOptions();
 
 }
 
@@ -312,6 +318,8 @@ var form = document.getElementById("form");
 var child = document.getElementsByClassName('field_container')[inputs];
 form.insertBefore(para,child);
 
+addOrRemoveOptions();
+
  
 }
 
@@ -347,6 +355,8 @@ function multichoiceAnswer(params) {
     var form = document.getElementById("form");
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
+
+    addOrRemoveOptions();
 
 }
 
@@ -396,6 +406,8 @@ function singleOptionAnswer(params) {
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
 
+    addOrRemoveOptions();
+
 }
 
 
@@ -426,14 +438,16 @@ window.onclick = function(event) {
 
 // form adding and removing of active classes
 
-for (let index = 0; index < inputDivs.length; index++) {
-  inputDivs[index].addEventListener('mouseover', function(){
-    addingOptions(index, this)
-  });
-
-  inputDivs[index].addEventListener('mouseout', function(e){
-    removingOptions(index, this, e)
-  });
+function addOrRemoveOptions(params) {
+  for (let index = 0; index < inputDivs.length; index++) {
+    inputDivs[index].addEventListener('mouseover', function(){
+      addingOptions(index, this)
+    });
+  
+    inputDivs[index].addEventListener('mouseout', function(e){
+      removingOptions(index, this, e)
+    });
+  }
 }
 
 
@@ -649,3 +663,5 @@ function showLastSaved(param) {
 
 
 responseSwitch.addEventListener('click', editAllowingResponses);
+
+addOrRemoveOptions();
