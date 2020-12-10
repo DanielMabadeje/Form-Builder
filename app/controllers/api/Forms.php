@@ -15,15 +15,19 @@ class Forms extends ApiController
         header("Content-Type: application/json; charset=UTF-8");
     }
 
-    public function edit($var = null)
+    public function editQuestion($api, $form_id, $question_id)
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //
+        } else {
+            $this->fail('Its not a POST Request', 405);
+        }
     }
 
     public function delete($api, $form_id, $question_id)
     {
         if ($this->validateIfFormExists($form_id)) {
-            if ($this->validateIfQuestionExists($form_id,$question_id)) {
+            if ($this->validateIfQuestionExists($form_id, $question_id)) {
                 try {
                     $this->formModel->deleteQuestion($form_id, $question_id);
                     $this->success('Question Deleted Successfully');
@@ -47,7 +51,7 @@ class Forms extends ApiController
         }
     }
 
-    private function validateIfQuestionExists($form_id,$question_id)
+    private function validateIfQuestionExists($form_id, $question_id)
     {
         if ($this->formModel->getQuestion($form_id, $question_id)) {
             return true;
