@@ -19,6 +19,7 @@ class Forms extends ApiController
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->sanitizePost();
+            $data = $_POST;
             if ($this->formModel->editQuestion($data)) {
                 $this->success('Question Edited Successfully');
             } else {
