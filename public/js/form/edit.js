@@ -81,17 +81,6 @@ function save() {
 }
 
 
-function editFormHtml(params) {
-    
-}
-
-
-// function appendHtml(params) {
-
-    
-// }
-
-
 var newformarray={
   "question_id":"",
   "form_id":"",
@@ -167,7 +156,7 @@ function getNumberOfInputType(params) {
 }
 
 function shortAnswer(params) {
-  let inputs=document.getElementsByClassName('field_container').length-1
+  let inputs=document.getElementsByClassName('field_container').length
   var para = document.createElement("div");
   para.classList.add('field_container')
 
@@ -216,7 +205,7 @@ function shortAnswer(params) {
 }
 
 function longAnswer(params) {
-  let inputs=document.getElementsByClassName('field_container').length-1
+  let inputs=document.getElementsByClassName('field_container').length
 
   var para = document.createElement("div");
 
@@ -252,7 +241,7 @@ function longAnswer(params) {
 }
 
 function dateAnswer(params) {
-  let inputs=document.getElementsByClassName('field_container').length-1
+  let inputs=document.getElementsByClassName('field_container').length
 
   var para = document.createElement("div");
 
@@ -286,7 +275,7 @@ function dateAnswer(params) {
 
 function dropdownAnswer(params) {
  
-let inputs=document.getElementsByClassName('field_container').length-1
+let inputs=document.getElementsByClassName('field_container').length
 
 var para = document.createElement("div");
 
@@ -325,7 +314,7 @@ form.insertBefore(para,child);
 }
 
 function multichoiceAnswer(params) {
-  let inputs=document.getElementsByClassName('field_container').length-1
+  let inputs=document.getElementsByClassName('field_container').length
 
     var para = document.createElement("div");
 
@@ -361,7 +350,7 @@ function multichoiceAnswer(params) {
 
 
 function singleOptionAnswer(params) {
-  let inputs=document.getElementsByClassName('field_container').length-1
+  let inputs=document.getElementsByClassName('field_container').length
 
     var para = document.createElement("div");
 
@@ -520,7 +509,7 @@ function addingOptions(params, element) {
 function removingOptions(params, element,e){
 
   var child = document.getElementsByClassName("showoptions")[0];
-  // element.removeChild(child)
+  element.removeChild(child)
 }
 
 function deleteItem(param){
