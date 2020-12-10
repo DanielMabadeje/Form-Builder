@@ -204,11 +204,14 @@ class Form
     {
         $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id');
         $this->db->bind(':form_id', $form_id);
-        $this->db->bind(':question_id', $qurstion_id);
+        $this->db->bind(':question_id', $question_id);
 
 
-        $result = $this->db->resultSet();
-        return $result;
+        if ($result = $this->db->single()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

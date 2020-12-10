@@ -528,7 +528,7 @@ function deleteItem(param){
   var formContainer=document.getElementsByClassName("field_container")[param]
   console.log(formContainer)
   form.removeChild(formContainer)
-  return;
+  // return;
   deleteItemInArray(param);
 
 }
