@@ -6,7 +6,7 @@ var inputDivs=document.getElementsByClassName('field_container');
 var inputLabels=document.getElementsByClassName('form-label');
 var savingProgress=document.getElementsByClassName('save')[0];
 var responseSwitch=document.getElementById('switch');
-var form=document.getElementsByTagName('form')[0];
+var form=document.getElementsByTagName('form')[1];
 var mainform=formarray.form;
 
 var modal = document.getElementById('myModal');
@@ -545,9 +545,8 @@ function removingOptions(params, element,e){
 function deleteItem(param){
 
   var formContainer=document.getElementsByClassName("field_container")[param]
-  console.log(formContainer)
   form.removeChild(formContainer)
-  // return;
+  
   deleteItemInArray(param);
 
 }
