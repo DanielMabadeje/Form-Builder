@@ -229,4 +229,17 @@ class Form
         $row = $this->db->single();
         return $row;
     }
+
+    public function deleteQuestion($form_id, $question_id)
+    {
+        $this->db->query("DELETE FROM form_questions WHERE form_id=:form_id AND question_id=:question_id");
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $question_id);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

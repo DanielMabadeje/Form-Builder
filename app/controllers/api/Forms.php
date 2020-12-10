@@ -20,6 +20,37 @@ class Forms extends ApiController
         # code...
     }
 
+    public function delete($api, $form_id, $question_id)
+    {
+        if ($this->validateIfFormExists($form_id)) {
+            if ($this->validateIfQuestionExists($question_id)) {
+                try {
+                    $this->formModel->deleteQuestion($form_id, $question_id);
+                } catch (\Throwable $e) {
+                    $this->fail($e);
+                }
+            } else {
+                $this->fail('Question does not exist');
+            }
+        } else {
+            $this->fail('Form does not exist');
+        }
+    }
+
+    private function validateIfFormExists($form_id)
+    {
+        if ($this->formModel->getForm($form_id)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function validateIfQuestionExists($question_id)
+    {
+        # code...
+    }
+
     public function getform($api, $param)
     {
         if ($param) {
@@ -31,7 +62,7 @@ class Forms extends ApiController
         }
     }
 
-    public function addQuestion($var=null)
+    public function addQuestion($var = null)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             # code...

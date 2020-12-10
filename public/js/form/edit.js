@@ -6,9 +6,14 @@ var inputDivs=document.getElementsByClassName('field_container');
 var inputLabels=document.getElementsByClassName('form-label');
 var savingProgress=document.getElementsByClassName('save')[0];
 var responseSwitch=document.getElementById('switch');
+var form=document.getElementsByTagName('form')[0];
 var mainform=formarray.form;
 
 var formarrayform=``
+
+
+
+form.action=false
 
 
 function getvalue() {
@@ -27,22 +32,7 @@ description.addEventListener('keyup', getvalue);
 
 
 
-
-
-
-function removeItemFromForm(param) {
-
-}
-
 function addItemToForm(params) {
-    // console.log(formarray.form_array);
-    var newobject={}
-
-    // if (condition) { 
-      
-    // } else {
-      
-    // }
     var inputtype=params
     switch (inputtype) {
       case 'email':
@@ -446,16 +436,19 @@ window.onclick = function(event) {
 // form adding and removing of active classes
 
 for (let index = 0; index < inputDivs.length; index++) {
-  // const element = array[index];
-  inputDivs[index].addEventListener('mouseover', addingOptions);
-  inputDivs[index].addEventListener('mouseout', removingOptions);
+  inputDivs[index].addEventListener('mouseover', function(){
+    addingOptions(index, this)
+  });
+
+  inputDivs[index].addEventListener('mouseout', function(){
+    removingOptions(index, this)
+  });
 }
 
 
-function addingOptions(params) {
+function addingOptions(params, element) {
 
-
-  if (document.getElementsByClassName("showoptions")[0] == true) {
+  if (element.getElementsByClassName("showoptions")[0]) {
     
   } else {
     var containerDiv = document.createElement("div");
@@ -475,6 +468,8 @@ function addingOptions(params) {
   
     deleteOption.classList.add('fa');
     deleteOption.classList.add('fa-bin');
+
+    innerDiv.id=params
   
     editOption.classList.add('fa');
     editOption.classList.add('fa-pen');
@@ -496,6 +491,14 @@ function addingOptions(params) {
   
     btnOne.appendChild(editOption);
     btnTwo.appendChild(deleteOption);
+
+    // btnTwo.onclick="deleteItem("+params+")"
+    // btnTwo.onclick="deleteItem()"
+    btnTwo.addEventListener('click', function(e){
+      e.preventDefault();
+      
+      deleteItem(params)
+    })
   
     innerDiv.appendChild(btnOne)
     innerDiv.appendChild(btnTwo);
@@ -506,20 +509,46 @@ function addingOptions(params) {
   // containerDiv.appendChild(node);
   
   containerDiv.classList.add('showoptions')
-  var child = this.getElementsByTagName('label')[0];
-  this.insertBefore(containerDiv,child);  
+  var child = element.getElementsByTagName('label')[0];
+  element.insertBefore(containerDiv,child);  
   }
 
 
   
 }
 
-function removingOptions(){
+function removingOptions(params, element){
 
-// var child = document.getElementsByClassName("showoptions")[0];
-// this.removeChild(child)
+  var child = document.getElementsByClassName("showoptions")[params];
+  // console.log(element)
+  element.removeChild(child)
 }
 
+function deleteItem(param){
+
+  var formContainer=document.getElementsByClassName("field_container")[param]
+  // console.log(formContainer)
+  form.removeChild(formContainer)
+  deleteItemInArray(param);
+
+}
+function deleteItemInArray(param){
+  var currentItem=mainform[param];
+  mainform.splice(param, 1)
+
+  deleteItemInApi(currentItem.form_id, currentItem.question_id);
+}
+
+function deleteItemInApi(formId,questionId) {
+  settings.url=base_url+"/api/forms/delete/"+formId+"/"+questionId;
+  settings.method="GET"
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
+    showSaveSuccess(updatedAt);
+  })
+}
 // console.log(inputLabels);
 
 for (let index = 0; index < inputLabels.length; index++) {

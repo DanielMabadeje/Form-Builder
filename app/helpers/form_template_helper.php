@@ -10,12 +10,12 @@ function blankForm()
             'name' => 'email',
             'type' => 'email'
         ),
-        array(
-            'id' => 'submit',
-            'label' => 'submit',
-            'type' => 'submit',
-            'name' => 'submit'
-        ),
+        // array(
+        //     'id' => 'submit',
+        //     'label' => 'submit',
+        //     'type' => 'submit',
+        //     'name' => 'submit'
+        // ),
     );
 }
 

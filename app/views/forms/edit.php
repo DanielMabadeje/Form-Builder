@@ -40,10 +40,10 @@
 
                 ?>
 
-                <div class="field_container submit">
+                <!-- <div class=" submit">
                     <label class="form-label rd-input-label" contenteditable="true" for="submit"></label>
                     <input type="submit" name="submit" value="Submit" placeholder="">
-                </div>
+                </div> -->
                 <?php
                 echo $this->form->_form_close();
                 ?>
