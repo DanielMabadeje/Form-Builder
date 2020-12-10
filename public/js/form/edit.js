@@ -520,7 +520,7 @@ function addingOptions(params, element) {
 function removingOptions(params, element,e){
 
   var child = document.getElementsByClassName("showoptions")[0];
-  element.removeChild(child)
+  // element.removeChild(child)
 }
 
 function deleteItem(param){
