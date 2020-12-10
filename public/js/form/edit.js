@@ -440,8 +440,8 @@ for (let index = 0; index < inputDivs.length; index++) {
     addingOptions(index, this)
   });
 
-  inputDivs[index].addEventListener('mouseout', function(){
-    removingOptions(index, this)
+  inputDivs[index].addEventListener('mouseout', function(e){
+    removingOptions(index, this, e)
   });
 }
 
@@ -517,16 +517,17 @@ function addingOptions(params, element) {
   
 }
 
-function removingOptions(params, element){
+function removingOptions(params, element,e){
 
-  var bookdiv=element.target.parentElement;
+  var parentDiv=e.target.parentElement;
 
-  console.log(bookdiv)
-  return;
+  // console.log(bookdiv)
+  // return;
   var child = document.getElementsByClassName("showoptions")[params];
   // console.log(element)
   // element.removeChild(child)
   child.remove();
+  // parentDiv.removeChild(child)
 }
 
 function deleteItem(param){
