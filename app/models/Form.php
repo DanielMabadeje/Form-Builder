@@ -215,7 +215,7 @@ class Form
     }
 
 
-    private function editQuestion($data)
+    public function editQuestion($data)
     {
         $this->db->query("UPDATE form_question SET status=`completed` WHERE reference=:reference AND user_id=:user_id");
         $this->db->bind(':reference', $data['reference']);
