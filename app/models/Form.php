@@ -200,6 +200,17 @@ class Form
         return $result;
     }
 
+        public function getQuestion($form_id, $question_id)
+    {
+        $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id');
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $qurstion_id);
+
+
+        $result = $this->db->resultSet();
+        return $result;
+    }
+
 
     private function editQuestion($data)
     {

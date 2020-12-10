@@ -23,7 +23,7 @@ class Forms extends ApiController
     public function delete($api, $form_id, $question_id)
     {
         if ($this->validateIfFormExists($form_id)) {
-            if ($this->validateIfQuestionExists($question_id)) {
+            if ($this->validateIfQuestionExists($form_id,$question_id)) {
                 try {
                     $this->formModel->deleteQuestion($form_id, $question_id);
                 } catch (\Throwable $e) {
@@ -46,9 +46,13 @@ class Forms extends ApiController
         }
     }
 
-    public function validateIfQuestionExists($question_id)
+    public function validateIfQuestionExists($form_id,$question_id)
     {
-        # code...
+        if ($this->formModel->getQuestion($form_id, $question_id)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function getform($api, $param)
