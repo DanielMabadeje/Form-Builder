@@ -526,8 +526,8 @@ function removingOptions(params, element,e){
   var child = document.getElementsByClassName("showoptions")[params];
   // console.log(element)
   // element.removeChild(child)
-  child.remove();
-  // parentDiv.removeChild(child)
+  // child.remove();
+  parentDiv.removeChild(child)
 }
 
 function deleteItem(param){
