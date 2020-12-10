@@ -9,6 +9,8 @@ var responseSwitch=document.getElementById('switch');
 var form=document.getElementsByTagName('form')[0];
 var mainform=formarray.form;
 
+var modal = document.getElementById('myModal');
+
 var formarrayform=``
 
 
@@ -488,6 +490,12 @@ function addingOptions(params, element) {
       
       deleteItem(params)
     })
+
+    btnOne.addEventListener('click', function(e){
+      e.preventDefault();
+      
+      showEditModal(params)
+    })
   
     innerDiv.appendChild(btnOne)
     innerDiv.appendChild(btnTwo);
@@ -501,15 +509,37 @@ function addingOptions(params, element) {
   var child = element.getElementsByTagName('label')[0];
   element.insertBefore(containerDiv,child);  
   }
+}
 
 
-  
+function showEditModal(param){
+  modal.style.display = "block";
+
+
+  if(param){
+    var form =formarrayform[param];
+
+  }
+
+ // When the user clicks on <span> (x), close the modal
+var span = modal.getElementsByTagName('span')[0]
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 }
 
 function removingOptions(params, element,e){
 
   var child = document.getElementsByClassName("showoptions")[0];
-  element.removeChild(child)
+  // element.removeChild(child)
 }
 
 function deleteItem(param){

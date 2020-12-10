@@ -1,9 +1,66 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/forms/inc/editheader.php'; ?>
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/form/edit.css">
+<link rel="stylesheet" href="<?= URLROOT; ?>/css/modal.css">
 
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/font-awesome.min.css">
 <div class="container" style="text-align:center; margin-top:10%;">
+
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="col-12 text-right">
+                <span class="close">x</span>
+            </div>
+
+            <div class="col-md-7 text-left">
+                <h2>Edit Current Input</h2>
+            </div>
+            <div class="form container pt-4 text-left">
+                <form>
+                    <div class="row">
+                        <div class="form_container col-md-6">
+                            <label for="Label">Label</label><br>
+                            <input type="text" class="input-group-text col-12 text-left" placeholder="Label" name="label">
+                        </div>
+
+                        <div class="form_container col-md-6">
+                            <label for="Label" class="col-12 pl-0 ml-0">Placeholder</label>
+                            <input type="text" class="input-group-text col-12 text-left" placeholder="What Placeholder do you want your input to have" name="placeholder">
+                        </div>
+                    </div>
+
+                    <div class="row pt-4">
+                        <div class="form_container col-md-6">
+                            <label for="Label">Required</label><br>
+                            <select name="required" class="input-group-text col-12 text-left">
+                                <option value="volvo">Yes</option>
+                                <option value="saab">No</option>
+                            </select>
+                        </div>
+                        <div class="form_container col-md-6">
+                            <label for="Label" class="col-12 pl-0 ml-0">Type</label>
+                            <select name="inputType" class="input-group-text col-12 text-left">
+                                <option value="volvo">Email</option>
+                                <option value="saab">ShortAnswer</option>
+                                <option value="volvo">Long Answer</option>
+                                <option value="saab">Dropdown</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_container col-md-6 pt-4 pl-0 ml-0">
+                        <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
+                        <button class="btn btn-secondary">Update</button>
+                    </div>
+                </form>
+            </div>
+            <!-- <p>Some text in the Modal..</p> -->
+        </div>
+
+    </div>
 
 
     <section class="col-md-12 d-md-flex">
