@@ -18,7 +18,7 @@ class Forms extends ApiController
     public function editQuestion($api, $form_id, $question_id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            //
+            $this->formModel->updateQuestion();
         } else {
             $this->fail('Its not a POST Request', 405);
         }
