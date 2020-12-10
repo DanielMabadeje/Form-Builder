@@ -217,9 +217,17 @@ class Form
 
     public function editQuestion($data)
     {
-        $this->db->query("UPDATE form_question SET status=`completed` WHERE reference=:reference AND user_id=:user_id");
-        $this->db->bind(':reference', $data['reference']);
-        $this->db->bind(':user_id', $data['user_id']);
+        $this->db->query("UPDATE form_question SET label=:label WHERE question_id=:question_id AND form_id=:form_id");
+        $this->db->bind(':label', $data['label']);
+        $this->db->bind(':type', $data['type']);
+        $this->db->bind(':placeholder', $data['placeholder']);
+        // $this->db->bind(':type', $data['type']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function editAllowingResponses($data)
