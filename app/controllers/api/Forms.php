@@ -46,7 +46,7 @@ class Forms extends ApiController
         }
     }
 
-    public function validateIfQuestionExists($form_id,$question_id)
+    private function validateIfQuestionExists($form_id,$question_id)
     {
         if ($this->formModel->getQuestion($form_id, $question_id)) {
             return true;
