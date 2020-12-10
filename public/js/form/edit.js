@@ -169,11 +169,11 @@ function shortAnswer(params) {
         var nodetext='Email'
       }  
       else {
-        var node = document.createTextNode("Short Answer");
+        var node = document.createTextNode("ShortAnswer");
         var nodetext='ShortAnswer'
       }
     }else{
-      var nodetext='Short Answer'
+      var nodetext='ShortAnswer'
     }
 
     formarrayform=nodetext;
@@ -187,7 +187,7 @@ function shortAnswer(params) {
       if (params == 'email') {
         input.placeholder='Email'
       } else {
-        input.placeholder='Your Short Answer..'
+        input.placeholder='Your ShortAnswer...'
       }
     }
     input.classList.add('form-input');
