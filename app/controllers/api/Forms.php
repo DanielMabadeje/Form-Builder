@@ -18,6 +18,7 @@ class Forms extends ApiController
     public function editQuestion($api, $form_id, $question_id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->sanitizePost();
             if ($data = $this->formModel->updateQuestion($form_id, $question_id)) {
                 # code...
             }
