@@ -513,6 +513,7 @@ function addingOptions(params, element) {
 
 
 function showEditModal(param){
+
   modal.style.display = "block";
 
 
@@ -520,20 +521,19 @@ function showEditModal(param){
     var form =formarrayform[param];
 
   }
+  // When the user clicks on <span> (x), close the modal
+  var span = modal.getElementsByTagName('span')[0]
 
- // When the user clicks on <span> (x), close the modal
-var span = modal.getElementsByTagName('span')[0]
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
 }
 
 function removingOptions(params, element,e){
@@ -568,7 +568,6 @@ function deleteItemInApi(formId,questionId) {
     showSaveSuccess(updatedAt);
   })
 }
-// console.log(inputLabels);
 
 for (let index = 0; index < inputLabels.length; index++) {
   index=index;
