@@ -519,23 +519,16 @@ function addingOptions(params, element) {
 
 function removingOptions(params, element,e){
 
-  var parentDiv=e.target.parentElement;
-
-  // console.log(bookdiv)
-  // return;
-  var child = document.getElementsByClassName("showoptions")[params];
-  // console.log(element)
-  console.log(child.nodeType());
-  // element.removeChild(child)
-  // child.remove();
-  parentDiv.removeChild(child)
+  var child = document.getElementsByClassName("showoptions")[0];
+  element.removeChild(child)
 }
 
 function deleteItem(param){
 
   var formContainer=document.getElementsByClassName("field_container")[param]
-  // console.log(formContainer)
+  console.log(formContainer)
   form.removeChild(formContainer)
+  return;
   deleteItemInArray(param);
 
 }
