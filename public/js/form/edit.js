@@ -472,7 +472,7 @@ function addingOptions(params, element) {
     innerDiv.id=params
   
     editOption.classList.add('fa');
-    editOption.classList.add('fa-pen');
+    editOption.classList.add('fa-pencil-square-o');
   
     btnOne.classList.add('btn')
     btnTwo.classList.add('btn')
