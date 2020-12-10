@@ -15,7 +15,7 @@ class Forms extends ApiController
         header("Content-Type: application/json; charset=UTF-8");
     }
 
-    public function editQuestion($api, $form_id, $question_id)
+    public function editQuestion()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->sanitizePost();
