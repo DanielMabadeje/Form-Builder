@@ -26,6 +26,7 @@ class Forms extends ApiController
             if ($this->validateIfQuestionExists($form_id,$question_id)) {
                 try {
                     $this->formModel->deleteQuestion($form_id, $question_id);
+                    $this->success('Question Deleted Successfully');
                 } catch (\Throwable $e) {
                     $this->fail($e);
                 }
