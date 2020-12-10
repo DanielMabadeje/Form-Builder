@@ -200,7 +200,7 @@ class Form
         return $result;
     }
 
-        public function getQuestion($form_id, $question_id)
+    public function getQuestion($form_id, $question_id)
     {
         $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id AND question_id=:question_id');
         $this->db->bind(':form_id', $form_id);
@@ -255,5 +255,10 @@ class Form
         } else {
             return false;
         }
+    }
+
+    public function updateQuestion($form_id, $question_id)
+    {
+        # code...
     }
 }
