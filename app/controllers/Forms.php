@@ -116,6 +116,7 @@ class Forms extends Controller
             if ($view == 'chart') {
                 # code...
             } elseif ($view = 'table') {
+                $data['responses'] = '';
                 $this->view('forms/responsestable', $data);
             } else {
                 $this->view('forms/responsestable', $data);
