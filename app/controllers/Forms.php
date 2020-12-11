@@ -116,13 +116,13 @@ class Forms extends Controller
             if ($view = 'chart') {
                 # code...
             } elseif ($view = 'table') {
-                # code...
+                $this->view('forms/responses', $data);
             } else {
-                # code...
+                $this->view('forms/responses', $data);
             }
 
             // $data = ``;
-            $this->view('forms/responses', $data);
+
         }
     }
 
