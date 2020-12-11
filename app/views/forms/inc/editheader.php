@@ -5,7 +5,7 @@
                 <span class="save">Last Edit Was at <?= $data->updated_at; ?></span>
             </div>
             <div class="col-md-5 ml-auto text-right">
-                <div class="d-flex mt-sm-4 mt-md-0">
+                <div class="d-flex mt-sm-4 mt-md-0 ml-md-5">
 
                     <div class="pr-3">
                         <h5 class="text-dark">Allowing Responses</h5>
