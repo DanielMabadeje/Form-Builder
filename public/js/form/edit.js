@@ -533,13 +533,20 @@ function showEditModal(param){
 
   if(param){
     var form =mainform[param]
-    modal.getElementsByTagName('input')[0].value=form.label
-    modal.getElementsByTagName('input')[1].value=form.placeholder
+    var modal_label=modal.getElementsByTagName('input')[0].value
+    modal_label=form.label
+    var modal_placeholder=modal.getElementsByTagName('input')[1].value
+    modal_placeholder=form.placeholder
 
     
     modal.getElementsByTagName('select')[1].value=form.type
 
-    modal.getElementsByTagName(input)[2].addEventListener('click')
+    modal.getElementsByTagName(input)[2].addEventListener('click', function(e){
+      // e.preventDefault();
+ 
+      alert('clicked')
+      // deleteItem(params)
+    })
 
   }
   // When the user clicks on <span> (x), close the modal

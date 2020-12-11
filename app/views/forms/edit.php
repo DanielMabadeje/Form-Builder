@@ -19,7 +19,7 @@
                 <h2>Edit Current Input</h2>
             </div>
             <div class="form container pt-4 text-left">
-                <form>
+                <form action="false">
                     <div class="row">
                         <div class="form_container col-md-6">
                             <label for="Label">Label</label><br>
