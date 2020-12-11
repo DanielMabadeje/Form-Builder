@@ -71,7 +71,7 @@ class Forms extends Controller
     }
     public function views($id)
     {
-        if ($_SERVER['REQUEST_METHOD']== 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             # code...
         } else {
             if ($data = $this->formModel->getForm($id)) {
@@ -80,7 +80,7 @@ class Forms extends Controller
                     case 'rsvp':
                         $this->view('forms/templates/rsvp', $data);
                         break;
-    
+
                     default:
                         # code...
                         break;
@@ -107,5 +107,10 @@ class Forms extends Controller
         } else {
             # code...
         }
+    }
+
+    public function responses(Type $var = null)
+    {
+        # code...
     }
 }
