@@ -24,32 +24,7 @@
             </div>
 
             <div class="card-body">
-                <?php
-
-                $form_options = $data->form;
-                foreach ($form_options as $key => $datas) {
-                    $form_options[$key] = (array)$datas;
-                    if ($form_options[$key]['type'] == 'submit') {
-                        // $form_options[$key]['type'] = 'form_hidden';
-                    }
-                }
-
-
-                // $this->form->rule('required', $data->required_fields)->message('Required: {field} cannot be empty');
-                $this->form->rule('email', 'email');
-                // $this->form->rule('equals', 'confirm_email', 'email');
-                echo $this->form->_form_open();
-                echo $this->form->form_field_creation($form_options);
-
-                ?>
-
-                <!-- <div class=" submit">
-                    <label class="form-label rd-input-label" contenteditable="true" for="submit"></label>
-                    <input type="submit" name="submit" value="Submit" placeholder="">
-                </div> -->
-                <?php
-                echo $this->form->_form_close();
-                ?>
+                <h2>Responses Page</h2>
             </div>
         </div>
 
