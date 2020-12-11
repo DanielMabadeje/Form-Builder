@@ -114,7 +114,7 @@ class Forms extends Controller
         if ($this->validateIfFormExists($form_id)) {
             $data = $this->formModel->getForm($form_id);
             // $data = ``;
-            $this->view('forms/edit', $data);
+            $this->view('forms/responses', $data);
         }
     }
 
