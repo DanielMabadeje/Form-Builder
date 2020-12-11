@@ -532,7 +532,13 @@ function showEditModal(param){
 
 
   if(param){
-    var form =formarrayform[param];
+    var form =mainform[param]
+    modal.getElementsByTagName('input')[0].value=form.label
+    modal.getElementsByTagName('input')[1].value=form.placeholder
+
+    // if (form.type==""){ 
+    // console.log(form.type)
+    modal.getElementsByTagName('select')[1].value='email'
 
   }
   // When the user clicks on <span> (x), close the modal

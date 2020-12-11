@@ -36,17 +36,17 @@
                         <div class="form_container col-md-6">
                             <label for="Label">Required</label><br>
                             <select name="required" class="input-group-text col-12 text-left">
-                                <option value="volvo">Yes</option>
-                                <option value="saab">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                             </select>
                         </div>
                         <div class="form_container col-md-6">
                             <label for="Label" class="col-12 pl-0 ml-0">Type</label>
                             <select name="inputType" class="input-group-text col-12 text-left">
-                                <option value="volvo">Email</option>
-                                <option value="saab">ShortAnswer</option>
-                                <option value="volvo">Long Answer</option>
-                                <option value="saab">Dropdown</option>
+                                <option value="email">Email</option>
+                                <option value="shortanswer">ShortAnswer</option>
+                                <option value="longanswer">Long Answer</option>
+                                <option value="dropdown">Dropdown</option>
                             </select>
                         </div>
                     </div>
