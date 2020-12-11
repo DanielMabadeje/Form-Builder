@@ -34,3 +34,17 @@
         </div>
     </div>
 </div>
+
+
+<div class="col-12 p-3" style="border-top:1px #fbfafafa solid; background:#fdfcfc;">
+    <div class="text-dark container">
+        <div class="d-md-flex">
+            <div class="col-md-7 mr-auto">
+                <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
+            </div>
+            <div class="col-md-5 ml-auto text-right">
+
+            </div>
+        </div>
+    </div>
+</div>
