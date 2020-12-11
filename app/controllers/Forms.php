@@ -111,6 +111,6 @@ class Forms extends Controller
 
     public function responses($form_id)
     {
-        # code...
+        $this->view('forms/edit', $data);
     }
 }
