@@ -1,5 +1,27 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/forms/inc/editheader.php'; ?>
+
+<div class="col-12 p-3" style="border-top:1px #fbfafafa solid; background:#fdfcfc;">
+    <div class="text-dark container">
+        <div class="d-md-flex col-12">
+            <div class="col-md-7 mr-auto">
+                <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
+            </div>
+            <div class="col-md-5 ml-auto text-right">
+                <div>
+                    <nav>
+                        <ul class="navbar-nv d-flex">
+                            <div class="nav-item"><a href="" class="nav-link">Questions</a></div>
+                            <div class="nav-item"><a href="" class="nav-link">Responses</a></div>
+                            <div class="nav-item">
+                                <a href="" class="nav-link">Chart</a></div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/form/edit.css">
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/modal.css">
 
