@@ -109,7 +109,7 @@ class Forms extends Controller
         }
     }
 
-    public function responses(Type $var = null)
+    public function responses($form_id)
     {
         # code...
     }
