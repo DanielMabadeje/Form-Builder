@@ -24,7 +24,7 @@
             </div>
 
             <div class="card-body">
-                <h2>Responses Page</h2>
+                <h2>Graphical ResponsesChart Page</h2>
             </div>
         </div>
 
