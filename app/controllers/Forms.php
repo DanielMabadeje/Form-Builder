@@ -109,16 +109,16 @@ class Forms extends Controller
         }
     }
 
-    public function responses($form_id, $view)
+    public function responses($form_id, $view = null)
     {
         if ($this->validateIfFormExists($form_id)) {
             $data = $this->formModel->getForm($form_id);
-            if ($view = 'chart') {
+            if ($view == 'chart') {
                 # code...
             } elseif ($view = 'table') {
-                $this->view('forms/responses', $data);
+                $this->view('forms/responsestable', $data);
             } else {
-                $this->view('forms/responses', $data);
+                $this->view('forms/responsestable', $data);
             }
 
             // $data = ``;
