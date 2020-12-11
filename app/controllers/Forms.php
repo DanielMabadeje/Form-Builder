@@ -121,9 +121,6 @@ class Forms extends Controller
             } else {
                 $this->view('forms/responsestable', $data);
             }
-
-            // $data = ``;
-
         }
     }
 
