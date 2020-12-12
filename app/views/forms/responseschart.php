@@ -26,7 +26,7 @@
 <div class="col-12 p-3">
     <div class="container">
         <div class="col-md-7 mr-auto">
-            <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
+            <span class="nav-item"><i class="fa fa-chevron-right"></i>Chart</span>
         </div>
     </div>
 </div>
