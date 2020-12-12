@@ -10,10 +10,10 @@
                 <div>
                     <nav>
                         <ul class="navbar-nv d-flex">
-                            <div class="nav-item"><a href="" class="nav-link">Questions</a></div>
-                            <div class="nav-item"><a href="" class="nav-link">Responses</a></div>
+                            <div class="nav-item"><a href="<?=URLROOT?>/forms/edit/<?=$data->form_id; ?>/" class="nav-link">Questions</a></div>
+                            <div class="nav-item"><a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/" class="nav-link">Responses</a></div>
                             <div class="nav-item">
-                                <a href="" class="nav-link">Chart</a></div>
+                                <a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/chart" class="nav-link">Chart</a></div>
                         </ul>
                     </nav>
                 </div>

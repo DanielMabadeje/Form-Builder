@@ -113,10 +113,12 @@ class Forms extends Controller
     {
         if ($this->validateIfFormExists($form_id)) {
             $data = $this->formModel->getForm($form_id);
+            // var_dump($data);
+            // die;
             if ($view == 'chart') {
                 # code...
             } elseif ($view = 'table') {
-                $data['responses'] = '';
+                // $data['responses'] = '';
                 $this->view('forms/responsestable', $data);
             } else {
                 $this->view('forms/responsestable', $data);
