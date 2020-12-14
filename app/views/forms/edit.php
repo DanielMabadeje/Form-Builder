@@ -78,6 +78,9 @@
                             <option value="shortanswer">ShortAnswer</option>
                             <option value="longanswer">Long Answer</option>
                             <option value="dropdown">Dropdown</option>
+                            <option value="date">Date</option>
+                            <option value="multichoice">Multi Choice</option>
+                            <option value="singlechoice">Single Option</option>
                         </select>
                     </div>
                 </div>
