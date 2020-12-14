@@ -295,7 +295,7 @@ var label=document.createElement("label");
 
 var node = document.createTextNode("This is new.");
 
-formarrayform=node;
+formarrayform="This is new.";
 var input =document.createElement("select");
 var option=document.createElement("option");
 
