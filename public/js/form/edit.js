@@ -553,9 +553,10 @@ function showEditModal(param){
     modal_placeholder.addEventListener('change', function (e) {
       // inputLabels[param].innerHTML=modal_label.value
       var currentInput=inputDivs[param].getElementsByTagName('input')[0];
+      currentInput.placeholder=modal_placeholder.value
       form.placeholder=modal_placeholder.value
 
-      updateForm();
+      // updateForm();
     })
 
   }
