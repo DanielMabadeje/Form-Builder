@@ -544,14 +544,10 @@ function showEditModal(param){
 
 
     modal_label.addEventListener('change', function (e) {
-      // var currentLabel=form[param].getElementsByTagName('label');
-      var currentLabel=form[param];
-      // console.log(param)
-      // console.log(inputLabels[param])
-      // console.log(currentLabel);
       inputLabels[param].innerHTML=modal_label.value
+      form.label=modal_label.value
 
-      // updateForm();
+      updateForm();
     })
 
   }
