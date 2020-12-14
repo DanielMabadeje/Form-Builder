@@ -138,6 +138,6 @@ class Forms extends Controller
     private function generateRandomChars()
     {
         $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        return substr(str_shuffle($charset), 0, 6);
+        return substr(str_shuffle($charset), 0, 8);
     }
 }
