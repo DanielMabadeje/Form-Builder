@@ -570,6 +570,7 @@ function showEditModal(param){
       switch (modal_type.value) {
         case 'email':
           currentInput.type=modal_type;
+          form.type=modal_type
           break;
       
         default:
