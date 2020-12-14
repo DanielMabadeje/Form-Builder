@@ -556,7 +556,7 @@ function showEditModal(param){
       currentInput.placeholder=modal_placeholder.value
       form.placeholder=modal_placeholder.value
 
-      // updateForm();
+      updateForm();
     })
 
   }
