@@ -547,7 +547,7 @@ function showEditModal(param){
       // alert('clicked')
       // deleteItem(params)
     // })
-    document.getElementById('updateBtn')
+    var updateBtn=modal.getElementById('updateBtn')
 
   }
   // When the user clicks on <span> (x), close the modal
