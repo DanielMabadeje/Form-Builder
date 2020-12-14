@@ -568,17 +568,18 @@ function showEditModal(param){
 
 
     modal_type.addEventListener('change', function (e) {
-      // inputLabels[param].innerHTML=modal_label.value
       var currentInput=inputDivs[param].getElementsByTagName('input')[0];
-      // currentInput.placeholder=modal_placeholder.value
-      // form.placeholder=modal_placeholder.value
 
       switch (modal_type.value) {
         case 'email':
           currentInput.type=modal_type.value;
           form.type=modal_type.value
           break;
-        case 'text' :
+        case 'shortanswer' :
+          currentInput.type=modal_type.value;
+          form.type='';
+          break;
+        case 'longanswer' :
           currentInput.type=modal_type.value;
           form.type='';
           break;
