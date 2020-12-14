@@ -540,8 +540,10 @@ function showEditModal(param){
 
 
     var modal_type=modal.getElementsByTagName('select')[1]
-    if (form.type==''){
-      modal_type.value='text'
+    // console.log(form)
+    // console.log(form.type)
+    if (form.type==""){
+      modal_type.value="shortanswer"
     }  else {
       modal_type.value=form.type
     }
