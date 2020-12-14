@@ -550,6 +550,14 @@ function showEditModal(param){
       updateForm();
     })
 
+    modal_placeholder.addEventListener('change', function (e) {
+      // inputLabels[param].innerHTML=modal_label.value
+      var currentInput=inputDivs[param].getElementsByTagName('input')[0];
+      form.placeholder=modal_placeholder.value
+
+      updateForm();
+    })
+
   }
   // When the user clicks on <span> (x), close the modal
   var span = modal.getElementsByTagName('span')[0]
