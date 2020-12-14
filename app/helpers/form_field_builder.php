@@ -248,7 +248,7 @@ class Sample_Form_Creator
             unset($data['value']); // textareas don't use the value attribute
         }
 
-        return '<textarea ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . '>'
+        return '<textarea  class="form-input form-control-has-validation"' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . '>'
             . $this->html_escape($val)
             . "</textarea>\n";
     }
