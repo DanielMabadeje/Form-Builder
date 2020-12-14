@@ -581,7 +581,7 @@ function showEditModal(param){
           break;
         case 'longanswer' :
           currentInput.type=modal_type.value;
-          form.type='';
+          form.type='textarea';
           break;
         case 'date' :
           currentInput.type=modal_type.value;
