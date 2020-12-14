@@ -50,43 +50,43 @@
                 <h2>Edit Current Input</h2>
             </div>
             <div class="form container pt-4 text-left">
-                <form action="false">
-                    <div class="row">
-                        <div class="form_container col-md-6">
-                            <label for="Label">Label</label><br>
-                            <input type="text" class="input-group-text col-12 text-left" placeholder="Label" name="label">
-                        </div>
-
-                        <div class="form_container col-md-6">
-                            <label for="Label" class="col-12 pl-0 ml-0">Placeholder</label>
-                            <input type="text" class="input-group-text col-12 text-left" placeholder="What Placeholder do you want your input to have" name="placeholder">
-                        </div>
+                <!-- <form action="false"> -->
+                <div class="row">
+                    <div class="form_container col-md-6">
+                        <label for="Label">Label</label><br>
+                        <input type="text" class="input-group-text col-12 text-left" placeholder="Label" name="label">
                     </div>
 
-                    <div class="row pt-4">
-                        <div class="form_container col-md-6">
-                            <label for="Label">Required</label><br>
-                            <select name="required" class="input-group-text col-12 text-left">
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
-                        <div class="form_container col-md-6">
-                            <label for="Label" class="col-12 pl-0 ml-0">Type</label>
-                            <select name="inputType" class="input-group-text col-12 text-left">
-                                <option value="email">Email</option>
-                                <option value="shortanswer">ShortAnswer</option>
-                                <option value="longanswer">Long Answer</option>
-                                <option value="dropdown">Dropdown</option>
-                            </select>
-                        </div>
+                    <div class="form_container col-md-6">
+                        <label for="Label" class="col-12 pl-0 ml-0">Placeholder</label>
+                        <input type="text" class="input-group-text col-12 text-left" placeholder="What Placeholder do you want your input to have" name="placeholder">
                     </div>
+                </div>
 
-                    <div class="form_container col-md-6 pt-4 pl-0 ml-0">
-                        <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
-                        <button class="btn btn-secondary" id="updateBtn">Update</button>
+                <div class="row pt-4">
+                    <div class="form_container col-md-6">
+                        <label for="Label">Required</label><br>
+                        <select name="required" class="input-group-text col-12 text-left">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
-                </form>
+                    <div class="form_container col-md-6">
+                        <label for="Label" class="col-12 pl-0 ml-0">Type</label>
+                        <select name="inputType" class="input-group-text col-12 text-left">
+                            <option value="email">Email</option>
+                            <option value="shortanswer">ShortAnswer</option>
+                            <option value="longanswer">Long Answer</option>
+                            <option value="dropdown">Dropdown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form_container col-md-6 pt-4 pl-0 ml-0">
+                    <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
+                    <button class="btn btn-secondary" id="updateBtn">Update</button>
+                </div>
+                <!-- </form> -->
             </div>
             <!-- <p>Some text in the Modal..</p> -->
         </div>

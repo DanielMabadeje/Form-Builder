@@ -15,7 +15,7 @@ var formarrayform=``
 
 
 
-form.action=false
+// form.action=false
 
 
 function getvalue() {
@@ -547,12 +547,12 @@ function showEditModal(param){
       // alert('clicked')
       // deleteItem(params)
     // })
-    var updateBtn=modal.getElementById('updateBtn')
+    // var updateBtn=document.getElementById('updateBtn')
 
-    updateBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      alert('clicked')
-    });
+    // updateBtn.addEventListener('click', function(e){
+    //   e.preventDefault();
+    //   alert('clicked');
+    // });
 
   }
   // When the user clicks on <span> (x), close the modal
