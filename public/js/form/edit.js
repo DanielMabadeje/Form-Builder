@@ -574,6 +574,8 @@ function showEditModal(param){
           break;
       
         default:
+          currentInput.type='';
+          form.type=''
           break;
       }
 
