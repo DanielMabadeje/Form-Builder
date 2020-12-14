@@ -538,23 +538,15 @@ function showEditModal(param){
     var modal_placeholder=modal.getElementsByTagName('input')[1]
     modal_placeholder.value=form.placeholder
 
-    // console.log(modal);
 
-    console.log(modal_label);
     modal.getElementsByTagName('select')[1].value=form.type
 
-    // modal.getElementsByTagName(input)[2].addEventListener('click', function(e){
-      // e.preventDefault();
- 
-      // alert('clicked')
-      // deleteItem(params)
-    // })
-    // var updateBtn=document.getElementById('updateBtn')
 
-    // updateBtn.addEventListener('click', function(e){
-    //   e.preventDefault();
-    //   alert('clicked');
-    // });
+
+    modal_label.addEventListener('change', function (e) {
+      var currentLabel=form[param].getElementsByTagName('label');
+      console.log(currentLabel);
+    })
 
   }
   // When the user clicks on <span> (x), close the modal
