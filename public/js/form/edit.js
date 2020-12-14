@@ -539,7 +539,8 @@ function showEditModal(param){
     modal_placeholder.value=form.placeholder
 
 
-    var modal_type=modal.getElementsByTagName('select')[1].value=form.type
+    var modal_type=modal.getElementsByTagName('select')[1]
+    modal_type.value=form.type
 
 
 
