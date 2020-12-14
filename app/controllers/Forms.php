@@ -72,7 +72,7 @@ class Forms extends Controller
     public function views($id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // $answer_id;
+            $answer_id = date('Y-m-d') . $this->generateRandomChars();
         } else {
             if ($data = $this->formModel->getForm($id)) {
                 // $this->view('forms/templates', $data);
