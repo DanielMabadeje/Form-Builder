@@ -540,7 +540,11 @@ function showEditModal(param){
 
 
     var modal_type=modal.getElementsByTagName('select')[1]
-    modal_type.value=form.type
+    if (form.type==''){
+      modal_type.value='text'
+    }  else {
+      modal_type.value=form.type
+    }
 
 
 
@@ -573,15 +577,15 @@ function showEditModal(param){
           form.type=modal_type.value
           break;
         case 'text' :
-          currentInput.type=modal_type;
-          form.type=modal_type;
+          currentInput.type=modal_type.value;
+          form.type='';
           break;
         case 'date' :
-          currentInput.type=modal_type;
-          form.type=modal_type;
+          currentInput.type=modal_type.value;
+          form.type=modal_type.value;
         case 'number' :
-          currentInput.type=modal_type;
-          form.type=modal_type;
+          currentInput.type=modal_type.value;
+          form.type=modal_type.value;
         default:
           currentInput.type='';
           form.type=''
