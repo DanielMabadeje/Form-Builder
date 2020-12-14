@@ -8,6 +8,7 @@ var savingProgress=document.getElementsByClassName('save')[0];
 var responseSwitch=document.getElementById('switch');
 var form=document.getElementsByTagName('form')[1];
 var mainform=formarray.form;
+var dropdownOption=``
 
 var modal = document.getElementById('myModal');
 
@@ -112,6 +113,19 @@ function appendArray(param, type){
     newformarray.placeholder='Your '+formarrayform+'...'
   }
 
+
+  switch (type) {
+    case 'dropdown':
+      newformarray.options={
+        '':'--SELECT--',
+        dropdownOption:dropdownOption
+      }
+      
+      break;
+  
+    default:
+      break;
+  }
 
   var array_length=mainform.length
   
@@ -296,6 +310,7 @@ var label=document.createElement("label");
 var node = document.createTextNode("This is new.");
 
 formarrayform="This is new.";
+dropdownOption="First List in Dropdown"
 var input =document.createElement("select");
 var option=document.createElement("option");
 

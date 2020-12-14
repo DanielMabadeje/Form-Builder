@@ -72,7 +72,7 @@ class Forms extends Controller
     public function views($id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            # code...
+            // $answer_id;
         } else {
             if ($data = $this->formModel->getForm($id)) {
                 // $this->view('forms/templates', $data);
@@ -133,5 +133,9 @@ class Forms extends Controller
         } else {
             return false;
         }
+    }
+
+    private function generateRandomChars()
+    {
     }
 }
