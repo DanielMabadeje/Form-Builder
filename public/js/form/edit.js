@@ -113,8 +113,9 @@ function appendArray(param, type){
   }
 
 
-  console.log(newformarray)
+  // console.log(newformarray)
 
+  // return;
   var array_length=mainform.length
   
 addQuestionToApi(newformarray);
@@ -223,7 +224,7 @@ function longAnswer(params) {
 
   var node = document.createTextNode("This is new.");
 
-  formarrayform=node;
+  formarrayform='This is new.';
   var input =document.createElement("textarea");
 
   // adding classes,placeholders and contenteditable
