@@ -549,6 +549,11 @@ function showEditModal(param){
     // })
     var updateBtn=modal.getElementById('updateBtn')
 
+    updateBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      alert('clicked')
+    });
+
   }
   // When the user clicks on <span> (x), close the modal
   var span = modal.getElementsByTagName('span')[0]
