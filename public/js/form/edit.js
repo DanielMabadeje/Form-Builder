@@ -113,6 +113,8 @@ function appendArray(param, type){
   }
 
 
+  console.log(newformarray)
+
   var array_length=mainform.length
   
 addQuestionToApi(newformarray);
