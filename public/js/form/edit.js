@@ -533,14 +533,14 @@ function showEditModal(param){
 
   if(param){
     var form =mainform[param]
-    var modal_label=modal.getElementsByTagName('input')[0].value
-    modal_label=form.label
+    var modal_label=modal.getElementsByTagName('input')[0]
+    modal_label.value=form.label
     var modal_placeholder=modal.getElementsByTagName('input')[1].value
     modal_placeholder=form.placeholder
 
-    console.log(modal);
+    // console.log(modal);
 
-    // console.log(modal_label);
+    console.log(modal_label);
     modal.getElementsByTagName('select')[1].value=form.type
 
     // modal.getElementsByTagName(input)[2].addEventListener('click', function(e){
