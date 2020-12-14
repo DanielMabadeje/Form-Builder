@@ -539,7 +539,7 @@ function showEditModal(param){
     modal_placeholder.value=form.placeholder
 
 
-    modal.getElementsByTagName('select')[1].value=form.type
+    var modal_type=modal.getElementsByTagName('select')[1].value=form.type
 
 
 
@@ -558,6 +558,8 @@ function showEditModal(param){
 
       updateForm();
     })
+
+    
 
   }
   // When the user clicks on <span> (x), close the modal
