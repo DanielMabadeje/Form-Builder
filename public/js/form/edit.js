@@ -541,12 +541,13 @@ function showEditModal(param){
     
     modal.getElementsByTagName('select')[1].value=form.type
 
-    modal.getElementsByTagName(input)[2].addEventListener('click', function(e){
+    // modal.getElementsByTagName(input)[2].addEventListener('click', function(e){
       // e.preventDefault();
  
-      alert('clicked')
+      // alert('clicked')
       // deleteItem(params)
-    })
+    // })
+    document.getElementById('updateBtn')
 
   }
   // When the user clicks on <span> (x), close the modal

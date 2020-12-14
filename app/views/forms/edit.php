@@ -11,10 +11,10 @@
                 <div>
                     <nav>
                         <ul class="navbar-nv d-flex">
-                        <div class="nav-item"><a href="<?=URLROOT?>/forms/edit/<?=$data->form_id; ?>/" class="nav-link">Questions</a></div>
-                            <div class="nav-item"><a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/" class="nav-link">Responses</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
                             <div class="nav-item">
-                                <a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/chart" class="nav-link">Chart</a></div>
+                                <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a></div>
                         </ul>
                     </nav>
                 </div>
@@ -84,7 +84,7 @@
 
                     <div class="form_container col-md-6 pt-4 pl-0 ml-0">
                         <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
-                        <button class="btn btn-secondary">Update</button>
+                        <button class="btn btn-secondary" id="updateBtn">Update</button>
                     </div>
                 </form>
             </div>
