@@ -535,8 +535,8 @@ function showEditModal(param){
     var form =mainform[param]
     var modal_label=modal.getElementsByTagName('input')[0]
     modal_label.value=form.label
-    var modal_placeholder=modal.getElementsByTagName('input')[1].value
-    modal_placeholder=form.placeholder
+    var modal_placeholder=modal.getElementsByTagName('input')[1]
+    modal_placeholder.value=form.placeholder
 
     // console.log(modal);
 
