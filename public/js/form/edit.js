@@ -572,6 +572,13 @@ function showEditModal(param){
           currentInput.type=modal_type;
           form.type=modal_type
           break;
+        case 'text' :
+          currentInput.type=modal_type;
+          form.type=modal_type;
+          break;
+        case 'date' :
+          currentInput.type=modal_type;
+          form.type=modal_type;
       
         default:
           currentInput.type='';
