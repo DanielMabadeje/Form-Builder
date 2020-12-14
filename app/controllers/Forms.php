@@ -73,6 +73,7 @@ class Forms extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $answer_id = date('Y-m-d') . $this->generateRandomChars();
+            $data=$_POST;
         } else {
             if ($data = $this->formModel->getForm($id)) {
                 // $this->view('forms/templates', $data);
