@@ -96,6 +96,10 @@ class Forms extends Controller
         }
     }
 
+    private function validateRequiredFields(){
+        #code..
+    }
+
     public function embed($id)
     {
         if ($data = $this->formModel->getForm($id)) {
