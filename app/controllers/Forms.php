@@ -5,6 +5,7 @@ class Forms extends Controller
 {
     public $form;
     private $formerrors;
+    private $formData;
 
 
     public function __construct()
@@ -121,6 +122,11 @@ class Forms extends Controller
         } else {
             # code...
         }
+    }
+
+    private function getQuestionIdByName(Type $var = null)
+    {
+        # code...
     }
 
     public function responses($form_id, $view = null)
