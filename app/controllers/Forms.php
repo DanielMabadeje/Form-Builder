@@ -79,6 +79,7 @@ class Forms extends Controller
             $this->sanitizePost();
             $data = $_POST;
             $data['answer_id'] = $answer_id;
+            $this->formId=$id;
             var_dump($data);
             die;
         } else {
