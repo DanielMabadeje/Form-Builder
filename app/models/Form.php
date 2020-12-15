@@ -272,5 +272,12 @@ class Form
     public function getQuestionIdByName($form_id, $name)
     {
         $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':name', $name);
+
+        $row = $this->db->single();
+        var_dump($row);
+        die;
+        return $row;
     }
 }

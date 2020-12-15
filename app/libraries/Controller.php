@@ -26,4 +26,11 @@
               die('view does not exist');
           }
       }
+
+
+
+      public function sanitizePost()
+    {
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    }
   }

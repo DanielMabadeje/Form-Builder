@@ -80,6 +80,7 @@ class Forms extends Controller
             $data = $_POST;
             $data['answer_id'] = $answer_id;
             $this->formId=$id;
+            $this->getQuestionIdByName();
             var_dump($data);
             die;
         } else {
@@ -129,8 +130,9 @@ class Forms extends Controller
     private function getQuestionIdByName($var = null)
     {
         if ($_SERVER['REQUEST_METHOD']=='POST') {
-            foreach ($_POST as $key => $value) {
-                # code...
+            $data=$_POST;
+            foreach ($data as $key => $value) {
+                $result=$this->formModel->getQuestionIdByName($this->questionId, $key);
             }
         } else {
             # code...
