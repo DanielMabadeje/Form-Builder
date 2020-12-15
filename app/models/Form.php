@@ -276,8 +276,8 @@ class Form
         $this->db->bind(':name', $name);
 
         $row = $this->db->single();
-        var_dump($row);
-        die;
+        // var_dump($row);
+        // die;
         return $row;
     }
 }

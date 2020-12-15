@@ -132,8 +132,14 @@ class Forms extends Controller
         if ($_SERVER['REQUEST_METHOD']=='POST') {
             $data=$_POST;
             foreach ($data as $key => $value) {
-                $result=$this->formModel->getQuestionIdByName($this->questionId, $key);
+                $result=$this->formModel->getQuestionIdByName($this->formId, $key);
+                $data[$key]=$result->question_id;
             }
+
+            $this->formData=$data;
+
+            var_dump($this->formData);
+            die;
         } else {
             # code...
         }
