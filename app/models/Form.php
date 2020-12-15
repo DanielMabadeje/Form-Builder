@@ -269,4 +269,8 @@ class Form
     {
         # code...
     }
+    public function getQuestionIdByName($form_id, $name)
+    {
+        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
+    }
 }
