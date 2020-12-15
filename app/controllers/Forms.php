@@ -126,9 +126,15 @@ class Forms extends Controller
         }
     }
 
-    private function getQuestionIdByName(Type $var = null)
+    private function getQuestionIdByName($var = null)
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD']=='POST') {
+            foreach ($_POST as $key => $value) {
+                # code...
+            }
+        } else {
+            # code...
+        }
     }
 
     public function responses($form_id, $view = null)
