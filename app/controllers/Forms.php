@@ -81,8 +81,8 @@ class Forms extends Controller
             $data['answer_id'] = $answer_id;
             $this->formId=$id;
             $this->getQuestionIdByName();
-            var_dump($data);
-            die;
+            // var_dump($data);
+            // die;
         } else {
             if ($data = $this->formModel->getForm($id)) {
                 // $this->view('forms/templates', $data);
@@ -98,6 +98,13 @@ class Forms extends Controller
             } else {
                 # code...
             }
+        }
+    }
+
+    private function submitAnswer()
+    {
+        foreach ($variable as $key => $value) {
+            # code...
         }
     }
 
@@ -131,15 +138,23 @@ class Forms extends Controller
     {
         if ($_SERVER['REQUEST_METHOD']=='POST') {
             $data=$_POST;
+            $newData=[];
+            $no=0;
             foreach ($data as $key => $value) {
                 $result=$this->formModel->getQuestionIdByName($this->formId, $key);
-                $data[$key]=$result->question_id;
+                $question_id=$result->question_id;
+
+                $newData[$no]['name']=$key;
+                $newData[$no]['question_id']=$question_id;
+                $newData[$no]['value']=$value;
+
+                $no++;
             }
 
-            $this->formData=$data;
+            $this->formData=$newData;
 
-            var_dump($this->formData);
-            die;
+            // var_dump($this->formData);
+            // die;
         } else {
             # code...
         }
