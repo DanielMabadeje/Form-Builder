@@ -280,4 +280,12 @@ class Form
         // die;
         return $row;
     }
+
+
+
+    // Answers Section
+    public function addAanswer(Type $var = null)
+    {
+        # code...
+    }
 }

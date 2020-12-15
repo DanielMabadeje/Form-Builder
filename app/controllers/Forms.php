@@ -103,7 +103,7 @@ class Forms extends Controller
 
     private function submitAnswer()
     {
-        foreach ($variable as $key => $value) {
+        foreach ($this->formData as $key => $value) {
             # code...
         }
     }
