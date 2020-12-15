@@ -6,6 +6,7 @@ class Forms extends Controller
     public $form;
     private $formerrors;
     private $formData;
+    private $formId;
 
 
     public function __construct()
