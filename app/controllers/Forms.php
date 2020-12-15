@@ -4,6 +4,7 @@
 class Forms extends Controller
 {
     public $form;
+    private $formerrors;
 
 
     public function __construct()
@@ -96,8 +97,12 @@ class Forms extends Controller
         }
     }
 
-    private function validateRequiredFields(){
-        #code..
+    private function validateRequiredFields()
+    {
+        $data = $_POST;
+        foreach ($data as $key => $value) {
+            # code...
+        }
     }
 
     public function embed($id)
