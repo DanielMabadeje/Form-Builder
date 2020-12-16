@@ -271,14 +271,15 @@ class Form
     }
     public function getQuestionIdByName($form_id, $name)
     {
-        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->query("SELECT * FROM form_questions WHERE form_id=:form_id AND name=:name");
         $this->db->bind(':form_id', $form_id);
         $this->db->bind(':name', $name);
 
         $row = $this->db->single();
-        // var_dump($row);
+        
+        // var_dump($row->question_id);
         // die;
-        return $row;
+        return $row->question_id;
     }
 
 
@@ -286,11 +287,16 @@ class Form
     // Answers Section
     public function addAnswer($data)
     {
+
+        // var_dump($data['question_id']);
+        // die;
         $this->db->query('INSERT INTO form_answers (form_id, question_id, answer_id, answer) VALUES(:form_id, :question_id, :answer_id, :answer)');
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':question_id', $data['question_id']);
         $this->db->bind(':answer_id', $data['answer_id']);
         $this->db->bind(':answer', $data['answer']);
+
+
 
 
         if ($this->db->execute()) {

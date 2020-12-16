@@ -158,10 +158,7 @@ class Forms extends Controller
             $no=0;
             foreach ($data as $key => $value) {
                 $result=$this->formModel->getQuestionIdByName($this->formId, $key);
-                $question_id=$result->question_id;
-
-                var_dump($question_id);
-                die;
+                $question_id=$result;
 
                 $newData[$no]['name']=$key;
                 $newData[$no]['form_id']=$this->formId;
