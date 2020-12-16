@@ -209,6 +209,8 @@ class Forms extends Controller
             if ($view == 'chart') {
                 # code...
             } elseif ($view = 'table') {
+                // var_dump($data);
+                // die;
                 // $data['responses'] = '';
                 $this->view('forms/responsestable', $data);
             } else {

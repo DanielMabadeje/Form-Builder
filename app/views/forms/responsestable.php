@@ -40,7 +40,7 @@
 
 
     <section class="col-md-12 d-md-flex">
-        <div class="card border-radius-none border-none col-md-10 text-left p-3">
+        <div class="card border-radius-none border-none col-md-12 text-left p-3">
             <div class="card-title">
                 <div class="row">
                     <div class="col-12">
@@ -60,10 +60,12 @@
                             <table class="table text-left">
                                 <thead>
                                     <tr>
-                                        <th> Name </th>
-                                        <th> Assigned </th>
-                                        <th> Status </th>
-                                        <th> Active </th>
+                                    <?php 
+                                    $form_questions=$data->form;
+                                    foreach ($form_questions as $question) { 
+                                        ?>
+                                        <th><?= $question->label ?> </th>
+                                        <?php } ?>
                                     </tr>
                                 </thead>
                                 <tbody id="order">
