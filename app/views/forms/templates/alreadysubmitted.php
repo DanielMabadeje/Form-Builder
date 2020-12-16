@@ -162,6 +162,8 @@
                    <div class="card-body">
 <h3>Thank you for your response</h3>
 
+<h4>If you want to fill another please click <a href="<?= URLROOT; ?>/forms/resetresponse/<?= $data->form_id; ?>">here</a> </h4>
+
 
         </div>
     </section>

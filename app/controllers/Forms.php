@@ -78,29 +78,27 @@ class Forms extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $answer_id = date('Y-m-d') . $this->generateRandomChars();
             $this->sanitizePost();
-            $this->answerId=$answer_id;
-            $this->formId=$id;
+            $this->answerId = $answer_id;
+            $this->formId = $id;
             $this->getQuestionIdByName();
 
-            if ($data=$this->submitAnswer()) {
-                $_SESSION[$id]=$id;
-                redirect('/forms/views/'.$id);
+            if ($data = $this->submitAnswer()) {
+                $_SESSION[$id] = $id;
+                redirect('/forms/views/' . $id);
             }
-
-            
         } else {
 
             $data = $this->formModel->getForm($id);
-            if ( isset($_SESSION[$id])) {
+            if (isset($_SESSION[$id])) {
                 $this->view('forms/templates/alreadysubmitted', $data);
-            }else{
+            } else {
                 if ($data = $this->formModel->getForm($id)) {
                     // $this->view('forms/templates', $data);
                     switch ($data->form_type) {
                         case 'rsvp':
                             $this->view('forms/templates/rsvp', $data);
                             break;
-    
+
                         default:
                             # code...
                             break;
@@ -116,24 +114,23 @@ class Forms extends Controller
     {
         if (isset($_SESSION[$id])) {
             unset($_SESSION[$id]);
-            redirect('/forms/views/'.$id);
+            redirect('/forms/views/' . $id);
         } else {
-            redirect('/forms/views/'.$id);
+            redirect('/forms/views/' . $id);
         }
     }
 
     private function submitAnswer()
     {
 
-        $data=$this->formData;
-        
+        $data = $this->formData;
+
         foreach ($data as $key => $value) {
             try {
                 $this->formModel->addAnswer($data[$key]);
             } catch (\Throwable $e) {
                 echo $e;
             }
-                
         }
 
         return true;
@@ -143,7 +140,6 @@ class Forms extends Controller
     {
         $data = $_POST;
         foreach ($data as $key => $value) {
-         
         }
     }
 
@@ -167,17 +163,17 @@ class Forms extends Controller
 
     private function getQuestionIdByName($var = null)
     {
-        if ($_SERVER['REQUEST_METHOD']=='POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             unset($_POST['submit']);
-            $data=$_POST;
-            $newData=[];
-            $no=0;
+            $data = $_POST;
+            $newData = [];
+            $no = 0;
             foreach ($data as $key => $value) {
 
 
-                $result=$this->formModel->getQuestionIdByName($this->formId, $key);
-                $question_id=$result;
+                $result = $this->formModel->getQuestionIdByName($this->formId, $key);
+                $question_id = $result;
                 // var_dump($question_id);
                 // die;
 
@@ -186,16 +182,16 @@ class Forms extends Controller
                 // var_dump($question_id);
                 // die;
 
-                $newData[$no]['name']=$key;
-                $newData[$no]['form_id']=$this->formId;
-                $newData[$no]['question_id']=$question_id;
-                $newData[$no]['answer']=$value;
-                $newData[$no]['answer_id']=$this->answerId;
+                $newData[$no]['name'] = $key;
+                $newData[$no]['form_id'] = $this->formId;
+                $newData[$no]['question_id'] = $question_id;
+                $newData[$no]['answer'] = $value;
+                $newData[$no]['answer_id'] = $this->answerId;
 
                 $no++;
             }
 
-            $this->formData=$newData;
+            $this->formData = $newData;
 
             // var_dump($this->formData);
             // die;
