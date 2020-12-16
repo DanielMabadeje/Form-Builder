@@ -7,6 +7,7 @@ class Forms extends Controller
     private $formerrors;
     private $formData;
     private $formId;
+    private $answerId;
 
 
     public function __construct()
@@ -77,8 +78,7 @@ class Forms extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $answer_id = date('Y-m-d') . $this->generateRandomChars();
             $this->sanitizePost();
-            $data = $_POST;
-            $data['answer_id'] = $answer_id;
+            $this->answerId=$answer_id;
             $this->formId=$id;
             $this->getQuestionIdByName();
             // var_dump($data);
@@ -104,7 +104,11 @@ class Forms extends Controller
     private function submitAnswer()
     {
         foreach ($this->formData as $key => $value) {
-            # code...
+            try {
+                $this->formModel->addAnswer($data[$key]);
+            } catch (\Throwable $e) {
+                echo $e;
+            }
         }
     }
 
@@ -112,7 +116,7 @@ class Forms extends Controller
     {
         $data = $_POST;
         foreach ($data as $key => $value) {
-            # code...
+         
         }
     }
 
@@ -145,8 +149,10 @@ class Forms extends Controller
                 $question_id=$result->question_id;
 
                 $newData[$no]['name']=$key;
+                $newData[$no]['form_id']=$this->formId;
                 $newData[$no]['question_id']=$question_id;
-                $newData[$no]['value']=$value;
+                $newData[$no]['answer']=$value;
+                $newData[$no]['answer_id']=$this->answerId;
 
                 $no++;
             }
