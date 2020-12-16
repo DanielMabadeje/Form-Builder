@@ -55,6 +55,31 @@
 
             <div class="card-body">
                 <h2>Responses Page</h2>
+                <div class="card-title mb-0">Drivers</div>
+                        <div class="table-responsive">
+                            <table class="table text-left">
+                                <thead>
+                                    <tr>
+                                        <th> Name </th>
+                                        <th> Assigned </th>
+                                        <th> Status </th>
+                                        <th> Active </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="order">
+                                    <!-- <?php foreach ($data['drivers'] as $post) : ?> -->
+                                        <tr>
+                                            <!-- <td><?= $post->name ?></td> -->
+                                            <!-- <td><?= $post->assigned ?></td> -->
+                                            <!-- <td><?= $post->status ?></td> -->
+                                            <!-- <td><?= $post->active ?></td> -->
+                                        </tr>
+                        </div>
+
+                    <!-- <?php endforeach; ?> -->
+                    </tbody>
+                    </table>
+                    </div>
             </div>
         </div>
 
