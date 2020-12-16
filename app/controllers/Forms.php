@@ -82,15 +82,21 @@ class Forms extends Controller
             $this->formId=$id;
             $this->getQuestionIdByName();
 
-            if ($this->submitAnswer()) {
-                $_SESSION['already_submitted']=1;
+            // if ($data=$this->submitAnswer()) {
+            //     $_SESSION['already_submitted']=1;
+            // }
+
+            try {
+                $this->submitAnswer();
+            } catch (\Throwable $e) {
+                # code...
             }
             // var_dump($data);
             // die;
         } else {
 
             $data = $this->formModel->getForm($id);
-            if ($_SESSION['already_submitted']==1 || isset($_SESSION['already_submitted'])) {
+            if ( isset($_SESSION['already_submitted'])) {
                 $this->view('forms/templates/alreadysubmitted', $data);
             }else{
                 if ($data = $this->formModel->getForm($id)) {
@@ -116,11 +122,12 @@ class Forms extends Controller
 
         $data=$this->formData;
         foreach ($data as $key => $value) {
-            try {
-                $this->formModel->addAnswer($data[$key]);
-            } catch (\Throwable $e) {
-                echo $e;
-            }
+            // try {
+            //     $this->formModel->addAnswer($data[$key]);
+            // } catch (\Throwable $e) {
+            //     echo $e;
+            // }
+                 $this->formModel->addAnswer($data[$key]);
         }
     }
 
@@ -159,6 +166,13 @@ class Forms extends Controller
             foreach ($data as $key => $value) {
                 $result=$this->formModel->getQuestionIdByName($this->formId, $key);
                 $question_id=$result;
+                // var_dump($question_id);
+                // die;
+
+                // $question_id=number_format($question_id);
+                // $question_id=intval($question_id);
+                // var_dump($question_id);
+                // die;
 
                 $newData[$no]['name']=$key;
                 $newData[$no]['form_id']=$this->formId;

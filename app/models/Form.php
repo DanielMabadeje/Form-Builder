@@ -271,15 +271,16 @@ class Form
     }
     public function getQuestionIdByName($form_id, $name)
     {
-        $this->db->query("SELECT * FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->query("SELECT question_id AS  questionId FROM form_questions WHERE form_id=:form_id AND name=:name");
         $this->db->bind(':form_id', $form_id);
         $this->db->bind(':name', $name);
 
-        $row = $this->db->single();
-        
-        // var_dump($row->question_id);
+        // $row = $this->db->single();
+        $row = $this->db->resultSet();
+        // var_dump($row[0]->questionId);
         // die;
-        return $row->question_id;
+        $question_id=$row[0]->questionId;
+        return $question_id;
     }
 
 
@@ -297,7 +298,8 @@ class Form
         $this->db->bind(':answer', $data['answer']);
 
 
-
+// var_dump($this->db->query($sql));
+// die;
 
         if ($this->db->execute()) {
 
