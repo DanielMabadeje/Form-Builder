@@ -288,7 +288,7 @@ class Form
     {
         $this->db->query('INSERT INTO form_answers (form_id, question_id, answer_id, answer) VALUES(:form_id, :question_id, :answer_id, :answer)');
         $this->db->bind(':form_id', $data['form_id']);
-        $this->db->bind(':question_id', $data['user_id']);
+        $this->db->bind(':question_id', $data['question_id']);
         $this->db->bind(':answer_id', $data['answer_id']);
         $this->db->bind(':answer', $data['answer']);
 

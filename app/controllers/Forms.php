@@ -160,6 +160,9 @@ class Forms extends Controller
                 $result=$this->formModel->getQuestionIdByName($this->formId, $key);
                 $question_id=$result->question_id;
 
+                var_dump($question_id);
+                die;
+
                 $newData[$no]['name']=$key;
                 $newData[$no]['form_id']=$this->formId;
                 $newData[$no]['question_id']=$question_id;
