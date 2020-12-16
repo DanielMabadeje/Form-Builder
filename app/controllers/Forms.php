@@ -82,17 +82,11 @@ class Forms extends Controller
             $this->formId=$id;
             $this->getQuestionIdByName();
 
-            // if ($data=$this->submitAnswer()) {
-            //     $_SESSION['already_submitted']=1;
-            // }
-
-            try {
-                $this->submitAnswer();
-            } catch (\Throwable $e) {
-                echo $e;
+            if ($data=$this->submitAnswer()) {
+                $_SESSION['already_submitted']=1;
             }
-            // var_dump($data);
-            // die;
+
+            
         } else {
 
             $data = $this->formModel->getForm($id);
