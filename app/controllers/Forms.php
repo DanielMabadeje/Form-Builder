@@ -89,7 +89,7 @@ class Forms extends Controller
             try {
                 $this->submitAnswer();
             } catch (\Throwable $e) {
-                # code...
+                echo $e;
             }
             // var_dump($data);
             // die;
@@ -121,13 +121,14 @@ class Forms extends Controller
     {
 
         $data=$this->formData;
+        
         foreach ($data as $key => $value) {
-            // try {
-            //     $this->formModel->addAnswer($data[$key]);
-            // } catch (\Throwable $e) {
-            //     echo $e;
-            // }
-                 $this->formModel->addAnswer($data[$key]);
+            try {
+                $this->formModel->addAnswer($data[$key]);
+            } catch (\Throwable $e) {
+                echo $e;
+            }
+                
         }
     }
 
@@ -160,10 +161,14 @@ class Forms extends Controller
     private function getQuestionIdByName($var = null)
     {
         if ($_SERVER['REQUEST_METHOD']=='POST') {
+
+            unset($_POST['submit']);
             $data=$_POST;
             $newData=[];
             $no=0;
             foreach ($data as $key => $value) {
+
+
                 $result=$this->formModel->getQuestionIdByName($this->formId, $key);
                 $question_id=$result;
                 // var_dump($question_id);
