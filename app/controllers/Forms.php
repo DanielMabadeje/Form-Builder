@@ -83,14 +83,15 @@ class Forms extends Controller
             $this->getQuestionIdByName();
 
             if ($data=$this->submitAnswer()) {
-                $_SESSION['already_submitted']=1;
+                $_SESSION[$id]=$id;
+                redirect('/forms/views/'.$id);
             }
 
             
         } else {
 
             $data = $this->formModel->getForm($id);
-            if ( isset($_SESSION['already_submitted'])) {
+            if ( isset($_SESSION[$id])) {
                 $this->view('forms/templates/alreadysubmitted', $data);
             }else{
                 if ($data = $this->formModel->getForm($id)) {
@@ -111,6 +112,16 @@ class Forms extends Controller
         }
     }
 
+    public function resetResponse($id)
+    {
+        if (isset($_SESSION[$id])) {
+            unset($_SESSION[$id]);
+            redirect('/forms/views/'.$id);
+        } else {
+            redirect('/forms/views/'.$id);
+        }
+    }
+
     private function submitAnswer()
     {
 
@@ -124,6 +135,8 @@ class Forms extends Controller
             }
                 
         }
+
+        return true;
     }
 
     private function validateRequiredFields()
