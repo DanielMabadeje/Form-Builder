@@ -81,29 +81,39 @@ class Forms extends Controller
             $this->answerId=$answer_id;
             $this->formId=$id;
             $this->getQuestionIdByName();
+
+            if ($this->submitAnswer()) {
+                $_SESSION['already_submitted']=1;
+            }
             // var_dump($data);
             // die;
         } else {
-            if ($data = $this->formModel->getForm($id)) {
-                // $this->view('forms/templates', $data);
-                switch ($data->form_type) {
-                    case 'rsvp':
-                        $this->view('forms/templates/rsvp', $data);
-                        break;
-
-                    default:
-                        # code...
-                        break;
-                }
-            } else {
+            if ($_SESSION['already_submitted']==1 || isset($_SESSION['already_submitted'])) {
                 # code...
+            }else{
+                if ($data = $this->formModel->getForm($id)) {
+                    // $this->view('forms/templates', $data);
+                    switch ($data->form_type) {
+                        case 'rsvp':
+                            $this->view('forms/templates/rsvp', $data);
+                            break;
+    
+                        default:
+                            # code...
+                            break;
+                    }
+                } else {
+                    # code...
+                }
             }
         }
     }
 
     private function submitAnswer()
     {
-        foreach ($this->formData as $key => $value) {
+
+        $data=$this->formData;
+        foreach ($data as $key => $value) {
             try {
                 $this->formModel->addAnswer($data[$key]);
             } catch (\Throwable $e) {
