@@ -159,67 +159,12 @@
                 <br>
                 <h5><?= $data->description; ?></h5>
             </div>
-
-            <?php if ($data->allowing_responses == 0) : ?>
-                <div>The Admin Is Not Currently Allowing Responses</div>
-                        <?php elseif ($data->allowing_responses == 1) : ?>
-                            <div class="card-body">
-
-<!-- <div class="form-wrap">
-    <input class="form-input form-control-has-validation" placeholder="Full Name" value="mabz" id="checkout-first-name-2" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span><span class="form-validation"></span>
-    <label class="form-label rd-input-label" for="checkout-first-name-2">Full Name</label>
-</div> -->
-<?php
+                   <div class="card-body">
+<h3>Thank you for your response</h3>
 
 
-// $form_options = $data->form_array;
-$form_options = $data->form;
-// echo '<pre>';
-// var_dump($form_options);
-// echo '</pre>';
-// die;
-// $form_options = json_decode($form_options);
-
-foreach ($form_options as $key => $datas) {
-    $form_options[$key] = (array)$datas;
-    if ($form_options[$key]['type'] == 'submit') {
-        // $form_options[$key]['type'] = 'form_hidden';
-    }                    // $form_options[$key] = $datas;
-}
-
-
-// $this->form->rule('required', $data->required_fields)->message('Required: {field} cannot be empty');
-$this->form->rule('email', 'email');
-// $this->form->form_hidden('submit', 'submit');
-// $this->form->rule('equals', 'confirm_email', 'email');
-echo $this->form->_form_open();
-echo $this->form->form_field_creation($form_options);
-
-?>
-
-<div class="field_container submit">
-    <label class="form-label rd-input-label" contenteditable="true" for="submit"></label>
-    <input type="submit" name="submit" value="Submit" placeholder="">
-</div>
-<?php
-echo $this->form->_form_close();
-?>
-</div>
-                        <?php else : ?>
-                            <div>The Admin Is Not Currently Allowing Responses</div>
-                        <?php endif; ?>
-
-          
         </div>
     </section>
 </div>
-
-<script defer>
-    var labels=document.getElementsByClassName('form-label')
-    for (let index = 0; index < labels.length; index++) {
-        labels[index].contentEditable=false;
-        // labels[index].isContentEditable=false;
-    }
-</script>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

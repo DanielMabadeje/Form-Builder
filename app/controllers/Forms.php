@@ -88,8 +88,10 @@ class Forms extends Controller
             // var_dump($data);
             // die;
         } else {
+
+            $data = $this->formModel->getForm($id);
             if ($_SESSION['already_submitted']==1 || isset($_SESSION['already_submitted'])) {
-                # code...
+                $this->view('forms/templates/alreadysubmitted', $data);
             }else{
                 if ($data = $this->formModel->getForm($id)) {
                     // $this->view('forms/templates', $data);

@@ -284,7 +284,7 @@ class Form
 
 
     // Answers Section
-    public function addAanswer($data)
+    public function addAnswer($data)
     {
         $this->db->query('INSERT INTO form_answers (form_id, question_id, answer_id, answer) VALUES(:form_id, :question_id, :answer_id, :answer)');
         $this->db->bind(':form_id', $data['uniqueId']);
