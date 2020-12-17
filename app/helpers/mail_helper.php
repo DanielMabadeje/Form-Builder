@@ -6,8 +6,17 @@ function  sendwelcomemail($password)
     $welcome->send();
 }
 
-function sendmail($class, $data){
+function sendmail($class, $data)
+{
     new Mailer($class);
     $welcome = new $class($data);
     $welcome->send();
+}
+
+
+function viewMail($class, $data)
+{
+    new Mailer($class);
+    $welcome = new $class($data);
+    $welcome->view();
 }
