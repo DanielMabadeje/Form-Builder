@@ -8,7 +8,7 @@ class Dashboard extends Controller
 
     public function index()
     {
-        # code...
+        $this->view('dashboard/index');
     }
 
 
