@@ -43,6 +43,6 @@ class sendresponse extends Mail
             $data['response'][$key] = $this->$key;
         }
         $data['year'] = date('Y');
-        $this->sendhtml($data, 'adddriver.mail');
+        $this->sendhtml($data, 'sendresponse.mail');
     }
 }
