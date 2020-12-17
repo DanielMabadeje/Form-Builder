@@ -11,4 +11,10 @@ class Dashboard extends Controller
     {
         # code...
     }
+
+
+    public function membership()
+    {
+        echo $_SESSION['membership_plan'];
+    }
 }

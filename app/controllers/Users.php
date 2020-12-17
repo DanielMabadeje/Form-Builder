@@ -165,7 +165,7 @@ class Users extends Controller
         $_SESSION['email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         $_SESSION['usertype'] = $user->usertype;
-        $_SESSION['membership_plan'] = $user->usertype;
+        $_SESSION['membership_plan'] = $user->membership_plan;
         // if($_SESSION['usertype']=='vendor'){
 
         // }
