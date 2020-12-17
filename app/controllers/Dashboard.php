@@ -6,6 +6,11 @@ class Dashboard extends Controller
         $this->userModel=$this->model('User');
     }
 
+    public function index()
+    {
+        # code...
+    }
+
 
     public function forms($id=null)
     {
