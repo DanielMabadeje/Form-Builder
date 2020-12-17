@@ -29,7 +29,7 @@ class sendresponse extends Mail
     public function view()
     {
         foreach ($this->key as $key) {
-            $data[$key] = $this->$key;
+            $data['response'][$key] = $this->$key;
         }
         $data['year'] = date('Y');
 

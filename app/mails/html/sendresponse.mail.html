@@ -37,8 +37,58 @@
 <body>
     <div class="card col-6">
         <h3>New Response</h3>
-        <h5>Your Email is [[email]] </h5>
-        <h5>Your  Password is [[password]]</h5>
+
+
+
+
+        <div class="table-responsive">
+                    <table class="table text-left">
+                        <thead>
+                            <tr>
+                                
+
+                                <?php $responses= json_decode(`{{ response }}`) ;
+                                var_dump($responses);
+                                //die;
+                                ?>
+                                <?php foreach($responses  as $response): ?>
+                                <p>gfg</p>
+
+                                <th style="color: black;"><?php echo $response ?> </th>
+
+                                <th>{{response}}</th>
+                                
+                                <?php endforeach; 
+                                
+                                die;?>
+                            </tr>
+                        </thead>
+                        <tbody id="order">
+                            <?php
+                            $index = 0;
+                            ?>
+
+                            <!-- foreach([{`responses`}]  as $key=$responsed) -->
+                            <!-- <p>gfg</p> -->
+
+                            <!-- <th><?= $response ?> </th> -->
+                            
+                                <tr>
+
+                                    <!-- foreach ($responses[$key] as $single_response) -->
+                                        <td><?= $single_response->answer ?></td>
+                                    <!-- endforeach -->
+                                </tr>
+                                <?php $index++; ?>
+                                <!-- </div> -->
+
+                            <!-- endforeach -->
+                        </tbody>
+                    </table>
+                </div>
+        <!-- <h5>Your Email is [[email]] </h5> -->
+        <!-- [foreach()] -->
+        <!-- <h5>Your  Password is [[password]]</h5> -->
     </div>
 </body>
 </html>
