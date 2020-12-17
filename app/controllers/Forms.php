@@ -204,33 +204,21 @@ class Forms extends Controller
     {
         if ($this->validateIfFormExists($form_id)) {
             $data = $this->formModel->getForm($form_id);
-            // var_dump($data);
-            // die;
+
             if ($view == 'chart') {
                 # code...
             } elseif ($view = 'table') {
-                // var_dump($data);
-                // die;
 
-                // $data->responses = 'gdg';
                 $responses = $this->formModel->getResponsesCount($form_id);
 
                 $responses_array = [];
 
-                // $index = 0;
+
                 foreach ($responses as $key => $value) {
-                    // echo $key;
-                    // var_dump($responses[$key]);
+
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
-
-                    // $index++;
                 }
-                // $data->responses = $this->formModel->getAnswers($form_id);
-
                 $data->responses = $responses_array;
-                // var_dump($data->responses);
-                // $data->responses = json_encode($data->responses);
-                // die($data->responses);
                 $this->view('forms/responsestable', $data);
             } else {
                 $this->view('forms/responsestable', $data);

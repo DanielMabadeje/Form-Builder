@@ -307,29 +307,20 @@ class Form
     public function getResponsesCount($form_id)
     {
         $this->db->query("SELECT answer_id, COUNT(form_answers.answer_id) AS numberofanswers FROM form_answers WHERE form_id=:form_id GROUP BY answer_id ");
-        // $this->db->query("SELECT * FROM form_answers WHERE form_id=:form_id ");
         $this->db->bind(':form_id', $form_id);
 
 
         $data = $this->db->resultSet();
-
-        // $data=json_encode($data);
-        // die($data);
         return $data;
     }
 
     public function getResponses($form_id)
     {
-        // $this->db->query("SELECT answer_id, COUNT(form_answers.answer_id) AS numberofanswers FROM form_answers WHERE form_id=:form_id GROUP BY answer_id ");
         $this->db->query("SELECT answer FROM form_answers WHERE answer_id=:form_id ");
         $this->db->bind(':form_id', $form_id);
 
 
         $data = $this->db->resultSet();
-        // $data=$this->db->single();
-
-        // $data = json_encode($data);
-        // die($data);
         return $data;
     }
 }

@@ -81,7 +81,6 @@
                                     <?php foreach ($responses[$key] as $single_response) : ?>
                                         <td><?= $single_response->answer ?></td>
                                     <?php endforeach; ?>
-                                    <!-- <td><?= $responses[$key][$index]->answer ?></td> -->
                                 </tr>
                                 <?php $index++; ?>
                                 <!-- </div> -->
