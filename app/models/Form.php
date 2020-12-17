@@ -316,7 +316,7 @@ class Form
 
     public function getResponses($form_id)
     {
-        $this->db->query("SELECT answer FROM form_answers WHERE answer_id=:form_id ");
+        $this->db->query("SELECT *,answer FROM form_answers WHERE answer_id=:form_id ");
         $this->db->bind(':form_id', $form_id);
 
 

@@ -9,44 +9,32 @@ class sendresponse extends Mail
     // private $courier;
 
     private $key = [];
-    public function __construct($data = null)
+    public function __construct($data = [
+        "id" => "214",
+        "answer_id" => "2020-12-16sCnEhDrL",
+        "form_id" => "5fcfece717a24",
+        "question_id" => "142",
+        "answer" => "mabadejedaniel1@gmail.com",
+        "created_at" => "2020-12-15 17:13:30",
+        "updated_at" => "2020-12-15 17:13:30",
+    ])
     {
-        // $this->name = $data['name'];
-        // $this->email = $data['email'];
-        // $this->password = $data['password'];
-        // $this->url = $data['url'];
-        // $this->courier = $data['courier'];
-
         $index = 0;
         foreach ($data as $key => $value) {
             $this->key[$index] = $key;
             $this->$key = $value;
+            $index++;
         }
-
-        // if ($func == 'view') {
-        //     $this->view();
-        // } elseif ($func == 'send') {
-        //     $this->send();
-        // }
     }
     public function view()
     {
-        // $data = [
-        //     'name' => $this->name,
-        //     'email' => $this->email,
-        //     'courier_name' => $this->courier,
-        //     'password' => $this->password,
-        //     'url' => $this->url,
-        //     'year' => date('Y')
-        // ];
-
         foreach ($this->key as $key) {
             $data[$key] = $this->$key;
         }
         $data['year'] = date('Y');
 
-        var_dump($data);
-        die;
+        // var_dump($data);
+        // die;
         $this->viewhtml($data, 'sendresponse.mail');
     }
     public function send()
