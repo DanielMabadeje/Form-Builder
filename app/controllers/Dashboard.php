@@ -12,6 +12,12 @@ class Dashboard extends Controller
     }
 
 
+    public function payments()
+    {
+        # code...
+    }
+
+
     public function forms($id=null)
     {
         # code...
