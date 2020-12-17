@@ -39,14 +39,10 @@ class sendresponse extends Mail
     }
     public function send()
     {
-        $data = [
-            'name' => $this->name,
-            'email' => $this->email,
-            'courier_name' => $this->courier,
-            'password' => $this->password,
-            'url' => $this->url,
-            'date' => date('Y')
-        ];
+        foreach ($this->key as $key) {
+            $data['response'][$key] = $this->$key;
+        }
+        $data['year'] = date('Y');
         $this->sendhtml($data, 'adddriver.mail');
     }
 }
