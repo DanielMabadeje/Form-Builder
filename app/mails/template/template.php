@@ -38,7 +38,7 @@ class Template
                 $value = json_encode($value);
 
                 // echo $value;
-                $contents = preg_replace('/\{\{' . $key . '\}\}/', $value, $contents);
+                $contents = preg_replace('/\-\-' . $key . '\-\-/', $value, $contents);
             }
 
 

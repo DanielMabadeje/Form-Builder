@@ -47,20 +47,20 @@
                             <tr>
                                 
 
-                                <?php $responses= json_decode(`{{ response }}`) ;
-                                var_dump($responses);
+                                <?php $responses= json_decode('--response--') ;
+                                //var_dump($responses);
                                 //die;
                                 ?>
-                                <?php foreach($responses  as $response): ?>
-                                <p>gfg</p>
+                                <?php foreach($responses  as $key=>$response): ?>
+                                
 
-                                <th style="color: black;"><?php echo $response ?> </th>
+                                <th style="color: black;"><?= $key ?> </th>
 
-                                <th>{{response}}</th>
+                                <!-- <th>{{response}}</th> -->
                                 
                                 <?php endforeach; 
                                 
-                                die;?>
+                                ?>
                             </tr>
                         </thead>
                         <tbody id="order">
@@ -69,15 +69,13 @@
                             ?>
 
                             <!-- foreach([{`responses`}]  as $key=$responsed) -->
-                            <!-- <p>gfg</p> -->
-
                             <!-- <th><?= $response ?> </th> -->
                             
                                 <tr>
 
-                                    <!-- foreach ($responses[$key] as $single_response) -->
-                                        <td><?= $single_response->answer ?></td>
-                                    <!-- endforeach -->
+                                    <?php foreach($responses  as $key=>$response): ?>
+                                        <td><?= $response?></td>
+                                <?php    endforeach; ?>
                                 </tr>
                                 <?php $index++; ?>
                                 <!-- </div> -->
