@@ -10,10 +10,10 @@
                 <div>
                     <nav>
                         <ul class="navbar-nv d-flex">
-                            <div class="nav-item"><a href="<?=URLROOT?>/forms/edit/<?=$data->form_id; ?>/" class="nav-link">Questions</a></div>
-                            <div class="nav-item"><a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/" class="nav-link">Responses</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
                             <div class="nav-item">
-                                <a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/chart" class="nav-link">Chart</a></div>
+                                <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a></div>
                         </ul>
                     </nav>
                 </div>
@@ -56,32 +56,40 @@
             <div class="card-body">
                 <h2>Responses Page</h2>
                 <div class="card-title mb-0">Drivers</div>
-                        <div class="table-responsive">
-                            <table class="table text-left">
-                                <thead>
-                                    <tr>
-                                    <?php 
-                                    $form_questions=$data->form;
-                                    foreach ($form_questions as $question) { 
-                                        ?>
-                                        <th><?= $question->label ?> </th>
-                                        <?php } ?>
-                                    </tr>
-                                </thead>
-                                <tbody id="order">
-                                    <!-- <?php foreach ($data['drivers'] as $post) : ?> -->
-                                        <tr>
-                                            <!-- <td><?= $post->name ?></td> -->
-                                            <!-- <td><?= $post->assigned ?></td> -->
-                                            <!-- <td><?= $post->status ?></td> -->
-                                            <!-- <td><?= $post->active ?></td> -->
-                                        </tr>
-                        </div>
+                <div class="table-responsive">
+                    <table class="table text-left">
+                        <thead>
+                            <tr>
+                                <?php
+                                $form_questions = $data->form;
+                                foreach ($form_questions as $question) {
+                                ?>
+                                    <th><?= $question->label ?> </th>
+                                <?php } ?>
+                            </tr>
+                        </thead>
+                        <tbody id="order">
+                            <?php
+                            $responses = $data->responses;
+                            $index = 0;
+                            foreach ($responses as $key => $response) :
 
-                    <!-- <?php endforeach; ?> -->
-                    </tbody>
+                                // var_dump($responses);
+                            ?>
+                                <tr>
+
+                                    <?php foreach ($responses[$key] as $single_response) : ?>
+                                        <td><?= $single_response->answer ?></td>
+                                    <?php endforeach; ?>
+                                    <!-- <td><?= $responses[$key][$index]->answer ?></td> -->
+                                </tr>
+                                <?php $index++; ?>
+                                <!-- </div> -->
+
+                            <?php endforeach; ?>
+                        </tbody>
                     </table>
-                    </div>
+                </div>
             </div>
         </div>
 

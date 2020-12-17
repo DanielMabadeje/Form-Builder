@@ -279,7 +279,7 @@ class Form
         // $row = $this->db->resultSet();
         // var_dump($row[0]->questionId);
         // die;
-        $question_id=$row->question_id;
+        $question_id = $row->question_id;
         return $question_id;
         // echo $question_id;
     }
@@ -290,23 +290,46 @@ class Form
     public function addAnswer($data)
     {
 
-        // var_dump($data['question_id']);
-        // die;
         $this->db->query('INSERT INTO form_answers (form_id, question_id, answer_id, answer) VALUES(:form_id, :question_id, :answer_id, :answer)');
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':question_id', $data['question_id']);
         $this->db->bind(':answer_id', $data['answer_id']);
         $this->db->bind(':answer', $data['answer']);
 
-
-// var_dump($this->db->query($sql));
-// die;
-
         if ($this->db->execute()) {
 
             return true;
-        }else{
+        } else {
             return false;
         }
+    }
+
+    public function getResponsesCount($form_id)
+    {
+        $this->db->query("SELECT answer_id, COUNT(form_answers.answer_id) AS numberofanswers FROM form_answers WHERE form_id=:form_id GROUP BY answer_id ");
+        // $this->db->query("SELECT * FROM form_answers WHERE form_id=:form_id ");
+        $this->db->bind(':form_id', $form_id);
+
+
+        $data = $this->db->resultSet();
+
+        // $data=json_encode($data);
+        // die($data);
+        return $data;
+    }
+
+    public function getResponses($form_id)
+    {
+        // $this->db->query("SELECT answer_id, COUNT(form_answers.answer_id) AS numberofanswers FROM form_answers WHERE form_id=:form_id GROUP BY answer_id ");
+        $this->db->query("SELECT answer FROM form_answers WHERE answer_id=:form_id ");
+        $this->db->bind(':form_id', $form_id);
+
+
+        $data = $this->db->resultSet();
+        // $data=$this->db->single();
+
+        // $data = json_encode($data);
+        // die($data);
+        return $data;
     }
 }
