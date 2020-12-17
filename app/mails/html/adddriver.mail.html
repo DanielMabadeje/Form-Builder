@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Request</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .text-center {
+        text-align: center !important;
+      }
+    .ml-auto, .mx-auto {
+        margin-left: auto !important;
+    }
+    .mr-auto, .mx-auto {
+        margin-right: auto !important;
+    }
+    .card{
+        position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    left: 0;
+    right: 0;
+    position: fixed;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .lightGallery .image-tile, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .col {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      
+      .col-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+      }
+      
+      .col-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+      }
+      
+      .col-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+      }
+      
+      .col-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+      
+      .col-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+      
+      .col-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+      }
+      
+      .col-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      
+      .col-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+      }
+      
+      .col-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+      }
+      
+      .col-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+      }
+      
+      .col-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+      }
+      
+      .col-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+      }
+      
+      .col-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      @media (min-width: 768px) {
+        .col-md {
+          -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          max-width: 100%;
+        }
+        .col-md-auto {
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+          width: auto;
+          max-width: none;
+        }
+        .col-md-1 {
+          -ms-flex: 0 0 8.333333%;
+          flex: 0 0 8.333333%;
+          max-width: 8.333333%;
+        }
+        .col-md-2 {
+          -ms-flex: 0 0 16.666667%;
+          flex: 0 0 16.666667%;
+          max-width: 16.666667%;
+        }
+        .col-md-3 {
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+        .col-md-4 {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+        .col-md-5 {
+          -ms-flex: 0 0 41.666667%;
+          flex: 0 0 41.666667%;
+          max-width: 41.666667%;
+        }
+        .col-md-6 {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        .col-md-7 {
+          -ms-flex: 0 0 58.333333%;
+          flex: 0 0 58.333333%;
+          max-width: 58.333333%;
+        }
+        .col-md-8 {
+          -ms-flex: 0 0 66.666667%;
+          flex: 0 0 66.666667%;
+          max-width: 66.666667%;
+        }
+        .col-md-9 {
+          -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+          max-width: 75%;
+        }
+        .col-md-10 {
+          -ms-flex: 0 0 83.333333%;
+          flex: 0 0 83.333333%;
+          max-width: 83.333333%;
+        }
+        .col-md-11 {
+          -ms-flex: 0 0 91.666667%;
+          flex: 0 0 91.666667%;
+          max-width: 91.666667%;
+        }
+        .col-md-12 {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+    }
+
+
+    @media (min-width: 576px) {
+        .col-sm {
+          -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          max-width: 100%;
+        }
+        .col-sm-auto {
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+          width: auto;
+          max-width: none;
+        }
+        .col-sm-1 {
+          -ms-flex: 0 0 8.333333%;
+          flex: 0 0 8.333333%;
+          max-width: 8.333333%;
+        }
+        .col-sm-2 {
+          -ms-flex: 0 0 16.666667%;
+          flex: 0 0 16.666667%;
+          max-width: 16.666667%;
+        }
+        .col-sm-3 {
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+        .col-sm-4 {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+        .col-sm-5 {
+          -ms-flex: 0 0 41.666667%;
+          flex: 0 0 41.666667%;
+          max-width: 41.666667%;
+        }
+        .col-sm-6 {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        .col-sm-7 {
+          -ms-flex: 0 0 58.333333%;
+          flex: 0 0 58.333333%;
+          max-width: 58.333333%;
+        }
+        .col-sm-8 {
+          -ms-flex: 0 0 66.666667%;
+          flex: 0 0 66.666667%;
+          max-width: 66.666667%;
+        }
+        .col-sm-9 {
+          -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+          max-width: 75%;
+        }
+        .col-sm-10 {
+          -ms-flex: 0 0 83.333333%;
+          flex: 0 0 83.333333%;
+          max-width: 83.333333%;
+        }
+        .col-sm-11 {
+          -ms-flex: 0 0 91.666667%;
+          flex: 0 0 91.666667%;
+          max-width: 91.666667%;
+        }
+        .col-sm-12 {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+    .btn-secondary {
+        color: #212529;
+        background-color: #a0a0a0;
+        border-color: #a0a0a0;
+    }
+    .btn{
+        font-size: 12px;
+        line-height: 1;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+
+
+        display: inline-block;
+    font-weight: 400;
+    color: #030303;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    line-height: 1;
+    border-radius: 4px;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    }
+    .border-none{
+        border:0;
+    }
+    .p-0 {
+        padding: 0 !important;
+      }
+      
+      .pt-0,
+      .py-0 {
+        padding-top: 0 !important;
+      }
+      
+      .pr-0,
+      .px-0 {
+        padding-right: 0 !important;
+      }
+      
+      .pb-0,
+      .py-0 {
+        padding-bottom: 0 !important;
+      }
+      
+      .pl-0,
+      .px-0 {
+        padding-left: 0 !important;
+      }
+      
+      .p-1 {
+        padding: 0.25rem !important;
+      }
+      
+      .pt-1,
+      .py-1 {
+        padding-top: 0.25rem !important;
+      }
+      
+      .pr-1,
+      .px-1 {
+        padding-right: 0.25rem !important;
+      }
+      
+      .pb-1,
+      .py-1 {
+        padding-bottom: 0.25rem !important;
+      }
+      
+      .pl-1,
+      .px-1 {
+        padding-left: 0.25rem !important;
+      }
+      
+      .p-2 {
+        padding: 0.5rem !important;
+      }
+      
+      .pt-2,
+      .py-2 {
+        padding-top: 0.5rem !important;
+      }
+      
+      .pr-2,
+      .px-2 {
+        padding-right: 0.5rem !important;
+      }
+      
+      .pb-2,
+      .py-2 {
+        padding-bottom: 0.5rem !important;
+      }
+      
+      .pl-2,
+      .px-2 {
+        padding-left: 0.5rem !important;
+      }
+      
+      .p-3 {
+        padding: 1rem !important;
+      }
+      
+      .pt-3,
+      .py-3 {
+        padding-top: 1rem !important;
+      }
+      
+      .pr-3,
+      .px-3 {
+        padding-right: 1rem !important;
+      }
+      
+      .pb-3,
+      .py-3 {
+        padding-bottom: 1rem !important;
+      }
+      
+      .pl-3,
+      .px-3 {
+        padding-left: 1rem !important;
+      }
+      
+      .p-4 {
+        padding: 1.5rem !important;
+      }
+      
+      .pt-4,
+      .py-4 {
+        padding-top: 1.5rem !important;
+      }
+      
+      .pr-4,
+      .px-4 {
+        padding-right: 1.5rem !important;
+      }
+      
+      .pb-4,
+      .py-4 {
+        padding-bottom: 1.5rem !important;
+      }
+      
+      .pl-4,
+      .px-4 {
+        padding-left: 1.5rem !important;
+      }
+      
+      .p-5 {
+        padding: 3rem !important;
+      }
+      
+      .pt-5,
+      .py-5 {
+        padding-top: 3rem !important;
+      }
+      
+      .pr-5,
+      .px-5 {
+        padding-right: 3rem !important;
+      }
+      
+      .pb-5,
+      .py-5 {
+        padding-bottom: 3rem !important;
+      }
+      
+      .pl-5,
+      .px-5 {
+        padding-left: 3rem !important;
+      }
+      
+      .m-auto {
+        margin: auto !important;
+      }
+      
+      .mt-auto,
+      .my-auto {
+        margin-top: auto !important;
+      }
+      
+      .mr-auto,
+      .mx-auto {
+        margin-right: auto !important;
+      }
+      
+      .mb-auto,
+      .my-auto {
+        margin-bottom: auto !important;
+      }
+
+      .h-25 {
+        height: 25% !important;
+      }
+      
+      .h-50 {
+        height: 50% !important;
+      }
+      
+      .h-75 {
+        height: 75% !important;
+      }
+      
+      .h-100 {
+        height: 100% !important;
+      }
+      
+      .h-auto {
+        height: auto !important;
+      }
+      
+</style>
+<body>
+    <div class="card col-md-7 mx-auto text-center p-4 mt-auto mb-auto" style="width: 100%; background-color: #f4f8fb; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 15px;"
+       bgcolor="#f8f8f8">
+        <tr>
+                    <td style="text-align: center; vertical-align: top;">
+                        <img src="{{ asset('/images/logo.png') }}" alt=" Logo"
+                             style="border:none; display:inline-block;" height="60">
+                    </td>
+                </tr>
+        <span class="fa fa-cab m-4" style="font-size: 40px"></span>
+        <h3>Hello [[name]]</h3>
+        <h4>Your Email is [[email]] </h4>
+        <p>You are receiving this email because <strong>[[courier_name]]</strong>  courier service is requesting to add you as one of their driver your password is [[password]]</p>
+        <a class="h-auto rd-search-form-submit btn btn-secondary bg fl-bigmug-line-search74 border-none col-6 mx-auto" id="myBtn" style="background: #dc3545;" href="[[url]]">Accept and Login</a>
+    
+
+     <tr>
+                    <td style="padding-top: 10px; font-weight: 300; line-height: 36px; font-size: 14px; font-family: 'Open Sans',Helvetica,Arial,sans-serif; color: #555; letter-spacing: -1px; text-align:center;">
+
+
+                        <style>
+                            #booking tr {
+                                border: 1px solid #ccc;
+                            }
+
+                        </style>
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:center;">
+                        <!-- <p>If You did not request this, no further action is required</p> -->
+                        <br>
+
+                        <p><b>Courier Support Team</b></p>
+                    </td>
+                </tr>
+
+
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+                   style="border:none; width:600; margin-top: 20px; margin-bottom: 40px; text-align: center; color: #85868a;">
+                <tr>
+                    <td style="padding-top: 20px;">
+                        Copyright &copy; [[year]] Cubbiccle Limited. All Rights Reserved.
+                    </td>
+                </tr>
+
+               
+            </table>
+        </td>
+    </tr>
+    </div>
+<!-- </table> -->
+</body>
+</html>
