@@ -7,9 +7,27 @@ define('DB_NAME', 'form_builder');
 //App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 // define('URLROOT', 'http://localhost/formsystem');
+// echo $_ENV;
+
+$url = $_SERVER['REQUEST_URI'];
+$host = $_SERVER['HTTP_HOST'];
+// $env = getenv();
+// var_dump($env);
+
+if ($host == "localhost") {
+    $app_url;
+} else {
+    # code...
+}
+
+// $env = json_encode($env);
+$url = json_encode($url);
+// var_dump($url);
+die($url);
+// die($env);
 
 if (isset($_ENV['URL_ROOT'])) {
-    define('URLROOT', 'http://localhost/formsystem');
+    define('URLROOT', $_ENV['URL_ROOT']);
 } else {
 
     define('URLROOT', 'http://localhost/formsystem');
