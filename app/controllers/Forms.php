@@ -131,8 +131,6 @@ class Forms extends Controller
         }
 
         $this->mailData=$mail_data;
-        // var_dump($mail_data);
-        // die;
 
         
         if (isset($_POST['email'])) {
