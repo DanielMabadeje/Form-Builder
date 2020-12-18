@@ -35,7 +35,7 @@ class sendcopyofresponse extends Mail
 
         // var_dump($data);
         // die;
-        $this->viewhtml($data, 'sendresponse.mail');
+        $this->viewhtml($data, 'sendcopyresponse.mail');
     }
     public function send($email)
     {
