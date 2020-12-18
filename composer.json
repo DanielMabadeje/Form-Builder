@@ -10,5 +10,8 @@
     },
       "config": {
         "vendor-dir": "Vendor"
-      }
+      },
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.1"
+    }
 }
