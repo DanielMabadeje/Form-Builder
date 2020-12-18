@@ -67,9 +67,6 @@ class Forms extends Controller
             } else {
                 die('404');
             }
-            // var_dump($data);
-            // die;
-
         } else {
             # code...
         }
@@ -85,7 +82,6 @@ class Forms extends Controller
 
 
             if ($data = $this->submitAnswer()) {
-
                 $this->sendResponseViaEmail();
                 $_SESSION[$id] = $id;
                 redirect('/forms/views/' . $id);
