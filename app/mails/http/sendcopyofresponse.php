@@ -43,6 +43,6 @@ class sendcopyofresponse extends Mail
             $data['response'][$key] = $this->$key;
         }
         $data['year'] = date('Y');
-        $this->sendhtml($email,'A Copy Of Your Submitted Response',$data, 'sendresponse.mail');
+        $this->sendhtml($email,'A Copy Of Your Submitted Response',$data, 'sendcopyresponse.mail');
     }
 }
