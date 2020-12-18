@@ -1,3 +1,5 @@
 #trying to remove vendor folder
 
 /Vendor
+
+composer.lock
