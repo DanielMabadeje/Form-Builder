@@ -2,4 +2,4 @@
 
 /Vendor
 
-composer.lock
+.env
