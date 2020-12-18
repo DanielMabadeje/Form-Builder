@@ -122,7 +122,7 @@ class Forms extends Controller
 
 
     private function sendResponseViaEmail(){
-        
+
         foreach ($this->formData as $key => $value) {
                 
             $label=$this->formModel->getLabelFromQuestionId($value['form_id'], $value['name']);
@@ -136,7 +136,7 @@ class Forms extends Controller
 
         
         if (isset($_POST['email'])) {
-            sendmail('sendresponse', $this->mailData, $_SESSION['email']);
+            sendmail('sendcopyofresponse', $this->mailData, $_SESSION['email']);
         }
     }
 
