@@ -13,7 +13,7 @@ class Mail
     public function __construct()
     {
     }
-    public function sendhtml(array $var, string $html)
+    public function sendhtml($email, $subject, array $var, string $html)
     {
         $template = new Template;
 
@@ -27,15 +27,15 @@ class Mail
         $headers = "From: CSIU Team\r\n";
         $headers .= "MIME-Version:1.0\r\n";
         $headers .= "Content-Type:text/html; charset=ISO-8859-1\r\n";
-        $email_to = $var['email'];
-        $subject = 'Welcome Email';
+        $email_to = $email;
+        $subject = $subject;
         $message = $template->render($html);
         // var_dump($message);
         // die;
         // die($message);
         try {
             mail($email_to, $subject, $message, $headers);
-            echo 'email sent';
+            // echo 'email sent';
         } catch (\Throwable $e) {
             die($e);
         }

@@ -6,11 +6,11 @@ function  sendwelcomemail($password)
     $welcome->send();
 }
 
-function sendmail($class, $data)
+function sendmail($class, $data, $email)
 {
     new Mailer($class);
     $welcome = new $class($data);
-    $welcome->send();
+    $welcome->send($email);
 }
 
 

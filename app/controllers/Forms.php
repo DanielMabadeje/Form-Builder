@@ -8,6 +8,7 @@ class Forms extends Controller
     private $formData;
     private $formId;
     private $answerId;
+    private $mailData;
 
 
     public function __construct()
@@ -82,7 +83,10 @@ class Forms extends Controller
             $this->formId = $id;
             $this->getQuestionIdByName();
 
+
             if ($data = $this->submitAnswer()) {
+
+                $this->sendResponseViaEmail();
                 $_SESSION[$id] = $id;
                 redirect('/forms/views/' . $id);
             }
@@ -117,6 +121,26 @@ class Forms extends Controller
             redirect('/forms/views/' . $id);
         } else {
             redirect('/forms/views/' . $id);
+        }
+    }
+
+
+    private function sendResponseViaEmail(){
+        
+        foreach ($this->formData as $key => $value) {
+                
+            $label=$this->formModel->getLabelFromQuestionId($value['form_id'], $value['name']);
+
+            $mail_data[$label]=$value['answer'];
+        }
+
+        $this->mailData=$mail_data;
+        // var_dump($mail_data);
+        // die;
+
+        
+        if (isset($_POST['email'])) {
+            sendmail('sendresponse', $this->mailData, $_SESSION['email']);
         }
     }
 

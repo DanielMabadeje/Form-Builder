@@ -37,12 +37,12 @@ class sendresponse extends Mail
         // die;
         $this->viewhtml($data, 'sendresponse.mail');
     }
-    public function send()
+    public function send($email)
     {
         foreach ($this->key as $key) {
             $data['response'][$key] = $this->$key;
         }
         $data['year'] = date('Y');
-        $this->sendhtml($data, 'sendresponse.mail');
+        $this->sendhtml($email,'Form Response',$data, 'sendresponse.mail');
     }
 }

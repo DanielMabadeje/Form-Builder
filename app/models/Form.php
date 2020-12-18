@@ -269,6 +269,27 @@ class Form
     {
         # code...
     }
+
+
+    public function getLabelFromQuestionId($form_id, $name)
+    {
+        $this->db->query("SELECT label FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':name', $name);
+
+
+        $row = $this->db->single();
+        // $row = $this->db->resultSet();
+        // var_dump($row[0]->questionId);
+        // die;
+        $label = $row->label;
+
+        // var_dump($label);
+        // die;
+        return $label;
+    }
+
+
     public function getQuestionIdByName($form_id, $name)
     {
         $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
