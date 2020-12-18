@@ -6,6 +6,13 @@ define('DB_PASS', '');
 define('DB_NAME', 'form_builder');
 //App Root
 define('APPROOT', dirname(dirname(__FILE__)));
-define('URLROOT', 'http://localhost/formsystem');
+// define('URLROOT', 'http://localhost/formsystem');
+
+if (isset($_ENV['URL_ROOT'])) {
+    define('URLROOT', 'http://localhost/formsystem');
+} else {
+
+    define('URLROOT', 'http://localhost/formsystem');
+}
 //site name
 define('SITENAME', 'FORMBUILDER');
