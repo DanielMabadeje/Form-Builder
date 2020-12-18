@@ -31,7 +31,7 @@ if (isset($_ENV['URL_ROOT'])) {
     define('URLROOT', $_ENV['URL_ROOT']);
 } else {
 
-    define('URLROOT', 'http://localhost/formsystem');
+    define('URLROOT', 'http://localhost/formsystem/');
 }
 //site name
 define('SITENAME', 'FORMBUILDER');
