@@ -9,8 +9,8 @@ require_once '../Vendor/autoload.php';
 
 // $calledEnv= new Dotenv\Dotenv();
 // $dotenv=$calledEnv::createImmutable(__DIR__);
-$dotenv = Dotenv::createImmutable('../');
-$dotenv->load();
+// $dotenv = Dotenv::createImmutable('../');
+// $dotenv->load();
 // Load Config
 require_once '../app/config/config.php';
 
