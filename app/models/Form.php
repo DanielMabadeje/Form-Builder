@@ -279,13 +279,7 @@ class Form
 
 
         $row = $this->db->single();
-        // $row = $this->db->resultSet();
-        // var_dump($row[0]->questionId);
-        // die;
         $label = $row->label;
-
-        // var_dump($label);
-        // die;
         return $label;
     }
 
