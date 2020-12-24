@@ -3,7 +3,7 @@
 
 require_once '../Vendor/autoload.php';
 
-if(require_once '../vendor/vlucas/phpdotenv/src/Dotenv.php';){
+if(require_once('../vendor/vlucas/phpdotenv/src/Dotenv.php')){
     $dotenv = Dotenv\Dotenv::createImmutable('../');
 $dotenv->load();
 }
