@@ -1,10 +1,13 @@
 <?php
-require_once '../vendor/vlucas/phpdotenv/src/Dotenv.php';
+
 
 require_once '../Vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable('../');
+if(require_once '../vendor/vlucas/phpdotenv/src/Dotenv.php';){
+    $dotenv = Dotenv\Dotenv::createImmutable('../');
 $dotenv->load();
+}
+
 // Load Config
 require_once '../app/config/config.php';
 
