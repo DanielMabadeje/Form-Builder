@@ -1,5 +1,5 @@
 #trying to remove vendor folder
 
-/Vendor
+/vendor
 
 .env
