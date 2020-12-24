@@ -1,14 +1,8 @@
 <?php
-
-// load .env
-// use Dotenv\Dotenv;
-
 require_once '../vendor/vlucas/phpdotenv/src/Dotenv.php';
 
 require_once '../Vendor/autoload.php';
 
-// $calledEnv= new Dotenv\Dotenv();
-// $dotenv=$calledEnv::createImmutable(__DIR__);
 $dotenv = Dotenv\Dotenv::createImmutable('../');
 $dotenv->load();
 // Load Config

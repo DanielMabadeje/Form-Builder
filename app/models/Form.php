@@ -143,10 +143,48 @@ class Form
             $this->db->bind(':id', $data['id']);
         }
 
+        // var_dump($data);
+        // die;
+
         if ($this->db->execute()) {
+            $lastId = $this->db->getLastId();
+            if (isset($data['options'])) {
+                $optionData = [];
+                foreach ($data['options'] as $option) {
+
+                    // die($option);
+                    $optionData['question_id'] = $lastId;
+                    $optionData['form_id'] = $data['form_id'];
+                    $optionData['type'] = $data['type'];
+                    $optionData['option'] = $option;
+
+                    $this->addQuestionOption($optionData);
+                }
+            } else {
+                # code...
+            }
+
             // die('gfgd');
-            return $this->db->getLastId();
+            return $lastId;
             // return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function addQuestionOption($data)
+    {
+        $this->db->query("INSERT INTO questions_options (form_id, question_id, form_type, form_option) VALUES(:form_id, :question_id, :type, :option)");
+
+        $this->db->bind(':form_id', $data['form_id']);
+        $this->db->bind(':question_id', $data['question_id']);
+        $this->db->bind(':type', $data['type']);
+        $this->db->bind(':option', $data['option']);
+
+
+        if ($this->db->execute()) {
+            return $this->db->getLastId();
         } else {
             return false;
         }
@@ -192,11 +230,16 @@ class Form
 
     public function getFormQuestion($id)
     {
-        $this->db->query('SELECT * FROM form_questions WHERE form_id= :form_id');
+        $this->db->query('SELECT  * FROM form_questions WHERE form_questions.form_id= :form_id
+        -- RIGHT JOIN questions_options
+        -- ON form_questions.question_id=questions_options.question_id
+        ');
         $this->db->bind(':form_id', $id);
 
 
         $result = $this->db->resultSet();
+        // $data = json_encode($result);
+        // die($data);
         return $result;
     }
 
@@ -209,6 +252,53 @@ class Form
 
         if ($result = $this->db->single()) {
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getQuestionDropdownOption($form_id, $question_id)
+    {
+        $this->db->query('SELECT form_option FROM questions_options WHERE form_id= :form_id AND question_id=:question_id');
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $question_id);
+
+
+        if ($result = $this->db->resultSet()) {
+
+            // die(json_encode($result));
+            $data = [];
+            $index = 0;
+            foreach ($result as $key => $value) {
+                // var_dump($value->form_option);
+                // die;
+
+                $data[$index] = $value->form_option;
+                $index++;
+            }
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
+    public function getQuestionOption($form_id, $question_id)
+    {
+        $this->db->query('SELECT id, form_option AS value FROM questions_options WHERE form_id= :form_id AND question_id=:question_id ORDER BY created_at DESC');
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $question_id);
+
+
+        if ($result = $this->db->resultSet()) {
+
+foreach ($result as $key => $value) {
+    $value->label=$value->value;
+    // array($value);
+[$value];
+    
+}
+
+            return $result;
         } else {
             return false;
         }
@@ -229,6 +319,7 @@ class Form
             return false;
         }
     }
+
 
     public function editAllowingResponses($data)
     {

@@ -6,9 +6,12 @@ var inputDivs=document.getElementsByClassName('field_container');
 var inputLabels=document.getElementsByClassName('form-label');
 var savingProgress=document.getElementsByClassName('save')[0];
 var responseSwitch=document.getElementById('switch');
-var form=document.getElementsByTagName('form')[1];
+var form=document.getElementsByTagName('form')[0];
 var mainform=formarray.form;
 var dropdownOption=``
+var optionarray=``
+
+var modaloptiondiv=``;
 
 var modal = document.getElementById('myModal');
 
@@ -61,12 +64,21 @@ function addItemToForm(params) {
         break;
       case 'singleoption':
         singleOptionAnswer();
-        console.log('date')
+        appendArray('singleOption', 'singleoption')
+        // console.log('date')
           
+        break;
+
+      case 'multichoice':
+        multichoiceAnswer();
+        appendArray('multichoice', 'multichoice')
+        // console.log('date')
+            
         break;
     
       default:
-        console.log('fd')
+        // console.log('fd')
+        alert('formtype not selected');
         break;
     }
     // appendHtml();
@@ -117,9 +129,26 @@ function appendArray(param, type){
   switch (type) {
     case 'dropdown':
       newformarray.options={
-        '':'--SELECT--',
+        "":"--SELECT--",
         dropdownOption:dropdownOption
       }
+
+    case 'singleoption':
+        newformarray.type='radio';
+        newformarray.options={
+          0:"First Value",
+          1:"Second Value"
+        }
+    case 'multichoice':
+        newformarray.type='checkbox'
+        newformarray.options={
+        0:"First Value",
+        1:"Second Value"
+        }
+
+      // console.log(newformarray);
+
+      // return;
       
       break;
   
@@ -345,32 +374,57 @@ function multichoiceAnswer(params) {
 
     para.classList.add('field_container')
 
+    var value1="First Value"
+    var value2="Second Value"
+
 
 
     var label=document.createElement("label");
-
     var node = document.createTextNode("This is new.");
+    // var nodeForValue1=document.createTextNode(value1);
+    // var nodeForValue2=document.createTextNode(value2);
+    
 
-    formarrayform=node;
+    formarrayform='This is new';
     var input =document.createElement("input");
+    var input2 =document.createElement("input");
+    var div1 =document.createElement("div");
+    var div2 =document.createElement("div");
 
     // adding classes,placeholders and contenteditable
     label.contentEditable=true;
-    if (params!==null || params !=='') {
-      input.type=params
-    }
-    input.classList.add('form-input');
+    input.type='checkbox'
+    input2.type='checkbox'
+    input.classList.add('p-1');
+    input2.classList.add('p-1');
+    div1.classList.add('m-2')
+    div1.classList.add('p-2')
+
+    div2.classList.add('m-2')
+    div2.classList.add('p-2')
     input.classList.add('form-control-has-validation');
-    input.placeholder='This is New'
+    input2.classList.add('form-control-has-validation');
+    input.name='firstradio'
+    input2.name='firstradio'
+    input.value=value1
+    input2.value=value2
+
+    
     label.appendChild(node);
+    div1.appendChild(input)
+    div2.appendChild(input2)
+
     para.appendChild(label)
-    para.appendChild(input)
+    para.appendChild(div1)
+    para.appendChild(div2)
     
 
     var form = document.getElementById("form");
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
-
+  
+    input.insertAdjacentText('afterend', value1)
+    input2.insertAdjacentText('afterend', value2)
     addOrRemoveOptions();
 
 }
@@ -383,44 +437,57 @@ function singleOptionAnswer(params) {
 
     para.classList.add('field_container')
 
+    var value1="First Value"
+    var value2="Second Value"
+
 
 
     var label=document.createElement("label");
-    // var innerlabel=document.createElement("label");
-    // var innerlabel1=document.createElement("label");
     var node = document.createTextNode("This is new.");
+    // var nodeForValue1=document.createTextNode(value1);
+    // var nodeForValue2=document.createTextNode(value2);
+    
 
-    formarrayform=node;
+    formarrayform='This is new';
     var input =document.createElement("input");
     var input2 =document.createElement("input");
+    var div1 =document.createElement("div");
+    var div2 =document.createElement("div");
 
     // adding classes,placeholders and contenteditable
     label.contentEditable=true;
     input.type='radio'
     input2.type='radio'
-    input.classList.add('form-input');
-    input2.classList.add('form-input');
+    input.classList.add('p-1');
+    input2.classList.add('p-1');
+    div1.classList.add('m-2')
+    div1.classList.add('p-2')
+
+    div2.classList.add('m-2')
+    div2.classList.add('p-2')
     input.classList.add('form-control-has-validation');
+    input2.classList.add('form-control-has-validation');
     input.name='firstradio'
     input2.name='firstradio'
+    input.value=value1
+    input2.value=value2
 
-    input.appendChild(node)
+    
     label.appendChild(node);
-    // innerlabel.appendChild(input)
-    // innerlabel.appendChild(node)
+    div1.appendChild(input)
+    div2.appendChild(input2)
 
-
-    // innerlabel1.appendChild(input)
-    // innerlabel1.appendChild(node)
     para.appendChild(label)
-    para.appendChild(input)
-    para.appendChild(input2)
+    para.appendChild(div1)
+    para.appendChild(div2)
     
 
     var form = document.getElementById("form");
     var child = document.getElementsByClassName('field_container')[inputs];
     form.insertBefore(para,child);
-
+  
+    input.insertAdjacentText('afterend', value1)
+    input2.insertAdjacentText('afterend', value2)
     addOrRemoveOptions();
 
 }
@@ -481,9 +548,12 @@ function addingOptions(params, element) {
   
     containerDiv.classList.add('col-md-12')
   
+
+    innerDiv.classList.add('optionsDiv');
     innerDiv.classList.add('col-md-7')
     innerDiv.classList.add('ml-auto')
     innerDiv.classList.add('text-dark')
+    // innerDiv.classList.add('d-flex')
     innerDiv.classList.add('text-right')
   
     deleteOption.classList.add('fa');
@@ -545,18 +615,19 @@ function showEditModal(param){
 
   modal.style.display = "block";
 
-
   if(param){
     var form =mainform[param]
+
+    // setting modal label
     var modal_label=modal.getElementsByTagName('input')[0]
     modal_label.value=form.label
+
+    // setting placeholder
     var modal_placeholder=modal.getElementsByTagName('input')[1]
     modal_placeholder.value=form.placeholder
 
-
+    // setting modal type
     var modal_type=modal.getElementsByTagName('select')[1]
-    // console.log(form)
-    // console.log(form.type)
     if (form.type==""){
       modal_type.value="shortanswer"
     }  else {
@@ -564,8 +635,36 @@ function showEditModal(param){
     }
 
 
+    // adding options
+    var modalOptionsDiv=document.getElementById('optionsadded');
+    var outermodalOptionsDiv=document.getElementById('outeroptionsadded');
+    if (form.options){
+      var options=form.options
+      modalOptionsDiv.classList.remove('d-none');
+      modalOptionsDiv.classList.add('d-block');
 
-    modal_label.addEventListener('change', function (e) {
+      outermodalOptionsDiv.classList.remove('d-none');
+      outermodalOptionsDiv.classList.add('d-block');
+      createOptionsDiv();
+      for (let index = 0; index < options.length; index++) {
+        options[index].value
+        createOptionInput(options[index].id,options[index].value)
+        
+      }
+    }  else {
+      outermodalOptionsDiv=document.getElementById('outeroptionsadded');
+      modalOptionsDiv=document.getElementById('optionsadded');
+      modalOptionsDiv.classList.remove('d-block');
+      modalOptionsDiv.classList.add('d-none');
+
+      outermodalOptionsDiv.classList.remove('d-block');
+      outermodalOptionsDiv.classList.add('d-none');
+    }
+
+
+
+    // Adding Event Listener for label
+      modal_label.addEventListener('change', function (e) {
       inputLabels[param].innerHTML=modal_label.value
       form.label=modal_label.value
 
@@ -616,26 +715,99 @@ function showEditModal(param){
 
       // updateForm();
 
-
-
     })
     
+    var addoptionicon=document.getElementsByClassName('addoptionicon')[0]
 
+    addoptionicon.addEventListener('click', function (e) {
+      addNewoption(param)
+    });
   }
   // When the user clicks on <span> (x), close the modal
   var span = modal.getElementsByTagName('span')[0]
 
   span.onclick = function() {
       modal.style.display = "none";
+      deleteOptionInput()
   }
 
 // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
       if (event.target == modal) {
           modal.style.display = "none";
+          deleteOptionInput()
       }
   }
 }
+
+
+function addNewoption(param) {
+  var form =mainform[param]
+  var optionslength=form.options.length
+  optionarray={
+    'form_id':form.form_id,
+    'question_id':form.question_id,
+    'type':form.type,
+    'option':'New Option',
+    'label':'New Option',
+    'value':'value'
+  }
+  // console.log(form);
+  // return;
+  addOptionToApi(optionarray);
+  form.options.splice(optionslength,0, optionarray)
+  createOptionInput(null, 'New Option')
+}
+
+function addOptionToApi(object){
+  settings.url=base_url+'/api/forms/addOption'
+  settings.method="POST"
+  settings.data=object
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    let question_id=response.success.message.question_id
+    // let updatedAt=response.success.m
+    optionarray.id=question_id
+    
+    showSaveSuccess(updatedAt);
+    return question_id;
+})
+}
+
+function createOptionsDiv(params) {
+  modaloptiondiv=document.createElement('div')
+  modaloptiondiv.classList.add('form_container');
+  modaloptiondiv.classList.add('col-md-6');
+  modaloptiondiv.classList.add('m-2');
+  modaloptiondiv.classList.add('pl-2');
+}
+
+function createOptionInput(id,value) {
+  modalOptionsDiv=document.getElementById('optionsadded');
+  
+  var input=document.createElement('input')
+  input.classList.add('input-group-text')
+  input.classList.add('optionInput')
+  input.classList.add('col-md-12')
+  input.classList.add('text-left')
+  input.classList.add('mt-2')
+  input.id=id
+  input.value=value
+
+  modaloptiondiv.appendChild(input);
+
+  modalOptionsDiv.appendChild(modaloptiondiv)
+
+
+  // div.addEventListener('change')
+}
+
+function deleteOptionInput(param) { 
+  modalOptionsDiv=document.getElementById('optionsadded');
+  modalOptionsDiv.innerHTML=''
+ }
+
 
 function removingOptions(params, element,e){
 
@@ -645,7 +817,9 @@ function removingOptions(params, element,e){
 
 function deleteItem(param){
 
+  // var form=document.getElementsByTagName('form')[1];
   var formContainer=document.getElementsByClassName("field_container")[param]
+  // console.log(form);
   form.removeChild(formContainer)
   
   deleteItemInArray(param);

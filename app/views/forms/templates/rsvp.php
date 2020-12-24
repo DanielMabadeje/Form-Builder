@@ -13,7 +13,7 @@
         border: none;
     }
 
-    /* input[type=submit] {
+    input[type=submit] {
         background-color: #343a40;
         color: white;
         width: 50%;
@@ -23,7 +23,7 @@
         align-self: center;
         margin-right: auto;
         margin-left: auto;
-    } */
+    }
 
 
     .field_container:focus,

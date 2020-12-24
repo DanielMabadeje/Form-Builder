@@ -130,7 +130,7 @@ class Sample_Form_Creator
 
         $multiple = (count($selected) > 1 && stripos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
 
-        $form = '<select ' . rtrim($this->_form_field_attributesl($data, $defaults)) . $extra . $multiple . ">\n";
+        $form = '<select class="form-input form-control-has-validation"' . rtrim($this->_form_field_attributesl($data, $defaults)) . $extra . $multiple . ">\n";
 
         foreach ($options as $key => $val) {
             $key = (string) $key;
@@ -188,7 +188,7 @@ class Sample_Form_Creator
             unset($defaults['checked']);
         }
 
-        return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+        return '<input class=""' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
     }
 
     /**
@@ -222,8 +222,21 @@ class Sample_Form_Creator
             unset($defaults['checked']);
         }
 
+        return '<input class="d-bloc"' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+    }
+
+
+
+    function form_date($data = '', $value = '', $extra = '')
+    {
+        $defaults = array('type' => 'date', 'name' => (!is_array($data) ? $data : ''), 'value' => $value);
+        return '<input class="form-input form-control-has-validation" ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+
         return '<input ' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
     }
+
+
+
 
     /**
      * Textarea field
@@ -448,12 +461,12 @@ class Sample_Form_Creator
                             // Set value as label if no label is set
                             array_key_exists('label', $this->elm_options) || $this->elm_options['label'] = $this->elm_options['value'];
 
-                            $label_class = substr($this->func, 5) . '-inline';
+                            $label_class = substr($this->func, 5) . '-inlin';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<label contenteditable="true" class="' . $label_class . '">';
+                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
-                            $this->print_string .= $this->elm_options['label'] . '</label>';
+                            $this->print_string .= $this->elm_options['label'] . '</label> ';
                         }
                         $this->elm_options = $all_elm_options;
                         if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($this->func == 'form_checkbox' || $this->func == 'form_radio')) {
@@ -553,7 +566,7 @@ class Sample_Form_Creator
                     $input_html_string = $this->form_input($this->elm_options);
                     break;
                 case 'form_hidden':
-                    return field_hidden($this->elm_options['id'], $this->elm_options['value']);
+                    return $this->form_hidden($this->elm_options['id'], $this->elm_options['value']);
                 case 'form_submit':
                     $name = $this->elm_options['id'];
                     $label = $this->_make_field_label((isset($this->elm_options['label']) ? $this->elm_options['label'] : $this->elm_options['id']));
@@ -591,6 +604,15 @@ class Sample_Form_Creator
                 case 'form_radio':
                     $input_html_string = $this->form_radio($this->elm_options);
                     break;
+                case 'form_date':
+                    $input_html_string = $this->form_date($this->elm_options);
+                    break;
+                case 'form_text':
+                    if (function_exists($this->func)) {
+                        $input_html_string = call_user_func($this->func, $this->elm_options);
+                    } else {
+                        // show_error("Could not find function to build form element: '{$this->func}'");
+                    }
 
                 default:
                     if (function_exists($this->func)) {

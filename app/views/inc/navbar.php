@@ -14,7 +14,10 @@
                     <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Pricing</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Features</a>

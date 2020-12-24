@@ -11,6 +11,9 @@ class Forms extends Controller
     private $mailData;
 
 
+    private $formandquestions;
+
+
     public function __construct()
     {
         $this->form = new Sample_Form_Creator();
@@ -63,7 +66,10 @@ class Forms extends Controller
     {
         if ($var) {
             if ($data = $this->formModel->getForm($var)) {
-                $this->view('forms/edit', $data);
+                $this->formandquestions = $data;
+                $this->checkIfQuestionisDropdown();
+                $this->checkIfQuestionisOption();
+                $this->view('forms/edit', $this->formandquestions);
             } else {
                 die('404');
             }
@@ -93,8 +99,16 @@ class Forms extends Controller
                 $this->view('forms/templates/alreadysubmitted', $data);
             } else {
                 if ($data = $this->formModel->getForm($id)) {
+
+                    $this->formandquestions = $data;
+                    $this->checkIfQuestionisDropdown();
+                    $this->checkIfQuestionisOption();
+
+
+                    // die(json_encode($this->formandquestions));
                     // $this->view('forms/templates', $data);
-                    switch ($data->form_type) {
+
+                    switch ($this->formandquestions->form_type) {
                         case 'rsvp':
                             $this->view('forms/templates/rsvp', $data);
                             break;
@@ -109,7 +123,47 @@ class Forms extends Controller
             }
         }
     }
+    private function checkIfQuestionisDropdown()
+    {
 
+        foreach ($this->formandquestions->form as $key => $single_data) {
+            if ($single_data->type == 'dropdown') {
+                $single_data->options = $this->formModel->getQuestionDropdownOption($single_data->form_id, $single_data->question_id);
+                $single_data->value = '0';
+            }
+        }
+    }
+
+    private function checkIfQuestionisOption()
+    {
+
+        foreach ($this->formandquestions->form as $key => $single_data) {
+            if ($single_data->type == 'singleoption' || $single_data->type == 'radio') {
+                $single_data->type = 'radio';
+                // $single_data->options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
+                $options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
+                foreach ($options as $key => $value) {
+                    $single_data->options[$key] = [
+                        'id' => $value->id,
+                        'label' => $value->label,
+                        'value' => $value->value
+                    ];
+                }
+            } elseif ($single_data->type == 'multichoice' || $single_data->type == 'checkbox') {
+                $single_data->type = 'checkbox';
+                // $single_data->options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
+                $options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
+                foreach ($options as $key => $value) {
+                    $single_data->options[$key] = [
+                        'id' => $value->id,
+                        'label' => $value->label,
+                        'value' => $value->value
+                    ];
+                }
+            } else {
+            }
+        }
+    }
     public function resetResponse($id)
     {
         if (isset($_SESSION[$id])) {
@@ -121,18 +175,19 @@ class Forms extends Controller
     }
 
 
-    private function sendResponseViaEmail(){
+    private function sendResponseViaEmail()
+    {
 
         foreach ($this->formData as $key => $value) {
-                
-            $label=$this->formModel->getLabelFromQuestionId($value['form_id'], $value['name']);
 
-            $mail_data[$label]=$value['answer'];
+            $label = $this->formModel->getLabelFromQuestionId($value['form_id'], $value['name']);
+
+            $mail_data[$label] = $value['answer'];
         }
 
-        $this->mailData=$mail_data;
+        $this->mailData = $mail_data;
 
-        
+
         if (isset($_POST['email'])) {
             sendmail('sendcopyofresponse', $this->mailData, $_SESSION['email']);
         }

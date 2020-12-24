@@ -7,13 +7,13 @@
             <!-- <div class="col-md-7 mr-auto">
                 <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
             </div> -->
-            <div class="col-md-5 ml-auto ">
+            <div class="col-md-5 ml-auto pl-0">
                 <div>
                     <nav>
-                        <ul class="navbar-nv d-flex">
-                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
-                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
-                            <div class="nav-item">
+                        <ul class="navbar-nv d-flex col-12 pl-0">
+                            <div class="nav-item col-sm-4 pl-0 pr-0"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
+                            <div class="nav-item col-sm-4 pl-0 pr-0"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
+                            <div class="nav-item col-sm-4 pl-0 pr-0">
                                 <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a></div>
                         </ul>
                     </nav>
@@ -24,7 +24,7 @@
 
     </div>
 </div>
-<div class="col-12 p-3">
+<div class="col-12 p-md-3 p-sm-0">
     <div class="container">
         <div class="col-md-7 mr-auto">
             <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
@@ -85,6 +85,15 @@
                     </div>
                 </div>
 
+
+                <div class="d-none pt-4" id="outeroptionsadded">
+                    <h2>Options</h2>
+
+                    <div class="row text-left d-none" id="optionsadded">
+
+                    </div>
+                    <button class="p-3 btn addoptionicon"><i class="fa fa-plus "></i></button>
+                </div>
                 <div class="form_container col-md-6 pt-4 pl-0 ml-0">
                     <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
                     <button class="btn btn-secondary" id="updateBtn">Update</button>
@@ -98,7 +107,7 @@
 
 
     <section class="col-md-12 d-md-flex">
-        <div class="card border-radius-none border-none col-md-10 text-left p-3">
+        <div class="card border-radius-none border-none col-md-10 text-left p-md-3">
             <div class="card-title">
                 <div class="row">
                     <div class="col-12">
@@ -153,9 +162,14 @@
                         <div onclick="addItemToForm('dropdown')">Dropdown</div>
                         <div onclick="addItemToForm('date')">Date</div>
                         <div onclick="addItemToForm('singleoption')">Single Option</div>
-                        <div>MultiChoice Answer</div>
-                        <div>File</div>
-                        <!-- input -->
+                        <div onclick="addItemToForm('multichoice')">MultiChoice Answer</div>
+                        <?php
+                        if ($_SESSION['membership_plan'] == 'premium') : ?>
+                            <div>Range</div>
+                            <div>Time</div>
+                            <div>File</div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
                 <div class="p-2 col-sm-2">
@@ -169,6 +183,12 @@
                 <div class="p-2 col-sm-2">
                     <button class="dropbtn btn  border-radius-none"> <i class="fa fa-credit-card"></i></button>
                 </div>
+
+                <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
+                    <div class="p-2 col-sm-2">
+                        <button class="dropbtn btn  border-radius-none"> <i class="fa fa-paper"></i></button>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>

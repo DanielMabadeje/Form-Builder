@@ -30,11 +30,19 @@ class Pages extends Controller
 
     public function contact()
     {
+        
+        $data = [
+            'title' => "Mabadeje's Framework",
+        ];
+        $this->view('pages/contact', $data);
     }
 
     public function pricing( $var = null)
     {
-        # code...
+        $data = [
+            'title' => "Mabadeje's Framework",
+        ];
+        $this->view('pages/pricing', $data);
     }
 
     public function features( $var = null)
