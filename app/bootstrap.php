@@ -3,10 +3,10 @@
 
 require_once '../Vendor/autoload.php';
 
-if(require_once('../vendor/vlucas/phpdotenv/src/Dotenv.php')){
-    $dotenv = Dotenv\Dotenv::createImmutable('../');
-$dotenv->load();
-}
+// if(require_once('../vendor/vlucas/phpdotenv/src/Dotenv.php')){
+//     $dotenv = Dotenv\Dotenv::createImmutable('../');
+// $dotenv->load();
+// }
 
 // Load Config
 require_once '../app/config/config.php';
@@ -30,8 +30,6 @@ require_once '../app/mails/template/template.php';
 require_once 'helpers/mail_helper.php';
 
 
-spl_autoload_register(function($className){
-    require_once 'libraries/'.$className.'.php';
+spl_autoload_register(function ($className) {
+    require_once 'libraries/' . $className . '.php';
 });
-
-
