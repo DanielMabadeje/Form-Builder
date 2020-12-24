@@ -787,6 +787,8 @@ function createOptionInput(id,value) {
   modalOptionsDiv=document.getElementById('optionsadded');
   
   var input=document.createElement('input')
+  var closebtn=document.createElement('button')
+  var closespan=document.createElement('span')
   input.classList.add('input-group-text')
   input.classList.add('optionInput')
   input.classList.add('col-md-12')
