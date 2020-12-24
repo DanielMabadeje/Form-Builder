@@ -787,22 +787,56 @@ function createOptionInput(id,value) {
   modalOptionsDiv=document.getElementById('optionsadded');
   
   var input=document.createElement('input')
-  var closebtn=document.createElement('button')
-  var closespan=document.createElement('span')
+  
+
   input.classList.add('input-group-text')
   input.classList.add('optionInput')
-  input.classList.add('col-md-12')
+  input.classList.add('col-md-9')
   input.classList.add('text-left')
   input.classList.add('mt-2')
   input.id=id
   input.value=value
+  modaloptiondiv.classList.add('row')
 
+
+  var closebtnHtml=`
+  <span class="btn btn-danger mt-2 col-1 ml-1 deleteOptionBtn" id="${id}">
+  <span>x</span>
+  </span>
+  `;
+
+  
   modaloptiondiv.appendChild(input);
 
   modalOptionsDiv.appendChild(modaloptiondiv)
 
+  input.insertAdjacentHTML('afterend', closebtnHtml)
+  
 
-  // div.addEventListener('change')
+  input.addEventListener('change', function (e) {
+    editQuestionOption(id)
+  });
+}
+
+function editQuestionOption(id) {
+
+}
+
+var deleteOptionBtn=document.getElementsByClassName('deleteOptionBtn')
+for (let index = 0; index < deleteOptionBtn.length; index++) {
+  // const element = array[index];
+  deleteOptionBtn[index].addEventListener('click',  function (e) {
+    console.log(this.id)
+    deleteQuestionOption(this.id)
+  })
+  
+}
+
+
+function deleteQuestionOption(id) {
+  // var parent = document.getElementById("div1");
+var child = modaloptiondiv.getElementById(id);
+modaloptiondiv.removeChild(child);
 }
 
 function deleteOptionInput(param) { 
