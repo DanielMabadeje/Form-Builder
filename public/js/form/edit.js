@@ -816,27 +816,34 @@ function createOptionInput(id,value) {
   input.addEventListener('change', function (e) {
     editQuestionOption(id)
   });
+
+
+  var deleteOptionBtn=document.getElementsByClassName('deleteOptionBtn')
+for (let index = 0; index < deleteOptionBtn.length; index++) {
+  deleteOptionBtn[index].addEventListener('click',  function (e) {
+    deleteQuestionOption(this.id)
+  }) 
+}
 }
 
 function editQuestionOption(id) {
 
 }
 
-var deleteOptionBtn=document.getElementsByClassName('deleteOptionBtn')
-for (let index = 0; index < deleteOptionBtn.length; index++) {
-  // const element = array[index];
-  deleteOptionBtn[index].addEventListener('click',  function (e) {
-    console.log(this.id)
-    deleteQuestionOption(this.id)
-  })
-  
-}
-
-
 function deleteQuestionOption(id) {
-  // var parent = document.getElementById("div1");
-var child = modaloptiondiv.getElementById(id);
+var child = document.getElementById(id);
 modaloptiondiv.removeChild(child);
+}
+function deleteQuestionOptionInApi(id, question_id, form_id) {
+  settings.url=base_url+'/api/forms/delete'
+  settings.method='GET'
+  // settings.data=formarray
+
+  $.ajax(settings).done(function (response) {
+    let updatedAt=response.success.message.updated_at
+    // let updatedAt=response.success.m
+    showSaveSuccess(updatedAt);
+  })
 }
 
 function deleteOptionInput(param) { 
@@ -853,9 +860,7 @@ function removingOptions(params, element,e){
 
 function deleteItem(param){
 
-  // var form=document.getElementsByTagName('form')[1];
   var formContainer=document.getElementsByClassName("field_container")[param]
-  // console.log(form);
   form.removeChild(formContainer)
   
   deleteItemInArray(param);
