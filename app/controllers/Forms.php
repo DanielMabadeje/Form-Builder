@@ -60,21 +60,55 @@ class Forms extends Controller
             }
         } else {
             redirect('/');
+            $data['uniqueId'] = generateUniqueId();
+            $data['title'] = 'New Form';
+            $data['description'] = 'Description of your form';
+            switch ($type) {
+                case '':
+                    $data['form_type'] = 'blank';
+                    $data['form_options'] = blankForm();
+                    break;
+                case 'donation':
+                    $data['form_type'] = $type;
+                    $data['form_options'] = donationForm();
+                    break;
+                case 'contact':
+                    $data['form_type'] = $type;
+                    $data['form_options'] = contactForm();
+                    break;
+                case 'rsvp':
+                    $data['form_type'] = $type;
+                    $data['form_options'] = rsvpForm();
+                    break;
+
+                default:
+                    $data['form_type'] = 'blank';
+                    $data['form_options'] = blankForm();
+                    break;
+            }
+
+            if ($this->formModel->add($data)) {
+                redirect('/forms/edit/' . $data['uniqueId'].'/?session_id='.$data['uniqueId']);
+            }
         }
     }
     public function edit($var)
     {
-        if ($var) {
-            if ($data = $this->formModel->getForm($var)) {
-                $this->formandquestions = $data;
-                $this->checkIfQuestionisDropdown();
-                $this->checkIfQuestionisOption();
-                $this->view('forms/edit', $this->formandquestions);
-            } else {
-                die('404');
-            }
+        if (isset($_GET['session_id'])) {
+            die('hi');
         } else {
-            # code...
+            if ($var) {
+                if ($data = $this->formModel->getForm($var)) {
+                    $this->formandquestions = $data;
+                    $this->checkIfQuestionisDropdown();
+                    $this->checkIfQuestionisOption();
+                    $this->view('forms/edit', $this->formandquestions);
+                } else {
+                    die('404');
+                }
+            } else {
+                
+            }
         }
     }
     public function views($id)
