@@ -458,13 +458,14 @@ class Sample_Form_Creator
                             $this->elm_options['name'] = $all_elm_options['name'];
                             $this->elm_options['id'] = $all_elm_options['id'];
 
+
                             // Set value as label if no label is set
                             array_key_exists('label', $this->elm_options) || $this->elm_options['label'] = $this->elm_options['value'];
 
                             $label_class = substr($this->func, 5) . '-inlin';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class . '">';
+                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class . '" id="' . $elm_suboptions['id'] . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
                             $this->print_string .= $this->elm_options['label'] . '</label> ';
                         }

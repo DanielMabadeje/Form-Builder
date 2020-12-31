@@ -291,14 +291,28 @@ class Form
 
         if ($result = $this->db->resultSet()) {
 
-foreach ($result as $key => $value) {
-    $value->label=$value->value;
-    // array($value);
-[$value];
-    
-}
+            foreach ($result as $key => $value) {
+                $value->label = $value->value;
+                // array($value);
+                [$value];
+            }
 
             return $result;
+        } else {
+            return false;
+        }
+    }
+
+    public function deleteQuestionOption($id, $form_id, $question_id)
+    {
+        $this->db->query('DELETE FROM questions_options WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $question_id);
+        $this->db->bind(':id', $id);
+
+
+        if ($this->db->execute()) {
+            return true;
         } else {
             return false;
         }

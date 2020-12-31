@@ -53,12 +53,16 @@ class Forms extends ApiController
     {
         if ($this->validateIfFormExists($form_id)) {
             if ($this->validateIfQuestionExists($form_id, $question_id)) {
-                die('Question Exists');
+                if ($this->formModel->deleteQuestionOption($id, $form_id, $question_id)) {
+                    $this->success('Deleted Successfully');
+                } else {
+                    $this->fail('Unable to delete');
+                }
             } else {
-                # code...
+                $this->fail('Question does not exist');
             }
         } else {
-            # code...
+            $this->fail('Form does not exist');
         }
     }
 
