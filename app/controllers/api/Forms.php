@@ -48,6 +48,20 @@ class Forms extends ApiController
         }
     }
 
+
+    public function deleteOption($api, $form_id, $question_id, $id)
+    {
+        if ($this->validateIfFormExists($form_id)) {
+            if ($this->validateIfQuestionExists($form_id, $question_id)) {
+                die('Question Exists');
+            } else {
+                # code...
+            }
+        } else {
+            # code...
+        }
+    }
+
     private function validateIfFormExists($form_id)
     {
         if ($this->formModel->getForm($form_id)) {
@@ -143,16 +157,16 @@ class Forms extends ApiController
 
     public function addOption()
     {
-        if ($_SERVER['REQUEST_METHOD']=='POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->sanitizePost();
             // var_dump($_POST);
-            $data=[];
-            $data['form_id']=$_POST['form_id'];
-            $data['question_id']=$_POST['question_id'];
-            $data['type']=$_POST['type'];
-            $data['option']=$_POST['option'];
+            $data = [];
+            $data['form_id'] = $_POST['form_id'];
+            $data['question_id'] = $_POST['question_id'];
+            $data['type'] = $_POST['type'];
+            $data['option'] = $_POST['option'];
 
-            if ($result=$this->formModel->addQuestionOption($data)) {
+            if ($result = $this->formModel->addQuestionOption($data)) {
                 $this->success($result);
             } else {
                 $this->fail();

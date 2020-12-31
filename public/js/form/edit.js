@@ -8,6 +8,7 @@ var savingProgress=document.getElementsByClassName('save')[0];
 var responseSwitch=document.getElementById('switch');
 var form=document.getElementsByTagName('form')[0];
 var mainform=formarray.form;
+var form=``;
 var dropdownOption=``
 var optionarray=``
 
@@ -616,7 +617,7 @@ function showEditModal(param){
   modal.style.display = "block";
 
   if(param){
-    var form =mainform[param]
+    form =mainform[param]
 
     // setting modal label
     var modal_label=modal.getElementsByTagName('input')[0]
@@ -742,7 +743,7 @@ function showEditModal(param){
 
 
 function addNewoption(param) {
-  var form =mainform[param]
+  form =mainform[param]
   var optionslength=form.options.length
   optionarray={
     'form_id':form.form_id,
@@ -822,6 +823,9 @@ function createOptionInput(id,value) {
 for (let index = 0; index < deleteOptionBtn.length; index++) {
   deleteOptionBtn[index].addEventListener('click',  function (e) {
     deleteQuestionOption(this.id)
+    // console.log(form);
+    // console.log(this.id);
+    deleteQuestionOptionInApi(this.id, form.form_id, form.question_id)
   }) 
 }
 }
@@ -834,8 +838,8 @@ function deleteQuestionOption(id) {
 var child = document.getElementById(id);
 modaloptiondiv.removeChild(child);
 }
-function deleteQuestionOptionInApi(id, question_id, form_id) {
-  settings.url=base_url+'/api/forms/delete'
+function deleteQuestionOptionInApi(id, form_id,question_id) {
+  settings.url=base_url+'/api/forms/deleteOption/'+form_id+'/'+question_id+'/'+id
   settings.method='GET'
   // settings.data=formarray
 
