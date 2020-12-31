@@ -3,6 +3,7 @@ var title = document.getElementsByTagName('h1')[0];
 var description = document.getElementsByClassName('description_h5')[0];
 
 var inputDivs = document.getElementsByClassName('field_container');
+var inputDivsParam=``;
 var inputLabels = document.getElementsByClassName('form-label');
 var savingProgress = document.getElementsByClassName('save')[0];
 var responseSwitch = document.getElementById('switch');
@@ -615,6 +616,7 @@ function addingOptions(params, element) {
 function showEditModal(param) {
 
   modal.style.display = "block";
+  inputDivsParam=param
 
   if (param) {
     form = mainform[param]
@@ -838,7 +840,12 @@ function deleteQuestionOption(id) {
   var child = document.getElementById(id);
   modaloptiondiv.removeChild(child);
 
-  // inputDivs[].removeChild(child);
+
+  var child = document.getElementById(id);
+  console.log(inputDivsParam)
+  console.log(child)
+  console.log(inputDivs[inputDivsParam])
+  // inputDivs[inputDivsParam].removeChild(child);
 }
 function deleteQuestionOptionInApi(id, form_id, question_id) {
   settings.url = base_url + '/api/forms/deleteOption/' + form_id + '/' + question_id + '/' + id
