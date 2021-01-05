@@ -122,6 +122,7 @@ class Forms extends Controller
         if (isset($_GET['session_id'])) {
         
             $data=$_SESSION[$_GET['session_id']];
+            echo 'HI';
             $this->view('forms/editforNotLogged', $data);
         } else {
             if ($var) {
