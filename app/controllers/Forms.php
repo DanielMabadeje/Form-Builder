@@ -103,8 +103,8 @@ class Forms extends Controller
                     break;
             }
 
-            var_dump($data);
-            die();
+            // var_dump($data);
+            // die();
 
             $_SESSION[$uniqueId]=$data;
 
