@@ -11,7 +11,6 @@ require_once '../Vendor/autoload.php';
 // Load Config
 require_once '../app/config/config.php';
 
-
 //Loading Libraries
 
 // loading helpers

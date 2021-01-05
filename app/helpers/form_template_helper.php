@@ -65,3 +65,16 @@ function donationForm()
 {
     #coming soon 
 }
+
+
+function createNotLoggedInform(){
+//  class formtemplating{
+    
+//  };
+
+ $data =new stdClass();
+// $data=[];
+//  var_dump($data);
+//  die;
+return $data;
+}

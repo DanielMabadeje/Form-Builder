@@ -270,8 +270,6 @@ class Form
             $data = [];
             $index = 0;
             foreach ($result as $key => $value) {
-                // var_dump($value->form_option);
-                // die;
 
                 $data[$index] = $value->form_option;
                 $index++;
@@ -299,7 +297,7 @@ class Form
 
             return $result;
         } else {
-            return false;
+            return [];
         }
     }
 

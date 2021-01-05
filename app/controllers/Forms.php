@@ -10,12 +10,16 @@ class Forms extends Controller
     private $answerId;
     private $mailData;
 
+    private $notLoggedQuestions;
+
 
     private $formandquestions;
 
 
     public function __construct()
     {
+
+        
         $this->form = new Sample_Form_Creator();
         $this->formModel = $this->model('Form');
         $this->user = isLoggedIn();
@@ -59,43 +63,66 @@ class Forms extends Controller
                 redirect('/forms/edit/' . $data['uniqueId']);
             }
         } else {
-            redirect('/');
-            $data['uniqueId'] = generateUniqueId();
-            $data['title'] = 'New Form';
-            $data['description'] = 'Description of your form';
+            // redirect('/');
+            $uniqueId = generateUniqueId();
+
+            $this->notLoggedQuestions=createNotLoggedInform();
+            $data = $this->notLoggedQuestions;
+
+            $data->form_id = $uniqueId;
+            $data->user_id = "1";
+            $data->form_name = "New Form";
+            $data->description = "Your Description";
+            $data->responses = "0";
+            $data->paginated = "false";
+            $data->paginated_after = null;
+            $data->allowing_responses = "1";
+            $data->created_at = date('y-m-d');
+            $data->updated_at = date('y-m-d');
             switch ($type) {
                 case '':
-                    $data['form_type'] = 'blank';
-                    $data['form_options'] = blankForm();
+                    $data->form_type = 'blank';
+                    $data->form= blankForm();
                     break;
                 case 'donation':
-                    $data['form_type'] = $type;
-                    $data['form_options'] = donationForm();
+                    $data->form_type = $type;
+                    $data->form_options = donationForm();
                     break;
                 case 'contact':
-                    $data['form_type'] = $type;
-                    $data['form_options'] = contactForm();
+                    $data->form_type = $type;
+                    $data->form_options = contactForm();
                     break;
                 case 'rsvp':
-                    $data['form_type'] = $type;
-                    $data['form_options'] = rsvpForm();
+                    $data->form_type = $type;
+                    $data->form_options = rsvpForm();
                     break;
 
                 default:
-                    $data['form_type'] = 'blank';
-                    $data['form_options'] = blankForm();
+                    $data->form_type = 'blank';
+                    $data->form_options = blankForm();
                     break;
             }
 
-            if ($this->formModel->add($data)) {
-                redirect('/forms/edit/' . $data['uniqueId'].'/?session_id='.$data['uniqueId']);
-            }
+            var_dump($data);
+            die();
+
+            $_SESSION[$uniqueId]=$data;
+
+                redirect('forms/edit/' . $uniqueId . '/?session_id=' . $uniqueId);
+            
         }
     }
+
+    // public function FunctionName(Type $var = null)
+    // {
+    //     # code...
+    // }
     public function edit($var)
     {
         if (isset($_GET['session_id'])) {
-            die('hi');
+        
+            $data=$_SESSION[$_GET['session_id']];
+            $this->view('forms/editfornotlogged', $data);
         } else {
             if ($var) {
                 if ($data = $this->formModel->getForm($var)) {
@@ -107,7 +134,6 @@ class Forms extends Controller
                     die('404');
                 }
             } else {
-                
             }
         }
     }
@@ -176,6 +202,7 @@ class Forms extends Controller
                 $single_data->type = 'radio';
                 // $single_data->options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
                 $options = $this->formModel->getQuestionOption($single_data->form_id, $single_data->question_id);
+                $single_data->options = [];
                 foreach ($options as $key => $value) {
                     $single_data->options[$key] = [
                         'id' => $value->id,
