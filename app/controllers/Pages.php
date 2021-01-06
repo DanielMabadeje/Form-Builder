@@ -18,7 +18,7 @@ class Pages extends Controller
         $this->view('pages/about', $data);
         # code...
     }
-    public function Index( $var = null)
+    public function Index($var = null)
     {
 
         $data = [
@@ -30,14 +30,14 @@ class Pages extends Controller
 
     public function contact()
     {
-        
+
         $data = [
             'title' => "Mabadeje's Framework",
         ];
         $this->view('pages/contact', $data);
     }
 
-    public function pricing( $var = null)
+    public function pricing($var = null)
     {
         $data = [
             'title' => "Mabadeje's Framework",
@@ -45,7 +45,7 @@ class Pages extends Controller
         $this->view('pages/pricing', $data);
     }
 
-    public function features( $var = null)
+    public function features($var = null)
     {
         # code...
     }
@@ -55,6 +55,10 @@ class Pages extends Controller
         $data = [
             'title' => "Mabadeje's Framework",
         ];
-        $this->view('pages/template', $data);
+        $this->view('pages/templates', $data);
+    }
+    public function page404()
+    {
+        # code...
     }
 }
