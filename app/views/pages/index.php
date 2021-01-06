@@ -169,7 +169,7 @@
   </div>
 
 
-  <div class="col-12 p-5 bg-light mt-4 text-left">
+  <div class="col-12 p-5 bg-light mt-4 text-md-left text-sm-center">
     <div class="pt-md-5 col-md-8">
       <h3 class="displ">Integrations</h3>
       <h3 class="display-4">Form Builder is more than just a <br> great online tool</h3>
