@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h2 class="display-4">
+                    <h2 class="display-md-4">
                         <?= SITENAME; ?>
                     </h2>
                     <br>
@@ -16,9 +16,9 @@
                         </h5>
                     </div>
                     <div class="pt-3">
-                        
+
                         <a href="#" disabled><img src="<?= URLROOT; ?>/img/app-store-logo.png" alt=""></a>
-                        
+
                         <a href=""><img src="<?= URLROOT; ?>/img/google-play-logo.png" alt=""></a>
                     </div>
                 </div>

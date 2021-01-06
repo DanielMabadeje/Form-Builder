@@ -6,7 +6,7 @@
       <h5 class=" text-main-color m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And an even wittier subheading to boot. </p>
       <h1 class="display-4 font-weight-normal">ONLINE FORM BUILDER</h1>
-      <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?=URLROOT ?>/forms/add">Get Started</a>
+      <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -60,7 +60,7 @@
 
   <div class="col-12 bg-light pt-5 mt-5">
     <div class="container">
-      <h2 class="display-3">Templates</h2>
+      <h2 class="display-md-3">Templates</h2>
       <div class="row"></div>
 
       <a href="#" class="btn btn-primary">View All Templates</a>
@@ -181,7 +181,7 @@
     <div class="row">
       <div class="col-md-7">
         <!-- <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12"> -->
-        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-previewed.png" alt="" class="">
+        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-previewed.png" alt="" class="col">
 
       </div>
       <div class="col-md-5">
@@ -196,7 +196,7 @@
   <div class="col-12  p-0 pt-5 pb-5 mt-4" style="background:black;">
     <div class="col-7 mx-auto text-center p-5 text-white">
       <h4>You can experience Form Builder even before Registration</h4>
-      <a href="<?=URLROOT ?>/forms/add" class="btn btn-primary">Quick Start</a>
+      <a href="<?= URLROOT ?>/forms/add" class="btn btn-primary">Quick Start</a>
     </div>
   </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
