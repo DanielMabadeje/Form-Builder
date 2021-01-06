@@ -50,7 +50,7 @@ class Pages extends Controller
         # code...
     }
 
-    public function template(Type $var = null)
+    public function template()
     {
         $data = [
             'title' => "Mabadeje's Framework",
