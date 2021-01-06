@@ -144,12 +144,7 @@
                         <div onclick="addItemToForm('date')">Date</div>
                         <div onclick="addItemToForm('singleoption')">Single Option</div>
                         <div onclick="addItemToForm('multichoice')">MultiChoice Answer</div>
-                        <?php
-                        if ($_SESSION['membership_plan'] == 'premium') : ?>
-                            <div>Range</div>
-                            <div>Time</div>
-                            <div>File</div>
-                        <?php endif; ?>
+
 
                     </div>
                 </div>
@@ -165,11 +160,6 @@
                     <button class="dropbtn btn  border-radius-none"> <i class="fa fa-credit-card"></i></button>
                 </div>
 
-                <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
-                    <div class="p-2 col-sm-2">
-                        <button class="dropbtn btn  border-radius-none"> <i class="fa fa-paper"></i></button>
-                    </div>
-                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -180,5 +170,5 @@
 </script>
 
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
-<script src="<?= URLROOT; ?>/js/form/edit.js"></script>
+<script src="<?= URLROOT; ?>js/form/editForNotLogged.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
