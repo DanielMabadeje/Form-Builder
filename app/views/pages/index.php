@@ -58,10 +58,61 @@
   </div>
 
 
-  <div class="col-12 bg-light pt-5 mt-5">
+  <div class="col-12 bg-light pt-5 mt-5 pb-5">
     <div class="container">
       <h2 class="display-md-3">Templates</h2>
-      <div class="row"></div>
+      <div class="row pt-5 pb-5 mt-5 mb-5">
+        <a href="#" class="col">
+          <div class="card border-none bg-transparent">
+            <div class="card-heade">
+              <h2 class="fa fa-cart"></h2>
+            </div>
+            <div class="card-body">
+              RSVP Form
+            </div>
+          </div>
+        </a>
+        <a href="#" class="col">
+          <div class="card border-none bg-transparent">
+            <div class="card-heade">
+              <h2 class="fa fa-cart"></h2>
+            </div>
+            <div class="card-body">
+              Booking Form
+            </div>
+          </div>
+        </a>
+        <a href="#" class="col">
+          <div class="card border-none bg-transparent">
+            <div class="card-heade">
+              <h2 class="fa fa-cart"></h2>
+            </div>
+            <div class="card-body">
+              Job Application Form
+            </div>
+          </div>
+        </a>
+        <a href="#" class="col">
+          <div class="card border-none bg-transparent">
+            <div class="card-heade">
+              <h2 class="fa fa-cart"></h2>
+            </div>
+            <div class="card-body">
+              Donation Form
+            </div>
+          </div>
+        </a>
+        <a href="#" class="col">
+          <div class="card border-none bg-transparent">
+            <div class="card-heade">
+              <h2 class="fa fa-cart"></h2>
+            </div>
+            <div class="card-body">
+              Payment Form
+            </div>
+          </div>
+        </a>
+      </div>
 
       <a href="<?= URLROOT ?>/pages/templates" class="btn btn-primary">View All Templates</a>
     </div>

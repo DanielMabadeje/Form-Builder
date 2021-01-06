@@ -1,3 +1,11 @@
 /* body{ */
      /* background-color: gray; */
 /* } */
+
+.border-none{
+     border: none !important;
+}
+
+.bg-transparent{
+     background: transparent !important;
+}
