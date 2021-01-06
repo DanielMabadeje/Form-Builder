@@ -52,6 +52,9 @@ class Pages extends Controller
 
     public function template(Type $var = null)
     {
-        # code...
+        $data = [
+            'title' => "Mabadeje's Framework",
+        ];
+        $this->view('pages/template', $data);
     }
 }
