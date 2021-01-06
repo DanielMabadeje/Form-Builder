@@ -4,7 +4,7 @@
   <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="background: linear-gradient(to bottom right, rgb(253, 251, 251), rgba(253, 249, 249, 0)), url('<?= URLROOT; ?>/img/jess-bailey-q10VITrVYUM-unsplash.jpg'); background-size:cover; height:100%;">
     <div class="col-md-7 p-lg-5 my-5 text-dark mx-auto">
       <h5 class=" text-main-color m">Data Collection is key</h5>
-      <p class="lead font-weight-normal">And an even wittier subheading to boot. </p>
+      <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
       <h1 class="display-4 font-weight-normal">ONLINE FORM BUILDER</h1>
       <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
     </div>
