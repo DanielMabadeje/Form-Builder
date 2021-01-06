@@ -23,7 +23,7 @@
 
   <div class="col-12">
     <div class="container">
-      <div class="row text-left pt-4">
+      <div class="row text-md-left text-sm-center pt-4">
         <div class="col-md-6">
           <h3 class="display-4">Create</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
@@ -35,7 +35,7 @@
         <div class="col-md-6"></div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6 ">
           <h3 class="display-4">Edit Flexibly</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
 
