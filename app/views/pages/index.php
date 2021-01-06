@@ -63,7 +63,7 @@
       <h2 class="display-md-3">Templates</h2>
       <div class="row"></div>
 
-      <a href="#" class="btn btn-primary">View All Templates</a>
+      <a href="<?= URLROOT ?>/pages/templates" class="btn btn-primary">View All Templates</a>
     </div>
   </div>
 
