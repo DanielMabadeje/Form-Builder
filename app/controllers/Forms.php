@@ -19,7 +19,7 @@ class Forms extends Controller
     public function __construct()
     {
 
-        
+
         $this->form = new Sample_Form_Creator();
         $this->formModel = $this->model('Form');
         $this->user = isLoggedIn();
@@ -66,7 +66,7 @@ class Forms extends Controller
             // redirect('/');
             $uniqueId = generateUniqueId();
 
-            $this->notLoggedQuestions=createNotLoggedInform();
+            $this->notLoggedQuestions = createNotLoggedInform();
             $data = $this->notLoggedQuestions;
 
             $data->form_id = $uniqueId;
@@ -82,7 +82,7 @@ class Forms extends Controller
             switch ($type) {
                 case '':
                     $data->form_type = 'blank';
-                    $data->form= blankForm();
+                    $data->form = blankForm();
                     break;
                 case 'donation':
                     $data->form_type = $type;
@@ -106,10 +106,9 @@ class Forms extends Controller
             // var_dump($data);
             // die();
 
-            $_SESSION[$uniqueId]=$data;
+            $_SESSION[$uniqueId] = $data;
 
-                redirect('forms/edit/' . $uniqueId . '/?session_id=' . $uniqueId);
-            
+            redirect('forms/edit/' . $uniqueId . '/?session_id=' . $uniqueId);
         }
     }
 
@@ -120,9 +119,8 @@ class Forms extends Controller
     public function edit($var)
     {
         if (isset($_GET['session_id'])) {
-        
-            $data=$_SESSION[$_GET['session_id']];
-            // echo 'HI';
+
+            $data = $_SESSION[$_GET['session_id']];
             $this->view('forms/editforNotLogged', $data);
         } else {
             if ($var) {
