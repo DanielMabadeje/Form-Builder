@@ -49,4 +49,9 @@ class Pages extends Controller
     {
         # code...
     }
+
+    public function template(Type $var = null)
+    {
+        # code...
+    }
 }
