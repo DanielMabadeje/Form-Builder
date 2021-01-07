@@ -5,7 +5,11 @@
             <?php flash('register_success'); ?>
             <h2>Login</h2>
             <p>Please fill the form</p>
-            <form action="<?= URLROOT ?>/users/login" method="post">
+            <?php if(isset($_GET['form_id'])):?>
+                <form action="<?= URLROOT ?>/users/login<?= $_GET['form_id'] ?>" method="post">
+            <?php else: ?>
+                <form action="<?= URLROOT ?>/users/login" method="post">
+            <?php endif; ?>
                 <div class="form-group">
                     <label for="email">Email <sup>*</sup></label>
                     <input type="email" name="email" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['email']; ?>">
