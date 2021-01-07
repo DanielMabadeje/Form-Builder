@@ -1,4 +1,4 @@
-<div class="c bg-white sidenav" id="mySidenav">
+<div class="col bg-white sidenav" id="mySidenav">
 <!-- padding: 8px 8px 8px 32px; -->
 <div class="sidenav-content ">
     

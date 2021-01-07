@@ -18,8 +18,8 @@
 }
 
 .sidenav li:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-    background-color: #343a40;
+    /* color: #f1f1f1; */
+    background-color: #d5dce2;
 }
 /* The navigation menu links */
 .sidenav li a {
@@ -37,8 +37,9 @@
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-    background-color: #343a40;
+    /* color: #f1f1f1; */
+    color: auto;
+    /* background-color: #343a40; */
 }
 
 /* Position and style the close button (top right corner) */
@@ -54,6 +55,7 @@
 #main {
     transition: margin-left .5s;
     padding: 20px;
+    right: 0;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
