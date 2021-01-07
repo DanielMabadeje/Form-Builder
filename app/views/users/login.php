@@ -6,7 +6,7 @@
             <h2>Login</h2>
             <p>Please fill the form</p>
             <?php if(isset($_GET['form_id'])):?>
-                <form action="<?= URLROOT ?>/users/login<?= $_GET['form_id'] ?>" method="post">
+                <form action="<?= URLROOT ?>/users/login/?form_id<?= $_GET['form_id'] ?>" method="post">
             <?php else: ?>
                 <form action="<?= URLROOT ?>/users/login" method="post">
             <?php endif; ?>
