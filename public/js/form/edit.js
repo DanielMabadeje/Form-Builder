@@ -649,10 +649,18 @@ function showEditModal(param) {
       outermodalOptionsDiv.classList.remove('d-none');
       outermodalOptionsDiv.classList.add('d-block');
       createOptionsDiv();
-      for (let index = 0; index < options.length; index++) {
-        options[index].value
-        createOptionInput(options[index].id, options[index].value)
-
+      if (currentform.type == 'dropdown') {
+        for (let index = 0; index < options.length; index++) {
+          // console.log(options)
+          createOptionInput(options[index].id, options[index])
+  
+        }
+      } else {
+        for (let index = 0; index < options.length; index++) {
+          options[index].value
+          createOptionInput(options[index].id, options[index].value)
+  
+        }
       }
     } else {
       outermodalOptionsDiv = document.getElementById('outeroptionsadded');
@@ -746,7 +754,7 @@ function showEditModal(param) {
 
 function addNewoption(param) {
   currentform = mainform[param]
-  var optionslength = form.options.length
+  var optionslength = currentform.options.length
   optionarray = {
     'form_id': currentform.form_id,
     'question_id': currentform.question_id,
