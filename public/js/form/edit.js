@@ -9,7 +9,7 @@ var savingProgress = document.getElementsByClassName('save')[0];
 var responseSwitch = document.getElementById('switch');
 var form = document.getElementsByTagName('form')[0];
 var mainform = formarray.form;
-var form = ``;
+var currentform = ``;
 var dropdownOption = ``
 var optionarray = ``
 
@@ -619,30 +619,30 @@ function showEditModal(param) {
   inputDivsParam=param
 
   if (param) {
-    form = mainform[param]
+    currentform = mainform[param]
 
     // setting modal label
     var modal_label = modal.getElementsByTagName('input')[0]
-    modal_label.value = form.label
+    modal_label.value = currentform.label
 
     // setting placeholder
     var modal_placeholder = modal.getElementsByTagName('input')[1]
-    modal_placeholder.value = form.placeholder
+    modal_placeholder.value = currentform.placeholder
 
     // setting modal type
     var modal_type = modal.getElementsByTagName('select')[1]
-    if (form.type == "") {
+    if (currentform.type == "") {
       modal_type.value = "shortanswer"
     } else {
-      modal_type.value = form.type
+      modal_type.value = currentform.type
     }
 
 
     // adding options
     var modalOptionsDiv = document.getElementById('optionsadded');
     var outermodalOptionsDiv = document.getElementById('outeroptionsadded');
-    if (form.options) {
-      var options = form.options
+    if (currentform.options) {
+      var options = currentform.options
       modalOptionsDiv.classList.remove('d-none');
       modalOptionsDiv.classList.add('d-block');
 
@@ -669,7 +669,7 @@ function showEditModal(param) {
     // Adding Event Listener for label
     modal_label.addEventListener('change', function (e) {
       inputLabels[param].innerHTML = modal_label.value
-      form.label = modal_label.value
+      currentform.label = modal_label.value
 
       updateForm();
     })
@@ -678,7 +678,7 @@ function showEditModal(param) {
       // inputLabels[param].innerHTML=modal_label.value
       var currentInput = inputDivs[param].getElementsByTagName('input')[0];
       currentInput.placeholder = modal_placeholder.value
-      form.placeholder = modal_placeholder.value
+      currentform.placeholder = modal_placeholder.value
 
       updateForm();
     })
@@ -690,25 +690,25 @@ function showEditModal(param) {
       switch (modal_type.value) {
         case 'email':
           currentInput.type = modal_type.value;
-          form.type = modal_type.value
+          currentform.type = modal_type.value
           break;
         case 'shortanswer':
           currentInput.type = modal_type.value;
-          form.type = '';
+          currentform.type = '';
           break;
         case 'longanswer':
           currentInput.type = modal_type.value;
-          form.type = 'textarea';
+          currentform.type = 'textarea';
           break;
         case 'date':
           currentInput.type = modal_type.value;
-          form.type = modal_type.value;
+          currentform.type = modal_type.value;
         case 'number':
           currentInput.type = modal_type.value;
-          form.type = modal_type.value;
+          currentform.type = modal_type.value;
         default:
           currentInput.type = '';
-          form.type = ''
+          currentform.type = ''
           break;
       }
 
@@ -745,12 +745,12 @@ function showEditModal(param) {
 
 
 function addNewoption(param) {
-  form = mainform[param]
+  currentform = mainform[param]
   var optionslength = form.options.length
   optionarray = {
-    'form_id': form.form_id,
-    'question_id': form.question_id,
-    'type': form.type,
+    'form_id': currentform.form_id,
+    'question_id': currentform.question_id,
+    'type': currentform.type,
     'option': 'New Option',
     'label': 'New Option',
     'value': 'value'
@@ -758,7 +758,7 @@ function addNewoption(param) {
   // console.log(form);
   // return;
   addOptionToApi(optionarray);
-  form.options.splice(optionslength, 0, optionarray)
+  currentform.options.splice(optionslength, 0, optionarray)
   createOptionInput(null, 'New Option')
 }
 
@@ -827,7 +827,7 @@ function createOptionInput(id, value) {
       deleteQuestionOption(this.id)
       // console.log(form);
       // console.log(this.id);
-      deleteQuestionOptionInApi(this.id, form.form_id, form.question_id)
+      deleteQuestionOptionInApi(this.id, currentform.form_id, currentform.question_id)
     })
   }
 }
@@ -976,7 +976,6 @@ function showLastSaved(param) {
 
 
 
-
+addOrRemoveOptions();
 responseSwitch.addEventListener('click', editAllowingResponses);
 
-addOrRemoveOptions();
