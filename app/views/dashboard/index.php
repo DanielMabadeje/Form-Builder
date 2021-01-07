@@ -1,1 +1,3 @@
-fd
+<section>
+    Dashboard
+</section>
