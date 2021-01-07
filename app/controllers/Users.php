@@ -144,6 +144,8 @@ class Users extends Controller
                 if ($loggedInUser) {
                     //create session
                     $this->createUserSession($loggedInUser);
+
+                    $user_id=$loggedInUser->id;
                     if (isset($_GET['form_id'])) {
                         $this->formModel->setUserId($user_id, $_GET['form_id']);
                     }
