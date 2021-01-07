@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/dashboard/layout.css">
 
     <!-- script config -->
     <script src="<?php echo URLROOT ?>/js/jquery.js"></script>
@@ -22,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="bg-lighter">
     <div class="containe">
 
 
