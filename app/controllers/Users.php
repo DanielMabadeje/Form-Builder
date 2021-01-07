@@ -144,6 +144,9 @@ class Users extends Controller
                 if ($loggedInUser) {
                     //create session
                     $this->createUserSession($loggedInUser);
+                    if (isset($_GET['form_id'])) {
+                        $this->formModel->setUserId($user_id, $_GET['form_id']);
+                    }
                 } else {
                     $data['password_err'] = 'Password Incorrect';
 

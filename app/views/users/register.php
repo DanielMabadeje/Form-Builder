@@ -4,7 +4,12 @@
         <div class="card card-body bg-sm-light bg-md-white mt-5">
             <h2>Create An account</h2>
             <p>Please fill the form to register with us</p>
-            <form action="<?= URLROOT ?>/users/register" method="post">
+            <?php if(isset($_GET['form_id'])):?>
+                <form action="<?= URLROOT ?>/users/register/?form_id<?= $_GET['form_id'] ?>" method="post">
+
+            <?php else: ?>
+                <form action="<?= URLROOT ?>/users/register" method="post">
+            <?php endif; ?>
                 <div class="form-group">
                     <label for="name">Name <sup>*</sup></label>
                     <input type="text" name="name" class="form-control form-control-lg <?= (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['name']; ?>">
