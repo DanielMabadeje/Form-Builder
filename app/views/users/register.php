@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <div class="row">
     <div class="col-md-6 mx-auto">
-        <div class="card card-body bg-light mt-5">
+        <div class="card card-body bg-sm-light bg-md-white mt-5">
             <h2>Create An account</h2>
             <p>Please fill the form to register with us</p>
             <form action="<?= URLROOT ?>/users/register" method="post">
@@ -26,9 +26,9 @@
                     <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
                 </div>
 
-                <div class="row">
+                <div class="row pt-2">
                     <div class="col">
-                        <input type="submit" value="Register" class="btn btn-success btn-block">
+                        <input type="submit" value="Register" class="btn btn-primary p-2 btn-block">
                     </div>
                     <div class="col">
                         <a href="<?= URLROOT; ?>users/login " class="btn btn-light btn-block">Have an account? Login</a>

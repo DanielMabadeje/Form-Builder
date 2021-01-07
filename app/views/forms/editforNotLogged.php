@@ -7,7 +7,7 @@
             <a href=""><span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span></a>
         </div>
         <div class="ml-auto text-right col mt-0">
-            <a href="" class="btn btn-primary ">Publish</a>
+            <a href="<?= URLROOT; ?>/users/register/?form_id=<?= $data->form_id ?>" class="btn btn-primary ">Publish</a>
         </div>
     </div>
 </div>
@@ -169,5 +169,6 @@
 </script>
 
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
-<script src="<?= URLROOT; ?>js/form/editForNotLogged.js"></script>
+<!-- <script src="<?= URLROOT; ?>js/form/editForNotLogged.js"></script> -->
+<script src="<?= URLROOT; ?>js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

@@ -67,46 +67,54 @@ class Forms extends Controller
             $uniqueId = generateUniqueId();
 
             $this->notLoggedQuestions = createNotLoggedInform();
-            $data = $this->notLoggedQuestions;
+            // $data = $this->notLoggedQuestions;
 
-            $data->form_id = $uniqueId;
-            $data->user_id = "1";
-            $data->form_name = "New Form";
-            $data->description = "Your Description";
-            $data->responses = "0";
-            $data->paginated = "false";
-            $data->paginated_after = null;
-            $data->allowing_responses = "1";
-            $data->created_at = date('y-m-d');
-            $data->updated_at = date('y-m-d');
+
+            $data = [];
+            $data['uniqueId'] = $uniqueId;
+            $data['user_id'] = "1";
+            $data['title'] = "New Form";
+            $data['description'] = "Your Description";
+            $data['responses'] = "0";
+            $data['paginated'] = "false";
+            $data['paginated_after'] = null;
+            $data['allowing_responses'] = "1";
+            $data['created_at'] = date('y-m-d');
+            $data['updated_at'] = date('y-m-d');
             switch ($type) {
                 case '':
-                    $data->form_type = 'blank';
-                    $data->form = blankForm();
+                    $data['form_type'] = 'blank';
+                    $data['form_options'] = blankForm();
                     break;
                 case 'donation':
-                    $data->form_type = $type;
-                    $data->form_options = donationForm();
+                    $data['form_type'] = $type;
+                    $data['form_options'] = donationForm();
                     break;
                 case 'contact':
-                    $data->form_type = $type;
-                    $data->form_options = contactForm();
+                    $data['form_type'] = $type;
+                    $data['form_options'] = contactForm();
                     break;
                 case 'rsvp':
-                    $data->form_type = $type;
-                    $data->form_options = rsvpForm();
+                    $data['form_type'] = $type;
+                    $data['form_options'] = rsvpForm();
                     break;
 
                 default:
-                    $data->form_type = 'blank';
-                    $data->form_options = blankForm();
+                    $data['form_type'] = 'blank';
+                    $data['form_options'] = blankForm();
                     break;
             }
 
             // var_dump($data);
             // die();
 
-            $_SESSION[$uniqueId] = $data;
+            // $_SESSION[$uniqueId] = $data;
+            $sessionData=[
+                'uniqueId'=>$uniqueId,
+                'name'=>$data['title']
+            ];
+            $_SESSION[$uniqueId] = $sessionData;
+            $this->formModel->add($data);
 
             redirect('forms/edit/' . $uniqueId . '/?session_id=' . $uniqueId);
         }
@@ -120,8 +128,12 @@ class Forms extends Controller
     {
         if (isset($_GET['session_id'])) {
 
-            $data = $_SESSION[$_GET['session_id']];
-            $this->view('forms/editforNotLogged', $data);
+            // $data = $_SESSION[$_GET['session_id']];
+            $data = $this->formModel->getForm($var);
+            $this->formandquestions = $data;
+                    $this->checkIfQuestionisDropdown();
+                    $this->checkIfQuestionisOption();
+            $this->view('forms/editforNotLogged', $this->formandquestions);
         } else {
             if ($var) {
                 if ($data = $this->formModel->getForm($var)) {

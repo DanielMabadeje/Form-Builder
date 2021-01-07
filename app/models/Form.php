@@ -16,15 +16,25 @@ class Form
     public function add($data)
     {
 
-        $form = $data['form_options'];
+        if(isset($data['form_options'])){
+            $form = $data['form_options'];
+        }else{
+            $form = $data['form'];
+        }
         // $data['form_options'] = json_encode($data['form_options']);
 
         $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
         $this->db->bind(':form_id', $data['uniqueId']);
-        $this->db->bind(':user_id', $data['user_id']);
+        
         $this->db->bind(':form_type', $data['form_type']);
         $this->db->bind(':form_name', $data['title']);
         $this->db->bind(':description', $data['description']);
+
+        if(isset($data['user_id'])){
+            $this->db->bind(':user_id', $data['user_id']);
+        }else{
+            $this->db->bind(':user_id', null);
+        }
 
         if ($this->db->execute()) {
 
@@ -35,6 +45,20 @@ class Form
             }
             return true;
         } else {
+            return false;
+        }
+    }
+    public function setUserId($user_id, $form_id)
+    {
+        $this->db->query("UPDATE forms 
+                          SET  user_id=:user_id,                       
+                          WHERE form_id=:form_id");
+        $this->db->bind(':user_id', $user_id);
+        $this->db->bind(':form_id', $form_id);
+
+        if ($this->db->execute()) {
+            return true;
+        }else{
             return false;
         }
     }

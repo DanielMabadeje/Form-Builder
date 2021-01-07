@@ -32,14 +32,17 @@ class User
     {
         // var_dump($data);
         // die();
-        $this->db->query('INSERT INTO users (name, email, password, usertype) VALUES(:name, :email, :password, :usertype)');
+        $this->db->query('INSERT INTO users (name, email, password, usertype, membership_plan, wallet) VALUES(:name, :email, :password, :usertype, :membership_plan, :wallet)');
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
         $this->db->bind(':usertype', $data['usertype']);
+        $this->db->bind(':membership_plan', $data['membership_plan']);
+        $this->db->bind(':wallet', $data['wallet']);
 
         if ($this->db->execute()) {
-            return true;
+            // return true;
+            return $this->db->getLastId();
         } else {
             return false;
         }

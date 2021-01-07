@@ -14,6 +14,7 @@ class Users extends Controller
     public function __construct()
     {
         $this->userModel = $this->model('User');
+        $this->formModel = $this->model('Form');
     }
     public function register($var = null)
     {
@@ -28,6 +29,9 @@ class Users extends Controller
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
+                'usertype' => 'user',
+                'membership_plan' => 'free',
+                'wallet' => 0,
                 'name_err' => '',
                 'email_err' => '',
                 'password_err' => '',
@@ -73,8 +77,11 @@ class Users extends Controller
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
                 //Register User
-                if ($this->userModel->register($data)) {
+                if ($user_id=$this->userModel->register($data)) {
                     flash('register_success', 'You are Registered Successfully');
+                    if (isset($_GET['form_id'])) {
+                        $this->formModel->setUserId($user_id, $_GET['form_id']);
+                    }
                     redirect('users/login');
                 } else {
                     die('Something went wrong');
