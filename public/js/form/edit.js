@@ -825,7 +825,7 @@ function createOptionInput(id, value) {
 
 
   input.addEventListener('change', function (e) {
-    editQuestionOption(id)
+    editQuestionOption(id, e)
   });
 
 
@@ -840,8 +840,12 @@ function createOptionInput(id, value) {
   }
 }
 
-function editQuestionOption(id) {
-
+function editQuestionOption(id, e) {
+  var child = document.getElementById(id);
+  // console.log(e);
+  // console.log(child.value);
+  // console.log(inputDivs[inputDivsParam].getElementById(id).value);
+  inputDivs[inputDivsParam].getElementById(id).value=child.value
 }
 
 function deleteQuestionOption(id) {
@@ -850,10 +854,10 @@ function deleteQuestionOption(id) {
 
 
   var child = document.getElementById(id);
-  console.log(inputDivsParam)
-  console.log(child)
-  console.log(inputDivs[inputDivsParam])
-  // inputDivs[inputDivsParam].removeChild(child);
+  // console.log(inputDivsParam)
+  // console.log(child)
+  // console.log(inputDivs[inputDivsParam])
+  inputDivs[inputDivsParam].removeChild(child);
 }
 function deleteQuestionOptionInApi(id, form_id, question_id) {
   settings.url = base_url + '/api/forms/deleteOption/' + form_id + '/' + question_id + '/' + id
