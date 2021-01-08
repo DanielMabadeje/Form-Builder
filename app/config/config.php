@@ -19,6 +19,7 @@ if (isset($_ENV['URL_ROOT'])) {
     define('DB_USER', 'rftwqjxawxxjla');
     define('DB_PASS', 'ce30a3c2859822efd2b558fad5f249a96d2c694cdf2568225784d3bb1eefefde');
     define('DB_NAME', 'd6t78llm8ie80f');
+    define('DB_TYPE', 'PGSQL');
     // define('APPROOT', dirname(__FILE__));
 } else {
 

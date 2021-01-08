@@ -12,6 +12,7 @@ class Database
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $dbname = DB_NAME;
+    private $dbtype = DB_TYPE;
 
     private $dbh;
     private $stmt;
@@ -20,7 +21,12 @@ class Database
     public function __construct()
     {
         //set DSN 
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        if ($this->dbtype=='PGSQL') {
+            // $dsn='pgsql:host=localhost;dbname=dbname', 'username', 'password';
+            $dsn = 'pgsql:host=' . $this->host . ';dbname=' . $this->dbname;
+        } else {
+            $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        }
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
