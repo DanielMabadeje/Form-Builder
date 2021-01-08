@@ -88,6 +88,9 @@ body{
 .font-2{
     font-size: 20px;
 }
+#closeSideNav{
+        display: none;
+    }
 
 @media screen and (max-width:700px){
     .sidenav{
@@ -99,6 +102,7 @@ body{
     }
 
     #closeSideNav{
-        display: none;
+        display: block;
     }
 }
+
