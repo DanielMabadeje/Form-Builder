@@ -9,7 +9,7 @@
               
                 <div class="collapse navbar-collapse c" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto co ">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a class="nav-link" href=""><span class="fa fa-bell"></span></a>
                     </li>
                     
