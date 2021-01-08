@@ -36,3 +36,7 @@
 
     
 </div>
+
+
+
+<?php require APPROOT . '/views/dashboard/inc/footer.php'; ?>

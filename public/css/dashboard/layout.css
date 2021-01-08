@@ -1,3 +1,8 @@
+
+body{
+    transition: background-color .5s;
+}
+
 /* The side navigation menu */
 .sidenav {
     /* width: 280px !important; */
@@ -91,5 +96,9 @@
     }
     #main{
         width: 100%;
+    }
+
+    #closeSideNav{
+        display: none;
     }
 }

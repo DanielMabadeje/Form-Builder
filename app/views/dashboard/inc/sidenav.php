@@ -1,7 +1,7 @@
 <div class="col pt-0 bg-white sidenav" id="mySidenav">
 <!-- padding: 8px 8px 8px 32px; -->
 <div class="sidenav-content ">
-<li><a href="javascript:void(0)" class="closebtn p-0 d-none" onclick="closeNav()">&times;</a></li>    
+<a href="javascript:void(0)" class="closebtn p-0 " id="closeSideNav" onclick="closeNav()">&times;</a>
 <div class="pt-4 pl-4">
     <h2 style="font-weight: 300;
     line-height: 1.2;"><?= SITENAME ?></h2>
