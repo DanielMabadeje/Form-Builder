@@ -64,7 +64,7 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
 
     // var current = location.pathname.split("/").slice(-1)[0].replace(/^\/|\/$/g, '');
     var current=location.href
-    $('.nav li a', sidebar).each(function() {
+    $('.links li a', sidebar).each(function() {
       var $this = $(this);
       addActiveClass($this);
     })
@@ -111,3 +111,5 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
     $(".form-check label, .form-radio label").append('<i class="input-helper"></i>');
   });
 })(jQuery);
+
+// addActiveClass();
