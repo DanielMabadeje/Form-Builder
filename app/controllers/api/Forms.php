@@ -179,4 +179,24 @@ class Forms extends ApiController
             $this->fail($_SERVER['REQUEST_METHOD'] . ' given instead of POST', 405);
         }
     }
+    public function editOption()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->sanitizePost();
+            // var_dump($_POST);
+            $data = [];
+            $data['form_id'] = $_POST['form_id'];
+            $data['question_id'] = $_POST['question_id'];
+            $data['id'] = $_POST['type'];
+            $data['value'] = $_POST['option'];
+
+            if ($result = $this->formModel->addQuestionOption($data)) {
+                $this->success($result);
+            } else {
+                $this->fail();
+            }
+        } else {
+            $this->fail($_SERVER['REQUEST_METHOD'] . ' given instead of POST', 405);
+        }
+    }
 }
