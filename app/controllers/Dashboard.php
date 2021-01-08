@@ -20,7 +20,7 @@ class Dashboard extends Controller
 
     public function forms($id=null)
     {
-        # code...
+        $this->view('dashboard/index');
     }
 
 
