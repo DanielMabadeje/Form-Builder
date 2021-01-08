@@ -15,6 +15,10 @@ $host = $_SERVER['HTTP_HOST'];
 
 if (isset($_ENV['URL_ROOT'])) {
     define('URLROOT', $_ENV['URL_ROOT']);
+    define('DB_HOST', 'ec2-50-19-32-202.compute-1.amazonaws.com');
+    define('DB_USER', 'rftwqjxawxxjla');
+    define('DB_PASS', 'ce30a3c2859822efd2b558fad5f249a96d2c694cdf2568225784d3bb1eefefde');
+    define('DB_NAME', 'd6t78llm8ie80f');
     // define('APPROOT', dirname(__FILE__));
 } else {
 
@@ -22,3 +26,6 @@ if (isset($_ENV['URL_ROOT'])) {
 }
 //site name
 define('SITENAME', 'FORMBUILDER');
+
+
+// $myPDO = new PDO('pgsql:host=localhost;dbname=dbname', 'username', 'password');
