@@ -19,6 +19,9 @@ if (isset($_ENV['URL_ROOT'])) {
     define('DB_USER', 'rftwqjxawxxjla');
     define('DB_PASS', 'ce30a3c2859822efd2b558fad5f249a96d2c694cdf2568225784d3bb1eefefde');
     define('DB_NAME', 'd6t78llm8ie80f');
+    define('DB_PORT', '5432');
+
+    define('DB_URL', 'postgres://rftwqjxawxxjla:ce30a3c2859822efd2b558fad5f249a96d2c694cdf2568225784d3bb1eefefde@ec2-50-19-32-202.compute-1.amazonaws.com:5432/d6t78llm8ie80f');
     define('DB_TYPE', 'PGSQL');
     // define('APPROOT', dirname(__FILE__));
 } else {
