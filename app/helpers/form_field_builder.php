@@ -465,7 +465,7 @@ class Sample_Form_Creator
                             $label_class = substr($this->func, 5) . '-inlin';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class . '" id="' . $elm_suboptions['id'] . '">';
+                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class .' '. $elm_suboptions['id'].'" id="' . $elm_suboptions['id'] . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
                             $this->print_string .= $this->elm_options['label'] . '</label> ';
                         }

@@ -842,10 +842,22 @@ function createOptionInput(id, value) {
 
 function editQuestionOption(id, e) {
   var child = document.getElementById(id);
-  // console.log(e);
-  // console.log(child.value);
-  // console.log(inputDivs[inputDivsParam].getElementById(id).value);
-  inputDivs[inputDivsParam].getElementById(id).value=child.value
+
+
+
+  var inputType=inputDivs[inputDivsParam].getElementsByClassName(id)[0].getElementsByTagName('input')[0].type
+  if (inputType=='checkbox'){
+    var html =`<input class="" type="checkbox" name="multichoice" value="${child.value}" id="multichoice" label="New Option"> ${child.value}`
+    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML=html
+  }
+  else if(inputType =='radio'){
+    var html =`<input class="" type="radio" name="multichoice" value="${child.value}" id="singlechoice" label="New Option"> ${child.value}`
+    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML=html
+  }  else {}
+}
+
+function editQuestionOptioninApi(id, form_id, question_id) {
+  
 }
 
 function deleteQuestionOption(id) {
