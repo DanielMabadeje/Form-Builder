@@ -1,6 +1,7 @@
 /* The side navigation menu */
 .sidenav {
-    width: 300px;
+    /* width: 280px !important; */
+    width: 21%;
     height: 100%; /* 100% Full-height */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -19,15 +20,18 @@
 
 .sidenav li:hover, .offcanvas a:focus{
     /* color: #f1f1f1; */
-    background-color: #d5dce2;
+    /* background-color: #d5dce2; */
+    background-color: rgba(235, 229, 229, 0.651);
 }
 /* The navigation menu links */
 .sidenav li a {
     /* padding: 8px 8px 8px 32px; */
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-decoration: none;
     /* font-size: 25px; */
+    /* font-weight: 300;
+    line-height: 1.2; */
     font-size: 20px;
     /* color: #818181; */
     color:#343a40;
@@ -44,18 +48,20 @@
 
 /* Position and style the close button (top right corner) */
 .closebtn {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 25px;
     font-size: 36px !important;
-    margin-left: 50px;
+    margin-left: 80%;
+    /* margin-bottom: 20%; */
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    /* padding: 20px; */
     right: 0;
+    width: 79% ;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -68,4 +74,22 @@
 
     background:#fdfdfdfc;
     /* background: whitesmoke; */
+}
+
+.nav{
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+}
+
+.font-2{
+    font-size: 20px;
+}
+
+@media screen and (max-width:700px){
+    .sidenav{
+        width: 0;
+        display: none;
+    }
+    #main{
+        width: 100%;
+    }
 }
