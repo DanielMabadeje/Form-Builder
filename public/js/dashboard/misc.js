@@ -15,7 +15,7 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
     var contentWrapper = $('.content-wrapper');
     var scroller = $('.container-scroller');
     var footer = $('.footer');
-    var sidebar = $('.sidebar');
+    var sidebar = $('.sidenav');
 
     //Add active class to nav-link based on url dynamically
     //Active class can be hard coded directly in html file also as required
@@ -25,7 +25,7 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
     //  alert()
     // console.log(element)
     // console.log(current)
-    console.log(element.attr('href'));
+    // console.log(element.attr('href'));
     // alert(current)
       // if (current === "") {
       //   //for root url

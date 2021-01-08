@@ -22,7 +22,9 @@ body{
 .sidenav li {
     list-style-type: none;
 }
-
+li.active{
+    background-color: rgba(235, 229, 229, 0.651);
+}
 .sidenav li:hover, .offcanvas a:focus{
     /* color: #f1f1f1; */
     /* background-color: #d5dce2; */
