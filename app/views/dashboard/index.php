@@ -20,6 +20,8 @@
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
                         <!-- <h2 class="display-5">10 Forms</h2> -->
+                        <!-- 1024px-OOjs_UI_icon_add.svg -->
+                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="200px" hwight="200px">
 
                     </div>
                 </div>
@@ -36,7 +38,7 @@
                 <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
-                    <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="200px" height="200px">
+                    <img src="<?= URLROOT ?>/img/reservations.jpg" alt=""  width="200px" height="200px">
 
                     </div>
                 </div>
