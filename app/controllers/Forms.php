@@ -385,4 +385,9 @@ class Forms extends Controller
         $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         return substr(str_shuffle($charset), 0, 8);
     }
+
+    public function checkmembershipPlan($user)
+    {
+        # code...
+    }
 }

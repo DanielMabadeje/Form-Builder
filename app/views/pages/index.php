@@ -1,7 +1,11 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <div style="text-align:center;">
   <!-- <h1><?php echo $data['title'] ?></h1> -->
-  <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="background: linear-gradient(to bottom right, rgb(253, 251, 251), rgba(253, 249, 249, 0)), url('<?= URLROOT; ?>/img/jess-bailey-q10VITrVYUM-unsplash.jpg'); background-size:cover; height:100%;">
+  <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="
+  background: linear-gradient(to bottom right, rgb(253, 251, 251), rgba(253, 249, 249, 0)), 
+  url('<?= URLROOT; ?>/img/jess-bailey-q10VITrVYUM-unsplash.jpg');
+  /* url('<?= URLROOT; ?>/img/woman-pointing-document-near-lady-table-with-calculator-smartphone-pen_23-2148042655.jpg'); */
+   background-size:cover; height:100%;">
     <div class="col-md-7 p-lg-5 my-5 text-dark mx-auto">
       <h5 class=" text-main-color m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
@@ -65,7 +69,8 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <h2 class="fa fa-cart"></h2>
+              <!-- <h2 class="fa fa-cart"></h2> -->
+              <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" hwight="200px">
             </div>
             <div class="card-body">
               RSVP Form
@@ -75,7 +80,7 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <h2 class="fa fa-cart"></h2>
+              <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="300px" height="200px">
             </div>
             <div class="card-body">
               Booking Form
@@ -85,7 +90,8 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <h2 class="fa fa-cart"></h2>
+              <!-- <h2 class="fa fa-cart"></h2> -->
+              <img src="<?=URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px">
             </div>
             <div class="card-body">
               Job Application Form
@@ -95,14 +101,15 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <h2 class="fa fa-cart"></h2>
+              <!-- <h2 class="fa fa-cart"></h2> -->
+              <img src="<?= URLROOT ?>/img/29964-200.png" alt="" width="200px" height="200px">
             </div>
             <div class="card-body">
               Donation Form
             </div>
           </div>
         </a>
-        <a href="#" class="col">
+        <!-- <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
               <h2 class="fa fa-cart"></h2>
@@ -111,7 +118,7 @@
               Payment Form
             </div>
           </div>
-        </a>
+        </a> -->
       </div>
 
       <a href="<?= URLROOT ?>/pages/templates" class="btn btn-primary">View All Templates</a>

@@ -6,13 +6,51 @@
     <?php require APPROOT . '/views/dashboard/inc/topnav.php'; ?>
     <section class="bg-lighter col-12 p-3 container">
         <div class="container">
-            <span class="fa fa-chevron-right"></span>Dashboard
+            <span class="fa fa-chevron-right"></span> Dashboard
         </div>
     </section>
     <section class="container pt-3">
         <!-- <h2 class="display-4">Dashboard</h2> -->
 
         <div class="container">
+
+<h2>Create Your Form</h2>
+        <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
+                    <div class="card-title mb-0"></div>
+                    <div class="card-body">
+                        <!-- <h2 class="display-5">10 Forms</h2> -->
+
+                    </div>
+                </div>
+
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
+                    <div class="card-title mb-0"></div>
+                    <div class="card-body">
+                        <!-- <h2 class="display-5">10 Forms</h2> -->
+                        <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" hwight="200px">
+
+                    </div>
+                </div>
+
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
+                    <div class="card-title mb-0"></div>
+                    <div class="card-body">
+                    <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="200px" height="200px">
+
+                    </div>
+                </div>
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
+                    <div class="card-title mb-0"></div>
+                    <div class="card-body">
+                    <img src="<?=URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px">
+
+                    </div>
+                </div>
+        </div>
+
+
+
             <div class="d-md-flex">
                 <div class="card border-none col-md-6 m-md-2 ml/-md-0 mt-2" style="border-radius:0;    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
                     <div class="card-body">

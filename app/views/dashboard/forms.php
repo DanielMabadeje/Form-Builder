@@ -63,8 +63,8 @@
                                     <td>5 January 2021</td>
 
                                     <td class="d-flex">
-                                        <button class="btn btn-primary myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-trash"></i></button>
+                                        <button class="btn btn-primary myBtn m-1"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-danger myBtn m-1"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
 
