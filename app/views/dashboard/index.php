@@ -14,7 +14,7 @@
 
         <div class="container">
 
-<h2>Create Your Form</h2>
+<h2 class="mb-4">Create Your Form</h2>
         <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
                 <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
                     <div class="card-title mb-0"></div>
@@ -44,7 +44,7 @@
                 <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
-                    <img src="<?= URLROOT ?>/img/reservations.jpg" alt=""  width="200px" height="200px">
+                    <img src="<?= URLROOT ?>/img/reservations.jpg" alt=""  width="220px" height="200px">
 
                     </div>
                 </div>

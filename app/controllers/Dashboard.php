@@ -23,6 +23,7 @@ class Dashboard extends Controller
         $this->view('dashboard/forms');
     }
 
+    public function formcreate(){}
 
     public function membership()
     {
