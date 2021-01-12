@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/modal.css">
 
 <link rel="stylesheet" href="<?= URLROOT; ?>/css/font-awesome.min.css">
-<div class="container" style="text-align:center; margin-top:10%;">
+<div class="container" style="text-align:center; margin-top:3%;">
 
 
     <div id="myModal" class="modal">
@@ -110,7 +110,7 @@
         <div class="card border-radius-none border-none col-md-10 text-left p-md-3">
             <div class="card-title">
                 <div class="row">
-                    <div class="col-12 pt-4" style="border-top:4px solid #5631af;">
+                    <div class="col-12 pt-5" style="border-top:4px solid #5631af;">
                         <h1 contenteditable="true" class="display-4"><?= $data->form_name; ?></h1>
                     </div>
 
