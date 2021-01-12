@@ -117,7 +117,7 @@
                 </div>
 
                 <br>
-                <h5 contenteditable="true" class="description_h5 col-md-7 pl-0"><?= $data->description; ?></h5>
+                <h5 contenteditable="true" class="font-weight-normal description_h5 col-md-7 pl-0"><?= $data->description; ?></h5>
             </div>
 
             <div class="card-body">
