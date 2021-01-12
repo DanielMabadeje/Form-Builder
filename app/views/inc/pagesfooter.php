@@ -26,12 +26,12 @@
                 <div class="col">
                     <h4>Buisness</h4>
                     <ul class="navbar-nav">
-                        <li class="nav-item mb-2"><a href="" class="text-dark">My Forms</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/dashboard/forms" class="text-dark">My Forms</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Home</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Features</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Template</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/features" class="text-dark">Features</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/templates" class="text-dark">Template</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/pricing" class="text-dark">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/blog" class="text-dark">Blog</a></li>
                     </ul>
                 </div>
 
@@ -42,9 +42,9 @@
                         <li class="nav-item mb-2"><a href="" class="text-dark">Survey Maker</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Design</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Integrations</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">About Us</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Login</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Register</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/about" class="text-dark">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/users/login" class="text-dark">Login</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/users/register" class="text-dark">Register</a></li>
                     </ul>
                 </div>
 

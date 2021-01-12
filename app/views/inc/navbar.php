@@ -7,24 +7,15 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
+                <li class="nav-item active ml-md-3 mr-md-3">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/contact">Contact</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item ml-md-3 mr-md-3">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/pricing">Pricing</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Features</a>
-                </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown ml-md-3 mr-md-3">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Templates
+                        Product
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <!-- <a class="dropdown-item" href="">V1</a> -->
@@ -33,26 +24,25 @@
                         <!-- <a class="dropdown-item" href="#">Something else here</a> -->
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Blog</a>
-                </li>
-                <li class="nav-item">
+                
+                <li class="nav-item ml-md-3 mr-md-3">
                     <a class="nav-link text-dark" href="<?= URLROOT ?>/pages/about">Help</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])) : ?> <li class="nav-item active">
-                    <li class="nav-item">
+                    <li class="nav-item ml-md-3 mr-md-3">
                         <a class="nav-link text-dark" href="<?= URLROOT ?>/dashboard">Welcome <?= $_SESSION['user_name']; ?></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ml-md-3 mr-md-3">
                         <a class="nav-link text-dark" href="<?= URLROOT ?>/users/logout">Logout</a>
                     </li>
                 <?php else : ?>
-                    <a class="nav-link text-dark" href="<?= URLROOT ?>/users/register">Register</a>
+                    <li class="nav-item">
+                    <a class="nav-link text-main-color pl-4 pr-4" href="<?= URLROOT ?>/users/register">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="<?= URLROOT ?>/users/login">Login</a>
+                        <a class="nav-link text-white btn bg-main pl-4 pr-4" href="<?= URLROOT ?>/users/login">Login</a>
                     </li>
                 <?php endif; ?>
             </ul>

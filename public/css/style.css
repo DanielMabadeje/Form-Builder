@@ -2,6 +2,18 @@
      /* background-color: gray; */
 /* } */
 
+.bg-main{
+     background: #5631af;
+}
+
+.border-color-main{
+     background: #5631af;
+}
+
+.text-main-color{
+     color: #5631af !important;
+}
+
 .border-none{
      border: none !important;
 }
