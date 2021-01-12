@@ -107,10 +107,10 @@
 
 
     <section class="col-md-12 d-md-flex">
-        <div class="card border-radius-none border-none col-md-10 text-left p-md-3">
+        <div class="card border-radius-none col-md-10 text-left p-md-3" style="border-top:4px solid #5631af; border-left:0; border-right:0; border-bottom:0">
             <div class="card-title">
                 <div class="row">
-                    <div class="col-12 pt-5" style="border-top:4px solid #5631af;">
+                    <div class="col-12 pt-5">
                         <h1 contenteditable="true" class="display-4"><?= $data->form_name; ?></h1>
                     </div>
 
