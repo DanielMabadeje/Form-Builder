@@ -62,8 +62,11 @@ class Pages extends Controller
         # code...
     }
 
-    public function quickdemo(Type $var = null)
+    public function quickdemo()
     {
-        # code...
+        $data = [
+            'title' => "Mabadeje's Framework",
+        ];
+        $this->view('pages/quicktutorial', $data);
     }
 }
