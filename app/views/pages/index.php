@@ -12,7 +12,7 @@
       <h1 class="display-4 font-weight-normal">ONLINE FORM BUILDER</h1>
       <?php if(isset($_SESSION['user_id'])): ?>
         <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
-      <? else; ?>
+      <?php else: ?>
       <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
@@ -258,7 +258,11 @@
   <div class="col-md-12  p-0 pt-5 pb-5 mt-4" style="background:black;">
     <div class="col-md-7 mx-auto text-center p-5 text-white">
       <h4>You can experience Form Builder even before Registration</h4>
-      <a href="<?= URLROOT ?>/forms/add" class="btn btn-primary">Quick Start</a>
+      <?php if($_SESSION['user_id']): ?>
+        <a href="<?= URLROOT ?>/forms/add" class="btn btn-primary">Quick Start</a>
+      <?php else: ?>
+        <a href="<?= URLROOT ?>/pages/quickdemo" class="btn btn-primary">Quick Start</a>
+      <?php endif; ?>
     </div>
   </div>
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
