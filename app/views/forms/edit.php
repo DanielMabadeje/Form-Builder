@@ -120,7 +120,7 @@
                 <h5 contenteditable="true" class="font-weight-normal description_h5 col-md-7 pl-0"><?= $data->description; ?></h5>
             </div>
 
-            <div class="card-body">
+            <div class="card-body pt-0">
                 <?php
 
                 $form_options = $data->form;
