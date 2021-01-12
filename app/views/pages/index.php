@@ -10,7 +10,11 @@
       <h5 class=" text-main-color m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
       <h1 class="display-4 font-weight-normal">ONLINE FORM BUILDER</h1>
+      <?php if(isset($_SESSION['user_id'])): ?>
+        <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
+      <? else; ?>
       <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
+      <?php endif; ?>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>

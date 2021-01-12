@@ -61,4 +61,9 @@ class Pages extends Controller
     {
         # code...
     }
+
+    public function quickdemo(Type $var = null)
+    {
+        # code...
+    }
 }
