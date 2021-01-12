@@ -16,7 +16,7 @@
                   </ul>
 
                   <ul class="ml-auto navbar-nav co">
-                     <li class="nav-item ml-auto">
+                     <li class="nav-item mr-md-3">
                           <a href="<?= URLROOT; ?>" class="nav-link"><i class="fa fa-home"></i>Home</a>
                       </li>
                       <li class="nav-item">

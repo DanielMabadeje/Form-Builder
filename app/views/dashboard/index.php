@@ -9,7 +9,7 @@
             <span class="fa fa-chevron-right"></span> Dashboard
         </div>
     </section>
-    <section class="container pt-3 pr-5">
+    <section class="container pt-3 pr-md-5">
         <!-- <h2 class="display-4">Dashboard</h2> -->
 
         <div class="container">
