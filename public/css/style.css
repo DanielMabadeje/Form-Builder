@@ -13,3 +13,7 @@
 .bg-darker{
      background-color: #0e0f11 !important;
 }
+
+.position-initial{
+     position: initial !important;
+}
