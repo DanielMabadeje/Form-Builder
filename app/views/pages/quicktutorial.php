@@ -54,17 +54,6 @@
                                 <span class="carousel-control-next-icon"></span>
                             </a>
                         </div>
-                        <div class="overlay-bg overlay"></div>
-                        <div class="container">
-                            <div class="row-fullscreen">
-                                <div class="banner-content d-flex align-items-center col-lg-12 col-md-12" style="color:gold; height:40px;">
-                                    <h1 id="topic">
-                                        First Music Records<br>
-                                        <p id="sub">
-                                            It's Better Than Ever.</p>
-                                    </h1>
-                                </div>
-                            </div>
                 </section>
             </div>
         </div>
