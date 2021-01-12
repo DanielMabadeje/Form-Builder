@@ -157,7 +157,7 @@
             <div class="card-title pt-4" style="border-top:4px solid #5631af;">
                 <h1 class="display-4"><?= $data->form_name; ?></h1>
                 <br>
-                <h5 class="col-md-5"><?= $data->description; ?></h5>
+                <h5 class="col-md-7 pl-0"><?= $data->description; ?></h5>
             </div>
 
             <?php if ($data->allowing_responses == 0) : ?>
