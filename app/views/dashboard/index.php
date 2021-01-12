@@ -9,12 +9,15 @@
             <span class="fa fa-chevron-right"></span> Dashboard
         </div>
     </section>
-    <section class="container pt-3">
+    <section class="container pt-3 pr-5">
         <!-- <h2 class="display-4">Dashboard</h2> -->
 
         <div class="container">
 
-<h2 class="mb-4">Create Your Form</h2>
+        <div class="mb-4">
+            <h2 class="">Create Your Form</h2>
+            <p>Start your data collection with just a click...</p>
+        </div>
         <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
                 <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:250px">
                     <div class="card-title mb-0"></div>
@@ -54,17 +57,17 @@
 
 
             <div class="d-md-flex">
-                <div class="card border-none col-md-6 m-md-2 ml/-md-0 mt-2" style="border-radius:0;    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+                <div class="card border-none bg-main text-white col-md-6 m-md-2 ml/-md-0 mt-2" style="border-radius:6px;    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
                     <div class="card-body">
                         <h2 class="display-5">10 Forms</h2>
-                        <span>Created</span>
+                        <span>Recently Created</span>
 
                     </div>
                 </div>
-                <div class="card border-none col-md-6 m-md-2 mt-4" style="border-radius:0;     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+                <div class="card border-none col-md-6 m-md-2 bg-slight-orange mt-4" style="border-radius:6px;     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
                     <div class="card-body">
                         <h2 class="display-5">10 Forms</h2>
-                        <span>Created</span>
+                        <span>Unpublished</span>
 
                     </div>
                 </div>

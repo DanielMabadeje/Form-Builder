@@ -11,8 +11,12 @@
 
     <div class="links mt-4 pt-1 text-dark">
       <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard" class="pl-md-4"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+      
+      <h6 class="pl-md-4 mt-4">Forms</h6>
       <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/forms" class="pl-md-4"><i class="fa fa-wpforms"></i> Forms</a></li>
       <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/formcreate" class="pl-md-4"><i class="fa fa-plus"></i> Create Form</a></li>
+
+      <h6 class="pl-md-4 mt-4">Others</h6>
       <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-credit-card"></i> Payments</a></li>
       <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-user"></i> Membership Plan</a></li>
       <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-home"></i> Back To Home</a></li>
