@@ -7,7 +7,7 @@
                 <h4>Create a form <span class="fa fa-plus"></span></h4>
             </div>
             <div class="col-2">
-                <a href="<?URLROOT; ?>/forms/add" class="btn btn-primary">Create Form</a>
+                <a href="<?= URLROOT; ?>/forms/add" class="btn btn-primary">Create Form</a>
             </div>
         </div>
         <section class="mt-md-2 pt-5 mb-5  mx-auto bg-white col-md-7" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
