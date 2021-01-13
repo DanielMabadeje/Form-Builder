@@ -7,7 +7,7 @@
   /* url('<?= URLROOT; ?>/img/woman-pointing-document-near-lady-table-with-calculator-smartphone-pen_23-2148042655.jpg'); */
    background-size:cover; height:100%;">
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
-    <h5 class=" text-main-color m">Data Collection is key</h5>
+    <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
       <h1 class="display-4 text-main-color">THE NEW PHASE <br> OF DATA COLLECTION</h1>
       
@@ -36,7 +36,7 @@
   </div>
 
   <!-- <img src="<?= URLROOT ?>/img/FsJ4AwKi_o.jpg" alt="" class="c" height="600px" width="100%"> -->
-  <div class="col-12 p-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg);">
+  <div class="col-12 p-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
         <div class="p-5">
           <div class="col-md-7 ml-auto p-4">
             <h2 class="display-4 text-white">
