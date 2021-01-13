@@ -6,10 +6,10 @@
   /* url('<?= URLROOT; ?>/img/jess-bailey-q10VITrVYUM-unsplash.jpg'); */
   /* url('<?= URLROOT; ?>/img/woman-pointing-document-near-lady-table-with-calculator-smartphone-pen_23-2148042655.jpg'); */
    background-size:cover; height:100%;">
-    <div class="col-md-7 p-lg-5 my-5 text-dark mx-auto">
+    <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
     <h5 class=" text-main-color m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <h1 class="display-4 text-main-color">THE NEW PHASE <br> OF DATA COLLECTION..</h1>
+      <h1 class="display-4 text-main-color">THE NEW PHASE <br> OF DATA COLLECTION</h1>
       
       <?php if(isset($_SESSION['user_id'])): ?>
         <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
@@ -17,8 +17,14 @@
       <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    <div class="product-device shadow-sm d-md-block mt-5">
+    <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+    </div>
+    <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
+    <!-- <div class="card container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="">
+    </div> -->
+    <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class=" col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> -->
   </div>
 
 
@@ -29,9 +35,27 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor amet adipisci corporis labore vel doloremque illum hic maxime, aliquid nam enim aspernatur, reprehenderit repellendus omnis impedit, at perferendis optio accusamus mollitia.</p>
   </div>
 
+  <!-- <img src="<?= URLROOT ?>/img/FsJ4AwKi_o.jpg" alt="" class="c" height="600px" width="100%"> -->
+  <div class="col-12 p-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg);">
+        <div class="p-5">
+          <div class="col-md-7 ml-auto p-4">
+            <h2 class="display-4 text-white">
+              Data available to all Devices and <br> across all Platforms
+            </h2>
+          </div>
+        </div>
+  </div>
 
   <div class="col-12">
     <div class="container">
+
+    <div class="text-center col-md-10 mx-auto pt-5 mt-5">
+      <h5 class="text-main-color">Form Building has never been easier</h5>
+      <h2 class="display-4">
+        Create, Edit Flexibly, Share <br>  & Analyse
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
+    </div>
       <div class="row text-md-left text-sm-center pt-4">
         <div class="col-md-6">
           <h3 class="display-4">Create</h3>
@@ -66,6 +90,17 @@
     </div>
   </div>
 
+  <div class="bg-main col-12 pt-5  mt-5">
+    <div class="text-white text-center col-md-7 mx-auto">
+      <span>Fast & Beautiful</span>
+      <h2 class="display-4">Boost Creativity and Productivity</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus corporis optio animi blanditiis fugiat porro delectus sunt nobis illum illo doloremque minus explicabo exercitationem facilis quos excepturi vitae, qui voluptate.</p>
+    </div>
+
+
+    <img src="<?= URLROOT ?>/img/screenshotdashboard.png" alt="" class="col-md-10 mt-5 pt-5" style="border-radius:10px;">
+  </div>
+
 
   <div class="col-12 bg-light pt-5 mt-5 pb-5">
     <div class="container">
@@ -75,7 +110,7 @@
           <div class="card border-none bg-transparent">
             <div class="card-heade">
               <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" hwight="200px">
+              <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               RSVP Form
@@ -85,7 +120,7 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="300px" height="200px">
+              <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="300px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               Booking Form
@@ -96,7 +131,7 @@
           <div class="card border-none bg-transparent">
             <div class="card-heade">
               <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?=URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px">
+              <img src="<?=URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               Job Application Form
@@ -107,7 +142,7 @@
           <div class="card border-none bg-transparent">
             <div class="card-heade">
               <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?= URLROOT ?>/img/29964-200.png" alt="" width="200px" height="200px">
+              <img src="<?= URLROOT ?>/img/29964-200.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               Donation Form
@@ -244,7 +279,7 @@
     <div class="row">
       <div class="col-md-7">
         <!-- <img src="<?= URLROOT ?>/img/272-2726659_phone-screen-png-transparent-background-transparent-android-phone.png" alt="" class="col-12"> -->
-        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-previewed.png" alt="" class="col">
+        <img src="<?= URLROOT ?>/img/realistic-hand-holding-smartphone-empty-touchscreen-isolated-transparent-background-realistic-hand-holding-smartphone-141794987-removebg-previewed.png" alt="" class="" width="300px" height="auto">
 
       </div>
       <div class="col-md-5">
@@ -256,13 +291,13 @@
   </div>
 
 
-  <div class="col-md-12  p-0 pt-5 pb-5 mt-4" style="background:black;">
-    <div class="col-md-7 mx-auto text-center p-5 text-white">
-      <h4>You can experience Form Builder even before Registration</h4>
-      <?php if($_SESSION['user_id']): ?>
-        <a href="<?= URLROOT ?>/forms/add" class="btn btn-primary">Quick Start</a>
+  <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main" >
+    <div class="col-md-7 mx-au text-left p-5 text-white">
+      <h1>You can experience Form Builder even <br> before Registration</h1>
+      <?php if(isset($_SESSION['user_id'])): ?>
+        <a href="<?= URLROOT ?>/forms/add" class="btn bg-white pl-3 pr-3 mt-3">Quick Start</a>
       <?php else: ?>
-        <a href="<?= URLROOT ?>/pages/quickdemo" class="btn btn-primary">Quick Start</a>
+        <a href="<?= URLROOT ?>/pages/quickdemo" class="btn bg-white pl-3 pr-3 mt-3">Quick Start</a>
       <?php endif; ?>
     </div>
   </div>
