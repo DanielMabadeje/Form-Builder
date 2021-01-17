@@ -351,7 +351,7 @@ class Forms extends Controller
             $data = $this->formModel->getForm($form_id);
 
             if ($view == 'chart') {
-                # code...
+                $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {
 
                 $responses = $this->formModel->getResponsesCount($form_id);

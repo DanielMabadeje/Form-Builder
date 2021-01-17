@@ -1,5 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/forms/inc/editheader.php'; ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
 <div class="col-12 p-3" style="border-top:1px #fbfafafa solid; background:#fdfcfc;">
     <div class="text-dark container">
         <div class="d-md-flex col-12">
@@ -10,10 +12,11 @@
                 <div>
                     <nav>
                         <ul class="navbar-nv d-flex">
-                        <div class="nav-item"><a href="<?=URLROOT?>/forms/edit/<?=$data->form_id; ?>/" class="nav-link">Questions</a></div>
-                            <div class="nav-item"><a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/" class="nav-link">Responses</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
+                            <div class="nav-item"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
                             <div class="nav-item">
-                                <a href="<?=URLROOT?>/forms/responses/<?=$data->form_id; ?>/chart" class="nav-link">Chart</a></div>
+                                <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a>
+                            </div>
                         </ul>
                     </nav>
                 </div>
@@ -55,6 +58,11 @@
 
             <div class="card-body">
                 <h2>Graphical ResponsesChart Page</h2>
+
+
+
+
+                <canvas id="myChart" width="400" height="400"></canvas>
             </div>
         </div>
 
@@ -64,8 +72,92 @@
 
 <script>
     var formarray = <?php echo json_encode($data); ?>
+
+    var ctx = document.getElementById('myChart');
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [12, 19, 3, 5, 2, 3],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //                 'rgba(153, 102, 255, 0.2)',
+    //                 'rgba(255, 159, 64, 0.2)'
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255, 99, 132, 1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //                 'rgba(153, 102, 255, 1)',
+    //                 'rgba(255, 159, 64, 1)'
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     beginAtZero: true
+    //                 }
+    //             }]
+    //         }
+    //     }
+    // });
+
+
+
+    var data = {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+    var options = {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: options
+    });
 </script>
 
+
+
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
+
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
