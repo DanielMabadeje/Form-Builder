@@ -17,7 +17,7 @@
       <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/formcreate" class="pl-md-4"><i class="fa fa-plus"></i> Create Form</a></li>
 
       <h6 class="pl-md-4 mt-4">Task Management</h6>
-      <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/formcreate" class="pl-md-4"><i class="fa fa-plus"></i> Tasks</a></li>
+      <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/formcreate" class="pl-md-4"><i class="fa fa-tasks"></i> Tasks</a></li>
       <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/formcreate" class="pl-md-4"><i class="fa fa-plus"></i> Todo List</a></li>
 
 
