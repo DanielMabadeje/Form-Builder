@@ -18,7 +18,9 @@
       <?php endif; ?>
     </div>
     <div class="product-device shadow-sm d-md-block mt-5">
-    <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+    
+    <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+    <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
     </div>
     <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
     <!-- <div class="card container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -90,7 +92,7 @@
     </div>
   </div>
 
-  <div class="bg-main col-12 pt-5  mt-5">
+  <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631affa, #5631affa), url(<?= URLROOT ?>/img/1.jpg);">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
       <h2 class="display-4">Boost Creativity and Productivity</h2>
