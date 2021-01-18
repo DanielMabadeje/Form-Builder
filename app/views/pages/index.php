@@ -92,7 +92,7 @@
     </div>
   </div>
 
-  <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631affa, #5631affa), url(<?= URLROOT ?>/img/1.jpg);">
+  <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631affa, #5631affa), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
       <h2 class="display-4">Boost Creativity and Productivity</h2>
