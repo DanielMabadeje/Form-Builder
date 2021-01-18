@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<link rel="stylesheet" href="<?= URLROOT ?>/css/laptop.css">
 <div style="text-align:center;">
   <!-- <h1><?php echo $data['title'] ?></h1> -->
   <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="
@@ -7,20 +8,20 @@
   /* url('<?= URLROOT; ?>/img/woman-pointing-document-near-lady-table-with-calculator-smartphone-pen_23-2148042655.jpg'); */
    background-size:cover; height:100%;">
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
-    <h5 class=" text-main-colo m">Data Collection is key</h5>
+      <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
       <h1 class="display-4 text-main-color">THE NEW PHASE <br> OF DATA COLLECTION</h1>
-      
-      <?php if(isset($_SESSION['user_id'])): ?>
+
+      <?php if (isset($_SESSION['user_id'])) : ?>
         <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
-      <?php else: ?>
-      <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
+      <?php else : ?>
+        <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
     <div class="product-device shadow-sm d-md-block mt-5">
-    
-    <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
-    <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
+
+      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+      <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
     </div>
     <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
     <!-- <div class="card container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -39,25 +40,205 @@
 
   <!-- <img src="<?= URLROOT ?>/img/FsJ4AwKi_o.jpg" alt="" class="c" height="600px" width="100%"> -->
   <div class="col-12 p-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
-        <div class="p-5">
-          <div class="col-md-7 ml-auto p-4">
-            <h2 class="display-4 text-white">
-              Data available to all Devices and <br> across all Platforms
-            </h2>
+    <div class="p-5">
+      <div class="col-md-7 ml-auto p-4">
+        <h2 class="display-4 text-white">
+          Data available to all Devices and <br> across all Platforms
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="laptop">
+    <div class="wrap">
+      <div class="comp">
+        <div class="monitor">
+          <div class="mid">
+            <div class="site">
+              <div class="topbar">
+                <div class="cerrar">
+                  <div class="circl"></div>
+                  <div class="circl"></div>
+                  <div class="circl"></div>
+                </div>
+              </div>
+              <div class="inhead">
+                <div class="mid">
+                  <div class="item"></div>
+                </div>
+                <div class="mid txr">
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                </div>
+              </div>
+              <div class="inslid">
+
+              </div>
+              <div class="incont">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="wid">
+                  <div class="itwid">
+                    <div>
+                      <div class="contfoot"></div>
+                    </div>
+                  </div>
+                  <div class="itwid">
+                    <div>
+                      <div class="contfoot"></div>
+                    </div>
+                  </div>
+                  <div class="itwid">
+                    <div>
+                      <div class="contfoot"></div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="infoot">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mid codigo">
+            <div class="line">
+              <div class="item var"></div>
+              <div class="item cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line">
+              <div class="item min var"></div>
+              <div class="item min fun"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line">
+              <div class="item var"></div>
+              <div class="item atr"></div>
+              <div class="item cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item min atr"></div>
+              <div class="item lrg fun"></div>
+              <div class="item min fun"></div>
+              <div class="item lrg cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item lrg atr"></div>
+              <div class="item min fun"></div>
+              <div class="item min cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item atr"></div>
+              <div class="item min fun"></div>
+              <div class="item atr"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item min atr"></div>
+              <div class="item min cont"></div>
+              <div class="item lrg atr"></div>
+              <div class="item  fun"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item min atr"></div>
+              <div class="item lrg fun"></div>
+              <div class="item lrg cont"></div>
+              <div class="item min fun"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab2">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab2">
+              <div class="item min atr"></div>
+              <div class="item min fun"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab3">
+              <div class="item min atr"></div>
+              <div class="item min fun"></div>
+              <div class="item lrg fun"></div>
+              <div class="item lrg cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab3">
+              <div class="item min atr"></div>
+              <div class="item min fun"></div>
+              <div class="item lrg atr"></div>
+              <div class="item lrg cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab4">
+              <div class="item min fun"></div>
+              <div class="item lrg atr"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab1">
+              <div class="item atr"></div>
+              <div class="item var"></div>
+              <div class="item cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab3">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line tab4">
+              <div class="item min atr"></div>
+              <div class="item min fun"></div>
+              <div class="item lrg atr"></div>
+              <div class="item lrg cont"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="line">
+              <div class="item min var"></div>
+              <div class="clearfix"></div>
+            </div>
+
           </div>
         </div>
+        <div class="base">
+
+        </div>
+      </div>
+    </div>
   </div>
+
 
   <div class="col-12">
     <div class="container">
 
-    <div class="text-center col-md-10 mx-auto pt-5 mt-5">
-      <h5 class="text-main-color">Form Building has never been easier</h5>
-      <h2 class="display-4">
-        Create, Edit Flexibly, Share <br>  & Analyse
-      </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
-    </div>
+      <div class="text-center col-md-10 mx-auto pt-5 mt-5">
+        <h5 class="text-main-color">Form Building has never been easier</h5>
+        <h2 class="display-4">
+          Create, Edit Flexibly, Share <br> & Analyse
+        </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
+      </div>
       <div class="row text-md-left text-sm-center pt-4">
         <div class="col-md-6">
           <h3 class="display-4">Create</h3>
@@ -92,7 +273,7 @@
     </div>
   </div>
 
-  <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631affa, #5631affa), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
+  <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631aff0, #5631aff0), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
       <h2 class="display-4">Boost Creativity and Productivity</h2>
@@ -100,12 +281,12 @@
     </div>
 
 
-    <img src="<?= URLROOT ?>/img/screenshotdashboard.png" alt="" class="col-md-10 mt-5 pt-5" style="border-radius:10px;">
+    <img src="<?= URLROOT ?>/img/screenshotdashboard.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
   </div>
 
 
-  <div class="col-12 bg-light pt-5 mt-5 pb-5">
-    <div class="container">
+  <div class="col-12 bg-light pt-5 pb-5">
+    <div class="container mt-5">
       <h2 class="display-md-3">Templates</h2>
       <div class="row pt-5 pb-5 mt-5 mb-5">
         <a href="#" class="col">
@@ -122,7 +303,7 @@
         <a href="#" class="col">
           <div class="card border-none bg-transparent">
             <div class="card-heade">
-              <img src="<?= URLROOT ?>/img/booking.png" alt=""  width="300px" height="200px" style="opacity: 0.6;">
+              <img src="<?= URLROOT ?>/img/booking.png" alt="" width="300px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               Booking Form
@@ -133,7 +314,7 @@
           <div class="card border-none bg-transparent">
             <div class="card-heade">
               <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?=URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
+              <img src="<?= URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
             </div>
             <div class="card-body">
               Job Application Form
@@ -293,12 +474,12 @@
   </div>
 
 
-  <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main" >
+  <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main">
     <div class="col-md-7 mx-au text-left p-5 text-white">
       <h1>You can experience Form Builder even <br> before Registration</h1>
-      <?php if(isset($_SESSION['user_id'])): ?>
+      <?php if (isset($_SESSION['user_id'])) : ?>
         <a href="<?= URLROOT ?>/forms/add" class="btn bg-white pl-3 pr-3 mt-3">Quick Start</a>
-      <?php else: ?>
+      <?php else : ?>
         <a href="<?= URLROOT ?>/pages/quickdemo" class="btn bg-white pl-3 pr-3 mt-3">Quick Start</a>
       <?php endif; ?>
     </div>
