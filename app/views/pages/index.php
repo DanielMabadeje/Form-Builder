@@ -281,7 +281,7 @@
     </div>
 
 
-    <img src="<?= URLROOT ?>/img/screenshotdashboard.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
+    <img src="<?= URLROOT ?>/img/screenshotdashboard2.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
   </div>
 
 
