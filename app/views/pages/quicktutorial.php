@@ -1,16 +1,17 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<section class="bg-light mb-5 pb-5 pt-0 mt-0">
-    <section class="container mt-md-5 pt-5">
+<main id="main">
+<div class="bg-light mb-5 pb-5 pt-0 mt-0 m-0 position-relative overflow-hidden">
+    <section class="container pt-5">
 
-        <div class="row col-md-3 mb-5">
-            <div class="col-10">
-                <h4>Create a form <span class="fa fa-plus"></span></h4>
-            </div>
-            <div class="col-2">
-                <a href="<?= URLROOT; ?>/forms/add" class="btn btn-primary">Create Form</a>
-            </div>
+        <div class="col-md-7 mb-5">
+            
+            <span class="font-weight-normal">Create a form <span class="fa fa-plus"></span></span>
+            <span><a href="<?= URLROOT; ?>/forms/add" class="btn text-white bg-main">Create Form</a></span>
+            
         </div>
-        <section class="mt-md-2 pt-5 mb-5  mx-auto bg-white col-md-7" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+        <section class="mt-md-2  mb-5  mx-auto bg-light col-md-7" style="
+        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+        ">
             <div class=" mb-md-5  ">
                 <div class="mb-md-5">
                     <section class="banner-area mt-md-5 overflow-hidden position-relative text-dark" id="lay" data-parallax="scroll" data-image-src="">
@@ -34,22 +35,22 @@
                                 <div class="carousel-item">
                                     <img src="<?= URLROOT ?>/img/booking.png" alt="" width="100%" height="300px">
                                     <div class="carousel-caption text-dark position-initial mx-auto">
-                                        <h3>Music</h3>
-                                        <p>Creation Of Uncomprehended Feelings</p>
+                                        <h3>QR Codes</h3>
+                                        <p>Tired of writing links ?... <br> we got you just scan the code to get started...</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="<?= URLROOT ?>/img/booking.png" alt="" width="100%" height="300px">
                                     <div class="carousel-caption text-dark position-initial mx-auto">
-                                        <h3>Music</h3>
-                                        <p>A Sweet Melody</p>
+                                        <h3>Even more Responses</h3>
+                                        <p>Even on freemium plan you get to have more responses and views</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="<?= URLROOT ?>/img/booking.png" alt="" width="100%" height="300px">
                                     <div class="carousel-caption text-dark position-initial mx-auto">
-                                        <h3>Music</h3>
-                                        <p>The Best</p>
+                                        <h3>Accepting Payments</h3>
+                                        <p>Yes, you can collect payments through our platform and allow integrations of Stripe, Paypal and Paystack</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -73,7 +74,8 @@
         </section>
     </section>
 
-</section>
+</div>
+</main>
 
 <?php require APPROOT . '/views/inc/pagesfooter.php'; ?>
 
