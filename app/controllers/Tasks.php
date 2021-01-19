@@ -5,6 +5,6 @@ class Tasks extends Controller
 {
     public function __construct()
     {
-        # code...
+        $this->user = isLoggedIn();
     }
 }
