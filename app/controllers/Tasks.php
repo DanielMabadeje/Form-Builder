@@ -10,7 +10,7 @@ class Tasks extends Controller
     public function add()
     {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+            $data= $_POST;
         }else{
             $this->view('tasks/add');
         }
