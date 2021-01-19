@@ -15,16 +15,16 @@
             <div class=" mb-md-5  ">
                 <div class="mb-md-5">
                     <section class="banner-area mt-md-5 overflow-hidden position-relative text-dark" id="lay" data-parallax="scroll" data-image-src="">
-                        <div id="" class="carousel carousel slide mt-md-5" data-ride="carousel">
+                        <div id="demo" class="carousel carousel slide mt-md-5 pb-5" data-ride="carousel">
                             <ul class="carousel-indicators">
-                                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                <li data-target="#demo" data-slide-to="1"></li>
-                                <li data-target="#demo" data-slide-to="2"></li>
-                                <li data-target="#demo" data-slide-to="3"></li>
-                                <li data-target="#demo" data-slide-to="4"></li>
+                                <li data-target="#demo" data-slide-to="0" class="active bg-main"></li>
+                                <li data-target="#demo" data-slide-to="1" class="bg-main"></li>
+                                <li data-target="#demo" data-slide-to="2" class="bg-main"></li>
+                                <li data-target="#demo" data-slide-to="3" class="bg-main"></li>
+                                <li data-target="#demo" data-slide-to="4" class="bg-main"></li>
                                 <!-- <li data-target="#demo" data-slide-to="2"></li> -->
                             </ul>
-                            <div class="carousel-inner" style="overflow:visibl">
+                            <div class="carousel-inner" style="overflow:visible">
                                 <div class="carousel-item active" id="">
                                     <img src="<?= URLROOT ?>/img/booking.png" alt="" width="100%" height="300px">
                                     <div class="carousel-caption text-dark position-initial mx-auto">
@@ -52,20 +52,21 @@
                                         <h3>Accepting Payments</h3>
                                         <p>Yes, you can collect payments through our platform and allow integrations of Stripe, Paypal and Paystack</p>
                                     </div>
+
                                 </div>
                                 <div class="carousel-item">
                                     <img src="<?= URLROOT ?>/img/booking.png" alt="" width="100%" height="300px">
                                     <div class="carousel-caption text-dark position-initial mx-auto">
-                                        <h3>Los Angeles</h3>
-                                        <p>Its For All Ages</p>
+                                        <h3>Accurate Data Metrics</h3>
+                                        <p>We help you give accurate metrics based on your surveys</p>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
                                     <span class="carousel-control-prev-icon bg-darker rounded-circle"></span>
                                 </a>
                                 <a class="carousel-control-next" href="#demo" data-slide="next">
                                     <span class="carousel-control-next-icon bg-darker rounded-circle"></span>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </section>
