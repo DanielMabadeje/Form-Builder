@@ -16,7 +16,7 @@ class Tasks extends Controller
         }
     }
 
-    public function view($id)
+    public function views($id)
     {
         # code...
     }
