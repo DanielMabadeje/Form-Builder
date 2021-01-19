@@ -7,4 +7,12 @@ class Tasks extends Controller
     {
         $this->user = isLoggedIn();
     }
+    public function add()
+    {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        }else{
+            $this->view();
+        }
+    }
 }
