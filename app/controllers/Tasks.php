@@ -12,7 +12,7 @@ class Tasks extends Controller
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         }else{
-            $this->view();
+            $this->view('tasks/add');
         }
     }
 }
