@@ -15,4 +15,9 @@ class Tasks extends Controller
             $this->view('tasks/add');
         }
     }
+
+    public function view($id)
+    {
+        # code...
+    }
 }
