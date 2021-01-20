@@ -185,9 +185,9 @@ class Forms extends ApiController
             $this->sanitizePost();
             // var_dump($_POST);
             $data = [];
-            $data['form_id'] = $_POST['form_id'];
-            $data['question_id'] = $_POST['question_id'];
-            $data['id'] = $_POST['type'];
+            $data['form_id'] = $form_id;
+            $data['question_id'] = $question_id;
+            $data['id'] = $id;
             $data['value'] = $_POST['option'];
 
 
