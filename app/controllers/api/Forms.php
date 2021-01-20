@@ -179,7 +179,7 @@ class Forms extends ApiController
             $this->fail($_SERVER['REQUEST_METHOD'] . ' given instead of POST', 405);
         }
     }
-    public function editOption()
+    public function editOption($api, $form_id, $question_id, $id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->sanitizePost();
@@ -191,8 +191,8 @@ class Forms extends ApiController
             $data['value'] = $_POST['option'];
 
 
-var_dump($data);
-die;
+            var_dump($data);
+            die;
             if ($result = $this->formModel->addQuestionOption($data)) {
                 $this->success($result);
             } else {
