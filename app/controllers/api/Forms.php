@@ -190,6 +190,9 @@ class Forms extends ApiController
             $data['id'] = $_POST['type'];
             $data['value'] = $_POST['option'];
 
+
+var_dump($data);
+die;
             if ($result = $this->formModel->addQuestionOption($data)) {
                 $this->success($result);
             } else {

@@ -3,7 +3,7 @@ var title = document.getElementsByTagName('h1')[0];
 var description = document.getElementsByClassName('description_h5')[0];
 
 var inputDivs = document.getElementsByClassName('field_container');
-var inputDivsParam=``;
+var inputDivsParam = ``;
 var inputLabels = document.getElementsByClassName('form-label');
 var savingProgress = document.getElementsByClassName('save')[0];
 var responseSwitch = document.getElementById('switch');
@@ -616,7 +616,7 @@ function addingOptions(params, element) {
 function showEditModal(param) {
 
   modal.style.display = "block";
-  inputDivsParam=param
+  inputDivsParam = param
 
   if (param) {
     currentform = mainform[param]
@@ -653,13 +653,13 @@ function showEditModal(param) {
         for (let index = 0; index < options.length; index++) {
           // console.log(options)
           createOptionInput(options[index].id, options[index])
-  
+
         }
       } else {
         for (let index = 0; index < options.length; index++) {
           options[index].value
           createOptionInput(options[index].id, options[index].value)
-  
+
         }
       }
     } else {
@@ -845,19 +845,19 @@ function editQuestionOption(id, e) {
 
 
 
-  var inputType=inputDivs[inputDivsParam].getElementsByClassName(id)[0].getElementsByTagName('input')[0].type
-  if (inputType=='checkbox'){
-    var html =`<input class="" type="checkbox" name="multichoice" value="${child.value}" id="multichoice" label="New Option"> ${child.value}`
-    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML=html
+  var inputType = inputDivs[inputDivsParam].getElementsByClassName(id)[0].getElementsByTagName('input')[0].type
+  if (inputType == 'checkbox') {
+    var html = `<input class="" type="checkbox" name="multichoice" value="${child.value}" id="multichoice" label="New Option"> ${child.value}`
+    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML = html
   }
-  else if(inputType =='radio'){
-    var html =`<input class="" type="radio" name="multichoice" value="${child.value}" id="singlechoice" label="New Option"> ${child.value}`
-    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML=html
-  }  else {}
+  else if (inputType == 'radio') {
+    var html = `<input class="" type="radio" name="multichoice" value="${child.value}" id="singlechoice" label="New Option"> ${child.value}`
+    inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML = html
+  } else { }
 }
 
 function editQuestionOptioninApi(id, form_id, question_id) {
-  
+
 }
 
 function deleteQuestionOption(id) {
