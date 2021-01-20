@@ -856,10 +856,10 @@ function editQuestionOption(id, e) {
   } else { }
 }
 
-function editQuestionOptioninApi(id, form_id, question_id) {
+function editQuestionOptioninApi(id, form_id, question_id, value) {
   settings.url = base_url + '/api/forms/editoption/' + form_id + '/' + question_id + '/' + id
   settings.method = 'POST'
-  // settings.data=formarray
+  settings.data={value:value}
 
   $.ajax(settings).done(function (response) {
     let updatedAt = response.success.message.updated_at
