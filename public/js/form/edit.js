@@ -849,10 +849,12 @@ function editQuestionOption(id, e) {
   if (inputType == 'checkbox') {
     var html = `<input class="" type="checkbox" name="multichoice" value="${child.value}" id="multichoice" label="New Option"> ${child.value}`
     inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML = html
+    editQuestionOptioninApi(id, currentform.form_id, currentform.question_id, child.value)
   }
   else if (inputType == 'radio') {
     var html = `<input class="" type="radio" name="multichoice" value="${child.value}" id="singlechoice" label="New Option"> ${child.value}`
     inputDivs[inputDivsParam].getElementsByClassName(id)[0].innerHTML = html
+    editQuestionOptioninApi(id, currentform.form_id, currentform.question_id, child.value)
   } else { }
 }
 
