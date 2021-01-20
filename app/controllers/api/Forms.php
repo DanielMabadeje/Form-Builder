@@ -188,7 +188,7 @@ class Forms extends ApiController
             $data['form_id'] = $form_id;
             $data['question_id'] = $question_id;
             $data['id'] = $id;
-            $data['value'] = $_POST['option'];
+            $data['value'] = $_POST['value'];
 
 
             var_dump($data);
