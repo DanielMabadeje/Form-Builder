@@ -16,23 +16,23 @@ class Form
     public function add($data)
     {
 
-        if(isset($data['form_options'])){
+        if (isset($data['form_options'])) {
             $form = $data['form_options'];
-        }else{
+        } else {
             $form = $data['form'];
         }
         // $data['form_options'] = json_encode($data['form_options']);
 
         $this->db->query('INSERT INTO forms (form_id, user_id, form_name, description, form_type) VALUES(:form_id, :user_id, :form_name, :description, :form_type)');
         $this->db->bind(':form_id', $data['uniqueId']);
-        
+
         $this->db->bind(':form_type', $data['form_type']);
         $this->db->bind(':form_name', $data['title']);
         $this->db->bind(':description', $data['description']);
 
-        if(isset($data['user_id'])){
+        if (isset($data['user_id'])) {
             $this->db->bind(':user_id', $data['user_id']);
-        }else{
+        } else {
             $this->db->bind(':user_id', null);
         }
 
@@ -58,7 +58,7 @@ class Form
 
         if ($this->db->execute()) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -331,6 +331,21 @@ class Form
         $this->db->bind(':form_id', $form_id);
         $this->db->bind(':question_id', $question_id);
         $this->db->bind(':id', $id);
+
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function updateQuestionOption($data)
+    {
+        $this->db->query('DELETE FROM questions_options WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
+        $this->db->bind(':form_id', $data);
+        $this->db->bind(':question_id', $data);
+        $this->db->bind(':id', $data);
 
 
         if ($this->db->execute()) {
