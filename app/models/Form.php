@@ -342,10 +342,11 @@ class Form
 
     public function updateQuestionOption($data)
     {
-        $this->db->query('DELETE FROM questions_options WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
-        $this->db->bind(':form_id', $data);
-        $this->db->bind(':question_id', $data);
-        $this->db->bind(':id', $data);
+        $this->db->query('UPDATE questions_options SET value=:value WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
+        $this->db->bind(':form_id', $data['form_id']);
+        $this->db->bind(':question_id', $data['question_id']);
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':value', $data['value']);
 
 
         if ($this->db->execute()) {
