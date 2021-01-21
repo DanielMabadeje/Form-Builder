@@ -446,8 +446,9 @@ class Form
     // function to get questions that their types are dropdowns, single option or multichoice
     public function getQuestionbyType($form_id)
     {
-        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND (type='dropdown' OR type='checkbox)");
         $this->db->bind(':form_id', $form_id);
+        // $this->db->bind(':form_id', $form_id);
 
 
         $row = $this->db->single();
