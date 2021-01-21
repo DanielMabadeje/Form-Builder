@@ -443,6 +443,22 @@ class Form
     }
 
 
+    // function to get questions that their types are dropdowns, single option or multichoice
+    public function getQuestionbyType($form_id)
+    {
+        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND name=:name");
+        $this->db->bind(':form_id', $form_id);
+
+
+        $row = $this->db->single();
+        // $row = $this->db->resultSet();
+        // var_dump($row[0]->questionId);
+        // die;
+        $question_id = $row->question_id;
+        return $question_id;
+    }
+
+
 
     // Answers Section
     public function addAnswer($data)
