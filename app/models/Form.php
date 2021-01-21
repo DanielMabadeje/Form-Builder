@@ -342,7 +342,7 @@ class Form
 
     public function updateQuestionOption($data)
     {
-        $this->db->query('UPDATE questions_options SET value=:value WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
+        $this->db->query('UPDATE questions_options SET form_option=:value WHERE form_id= :form_id AND question_id=:question_id AND id=:id');
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':question_id', $data['question_id']);
         $this->db->bind(':id', $data['id']);

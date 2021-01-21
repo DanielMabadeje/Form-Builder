@@ -59,6 +59,9 @@
             <div class="card-body">
                 <h2>Graphical ResponsesChart Page</h2>
 
+                <pre>
+                <?php var_dump($data); ?>
+                </pre>
 
 
 
@@ -137,15 +140,15 @@
             borderWidth: 1
         }]
     };
-    var options = {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+    // var options = {
+    //     scales: {
+    //         yAxes: [{
+    //             ticks: {
+    //                 beginAtZero: true
+    //             }
+    //         }]
+    //     }
+    // }
 
 
     var myDoughnutChart = new Chart(ctx, {

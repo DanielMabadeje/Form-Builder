@@ -191,9 +191,9 @@ class Forms extends ApiController
             $data['value'] = $_POST['value'];
 
 
-            var_dump($data);
-            die;
-            if ($result = $this->formModel->addQuestionOption($data)) {
+            // var_dump($data);
+            // die;
+            if ($result = $this->formModel->updateQuestionOption($data)) {
                 $this->success($result);
             } else {
                 $this->fail();

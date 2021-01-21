@@ -109,9 +109,9 @@ class Forms extends Controller
             // die();
 
             // $_SESSION[$uniqueId] = $data;
-            $sessionData=[
-                'uniqueId'=>$uniqueId,
-                'name'=>$data['title']
+            $sessionData = [
+                'uniqueId' => $uniqueId,
+                'name' => $data['title']
             ];
             $_SESSION[$uniqueId] = $sessionData;
             $this->formModel->add($data);
@@ -131,8 +131,8 @@ class Forms extends Controller
             // $data = $_SESSION[$_GET['session_id']];
             $data = $this->formModel->getForm($var);
             $this->formandquestions = $data;
-                    $this->checkIfQuestionisDropdown();
-                    $this->checkIfQuestionisOption();
+            $this->checkIfQuestionisDropdown();
+            $this->checkIfQuestionisOption();
             $this->view('forms/editforNotLogged', $this->formandquestions);
         } else {
             if ($var) {
@@ -349,6 +349,16 @@ class Forms extends Controller
     {
         if ($this->validateIfFormExists($form_id)) {
             $data = $this->formModel->getForm($form_id);
+            $responses = $this->formModel->getResponsesCount($form_id);
+
+            $responses_array = [];
+
+
+            foreach ($responses as $key => $value) {
+
+                $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
+            }
+            $data->responses = $responses_array;
 
             if ($view == 'chart') {
                 $this->view('forms/responseschart', $data);
