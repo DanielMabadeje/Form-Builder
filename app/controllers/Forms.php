@@ -363,6 +363,7 @@ class Forms extends Controller
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
                 }
                 $data->responses = $responses_array;
+                die(json_encode($data));
                 $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {
 
