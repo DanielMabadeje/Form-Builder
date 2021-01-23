@@ -477,6 +477,11 @@ class Form
         return $row;
     }
 
+    public function countResponsesOfOption($option_id)
+    {
+        # code...
+    }
+
 
 
     // Answers Section
