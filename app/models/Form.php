@@ -446,17 +446,35 @@ class Form
     // function to get questions that their types are dropdowns, single option or multichoice
     public function getQuestionbyType($form_id)
     {
-        $this->db->query("SELECT question_id FROM form_questions WHERE form_id=:form_id AND (type='dropdown' OR type='checkbox)");
+        $this->db->query("SELECT form_questions.question_id, COUNT(form_questions.question_id) AS NoOfOptions
+                        --  SELECT form_questions.question_id,  form_questions.type, questions_options.form_option, COUNT(form_questions.question_id) AS NoOfQuestions
+                          FROM form_questions
+                        --   RIGHT JOIN questions_options
+                          INNER JOIN questions_options
+                          ON form_questions.question_id=questions_options.question_id
+                        --   WHERE form_questions.form_id=:form_id AND form_questions.type='checkbox'
+                          WHERE form_questions.form_id=:form_id AND (form_questions.type='checkbox' OR form_questions.type='dropdown')
+                          GROUP BY form_questions.question_id
+                          ");
         $this->db->bind(':form_id', $form_id);
-        // $this->db->bind(':form_id', $form_id);
+        
+        $row = $this->db->resultSet();
 
+        foreach($row as $key=>$single_row){
+            $question_id=$single_row->question_id;
+            $this->db->query('SELECT form_option, id FROM questions_options WHERE form_id= :form_id AND question_id=:question_id');
+        $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':question_id', $question_id);
 
-        $row = $this->db->single();
-        // $row = $this->db->resultSet();
-        // var_dump($row[0]->questionId);
-        // die;
-        $question_id = $row->question_id;
-        return $question_id;
+        $options = $this->db->resultSet();
+        $single_row->options=[];
+        $index=0;
+
+        foreach ($options as $key => $value) {
+            $single_row->options[$value->id]=$value->form_option;
+        }
+        }
+        return $row;
     }
 
 
