@@ -502,6 +502,21 @@ class Form
         }
     }
 
+    public function addOptionAnswer($data){
+        $this->db->query('INSERT INTO answer_option (form_id, question_id, answer_id, option_id) VALUES(:form_id, :question_id, :answer_id, :option_id)');
+        $this->db->bind(':form_id', $data['form_id']);
+        $this->db->bind(':question_id', $data['question_id']);
+        $this->db->bind(':answer_id', $data['answer_id']);
+        $this->db->bind(':option_id', $data['answer']);
+
+        if ($this->db->execute()) {
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function getResponsesCount($form_id)
     {
         $this->db->query("SELECT answer_id, COUNT(form_answers.answer_id) AS numberofanswers FROM form_answers WHERE form_id=:form_id GROUP BY answer_id ");
