@@ -507,7 +507,7 @@ class Form
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':question_id', $data['question_id']);
         $this->db->bind(':answer_id', $data['answer_id']);
-        $this->db->bind(':option_id', $data['answer']);
+        $this->db->bind(':option_id', $data['option_id']);
 
         if ($this->db->execute()) {
 
