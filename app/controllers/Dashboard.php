@@ -42,7 +42,7 @@ class Dashboard extends Controller
         if (is_null($id)) {
             $this->view('dashboard/todo');
         } else {
-            # code...
+            $this->view('dashboard/viewtodo');
         }
     }
 }
