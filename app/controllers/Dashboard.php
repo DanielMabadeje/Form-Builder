@@ -36,4 +36,13 @@ class Dashboard extends Controller
     {
         # code...
     }
+
+    public function todo($id=null)
+    {
+        if (is_null($id)) {
+            $this->view('dashboard/todo');
+        } else {
+            # code...
+        }
+    }
 }
