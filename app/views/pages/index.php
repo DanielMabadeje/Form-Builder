@@ -20,7 +20,7 @@
     </div>
     <div class="product-device shadow-sm d-md-block mt-5">
 
-      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-10 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
       <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
     </div>
     <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
@@ -41,7 +41,7 @@
   <!-- <img src="<?= URLROOT ?>/img/FsJ4AwKi_o.jpg" alt="" class="c" height="600px" width="100%"> -->
   <div class="col-12 pt-5 p-md-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
     <div class="p-5">
-      <div class="col-md-7 ml-auto p-md-4">
+      <div class="col-md-7 ml-auto text-right p-md-4">
         <h2 class="display-4 text-white">
           Data available to all Devices and <br> across all Platforms
         </h2>
