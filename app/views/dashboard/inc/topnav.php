@@ -17,7 +17,10 @@
 
                   <ul class="ml-auto navbar-nav co">
                      <li class="nav-item mr-md-3">
-                          <a href="<?= URLROOT; ?>" class="nav-link"><i class="fa fa-home"></i>Home</a>
+                          <a href="<?= URLROOT; ?>" class="nav-link"><i class="fa fa-home"></i> Home</a>
+                      </li>
+                      <li class="nav-item mr-md-3">
+                          <a href="<?= URLROOT; ?>" class="nav-link"><i class="fa fa-people"></i> Teams</a>
                       </li>
                       <li class="nav-item">
                           <a href="" class="btn btn-danger">Logout</a>
