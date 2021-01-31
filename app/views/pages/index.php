@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?= URLROOT ?>/css/laptop.css">
 <div style="text-align:center;">
   <!-- <h1><?php echo $data['title'] ?></h1> -->
-  <div class="position-relative overflow-hidden p-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="
+  <div class="position-relative overflow-hidden p-md-5 m-0  text-center bg-whit landing-bg pt-0 mt-md-0" style="
   /* background: linear-gradient(to bottom right, rgb(253, 251, 251), rgba(253, 249, 249, 0)),  */
   /* url('<?= URLROOT; ?>/img/jess-bailey-q10VITrVYUM-unsplash.jpg'); */
   /* url('<?= URLROOT; ?>/img/woman-pointing-document-near-lady-table-with-calculator-smartphone-pen_23-2148042655.jpg'); */
@@ -10,12 +10,12 @@
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
       <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <h1 class="display-4 text-main-color">THE NEW PHASE <br> OF DATA COLLECTION</h1>
+      <h1 class="display-4 text-main-color col">THE NEW PHASE <br> OF DATA COLLECTION</h1>
 
       <?php if (isset($_SESSION['user_id'])) : ?>
-        <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
+        <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
       <?php else : ?>
-        <a class="btn btn-outline-secondary md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
+        <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
     <div class="product-device shadow-sm d-md-block mt-5">
