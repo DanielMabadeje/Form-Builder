@@ -31,4 +31,9 @@ class Dashboard extends Controller
     {
         echo $_SESSION['membership_plan'];
     }
+
+    public function tasks($id=null)
+    {
+        # code...
+    }
 }
