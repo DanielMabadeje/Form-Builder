@@ -24,7 +24,7 @@ class Dashboard extends Controller
     }
 
     public function formcreate(){
-        $this->view('dashboard/forms');
+        $this->view('dashboard/createform');
     }
 
     public function membership()
