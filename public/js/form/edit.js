@@ -66,14 +66,14 @@ function addItemToForm(params) {
       break;
     case 'singleoption':
       singleOptionAnswer();
-      appendArray('singleOption', 'singleoption')
+      appendArray('singleOption', 'checkbox')
       // console.log('date')
 
       break;
 
     case 'multichoice':
       multichoiceAnswer();
-      appendArray('multichoice', 'multichoice')
+      appendArray('multichoice', 'checkbox')
       // console.log('date')
 
       break;
@@ -130,6 +130,7 @@ function appendArray(param, type) {
 
   switch (type) {
     case 'dropdown':
+      // var inputs=document.get
       newformarray.options = {
         "": "--SELECT--",
         dropdownOption: dropdownOption

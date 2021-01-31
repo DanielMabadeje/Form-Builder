@@ -1,5 +1,5 @@
 <div class="footer pt-md-5 pb-0 mb-0 bg-white">
-    <footer class="pt-md-5">
+    <footer class="pt-md-5 pl-md-5">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4 mb-4">

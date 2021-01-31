@@ -170,7 +170,7 @@ class Sample_Form_Creator
      */
     function form_checkbox($data = '', $value = '', $checked = FALSE, $extra = '')
     {
-        $defaults = array('type' => 'checkbox', 'name' => (!is_array($data) ? $data : ''), 'value' => $value);
+        $defaults = array('type' => 'checkbox',  'name' => (!is_array($data) ? $data : ''), 'value' => $value);
 
         if (is_array($data) && array_key_exists('checked', $data)) {
             $checked = $data['checked'];
@@ -188,7 +188,7 @@ class Sample_Form_Creator
             unset($defaults['checked']);
         }
 
-        return '<input class=""' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
+        return '<input class="" id="' . $this->elm_options['id'] . '"' . $this->_form_field_attributesl($data, $defaults) . $this->_form_attributes_to_string($extra) . " />\n";
     }
 
     /**
@@ -452,12 +452,19 @@ class Sample_Form_Creator
 
                         $this->elm_options['id'] = $id;
                         $all_elm_options = $this->elm_options;
+                        $index = 0;
+                        // var_dump($all_elm_options);
+                        // die;
 
                         foreach ($all_elm_options['options'] as $elm_suboptions) {
                             $this->elm_options = $elm_suboptions;
                             $this->elm_options['name'] = $all_elm_options['name'];
-                            $this->elm_options['id'] = $all_elm_options['id'];
+                            // $this->elm_options['id'] = $all_elm_options['id'];
+                            $this->elm_options['id'] = $elm_suboptions['id'];
+                            // $this->elm_options['id'] = $elm_suboptions['id'];
+                            $this->elm_options['value'] = $elm_suboptions['id'];
 
+                            // $index++
 
                             // Set value as label if no label is set
                             array_key_exists('label', $this->elm_options) || $this->elm_options['label'] = $this->elm_options['value'];
@@ -465,7 +472,7 @@ class Sample_Form_Creator
                             $label_class = substr($this->func, 5) . '-inlin';
                             array_key_exists('disabled', $this->elm_options) && $label_class .= ' disabled';
 
-                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class .' '. $elm_suboptions['id'].'" id="' . $elm_suboptions['id'] . '">';
+                            $this->print_string .= '<br><label contenteditable="tru" class="' . $label_class . ' ' . $elm_suboptions['id'] . '" id="' . $elm_suboptions['id'] . '">';
                             $this->print_string .= $this->_build_form_field_input(FALSE);
                             $this->print_string .= $this->elm_options['label'] . '</label> ';
                         }

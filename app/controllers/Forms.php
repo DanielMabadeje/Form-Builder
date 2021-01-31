@@ -153,6 +153,9 @@ class Forms extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $answer_id = date('Y-m-d') . $this->generateRandomChars();
             $this->sanitizePost();
+
+            var_dump($_POST);
+            die;
             $this->answerId = $answer_id;
             $this->formId = $id;
             $this->getQuestionIdByName();
@@ -269,6 +272,9 @@ class Forms extends Controller
     {
 
         $data = $this->formData;
+
+        var_dump($data);
+        die;
 
         foreach ($data as $key => $value) {
             try {
