@@ -39,9 +39,9 @@
   </div>
 
   <!-- <img src="<?= URLROOT ?>/img/FsJ4AwKi_o.jpg" alt="" class="c" height="600px" width="100%"> -->
-  <div class="col-12 p-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
+  <div class="col-12 pt-5 p-md-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
     <div class="p-5">
-      <div class="col-md-7 ml-auto p-4">
+      <div class="col-md-7 ml-auto p-md-4">
         <h2 class="display-4 text-white">
           Data available to all Devices and <br> across all Platforms
         </h2>
@@ -51,7 +51,7 @@
 
 
 
-  <div class="laptop">
+  <!-- <div class="laptop">
     <div class="wrap">
       <div class="comp">
         <div class="monitor">
@@ -226,7 +226,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="col-12">
