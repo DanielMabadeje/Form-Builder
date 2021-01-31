@@ -136,14 +136,25 @@ function appendArray(param, type) {
         dropdownOption: dropdownOption
       }
 
+      break;
     case 'singleoption':
-      newformarray.type = 'radio';
+      // newformarray.type = 'radio';
+      var number = getNumberOfInputType('radio');
+      number = number + 1;
+      newformarray.name = param + number;
+    newformarray.id = param + number;
       newformarray.options = {
         0: "First Value",
         1: "Second Value"
       }
+
+      break;
     case 'multichoice':
-      newformarray.type = 'checkbox'
+      // newformarray.type = 'checkbox'
+      var number = getNumberOfInputType('checkbox');
+      number = number + 1;
+      newformarray.name = param + number;
+    newformarray.id = param + number;
       newformarray.options = {
         0: "First Value",
         1: "Second Value"
