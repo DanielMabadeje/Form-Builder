@@ -154,8 +154,8 @@ class Forms extends Controller
             $answer_id = date('Y-m-d') . $this->generateRandomChars();
             $this->sanitizePost();
 
-            var_dump($_POST);
-            die;
+            // var_dump($_POST);
+            // die;
             $this->answerId = $answer_id;
             $this->formId = $id;
             $this->getQuestionIdByName();

@@ -154,7 +154,7 @@ function appendArray(param, type) {
       var number = getNumberOfInputType('checkbox');
       number = number + 1;
       newformarray.name = param + number;
-    newformarray.id = param + number;
+      newformarray.id = param + number;
       newformarray.options = {
         0: "First Value",
         1: "Second Value"
@@ -162,6 +162,9 @@ function appendArray(param, type) {
 
       // console.log(newformarray);
 
+      // return;
+
+      // console.log(newformarray.options)
       // return;
 
       break;
