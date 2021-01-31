@@ -6,7 +6,7 @@
     <?php require APPROOT . '/views/dashboard/inc/topnav.php'; ?>
     <section class="bg-lighter col-12 p-3">
         <div>
-            <span class="fa fa-chevron-right"></span>Forms
+            <span class="fa fa-chevron-right"></span>Create Form
         </div>
     </section>
     <section class="container pt-3">
