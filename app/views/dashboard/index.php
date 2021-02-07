@@ -14,24 +14,24 @@
 
         <div class="container">
 
-        <div class="mb-4">
-            <h2 class="">Create Your Form</h2>
-            <p>Start your data collection with just a click...</p>
-        </div>
-        <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
+            <div class="mb-4">
+                <h2 class="">Create Your Form</h2>
+                <p>Start your data collection with just a click...</p>
+            </div>
+            <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body text-left">
                         <!-- <h2 class="display-5">10 Forms</h2> -->
                         <!-- 1024px-OOjs_UI_icon_add.svg -->
                         <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
-                        
+
 
                     </div>
                     <h5>Blank Form</h5>
                 </div>
 
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
                         <!-- <h2 class="display-5">10 Forms</h2> -->
@@ -40,24 +40,24 @@
                     </div>
                     <h5>RSVP Form</h5>
                 </div>
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
-                    <img src="<?=URLROOT ?>/img/16650192161582800237-512.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                        <img src="<?= URLROOT ?>/img/16650192161582800237-512.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
 
                     </div>
                     <h5>Job Application Form</h5>
                 </div>
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
-                    <img src="<?= URLROOT ?>/img/reservations.jpg" alt=""  width="auto" height="120px" style="opacity: 0.6;">
+                        <img src="<?= URLROOT ?>/img/reservations.jpg" alt="" width="auto" height="120px" style="opacity: 0.6;">
 
                     </div>
                     <h5>Booking Form</h5>
                 </div>
-                
-        </div>
+
+            </div>
 
 
 

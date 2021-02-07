@@ -128,7 +128,7 @@ function appendArray(param, type) {
   }
 
 
-  switch (type) {
+  switch (param) {
     case 'dropdown':
       // var inputs=document.get
       newformarray.options = {
@@ -137,12 +137,12 @@ function appendArray(param, type) {
       }
 
       break;
-    case 'singleoption':
+    case 'singleOption':
       // newformarray.type = 'radio';
       var number = getNumberOfInputType('radio');
       number = number + 1;
       newformarray.name = param + number;
-    newformarray.id = param + number;
+      newformarray.id = param + number;
       newformarray.options = {
         0: "First Value",
         1: "Second Value"
@@ -156,16 +156,9 @@ function appendArray(param, type) {
       newformarray.name = param + number;
       newformarray.id = param + number;
       newformarray.options = {
-        0: "First Value",
-        1: "Second Value"
+        "0":"First Value",
+        "1":"Second Value"
       }
-
-      // console.log(newformarray);
-
-      // return;
-
-      // console.log(newformarray.options)
-      // return;
 
       break;
 
@@ -174,6 +167,7 @@ function appendArray(param, type) {
   }
 
   var array_length = mainform.length
+
 
   addQuestionToApi(newformarray);
   mainform.splice(array_length, 0, newformarray)

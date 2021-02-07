@@ -174,6 +174,9 @@ class Form
             $lastId = $this->db->getLastId();
             if (isset($data['options'])) {
                 $optionData = [];
+
+                var_dump($data['options']);
+                die;
                 foreach ($data['options'] as $option) {
 
                     // die($option);
@@ -183,6 +186,8 @@ class Form
                     $optionData['option'] = $option;
 
                     $this->addQuestionOption($optionData);
+
+                    $optionData = [];
                 }
             } else {
                 # code...
@@ -457,22 +462,22 @@ class Form
                           GROUP BY form_questions.question_id
                           ");
         $this->db->bind(':form_id', $form_id);
-        
+
         $row = $this->db->resultSet();
 
-        foreach($row as $key=>$single_row){
-            $question_id=$single_row->question_id;
+        foreach ($row as $key => $single_row) {
+            $question_id = $single_row->question_id;
             $this->db->query('SELECT form_option, id FROM questions_options WHERE form_id= :form_id AND question_id=:question_id');
-        $this->db->bind(':form_id', $form_id);
-        $this->db->bind(':question_id', $question_id);
+            $this->db->bind(':form_id', $form_id);
+            $this->db->bind(':question_id', $question_id);
 
-        $options = $this->db->resultSet();
-        $single_row->options=[];
-        $index=0;
+            $options = $this->db->resultSet();
+            $single_row->options = [];
+            $index = 0;
 
-        foreach ($options as $key => $value) {
-            $single_row->options[$value->id]=$value->form_option;
-        }
+            foreach ($options as $key => $value) {
+                $single_row->options[$value->id] = $value->form_option;
+            }
         }
         return $row;
     }
@@ -502,7 +507,8 @@ class Form
         }
     }
 
-    public function addOptionAnswer($data){
+    public function addOptionAnswer($data)
+    {
         $this->db->query('INSERT INTO answer_option (form_id, question_id, answer_id, option_id) VALUES(:form_id, :question_id, :answer_id, :option_id)');
         $this->db->bind(':form_id', $data['form_id']);
         $this->db->bind(':question_id', $data['question_id']);
