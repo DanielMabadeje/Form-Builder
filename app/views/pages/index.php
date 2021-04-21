@@ -296,20 +296,19 @@
       <h2 class="display-md-3">Templates</h2>
       <div class="row pt-5 pb-5 mt-5 mb-5">
         <a href="#" class="col">
-          <div class="card border-none bg-transparent">
-            <div class="card-heade">
+          <div class="card border-none">
+            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg');  background-size:cover;">
               <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
+              <!-- <img src="<?= URLROOT ?>/img/490034-200.png" alt="" width="200px" height="200px" style="opacity: 0.6;"> -->
             </div>
-            <div class="card-body">
+            <div class="card-body ">
               RSVP Form
             </div>
           </div>
         </a>
         <a href="#" class="col">
-          <div class="card border-none bg-transparent">
-            <div class="card-heade">
-              <img src="<?= URLROOT ?>/img/booking.png" alt="" width="300px" height="200px" style="opacity: 0.6;">
+          <div class="card border-none">
+            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg');  background-size:cover;">
             </div>
             <div class="card-body">
               Booking Form
@@ -317,10 +316,8 @@
           </div>
         </a>
         <a href="#" class="col">
-          <div class="card border-none bg-transparent">
-            <div class="card-heade">
-              <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?= URLROOT ?>/img/10-106146_png-file-svg-job-icon-png-white-clipart.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
+          <div class="card border-none">
+            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/andrew-neel-cckf4TsHAuw-unsplash.jpg');  background-size:cover;">
             </div>
             <div class="card-body">
               Job Application Form
@@ -328,10 +325,9 @@
           </div>
         </a>
         <a href="#" class="col">
-          <div class="card border-none bg-transparent">
-            <div class="card-heade">
-              <!-- <h2 class="fa fa-cart"></h2> -->
-              <img src="<?= URLROOT ?>/img/29964-200.png" alt="" width="200px" height="200px" style="opacity: 0.6;">
+          <div class="card border-none">
+            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/katt-yukawa-K0E6E0a0R3A-unsplash.jpg');  background-size:cover;">
+              
             </div>
             <div class="card-body">
               Donation Form
