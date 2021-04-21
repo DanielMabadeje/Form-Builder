@@ -285,6 +285,7 @@
 
     <img src="<?= URLROOT ?>/img/b44904d7-0575-4fbd-8bae-a56029ff533d.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
   </div>
+  <!-- end dashboard screeshot -->
 
 
 
