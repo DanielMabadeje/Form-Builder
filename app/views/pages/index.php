@@ -285,6 +285,9 @@
   </div>
 
 
+
+<!-- Templates -->
+
   <div class="col-12 bg-light pt-5 pb-5">
     <div class="container mt-5">
       <h2 class="display-md-3">Templates</h2>
@@ -347,6 +350,12 @@
       <a href="<?= URLROOT ?>/pages/templates" class="btn btn-primary">View All Templates</a>
     </div>
   </div>
+
+<!-- end templates -->
+
+
+
+  <!-- features -->
 
   <div class="col-12 p-4">
     <div class="container">
@@ -449,6 +458,8 @@
     </div>
   </div>
 
+  <!-- end features -->
+
 
 
   <!-- integrations -->
@@ -483,6 +494,8 @@
   <!-- android coming soon -->
 
 
+
+<!-- get started -->
   <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main">
     <div class="col-md-7 mx-au text-left p-5 text-white">
       <h1>You can experience Form Builder even <br> before Registration</h1>
@@ -493,6 +506,8 @@
       <?php endif; ?>
     </div>
   </div>
+
+  <!-- end get started -->
   <!-- <p>Having issues? Please refer to the <a href="https://githubcom/DanielMabadeje.git">Docs</a> on how to use it</p> -->
 </div>
 
