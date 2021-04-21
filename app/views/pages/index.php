@@ -10,7 +10,7 @@
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
       <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <h1 class="display-4 text-main-color col">PRESENTING br THE NEW PHASE <br> OF DATA COLLECTION</h1>
+      <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE  OF DATA COLLECTION</h1>
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
