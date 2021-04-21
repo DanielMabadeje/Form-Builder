@@ -273,6 +273,8 @@
     </div>
   </div>
 
+
+<!-- dashboard screeshot -->
   <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631aff0, #5631aff0), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
@@ -281,7 +283,7 @@
     </div>
 
 
-    <img src="<?= URLROOT ?>/img/5412124f-2df1-46d9-a42e-6370802c21ad.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
+    <img src="<?= URLROOT ?>/img/b44904d7-0575-4fbd-8bae-a56029ff533d.png" alt="" class="col-md-10 mt-5" style="border-radius:4% 4% 0 0;">
   </div>
 
 
