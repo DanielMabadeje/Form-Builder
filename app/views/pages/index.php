@@ -308,7 +308,7 @@
         </a>
         <a href="#" class="col">
           <div class="card border-none">
-            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg');  background-size:cover;">
+            <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');  background-size:cover;">
             </div>
             <div class="card-body">
               Booking Form
