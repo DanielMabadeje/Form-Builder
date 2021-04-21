@@ -461,6 +461,10 @@
   </div>
   <!-- end integrations -->
 
+
+
+
+  <!-- android coming soon -->
   <div class="bg-white col-12 p-5 text-left">
     <div class="row">
       <div class="col-md-7">
@@ -475,6 +479,8 @@
 
     </div>
   </div>
+
+  <!-- android coming soon -->
 
 
   <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main">
