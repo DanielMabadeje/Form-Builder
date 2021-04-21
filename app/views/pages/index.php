@@ -18,7 +18,7 @@
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
-    <div class="product-device shadow-sm d-md-block mt-5">
+    <div class="product-device shadow-sm-o d-md-block mt-5">
 
       <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-10 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
       <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
@@ -450,13 +450,16 @@
   </div>
 
 
+
+  <!-- integrations -->
   <div class="col-12 p-5 bg-light mt-4 text-md-left text-sm-center">
     <div class="pt-md-5 col-md-8">
       <h3 class="displ">Integrations</h3>
       <h3 class="display-4">Form Builder is more than just a <br> great online tool</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
+      <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
     </div>
   </div>
+  <!-- end integrations -->
 
   <div class="bg-white col-12 p-5 text-left">
     <div class="row">
