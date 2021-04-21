@@ -31,11 +31,11 @@
                     <h5>Blank Form</h5>
                 </div>
 
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px">
+                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px;  background:url('<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg');  background-size:cover;">
                     <div class="card-title mb-0"></div>
                     <div class="card-body">
                         <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <img src="<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                        <!-- <img src="<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg" alt="" width="auto" height="120px" style="opacity: 0.6;"> -->
 
                     </div>
                     <h5>RSVP Form</h5>
