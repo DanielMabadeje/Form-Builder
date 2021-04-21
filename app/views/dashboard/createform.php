@@ -19,100 +19,114 @@
 
            <section class="templates">
             <section class="row">
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
                 </div>
+                                
 
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
-                </div>
-
-
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
-                        
-
-                    </div>
-                    <h5>Blank Form</h5>
                 </div>
 
 
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
+
                 </div>
 
-
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
+
                 </div>
 
-
-                <div class="col-md-4 m-2 ">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
+
                 </div>
 
-                <div class="col-md-4 m-2 "></div>
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:0; height:150px">
-                    <div class="card-title mb-0"></div>
-                    <div class="card-body text-left">
-                        <!-- <h2 class="display-5">10 Forms</h2> -->
-                        <!-- 1024px-OOjs_UI_icon_add.svg -->
-                        <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
                         
 
+                        </div>
+                        <h5>Blank Form</h5>
                     </div>
-                    <h5>Blank Form</h5>
                 </div>
+
+                <div class="col-md-4 pb-5">
+                
+                    <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px">
+                        <div class="card-title mb-0"></div>
+                        <div class="card-body text-left">
+                            <!-- <h2 class="display-5">10 Forms</h2> -->
+                            <!-- 1024px-OOjs_UI_icon_add.svg -->
+                            <img src="<?= URLROOT ?>/img/1024px-OOjs_UI_icon_add.svg.png" alt="" width="auto" height="120px" style="opacity: 0.6;">
+                        
+
+                        </div>
+                        <h5>Blank Form</h5>
+                    </div>
                 </div>
             </section>
            </section>
