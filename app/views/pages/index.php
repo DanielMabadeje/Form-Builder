@@ -253,7 +253,7 @@
 
         </div>
         <div class="col-md-6">
-          <img src="<?= URLROOT ?>/img/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash-removebg-preview.png" alt="" class="col">
+          <!-- <img src="<?= URLROOT ?>/img/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash-removebg-preview.png" alt="" class="col"> -->
         </div>
 
 
