@@ -10,7 +10,7 @@
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
       <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE  OF DATA COLLECTION</h1>
+      <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1>
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
@@ -245,7 +245,9 @@
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
 
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <img src="<?= URLROOT ?>/img/debby-hudson-MzSqFPLo8CE-unsplash-removebg-preview.png" alt="" class="col">
+        </div>
 
 
         <div class="col-md-6"></div>
@@ -274,7 +276,7 @@
   </div>
 
 
-<!-- dashboard screeshot -->
+  <!-- dashboard screeshot -->
   <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631aff0, #5631aff0), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
@@ -289,7 +291,7 @@
 
 
 
-<!-- Templates -->
+  <!-- Templates -->
 
   <div class="col-12 bg-light pt-5 pb-5">
     <div class="container mt-5">
@@ -327,7 +329,7 @@
         <a href="#" class="col">
           <div class="card border-none">
             <div class="card-heade" style=" height:200px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/katt-yukawa-K0E6E0a0R3A-unsplash.jpg');  background-size:cover;">
-              
+
             </div>
             <div class="card-body">
               Donation Form
@@ -350,7 +352,7 @@
     </div>
   </div>
 
-<!-- end templates -->
+  <!-- end templates -->
 
 
 
@@ -494,7 +496,7 @@
 
 
 
-<!-- get started -->
+  <!-- get started -->
   <div class="col-md-12  p-0 pt-5 pb-5 mt-4 bg-main">
     <div class="col-md-7 mx-au text-left p-5 text-white">
       <h1>You can experience Form Builder even <br> before Registration</h1>
