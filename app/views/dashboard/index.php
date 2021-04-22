@@ -19,7 +19,7 @@
                 <p>Start your data collection with just a click...</p>
             </div>
             <div class="d-md-flex overflow mb-5 ml-1 pb-5" style="overflow-x:auto">
-                <div class="card col-md-3 m-md-2 mt-4" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px;
+                <div class="card col-md-3 m-md-2 mt-4 text-white" style="border-radius:6px; box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 8%); border:none; height:150px;
                     background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/kelly-sikkema-Oz_J_FXKvIs-unsplash.jpg'); background-size:cover;">
                     <div class="card-title mb-0"></div>
                     <div class="card-body text-left">
