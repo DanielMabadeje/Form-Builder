@@ -166,6 +166,9 @@
                 echo $this->form->_form_close();
                 ?>
             </div>
+
+
+            <h4 class="display-5 text-gray">Powered By | FormBuilder</h4>
         </div>
 
         <div class="col-md-2 height ml-3 border-radius-none border-none p-3 ">
