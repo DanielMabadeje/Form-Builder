@@ -204,6 +204,8 @@
 <?php
 echo $this->form->_form_close();
 ?>
+
+<h4 class="display-5 text-gray">Powered By | FormBuilder</h4>
 </div>
                         <?php else : ?>
                         <div>The Admin Is Not Currently Allowing Responses</div>
