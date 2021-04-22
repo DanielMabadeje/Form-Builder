@@ -359,17 +359,19 @@ class Forms extends Controller
 
             if ($view == 'chart') {
 
-                // $responses = $this->formModel->getResponsesCount($form_id);
+                $responses = $this->formModel->getResponsesCount($form_id);
                 $questions = $this->formModel->getQuestionbyType($form_id);
 
                 $responses_array = [];
 
 
-                // foreach ($responses as $key => $value) {
+                foreach ($responses as $key => $value) {
 
-                //     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
-                // }
-                // $data->responses = $responses_array;
+                    $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
+                }
+                $data->responses = $responses_array;
+                $data->questions=$questions;
+                // die(json_encode($data->responses));
                 // die(json_encode($questions));
                 $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {
