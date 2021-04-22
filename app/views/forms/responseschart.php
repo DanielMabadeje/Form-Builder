@@ -65,7 +65,12 @@
 
 
 
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+
+
+                <?php foreach($data as $singleInput): ?>
+                    <canvas id="myChart" class="canvas" width="400" height="400"></canvas>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -76,7 +81,11 @@
 <script>
     var formarray = <?php echo json_encode($data); ?>
 
-    var ctx = document.getElementById('myChart');
+
+    for (let index = 0; index < formarray.length; index++) {
+
+        var ctx = document.getElementById('myChart');
+        var ctx=document.getElementsByClassName('canvas')[index];
     // var myChart = new Chart(ctx, {
     //     type: 'bar',
     //     data: {
@@ -117,7 +126,8 @@
 
 
     var data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: formarray[index].options,
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
@@ -156,6 +166,11 @@
         data: data,
         options: options
     });
+        const element = array[index];
+        
+    }
+
+    
 </script>
 
 
