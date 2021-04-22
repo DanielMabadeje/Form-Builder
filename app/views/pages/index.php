@@ -239,37 +239,54 @@
         </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
       </div>
-      <div class="row text-md-left text-sm-center pt-4">
+      <div class="row text-md-left text-sm-center pt-5 mt-5">
         <div class="col-md-6">
-          <h3 class="display-4">Create</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
+          <h3 class="text-main-color">Create</h3>
+
+          <h2 class="display-4">
+            Creation Made Easy With The
+            Perfect Form Builder
+          </h2>
+          <div class="mt-3 pt-5">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum facere, nisi doloremque obcaecati, alias, corporis labore repellat aperiam quam dolorem veritatis commodi sit deserunt odio provident adipisci magni eum eaque? Cumque iste ad quasi?</p>
+          </div>
 
         </div>
         <div class="col-md-6">
-          <img src="<?= URLROOT ?>/img/debby-hudson-MzSqFPLo8CE-unsplash-removebg-preview.png" alt="" class="col">
+          <img src="<?= URLROOT ?>/img/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash-removebg-preview.png" alt="" class="col">
         </div>
 
 
         <div class="col-md-6"></div>
 
 
-        <div class="col-md-6 ">
-          <h3 class="display-4">Edit Flexibly</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
+        <div class="col-md-6 pt-5">
+          <h3 class="text-main-color">Edit Flexibly</h3>
+          <h2 class="display-4">Customization & Personalization Even Makes it Better</h2>
+          <div class="pt-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
+          </div>
 
         </div>
 
 
-        <div class="col-md-6">
-          <h3 class="display-4">Share</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
+        <div class="col-md-6 pt-5">
+          <h3 class="text-main-color">Share</h3>
+          <h2 class="display-4">No Platform is an exception</h2>
+          <div class="pt-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
+          </div>
         </div>
 
         <div class="col-md-6"></div>
         <div class="col-md-6"></div>
-        <div class="col-md-6">
-          <h3 class="display-4">Analyse</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
+
+        <div class="col-md-6 pt-5">
+          <h3 class="text-main-color">Analyse</h3>
+          <h2 class="display-4">See Results In Real-Time</h2>
+          <div class="pt-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
+          </div>
         </div>
       </div>
     </div>
