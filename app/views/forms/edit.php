@@ -96,7 +96,7 @@
                 </div>
                 <div class="form_container col-md-6 pt-4 pl-0 ml-0">
                     <!-- <input type="submit" class="btn btn-secondary col-12 text-left" value="Update"> -->
-                    <button class="btn btn-secondary" id="updateBtn">Update</button>
+                    <button class="btn btn-secondary  bg-main" id="updateBtn">Update</button>
                 </div>
                 <!-- </form> -->
             </div>
