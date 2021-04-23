@@ -170,7 +170,34 @@
             });
         }
         else if(checkifDropdown(formarray.questions[index].question_id)){
+            
 
+
+           var data= {
+                datasets: [{
+                    barPercentage: 0.5,
+                    barThickness: 6,
+                    maxBarThickness: 8,
+                    minBarLength: 2,
+                    data: [10, 20, 30, 40, 50, 60, 70]
+                }]
+            };
+
+
+            var stackedBar = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true
+                        },
+                        y: {
+                            stacked: true
+                        }
+                    }
+                }
+            });
         }
          else {
       
