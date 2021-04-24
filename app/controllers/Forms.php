@@ -273,12 +273,15 @@ class Forms extends Controller
 
         $data = $this->formData;
 
-        var_dump($data);
-        die;
+        // var_dump($data);
+        // die;
 
         foreach ($data as $key => $value) {
             try {
                 $this->formModel->addAnswer($data[$key]);
+                // var_dump($_SERVER['REQUEST_URI']);
+                // die;
+                redirect($_SERVER['REQUEST_URI']);
             } catch (\Throwable $e) {
                 echo $e;
             }
