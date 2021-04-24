@@ -84,7 +84,7 @@
 
     for (let index = 0; index < formarray.questions.length; index++) {
         var ctx = document.getElementsByClassName('canvas')[index];
-        console.log(formarray);
+        // console.log(formarray);
         if (checkifMultiOption(formarray.questions[index].question_id)) {
             var data = {
                 // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -131,7 +131,9 @@
 
         } else if (currentIndex=checkifDropdown(formarray.questions[index].question_id)) {
             var labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+            console.log(formarray.questions[index].options);
             // var labels = formarray.questions[index].options;
+            var labels=convertObjectToArray(formarray.questions[index].options)
             var data = {
                 labels: labels,
                 datasets: [{
@@ -195,6 +197,11 @@
             };
 
         }
+    }
+
+
+    function convertObjectToArray(obj) {
+        return Object.values(obj);
     }
 </script>
 
