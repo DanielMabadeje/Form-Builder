@@ -68,7 +68,7 @@
                 <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
 
 
-                <?php foreach($data->questions as $singleInput): ?>
+                <?php foreach ($data->questions as $singleInput) : ?>
                     <canvas id="myChart" class="canvas mt-4 mb-5 pb-5" width="400" height="400"></canvas>
                 <?php endforeach; ?>
             </div>
@@ -83,51 +83,10 @@
 
 
     for (let index = 0; index < formarray.questions.length; index++) {
-
-        // var ctx = document.getElementById('myChart');
-        var ctx=document.getElementsByClassName('canvas')[index];
-        // var myChart = new Chart(ctx, {
-        //     type: 'bar',
-        //     data: {
-        //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        //         datasets: [{
-        //             label: '# of Votes',
-        //             data: [12, 19, 3, 5, 2, 3],
-        //             backgroundColor: [
-        //                 'rgba(255, 99, 132, 0.2)',
-        //                 'rgba(54, 162, 235, 0.2)',
-        //                 'rgba(255, 206, 86, 0.2)',
-        //                 'rgba(75, 192, 192, 0.2)',
-        //                 'rgba(153, 102, 255, 0.2)',
-        //                 'rgba(255, 159, 64, 0.2)'
-        //             ],
-        //             borderColor: [
-        //                 'rgba(255, 99, 132, 1)',
-        //                 'rgba(54, 162, 235, 1)',
-        //                 'rgba(255, 206, 86, 1)',
-        //                 'rgba(75, 192, 192, 1)',
-        //                 'rgba(153, 102, 255, 1)',
-        //                 'rgba(255, 159, 64, 1)'
-        //             ],
-        //             borderWidth: 1
-        //         }]
-        //     },
-        //     options: {
-        //         scales: {
-        //             yAxes: [{
-        //                 ticks: {
-        //                     beginAtZero: true
-        //                 }
-        //             }]
-        //         }
-        //     }
-        // });
-
-
+        var ctx = document.getElementsByClassName('canvas')[index];
         console.log(formarray);
-
         if (checkifMultiOption(formarray.questions[index].question_id)) {
-                var data = {
+            var data = {
                 // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 labels: formarray.questions[index].options,
                 datasets: [{
@@ -168,85 +127,75 @@
                 data: data,
                 options: options
             });
-        }
-        else if(checkifDropdown(formarray.questions[index].question_id)){
-            
 
 
-          // <block:setup:1>
-var labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
-var data = {
-  labels: labels,
-  datasets: [{
-    label: 'My First Dataset',
-    data: [65, 59, 80, 81, 56, 55, 40],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)',
-      'rgba(75, 192, 192, 0.2)',
-      'rgba(54, 162, 235, 0.2)',
-      'rgba(153, 102, 255, 0.2)',
-      'rgba(201, 203, 207, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(255, 205, 86)',
-      'rgb(75, 192, 192)',
-      'rgb(54, 162, 235)',
-      'rgb(153, 102, 255)',
-      'rgb(201, 203, 207)'
-    ],
-    borderWidth: 1
-  }]
-};
-// </block:setup>
+        } else if (currentIndex=checkifDropdown(formarray.questions[index].question_id)) {
+            console.log(currentIndex);
+            var labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+            var data = {
+                labels: labels,
+                datasets: [{
+                    label: formarray.form[currentIndex].label,
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(201, 203, 207, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(54, 162, 235)',
+                        'rgb(153, 102, 255)',
+                        'rgb(201, 203, 207)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+            const config = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+            });
 
-// <block:config:0>
-const config = {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  },
-};
-// </block:config>
+        } else {
 
         }
-         else {
-      
-        }
-        //const element = array[index];
-        
+
     }
 
 
 
     function checkifMultiOption(question_id) {
         for (let index = 0; index < formarray.form.length; index++) {
-                if (formarray.form[index].question_id == question_id &&  formarray.form[index].type=="checkbox") {
-                    return true;
-                };
-            
+            if (formarray.form[index].question_id == question_id && formarray.form[index].type == "checkbox") {
+                return index;
+            };
+
         }
     }
 
 
     function checkifDropdown(question_id) {
         for (let index = 0; index < formarray.form.length; index++) {
-                if (formarray.form[index].question_id == question_id &&  formarray.form[index].type=="dropdown") {
-                    return true;
-                };
-            
+            if (formarray.form[index].question_id == question_id && formarray.form[index].type == "dropdown") {
+                return index;
+            };
+
         }
     }
-
-    
 </script>
 
 
