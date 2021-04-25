@@ -387,8 +387,8 @@ class Forms extends Controller
                 $questions = $this->formModel->getQuestionbyType($form_id);
 
                 // var_dump($questions);
-                die(json_encode($questions));
-                die;
+                // die(json_encode($questions));
+                // die;
                 $responses_array = [];
 
 
@@ -401,12 +401,13 @@ class Forms extends Controller
                 foreach($questions as $key=>$singlequestion){
 
                     foreach($singlequestion->options as $optionKey=>$option){
-                        $chart[$singlequestion->question_id] = $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $option);    
+                        $chart[$singlequestion->question_id][$option] = $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $optionKey);    
                     }
                     // $chart[$singlequestion->question_id]=$this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $value);
                 }
 
-                var_dump($chart);
+                // var_dump($chart);
+                echo json_encode($chart);
                 die;
                 $data->responses = $responses_array;
                 $data->questions = $questions;
