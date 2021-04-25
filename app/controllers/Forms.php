@@ -336,12 +336,8 @@ class Forms extends Controller
                 // var_dump($question_id);
                 // die;
 
-                // if ($_POST['multichoice']) {
-                //     # code...
-                // }
-
                 if(is_array($value)){
-                    foreach($data[$key] as $key=>$value){
+                    foreach($data[$key] as $keys=>$value){
 
                         $newData[$no]['name'] = $key;
                         $newData[$no]['form_id'] = $this->formId;
@@ -351,8 +347,10 @@ class Forms extends Controller
 
                         $no++;
                     }
+                    continue;
+                    // return;
+                    // break;
                 }
-                // var_dump(array_keys($_POST));
 
                 $newData[$no]['name'] = $key;
                 $newData[$no]['form_id'] = $this->formId;
