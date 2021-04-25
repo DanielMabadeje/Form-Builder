@@ -336,6 +336,24 @@ class Forms extends Controller
                 // var_dump($question_id);
                 // die;
 
+                // if ($_POST['multichoice']) {
+                //     # code...
+                // }
+
+                if(is_array($value)){
+                    foreach($data[$key] as $key=>$value){
+
+                        $newData[$no]['name'] = $key;
+                        $newData[$no]['form_id'] = $this->formId;
+                        $newData[$no]['question_id'] = $question_id;
+                        $newData[$no]['answer'] = $value;
+                        $newData[$no]['answer_id'] = $this->answerId;
+
+                        $no++;
+                    }
+                }
+                // var_dump(array_keys($_POST));
+
                 $newData[$no]['name'] = $key;
                 $newData[$no]['form_id'] = $this->formId;
                 $newData[$no]['question_id'] = $question_id;
@@ -348,6 +366,9 @@ class Forms extends Controller
             $this->formData = $newData;
 
             // var_dump($this->formData);
+
+            echo "<br>
+            <br>";
             echo json_encode($_POST);
             echo json_encode($this->formData);
             die;
