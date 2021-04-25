@@ -397,8 +397,17 @@ class Forms extends Controller
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
                 }
 
+                $chart=[];
+                foreach($questions as $key=>$singlequestion){
 
-                // foreach($questions as ){}
+                    foreach($singlequestion->options as $optionKey=>$option){
+                        $chart[$singlequestion->question_id] = $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $option);    
+                    }
+                    // $chart[$singlequestion->question_id]=$this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $value);
+                }
+
+                var_dump($chart);
+                die;
                 $data->responses = $responses_array;
                 $data->questions = $questions;
                 die(json_encode($data->responses));

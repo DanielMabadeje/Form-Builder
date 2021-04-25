@@ -557,7 +557,7 @@ class Form
     public function countResponsesThatHaveOption($question_id, $value)
     {
         // $this->db->query("SELECT *,answer FROM form_answers WHERE question_id=:question_id AND value=:value");
-        $this->db->query("SELECT COUNT(*) FROM form_answers WHERE question_id=:question_id AND value=:value");
+        $this->db->query("SELECT COUNT(*) FROM form_answers WHERE question_id=:question_id AND answer=:value");
         $this->db->bind(':question_id', $question_id);
         $this->db->bind(':value', $value);
 
