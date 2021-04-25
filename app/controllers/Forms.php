@@ -336,8 +336,8 @@ class Forms extends Controller
                 // var_dump($question_id);
                 // die;
 
-                if(is_array($value)){
-                    foreach($data[$key] as $keys=>$value){
+                if (is_array($value)) {
+                    foreach ($data[$key] as $keys => $value) {
 
                         $newData[$no]['name'] = $key;
                         $newData[$no]['form_id'] = $this->formId;
@@ -365,11 +365,11 @@ class Forms extends Controller
 
             // var_dump($this->formData);
 
-            echo "<br>
-            <br>";
-            echo json_encode($_POST);
-            echo json_encode($this->formData);
-            die;
+            // echo "<br>
+            // <br>";
+            // echo json_encode($_POST);
+            // echo json_encode($this->formData);
+            // die;
         } else {
             # code...
         }
@@ -386,6 +386,9 @@ class Forms extends Controller
                 $responses = $this->formModel->getResponsesCount($form_id);
                 $questions = $this->formModel->getQuestionbyType($form_id);
 
+                // var_dump($questions);
+                die(json_encode($questions));
+                die;
                 $responses_array = [];
 
 
@@ -393,9 +396,12 @@ class Forms extends Controller
 
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
                 }
+
+
+                // foreach($questions as ){}
                 $data->responses = $responses_array;
                 $data->questions = $questions;
-                // die(json_encode($data->responses));
+                die(json_encode($data->responses));
                 // die(json_encode($questions));
                 $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {
