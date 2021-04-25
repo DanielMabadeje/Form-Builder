@@ -458,7 +458,7 @@ class Sample_Form_Creator
 
                         foreach ($all_elm_options['options'] as $elm_suboptions) {
                             $this->elm_options = $elm_suboptions;
-                            $this->elm_options['name'] = $all_elm_options['name'];
+                            $this->elm_options['name'] = $all_elm_options['name'].'[]';
                             // $this->elm_options['id'] = $all_elm_options['id'];
                             $this->elm_options['id'] = $elm_suboptions['id'];
                             // $this->elm_options['id'] = $elm_suboptions['id'];

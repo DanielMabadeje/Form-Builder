@@ -348,7 +348,9 @@ class Forms extends Controller
             $this->formData = $newData;
 
             // var_dump($this->formData);
-            // die;
+            echo json_encode($_POST);
+            echo json_encode($this->formData);
+            die;
         } else {
             # code...
         }
@@ -373,7 +375,7 @@ class Forms extends Controller
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
                 }
                 $data->responses = $responses_array;
-                $data->questions=$questions;
+                $data->questions = $questions;
                 // die(json_encode($data->responses));
                 // die(json_encode($questions));
                 $this->view('forms/responseschart', $data);
