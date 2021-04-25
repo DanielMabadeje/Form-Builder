@@ -86,29 +86,17 @@
         var ctx = document.getElementsByClassName('canvas')[index];
         console.log(formarray);
         if (currentIndex=checkifMultiOption(formarray.questions[index].question_id)) {
+
+            var colors=generateRandomColors(formarray.chart[formarray.questions[index].question_id].length)
             var data = {
                 // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 // labels: formarray.questions[index].options,
                 labels:convertObjectToArray(formarray.questions[index].options),
                 datasets: [{
                     label: formarray.form[currentIndex].label,
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        // 'rgba(255, 206, 86, 0.2)',
-                        // 'rgba(75, 192, 192, 0.2)',
-                        // 'rgba(153, 102, 255, 0.2)',
-                        // 'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        // 'rgba(255, 206, 86, 1)',
-                        // 'rgba(75, 192, 192, 1)',
-                        // 'rgba(153, 102, 255, 1)',
-                        // 'rgba(255, 159, 64, 1)'
-                    ],
+                    data: formarray.chart[formarray.questions[index].question_id],
+                    backgroundColor: colors,
+                    borderColor: colors,
                     borderWidth: 1
                 }]
             };
@@ -132,17 +120,18 @@
 
         } else if (currentIndex=checkifDropdown(formarray.questions[index].question_id)) {
             var labels=convertObjectToArray(formarray.questions[index].options)
+            var colors=generateRandomColors(formarray.chart[formarray.questions[index].question_id].length)
             var data = {
                 labels: labels,
                 datasets: [{
                     label: formarray.form[currentIndex].label,
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                    ],
-                    borderColor: [
-                        'rgb(255, 99, 132)',
-                    ],
+                    // data: [65, 59, 80, 81, 56, 55, 40],
+                    data:formarray.chart[formarray.questions[index].question_id],
+                    // backgroundColor: [
+                    //     'rgba(255, 99, 132, 0.2)',
+                    // ],
+                    backgroundColor: colors,
+                    borderColor: colors,
                     borderWidth: 1
                 }]
             };
@@ -188,6 +177,18 @@
 
     function convertObjectToArray(obj) {
         return Object.values(obj);
+    }
+
+    function generateRandomColors(length) {
+        var colors = [];
+        while (colors.length < 100) {
+            do {
+                var color = Math.floor((Math.random()*1000000)+1);
+            } while (colors.indexOf(color) >= 0);
+            colors.push("#" + ("000000" + color.toString(16)).slice(-6));
+        }
+
+        return colors;
     }
 </script>
 
