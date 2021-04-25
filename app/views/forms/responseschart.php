@@ -57,16 +57,7 @@
             </div>
 
             <div class="card-body">
-                <h2>Graphical ResponsesChart Page</h2>
-
-                <!-- <pre>
-                <?php var_dump($data); ?>
-                </pre> -->
-
-
-
-                <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-
+                <h2>Graphical Responses Chart Page</h2>
 
                 <?php foreach ($data->questions as $singleInput) : ?>
                     <canvas id="myChart" class="canvas mt-4 mb-5 pb-5" width="400" height="400"></canvas>
@@ -84,13 +75,11 @@
 
     for (let index = 0; index < formarray.questions.length; index++) {
         var ctx = document.getElementsByClassName('canvas')[index];
-        console.log(formarray);
         if (currentIndex=checkifMultiOption(formarray.questions[index].question_id)) {
 
             var colors=generateRandomColors(formarray.chart[formarray.questions[index].question_id].length)
             var data = {
-                // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                // labels: formarray.questions[index].options,
+                
                 labels:convertObjectToArray(formarray.questions[index].options),
                 datasets: [{
                     label: formarray.form[currentIndex].label,
@@ -125,11 +114,7 @@
                 labels: labels,
                 datasets: [{
                     label: formarray.form[currentIndex].label,
-                    // data: [65, 59, 80, 81, 56, 55, 40],
                     data:formarray.chart[formarray.questions[index].question_id],
-                    // backgroundColor: [
-                    //     'rgba(255, 99, 132, 0.2)',
-                    // ],
                     backgroundColor: colors,
                     borderColor: colors,
                     borderWidth: 1
