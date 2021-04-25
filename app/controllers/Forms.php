@@ -400,18 +400,20 @@ class Forms extends Controller
                 $chart=[];
                 foreach($questions as $key=>$singlequestion){
 
+                    $chart[$singlequestion->question_id]=[];
                     foreach($singlequestion->options as $optionKey=>$option){
-                        $chart[$singlequestion->question_id][$option] = $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $optionKey);    
+                        $chart[$singlequestion->question_id][] .= $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $optionKey);    
                     }
                     // $chart[$singlequestion->question_id]=$this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $value);
                 }
 
                 // var_dump($chart);
-                echo json_encode($chart);
-                die;
+                // echo json_encode($chart);
+                // die;
                 $data->responses = $responses_array;
                 $data->questions = $questions;
-                die(json_encode($data->responses));
+                $data->chart=$chart;
+                // die(json_encode($data->responses));
                 // die(json_encode($questions));
                 $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {

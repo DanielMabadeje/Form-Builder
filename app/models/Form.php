@@ -562,7 +562,7 @@ class Form
         $this->db->bind(':value', $value);
 
 
-        $data = $this->db->resultSet();
-        return $data;
+        $data = $this->db->single();
+        return $data->chartcount;
     }
 }
