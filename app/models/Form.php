@@ -572,5 +572,5 @@ class Form
 
 
 
-    public function countQuestionsithUserId(){}
+    public function countQuestionswithUserId(){}
 }
