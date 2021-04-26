@@ -164,6 +164,8 @@ class Forms extends Controller
             if ($data = $this->submitAnswer()) {
                 $this->sendResponseViaEmail();
                 $_SESSION[$id] = $id;
+                var_dump('here');
+                die;
                 redirect('/forms/views/' . $id);
             }
         } else {
@@ -279,9 +281,10 @@ class Forms extends Controller
         foreach ($data as $key => $value) {
             try {
                 $this->formModel->addAnswer($data[$key]);
-                // var_dump($_SERVER['REQUEST_URI']);
+                var_dump($_SERVER['REQUEST_URI']);
                 // die;
-                redirect($_SERVER['REQUEST_URI']);
+                return true;
+                // redirect($_SERVER['REQUEST_URI']);
             } catch (\Throwable $e) {
                 echo $e;
             }
@@ -391,18 +394,18 @@ class Forms extends Controller
                     $responses_array[$key] = $this->formModel->getResponses($responses[$key]->answer_id);
                 }
 
-                $chart=[];
-                foreach($questions as $key=>$singlequestion){
+                $chart = [];
+                foreach ($questions as $key => $singlequestion) {
 
-                    $chart[$singlequestion->question_id]=[];
-                    foreach($singlequestion->options as $optionKey=>$option){
-                        $chart[$singlequestion->question_id][] .= $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $optionKey);    
+                    $chart[$singlequestion->question_id] = [];
+                    foreach ($singlequestion->options as $optionKey => $option) {
+                        $chart[$singlequestion->question_id][] .= $this->formModel->countResponsesThatHaveOption($singlequestion->question_id, $optionKey);
                     }
                 }
                 $data->responses = $responses_array;
                 $data->questions = $questions;
-                $data->chart=$chart;
-                
+                $data->chart = $chart;
+
                 $this->view('forms/responseschart', $data);
             } elseif ($view = 'table') {
 
