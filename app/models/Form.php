@@ -569,4 +569,8 @@ class Form
 
 
     public function getFormsByUser(){}
+
+
+
+    public function countQuestionsithUserId(){}
 }
