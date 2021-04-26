@@ -161,13 +161,12 @@ class Forms extends Controller
             $this->getQuestionIdByName();
 
 
-            if ($data = $this->submitAnswer()) {
-                $this->sendResponseViaEmail();
+            if ($res=$this->submitAnswer()) {
                 $_SESSION[$id] = $id;
-                var_dump('here');
-                die;
+                $email=$this->sendResponseViaEmail();
                 redirect('/forms/views/' . $id);
             }
+
         } else {
 
             $data = $this->formModel->getForm($id);
@@ -266,30 +265,26 @@ class Forms extends Controller
 
 
         if (isset($_POST['email'])) {
-            sendmail('sendcopyofresponse', $this->mailData, $_SESSION['email']);
+            // sendmail('sendcopyofresponse', $this->mailData, $_SESSION['email']);
+            sendmail('sendcopyofresponse', $this->mailData, $_POST['email']);
+        }else{
+
         }
+
+        return true;
     }
 
     private function submitAnswer()
     {
 
         $data = $this->formData;
-
-        // var_dump($data);
-        // die;
-
         foreach ($data as $key => $value) {
             try {
                 $this->formModel->addAnswer($data[$key]);
-                var_dump($_SERVER['REQUEST_URI']);
-                // die;
-                return true;
-                // redirect($_SERVER['REQUEST_URI']);
             } catch (\Throwable $e) {
                 echo $e;
             }
         }
-
         return true;
     }
 
