@@ -4,10 +4,17 @@ class Dashboard extends Controller
 {
     public function __construct(){
         $this->userModel=$this->model('User');
+        $this->formModel=$this->model('Form');
     }
 
     public function index()
     {
+
+        $dashboardData=$this->formModel->getFormsByUser($_SESSION['user_id']);
+
+        die(json_encode($dashboardData));
+        
+
         $this->view('dashboard/index');
     }
 

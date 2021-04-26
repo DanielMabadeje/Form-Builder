@@ -569,7 +569,12 @@ class Form
 
 
     public function getFormsByUser($id){
-        $this->db->query("SELECT * FROM forms WHERE user_id=:user_id");
+        $this->db->query("SELECT forms.form_id, forms.form_name,forms.description,forms.responses,forms.allowing_responses, count(form_questions.form_id) AS questionscount FROM forms
+                          INNER JOIN form_questions
+                          ON forms.form_id=form_questions.form_id
+                          WHERE user_id=:user_id
+                          GROUP BY forms.form_id
+                          ");
         $this->db->bind(':user_id', $id);
 
 
