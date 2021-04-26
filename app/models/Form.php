@@ -569,7 +569,7 @@ class Form
 
 
     public function getFormsByUser($id){
-        $this->db->query("SELECT forms.form_id, forms.form_name,forms.description,forms.responses,forms.allowing_responses, count(form_questions.form_id) AS questionscount FROM forms
+        $this->db->query("SELECT forms.form_id, forms.form_name,forms.description,forms.responses,forms.allowing_responses,forms.created_at,forms.updated_at, count(form_questions.form_id) AS questionscount FROM forms
                           INNER JOIN form_questions
                           ON forms.form_id=form_questions.form_id
                           WHERE user_id=:user_id
@@ -582,7 +582,4 @@ class Form
         return $data;
     }
 
-
-
-    public function countQuestionswithFormId($form_id){}
 }

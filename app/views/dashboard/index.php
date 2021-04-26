@@ -107,38 +107,25 @@
                                     </tr>
                                 </thead>
                                 <tbody id="order" class="">
+                                <?php foreach($data['form'] as $form): ?>
+
                                     <tr>
-                                        <td>5fcfece717a24</td>
-                                        <td>Friend Form test</td>
-                                        <td>A Crazy form created for my friends to... </td>
+                                        <td><?= $form->form_id ?></td>
+                                        <td><?= $form->form_name ?></td>
+                                        <td><?= $form->description ?></td>
                                         <td>Yes</td>
-                                        <td>15</td>
+                                        <td><?= $form->questionscount ?></td>
                                         <td>25</td>
-                                        <td>15 November 2020</td>
-                                        <td>5 January 2021</td>
+                                        <td><?= $form->created_at ?></td>
+                                        <td><?= $form->updated_at ?></td>
 
                                         <td class="d-flex">
-                                            <button class="btn btn-primary myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5fcfece717a24</td>
-                                        <td>Friend Form test</td>
-                                        <td>A Crazy form created for my friends to... </td>
-                                        <td>Yes</td>
-                                        <td>15</td>
-                                        <td>25</td>
-                                        <td>15 November 2020</td>
-                                        <td>5 January 2021</td>
-
-                                        <td class="d-flex">
-                                            <button class="btn btn-primary myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger myBtn m-1" aria-hidden="5f774d20c901a"><i class="fa fa-trash"></i></button>
+                                            <a class="btn btn-primary myBtn m-1" href="<?= URLROOT; ?>/forms/edit/<?= $form->form_id ?>" aria-hidden="<?= $form->form_id ?>"><i class="fa fa-pencil"></i></a>
+                                            <a class="btn btn-danger myBtn m-1" href="<?= URLROOT; ?><?= $form->form_id ?>" aria-hidden="<?= $form->form_id ?>"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
 
-
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

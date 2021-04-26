@@ -12,10 +12,11 @@ class Dashboard extends Controller
 
         $dashboardData=$this->formModel->getFormsByUser($_SESSION['user_id']);
 
-        die(json_encode($dashboardData));
+        $data['form']=$dashboardData;
+        // die(json_encode($dashboardData));
         
 
-        $this->view('dashboard/index');
+        $this->view('dashboard/index', $data);
     }
 
 
