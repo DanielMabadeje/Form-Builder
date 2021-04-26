@@ -570,7 +570,7 @@ class Form
 
     public function getFormsByUser($id){
         $this->db->query("SELECT * FROM forms WHERE user_id=:user_id");
-        $this->db->bind(':question_id', $id);
+        $this->db->bind(':user_id', $id);
 
 
         $data = $this->db->resultSet();
