@@ -568,9 +568,16 @@ class Form
 
 
 
-    public function getFormsByUser(){}
+    public function getFormsByUser($id){
+        $this->db->query("SELECT * FROM forms WHERE user_id=:user_id");
+        $this->db->bind(':question_id', $id);
+
+
+        $data = $this->db->resultSet();
+        return $data;
+    }
 
 
 
-    public function countQuestionswithUserId(){}
+    public function countQuestionswithFormId($form_id){}
 }
