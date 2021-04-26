@@ -28,7 +28,11 @@ class Dashboard extends Controller
 
     public function forms($id=null)
     {
-        $this->view('dashboard/forms');
+
+        $dashboardData=$this->formModel->getFormsByUser($_SESSION['user_id']);
+
+        $data['form']=$dashboardData;
+        $this->view('dashboard/forms', $data);
     }
 
     public function formcreate(){
