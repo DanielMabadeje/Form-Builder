@@ -565,4 +565,8 @@ class Form
         $data = $this->db->single();
         return $data->chartcount;
     }
+
+
+
+    public function getFormsByUser(){}
 }
