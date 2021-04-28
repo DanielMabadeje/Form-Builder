@@ -78,56 +78,56 @@
 
                     <a class="col-md-4 pb-5">
 
-            <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cel-lisboa-60315-unsplash.jpg'); background-size:cover;">
-                <div class="card-title mb-0"></div>
-                <div class="card-body text-left pb-5 mb-5">
+                        <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cel-lisboa-60315-unsplash.jpg'); background-size:cover;">
+                            <div class="card-title mb-0"></div>
+                            <div class="card-body text-left pb-5 mb-5">
 
 
-                </div>
-                <h5 class="mt-5">Food Form</h5>
-            </div>
-        </a>
+                            </div>
+                            <h5 class="mt-5">Food Form</h5>
+                        </div>
+                    </a>
 
-        <a class="col-md-4 pb-5">
+                    <a class="col-md-4 pb-5">
 
-            <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cake.jpeg'); background-size:cover;">
-                <div class="card-title mb-0"></div>
-                <div class="card-body text-left mb-5 pb-5">
-
-
-                </div>
-                <h5 class="mt-5">Cake Order Form</h5>
-            </div>
-        </a>
+                        <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cake.jpeg'); background-size:cover;">
+                            <div class="card-title mb-0"></div>
+                            <div class="card-body text-left mb-5 pb-5">
 
 
-
-        <a class="col-md-4 pb-5">
-
-            <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg'); background-size:cover;">
-                <div class="card-title mb-0"></div>
-                <div class="card-body text-left mb-5 pb-5">
-
-
-                </div>
-                <h5 class="mt-5">Contact Form</h5>
-            </div>
-        </a>
+                            </div>
+                            <h5 class="mt-5">Cake Order Form</h5>
+                        </div>
+                    </a>
 
 
 
+                    <a class="col-md-4 pb-5">
 
-        <a class="col-md-4 pb-5">
-
-            <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/isaac-smith-AT77Q0Njnt0-unsplash.jpg'); background-size:cover;">
-                <div class="card-title mb-0"></div>
-                <div class="card-body text-left mb-5 pb-5">
+                        <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg'); background-size:cover;">
+                            <div class="card-title mb-0"></div>
+                            <div class="card-body text-left mb-5 pb-5">
 
 
-                </div>
-                <h5 class="mt-5">Survey Form</h5>
-            </div>
-        </a>
+                            </div>
+                            <h5 class="mt-5">Contact Form</h5>
+                        </div>
+                    </a>
+
+
+
+
+                    <a class="col-md-4 pb-5">
+
+                        <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/isaac-smith-AT77Q0Njnt0-unsplash.jpg'); background-size:cover;">
+                            <div class="card-title mb-0"></div>
+                            <div class="card-body text-left mb-5 pb-5">
+
+
+                            </div>
+                            <h5 class="mt-5">Survey Form</h5>
+                        </div>
+                    </a>
 
 
     </section>
