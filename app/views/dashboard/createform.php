@@ -19,7 +19,7 @@
 
             <section class="templates">
                 <section class="row">
-                    <a href="<?= URLROOT; ?>/forms/add/" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/kelly-sikkema-Oz_J_FXKvIs-unsplash.jpg');  background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -29,7 +29,7 @@
                             <h5 class="mt-5">Blank Form</h5>
                         </div>
                     </a>
-                    <a href="<?= URLROOT; ?>/forms/add/donation" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/donation" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px;  background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/katt-yukawa-K0E6E0a0R3A-unsplash.jpg');  background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -39,7 +39,7 @@
                             <h5 class="mt-5">Donation Form</h5>
                         </div>
                     </a>
-                    <a href="<?= URLROOT; ?>/forms/add/rsvp" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/rsvp" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sigmund-ZLst8z_M6_8-unsplash.jpg');  background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -52,7 +52,7 @@
                         </div>
                     </a>
 
-                    <a href="<?= URLROOT; ?>/forms/add/jobform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/jobform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT; ?>/img/andrew-neel-cckf4TsHAuw-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -64,7 +64,7 @@
                         </div>
                     </a>
 
-                    <a href="<?= URLROOT; ?>/forms/add/bookingform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/bookingform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -76,7 +76,7 @@
                         </div>
                     </a>
 
-                    <a href="<?= URLROOT; ?>/forms/add/foodform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/foodform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cel-lisboa-60315-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -88,7 +88,7 @@
                         </div>
                     </a>
 
-                    <a href="<?= URLROOT; ?>/forms/add/cakeform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/cakeform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/cake.jpeg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -102,7 +102,7 @@
 
 
 
-                    <a href="<?= URLROOT; ?>/forms/add/contactform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/contactform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
@@ -117,7 +117,7 @@
 
 
 
-                    <a href="<?= URLROOT; ?>/forms/add/surveyform" class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/surveyform" class="col-md-4 pb-5 text-dark">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/isaac-smith-AT77Q0Njnt0-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
