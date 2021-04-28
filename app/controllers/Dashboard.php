@@ -41,7 +41,12 @@ class Dashboard extends Controller
 
     public function membership()
     {
-        echo $_SESSION['membership_plan'];
+        // echo $_SESSION['membership_plan'];
+        $data=[
+            'membership_plan'=>$_SESSION['membership_plan'],
+        ];
+
+        $this->view('dashboard/membershipplan', $data);
     }
 
     public function tasks($id=null)
