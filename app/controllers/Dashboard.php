@@ -41,7 +41,6 @@ class Dashboard extends Controller
 
     public function membership()
     {
-        // echo $_SESSION['membership_plan'];
         $data=[
             'membership_plan'=>$_SESSION['membership_plan'],
         ];
