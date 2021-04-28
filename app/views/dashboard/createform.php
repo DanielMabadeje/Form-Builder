@@ -102,7 +102,7 @@
 
 
 
-                    <a class="col-md-4 pb-5">
+                    <a href="<?= URLROOT; ?>/forms/add/contactform" class="col-md-4 pb-5">
 
                         <div class="card col-md-12 m-md-2 mt-4 mb-4" style="border-radius:0; height:150px; background:linear-gradient(to right, #00000061, #0000001a), url('<?= URLROOT ?>/img/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg'); background-size:cover;">
                             <div class="card-title mb-0"></div>
