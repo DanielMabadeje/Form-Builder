@@ -23,7 +23,7 @@
 
       <h6 class="pl-md-4 mt-4">Others</h6>
       <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-credit-card"></i> Payments</a></li>
-      <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-user"></i> Membership Plan</a></li>
+      <li class="nav-item"><a href="<?= URLROOT; ?>/dashboard/membership" class="pl-md-4"><i class="fa fa-user"></i> Membership Plan</a></li>
       <li class="nav-item"><a href="#" class="pl-md-4"><i class="fa fa-home"></i> Back To Home</a></li>
       <li><a href="#" class="pl-md-4"><i class="fa fa-sign-out"></i> Logout</a></li>
     </div>
