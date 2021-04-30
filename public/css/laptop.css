@@ -1,4 +1,4 @@
-
+/ RESETS
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 .clearfix:before,
@@ -148,8 +148,7 @@ $codred: #ac5e47;
     }
     .incont{
 		padding-top: 10px;
-        background: #fefaf0;
-    
+		background: #fefaf0;
     	.item{
 			background-color: $item;
 			width: 53px;

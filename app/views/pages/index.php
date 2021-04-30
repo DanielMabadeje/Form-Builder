@@ -19,9 +19,10 @@
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a>
       <?php endif; ?>
     </div>
-    <div class="product-device shadow-sm-o d-md-block mt-5">
+    <div class="product-device shadow-sm-o d-md-block mt-5"  style="background:url(<?= URLROOT?>/img/dots.png)">
 
-      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-10 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;">
+    <!-- <img src="<?= URLROOT?>/img/dots.png" alt=""> -->
+      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;">
       <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
     </div>
     <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
@@ -260,7 +261,9 @@
         </div>
 
 
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <img src="<?= URLROOT?>/img/dots.png" alt="">
+        </div>
 
 
         <div class="col-md-6 pt-5">
@@ -282,8 +285,13 @@
           </div>
         </div>
 
-        <div class="col-md-6"></div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <img src="<?= URLROOT?>/img/dots.png" alt="">
+        </div>
+
+        <div class="col-md-6">
+          <img src="<?= URLROOT?>/img/dots.png" alt="">
+        </div>
 
         <div class="col-md-6 pt-5">
           <h3 class="">Analyse</h3>
