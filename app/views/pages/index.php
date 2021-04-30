@@ -22,7 +22,190 @@
     <div class="product-device shadow-sm-o d-md-block mt-5"  style="background:url(<?= URLROOT?>/img/dots.png)">
 
     <!-- <img src="<?= URLROOT?>/img/dots.png" alt=""> -->
-      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;">
+      <!-- <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;"> -->
+
+
+
+
+      <div class="wrap">
+		<div class="comp">
+			<div class="monitor">
+				<div class="mid">
+					<div class="site">
+						<div class="topbar">
+							<div class="cerrar">
+								<div class="circl"></div>
+								<div class="circl"></div>
+								<div class="circl"></div>
+							</div>
+						</div>
+						<div class="inhead">
+							<div class="mid">
+								<div class="item"></div>
+							</div>
+							<div class="mid txr">
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						</div>
+						<div class="inslid">
+							
+						</div>
+						<div class="incont">
+							<div class="item"></div>
+							<div class="item"></div>
+							<div class="item"></div>
+							<div class="item"></div>
+							<div class="wid">
+								<div class="itwid">
+									<div>
+										<div class="contfoot"></div>
+									</div>
+								</div>
+								<div class="itwid">
+									<div>
+										<div class="contfoot"></div>
+									</div>
+								</div>
+								<div class="itwid">
+									<div>
+										<div class="contfoot"></div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="infoot">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mid codigo">
+					<div class="line">
+						<div class="item var"></div>
+						<div class="item cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line">
+						<div class="item min var"></div>
+						<div class="item min fun"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line">
+						<div class="item var"></div>
+						<div class="item atr"></div>
+						<div class="item cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item min atr"></div>
+						<div class="item lrg fun"></div>
+						<div class="item min fun"></div>
+						<div class="item lrg cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item lrg atr"></div>
+						<div class="item min fun"></div>
+						<div class="item min cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item atr"></div>
+						<div class="item min fun"></div>
+						<div class="item atr"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item min atr"></div>
+						<div class="item min cont"></div>
+						<div class="item lrg atr"></div>
+						<div class="item  fun"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item min atr"></div>
+						<div class="item lrg fun"></div>
+						<div class="item lrg cont"></div>
+						<div class="item min fun"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab2">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab2">
+						<div class="item min atr"></div>
+						<div class="item min fun"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab3">
+						<div class="item min atr"></div>
+						<div class="item min fun"></div>
+						<div class="item lrg fun"></div>
+						<div class="item lrg cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab3">
+						<div class="item min atr"></div>
+						<div class="item min fun"></div>
+						<div class="item lrg atr"></div>
+						<div class="item lrg cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab4">
+						<div class="item min fun"></div>
+						<div class="item lrg atr"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab1">
+						<div class="item atr"></div>
+						<div class="item var"></div>
+						<div class="item cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab3">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line tab4">
+						<div class="item min atr"></div>
+						<div class="item min fun"></div>
+						<div class="item lrg atr"></div>
+						<div class="item lrg cont"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="line">
+						<div class="item min var"></div>
+						<div class="clearfix"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="base">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
       <!-- <img src="<?= URLROOT ?>/img/sreenshotofedit.png" alt="" class="mt-4 col-md-10 container p-md-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px;"> -->
     </div>
     <!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
