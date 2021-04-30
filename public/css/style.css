@@ -1,6 +1,10 @@
 body{
      /* background-color: gray; */
-     font-family: "Nunito", sans-serif;
+     font-family: "Nunito Sans", sans-serif;
+}
+
+h1{
+     font-family: "Nunito Sans", sans-serif;
 }
 
 .bg-main{
