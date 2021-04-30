@@ -10,7 +10,8 @@
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
       <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1>
+      <!-- <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1> -->
+      <h1 class="d text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1>
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
@@ -263,6 +264,7 @@
         <div class="col-md-6 pt-5">
           <h3 class="text-main-color">Edit Flexibly</h3>
           <h2 class="display-4">Customization & Personalization Even Makes it Better</h2>
+          <!-- <h1 class="displa">Customization & Personalization Even Makes it Better</h1> -->
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
           </div>

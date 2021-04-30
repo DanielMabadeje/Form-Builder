@@ -1,6 +1,7 @@
-/* body{ */
+body{
      /* background-color: gray; */
-/* } */
+     font-family: "Nunito", sans-serif;
+}
 
 .bg-main{
      background: #5631af !important;
