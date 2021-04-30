@@ -10,8 +10,8 @@
     <div class="col-md-7 pt-1 mt-2 mb-5 text-dark mx-auto">
       <h5 class=" text-main-colo m">Data Collection is key</h5>
       <p class="lead font-weight-normal">And to collect it with ease is golden.. </p>
-      <!-- <h1 class="display-4 text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1> -->
-      <h1 class="d text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1>
+      <!-- <h1 class="custom-display-4 text-main-color text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1> -->
+      <h1 class="custom-display-4  text-main-color col">PRESENTING THE <br> NEW PHASE OF DATA COLLECTION</h1>
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/forms/add">Get Started</a>
@@ -34,7 +34,7 @@
 
   <div class="col-md-8 mx-auto pt-5 mt-5">
     <h4>Collect Data of Any Size</h4>
-    <h2 class="display-4 font-weight-normal">We can handle a lot of data <br> before you know it</h2>
+    <h2 class="custom-display-4 text-main-color font-weight-normal">We can handle a lot of data <br> before you know it</h2>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor amet adipisci corporis labore vel doloremque illum hic maxime, aliquid nam enim aspernatur, reprehenderit repellendus omnis impedit, at perferendis optio accusamus mollitia.</p>
   </div>
@@ -43,7 +43,7 @@
   <div class="col-12 pt-5 p-md-5 mt-4 mb-4" style="background: url(<?= URLROOT ?>/img/FsJ4AwKi_o.jpg); background-attachment:fixed;">
     <div class="p-5">
       <div class="col-md-7 ml-auto text-right p-md-4">
-        <h2 class="display-4 text-white">
+        <h2 class="custom-display-4 text-main-color text-white">
           Data available to all Devices and <br> across all Platforms
         </h2>
       </div>
@@ -235,7 +235,7 @@
 
       <div class="text-center col-md-10 mx-auto pt-5 mt-5">
         <h5 class="text-main-color">Form Building has never been easier</h5>
-        <h2 class="display-4">
+        <h2 class="custom-display-4 text-main-color">
           Create, Edit Flexibly, Share <br> & Analyse
         </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
@@ -244,7 +244,7 @@
         <div class="col-md-6">
           <h3 class="text-main-color">Create</h3>
 
-          <h2 class="display-4">
+          <h2 class="custom-display-4 text-main-color">
             Creation Made Easy With The
             Perfect Form Builder
           </h2>
@@ -263,7 +263,7 @@
 
         <div class="col-md-6 pt-5">
           <h3 class="text-main-color">Edit Flexibly</h3>
-          <h2 class="display-4">Customization & Personalization Even Makes it Better</h2>
+          <h2 class="custom-display-4 text-main-color">Customization & Personalization Even Makes it Better</h2>
           <!-- <h1 class="displa">Customization & Personalization Even Makes it Better</h1> -->
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nisi omnis quod nemo. Veniam illum voluptatem tenetur? Tempore repellendus rem odit, eaque at quibusdam natus ea consequatur quaerat reprehenderit.</p>
@@ -274,7 +274,7 @@
 
         <div class="col-md-6 pt-5">
           <h3 class="text-main-color">Share</h3>
-          <h2 class="display-4">No Platform is an exception</h2>
+          <h2 class="custom-display-4 text-main-color">No Platform is an exception</h2>
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
           </div>
@@ -285,7 +285,7 @@
 
         <div class="col-md-6 pt-5">
           <h3 class="text-main-color">Analyse</h3>
-          <h2 class="display-4">See Results In Real-Time</h2>
+          <h2 class="custom-display-4 text-main-color">See Results In Real-Time</h2>
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
           </div>
@@ -299,7 +299,7 @@
   <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631aff0, #5631aff0), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
-      <h2 class="display-4">Boost Creativity and Productivity</h2>
+      <h2 class="custom-display-4 text-main-color">Boost Creativity and Productivity</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus corporis optio animi blanditiis fugiat porro delectus sunt nobis illum illo doloremque minus explicabo exercitationem facilis quos excepturi vitae, qui voluptate.</p>
     </div>
 
@@ -382,7 +382,7 @@
       <div class="row">
         <div class="col-md-5"></div>
         <div class="col-md-7 text-left">
-          <h2 class="display-4">Powerful Features</h2>
+          <h2 class="custom-display-4 text-main-color">Powerful Features</h2>
 
           <div class="text-left mt-5" id="accordion">
             <div class="card mb-1">
@@ -486,7 +486,7 @@
   <div class="col-12 p-5 bg-light mt-4 text-md-left text-sm-center">
     <div class="pt-md-5 col-md-8">
       <h3 class="displ">Integrations</h3>
-      <h3 class="display-4">Form Builder is more than just a <br> great online tool</h3>
+      <h3 class="custom-display-4 text-main-color">Form Builder is more than just a <br> great online tool</h3>
       <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus dolores inventore nam deleniti quaerat quo aperiam id commodi suscipit, omnis sit! Rerum facere omnis necessitatibus porro nemo corrupti, quo dolore voluptas distinctio perferendis! Laborum libero sit animi labore laudantium iusto quam harum ullam est.</p>
     </div>
   </div>
@@ -504,7 +504,7 @@
 
       </div>
       <div class="col-md-5">
-        <h3 class="display-4">Android app coming soon</h3>
+        <h3 class="custom-display-4 text-main-color">Android app coming soon</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda libero vel temporibus deserunt perspiciatis? Mollitia voluptas pariatur maxime iusto cum beatae similique cumque ipsam, dolor repellat ipsa ratione repudiandae exercitationem sit rem esse? Necessitatibus porro eligendi soluta nihil dicta.</p>
       </div>
 
