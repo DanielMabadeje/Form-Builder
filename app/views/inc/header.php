@@ -13,6 +13,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans%3A300%2C400%2C600%2C700%2C300italic%2C400italic%2C600italic%2C700italic%7CQuicksand%3A500&amp;ver=1.0.0#038;subset">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
 
 
     <!-- script config -->
