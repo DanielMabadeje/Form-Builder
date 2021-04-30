@@ -235,14 +235,14 @@
 
       <div class="text-center col-md-10 mx-auto pt-5 mt-5">
         <h5 class="text-main-color">Form Building has never been easier</h5>
-        <h2 class="custom-display-4 text-main-color">
+        <h2 class="custom-display-4 ">
           Create, Edit Flexibly, Share <br> & Analyse
         </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse rem, laborum veritatis mollitia sapiente alias possimus voluptatem nulla facilis repudiandae repellat explicabo accusantium fugiat a aperiam consequuntur minus placeat.</p>
       </div>
       <div class="row text-md-left text-sm-center pt-5 mt-5">
         <div class="col-md-6">
-          <h3 class="text-main-color">Create</h3>
+          <h3 class="">Create</h3>
 
           <h2 class="custom-display-4 text-main-color">
             Creation Made Easy With The
@@ -262,7 +262,7 @@
 
 
         <div class="col-md-6 pt-5">
-          <h3 class="text-main-color">Edit Flexibly</h3>
+          <h3 class="">Edit Flexibly</h3>
           <h2 class="custom-display-4 text-main-color">Customization & Personalization Even Makes it Better</h2>
           <!-- <h1 class="displa">Customization & Personalization Even Makes it Better</h1> -->
           <div class="pt-5">
@@ -273,7 +273,7 @@
 
 
         <div class="col-md-6 pt-5">
-          <h3 class="text-main-color">Share</h3>
+          <h3 class="">Share</h3>
           <h2 class="custom-display-4 text-main-color">No Platform is an exception</h2>
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam fuga incidunt molestiae non voluptatem earum aliquid, amet dolorem delectus placeat fugit recusandae porro minus commodi ipsa vel culpa voluptatibus? Illo pariatur dolore totam sint sunt animi ex. Odit.</p>
@@ -284,7 +284,7 @@
         <div class="col-md-6"></div>
 
         <div class="col-md-6 pt-5">
-          <h3 class="text-main-color">Analyse</h3>
+          <h3 class="">Analyse</h3>
           <h2 class="custom-display-4 text-main-color">See Results In Real-Time</h2>
           <div class="pt-5">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit quos, voluptates cum maxime asperiores reiciendis soluta, inventore illo officia accusamus architecto suscipit alias unde fugit ad autem non provident eligendi, minima enim veritatis hic? Sint voluptatibus nihil deleniti corporis quo dicta ea eum consequatur.</p>
@@ -299,7 +299,7 @@
   <div class="bg-mai col-12 pt-5  mt-5" style="background: linear-gradient(to right, #5631aff0, #5631aff0), url(<?= URLROOT ?>/img/1.jpg); background-size:cover">
     <div class="text-white text-center col-md-7 mx-auto">
       <span>Fast & Beautiful</span>
-      <h2 class="custom-display-4 text-main-color">Boost Creativity and Productivity</h2>
+      <h2 class="custom-display-4 ">Boost Creativity and Productivity</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus corporis optio animi blanditiis fugiat porro delectus sunt nobis illum illo doloremque minus explicabo exercitationem facilis quos excepturi vitae, qui voluptate.</p>
     </div>
 
