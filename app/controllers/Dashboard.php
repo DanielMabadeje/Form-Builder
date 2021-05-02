@@ -52,7 +52,7 @@ class Dashboard extends Controller
     {
 
         $data=[];
-        $this->view('dashboard/comingsoon', $data);
+        $this->view('pages/comingsoon', $data);
     }
 
     public function todo($id=null)
