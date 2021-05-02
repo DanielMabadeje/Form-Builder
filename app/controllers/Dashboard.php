@@ -50,7 +50,9 @@ class Dashboard extends Controller
 
     public function tasks($id=null)
     {
-        # code...
+
+        $data=[];
+        $this->view('dashboard/comingsoon', $data);
     }
 
     public function todo($id=null)
