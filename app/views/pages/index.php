@@ -19,26 +19,27 @@
         <!-- <a class="btn btn-outline-secondary mt-4 md-opjjpmhoiojifppkkcdabiobhakljdgm_doc" href="<?= URLROOT ?>/pages/quickdemo">Get Started</a> -->
       <?php endif; ?>
     </div>
-    <div class="product-device shadow-sm-o d-md-block mt-5"  style="background:url(<?= URLROOT?>/img/dots.png)">
+    <div class="product-device shadow-sm-o d-md-block mt-5" style="background:url(<?= URLROOT ?>/img/dots.png)">
 
-    <!-- <img src="<?= URLROOT?>/img/dots.png" alt=""> -->
+      <!-- <img src="<?= URLROOT ?>/img/dots.png" alt=""> -->
       <!-- <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;"> -->
 
 
 
 
       <div class="wrap">
-		<div class="comp">
-			<div class="monitor">
-      <!-- f20662ec-988a-4b26-9204-a4cfbbbc2ebb -->
-      <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;">
-      <img src="<?= URLROOT ?>/img/f20662ec-988a-4b26-9204-a4cfbbbc2ebb.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;">
-			</div>
-			<div class="base">
-				
-			</div>
-		</div>
-	</div>
+        <div class="comp">
+          <div class="monitor">
+            <div class="image p-2" style="background:url(<?= URLROOT ?>/img/f20662ec-988a-4b26-9204-a4cfbbbc2ebb.png); background-size:cover; height:100%;"></div>
+            <!-- f20662ec-988a-4b26-9204-a4cfbbbc2ebb -->
+            <!-- <img src="<?= URLROOT ?>/img/8f123c1e-32ab-41d9-b042-0a2373a695e9.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;"> -->
+            <!-- <img src="<?= URLROOT ?>/img/f20662ec-988a-4b26-9204-a4cfbbbc2ebb.png" alt="" class="col-md-8 container p-md-4" style="margin-top:7%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; z-index:10px;"> -->
+          </div>
+          <div class="base">
+
+          </div>
+        </div>
+      </div>
 
 
 
@@ -278,12 +279,12 @@
         <div class="col-md-6">
           <!-- <img src="<?= URLROOT ?>/img/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash-removebg-preview.png" alt="" class="col"> -->
 
-          <img src="<?= URLROOT?>/img/dots.png" alt="">
+          <img src="<?= URLROOT ?>/img/dots.png" alt="">
         </div>
 
 
         <div class="col-md-6">
-          <img src="<?= URLROOT?>/img/dots.png" alt="">
+          <img src="<?= URLROOT ?>/img/dots.png" alt="">
         </div>
 
 
@@ -307,11 +308,11 @@
         </div>
 
         <div class="col-md-6">
-          <img src="<?= URLROOT?>/img/dots.png" alt="">
+          <img src="<?= URLROOT ?>/img/dots.png" alt="">
         </div>
 
         <div class="col-md-6">
-          <img src="<?= URLROOT?>/img/dots.png" alt="">
+          <img src="<?= URLROOT ?>/img/dots.png" alt="">
         </div>
 
         <div class="col-md-6 pt-5">
