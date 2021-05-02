@@ -16,7 +16,12 @@ body{
     font-weight: 700  !important;
     line-height: 1.2 !important;
 }
-
+.lt-10{
+     letter-spacing: 10px;
+}
+.lt-20{
+     letter-spacing: 20px;
+}
 .bg-main{
      background: #5631af !important;
 }
