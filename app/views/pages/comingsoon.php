@@ -11,7 +11,7 @@
                 <form class="form-inline col-md-12">
                     <div class="form-group mb-2 col-md-8" style="border:2px solid #5631af;">
                         <label for="staticEmail2" class="sr-only">Email</label>
-                        <input type="text" placeholder="Your Email here...." class="form-control-plaintext" id="staticEmail2" value="">
+                        <input type="text" placeholder="Your Email Here...." class="form-control-plaintext" id="staticEmail2" value="">
                     </div>
                     <button type="submit" class="btn bg-main col-md-4  text-white p-2 mb-2" style="border-radius:0 !important;">Notify Me</button>
                 </form>
