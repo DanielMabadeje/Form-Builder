@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<section class="col-md-12">
+<section class="col-md-12" style="background:linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.99)), url(<?= URLROOT; ?>/img/webfactory-ltd-NoOrDKxUfzo-unsplash.jpg); background-size:cover;">
     <section class="mx-auto text-center mt-5 pt-4">
         <section class="pt-5 mt-5">
             <h1 class="display-4 lt-20 text-main-color">COMING <span class="ml-md-4">SOON</span> </h1>
