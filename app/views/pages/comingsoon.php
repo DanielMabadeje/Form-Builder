@@ -1,13 +1,13 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <section class="col-md-12">
-    <section class="mx-auto text-center">
+    <section class="mx-auto text-center mt-5 pt-4">
         <section class="pt-5 mt-5">
-            <h1 class="display-4 lt-2">COMING <span class="ml-md-4">SOON</span> </h1>
-            <h3>ARE YOU READY?</h3>
+            <h1 class="display-4 lt-20 text-main-color">COMING <span class="ml-md-4">SOON</span> </h1>
+            <h3 class="lt-10">ARE YOU READY?</h3>
         </section>
 
-        <section class="pt-5 ">
-            <div class="mx-auto col-md-4">
+        <section class="pt-5 mt-5">
+            <div class="mx-auto col-md-4 mt-5 pt-5">
                 <form class="form-inline col-md-12">
                     <div class="form-group mb-2 col-md-8" style="border:2px solid #5631af;">
                         <label for="staticEmail2" class="sr-only">Email</label>
