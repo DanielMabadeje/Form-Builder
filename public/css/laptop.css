@@ -22,6 +22,8 @@ $codred: #ac5e47; */
     height: 194px;
     text-align: center;
 }
+
+
     .monitor{
 		width: 60%;
 		height: 210%;
@@ -32,6 +34,16 @@ $codred: #ac5e47; */
 		/* border: solid 1px $grisclaro; */
 		background-color: black;
     }
+	@media screen and (max-width:600px){
+		.monitor{
+			height:80% !important;
+		}
+
+		.wrap{
+			height:auto;
+		}
+	}
+
     .mid{
     	float: left;
     	display: block;
