@@ -43,8 +43,13 @@
                         <li class="nav-item mb-2"><a href="" class="text-dark">Design</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Integrations</a></li>
                         <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/about" class="text-dark">About Us</a></li>
+                        <?php if (isset($_SESSION['user_id'])) : ?>
+                            <li class="nav-item mb-2"><a href="<?= URLROOT ?>/dashboard" class="text-dark">Dashboard</a></li>
+                        <?php else: ?>
                         <li class="nav-item mb-2"><a href="<?= URLROOT ?>/users/login" class="text-dark">Login</a></li>
                         <li class="nav-item mb-2"><a href="<?= URLROOT ?>/users/register" class="text-dark">Register</a></li>
+
+                        <?php endif; ?>
                     </ul>
                 </div>
 
@@ -54,7 +59,7 @@
                         <li class="nav-item mb-2"><a href="" class="text-dark">Help</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Packages</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">Sponsorship</a></li>
-                        <li class="nav-item mb-2"><a href="" class="text-dark">Contact Us</a></li>
+                        <li class="nav-item mb-2"><a href="<?= URLROOT ?>/pages/contact" class="text-dark">Contact Us</a></li>
                         <li class="nav-item mb-2"><a href="" class="text-dark">FAQ</a></li>
                     </ul>
                 </div>
