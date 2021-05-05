@@ -279,7 +279,11 @@
         <div class="col-md-6">
           <!-- <img src="<?= URLROOT ?>/img/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash-removebg-preview.png" alt="" class="col"> -->
 
-          <img src="<?= URLROOT ?>/img/dots.png" alt="">
+          <!-- <img src="<?= URLROOT ?>/img/dots.png" alt=""> -->
+          <!-- <img src="<?= URLROOT ?>/img/6820da88-38c7-41d9-b65a-773fec345a73.png" class=""> -->
+          <div class="text-right" style="background:url(<?= URLROOT ?>/img/dots.png)">
+            <img src="<?= URLROOT ?>/img/6820da88-38c7-41d9-b65a-773fec345a73.png" class="">
+          </div>
         </div>
 
 
