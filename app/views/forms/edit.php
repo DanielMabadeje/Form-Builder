@@ -136,7 +136,7 @@
                 <h2>Share Your Amazing Form</h2>
 
                 <div class="col">
-                    <input type="text" class="col" value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>">
+                    <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>">
 
                 </div>
             </div>
