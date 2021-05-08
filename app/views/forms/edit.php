@@ -6,7 +6,7 @@
         <div class="d-md-flex col-12">
             <div class="col-md-7 mr-auto">
                 <!-- <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span> -->
-                <button class="bg-main-color">Share</button>
+                <button class="bg-main-color btn text-white">Share</button>
             </div>
             <div class="col-md-5 ml-auto pl-0">
                 <div>
