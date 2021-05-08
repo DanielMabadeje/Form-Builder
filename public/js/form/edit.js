@@ -1014,6 +1014,10 @@ function showLastSaved(param) {
   savingProgress.innerHTML = 'Last Updated at ' + param
 }
 
+
+function openShareModal(params) {
+  
+}
 // console.log(formarray);
 
 
