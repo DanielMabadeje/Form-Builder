@@ -125,6 +125,21 @@
 
     </div>
 
+    <div class="modal" id="shareModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="col-12 text-right">
+                <span class="close">x</span>
+            </div>
+
+            <div class="col-md-7 text-left">
+                <h2>Customize Your Form</h2>
+            </div>
+
+
+        </div>
+    </div>
+
 
     <section class="col-md-12 d-md-flex">
         <div class="card border-radius-none col-md-10 text-left p-md-3" style="border-top:4px solid #5631af; border-left:0; border-right:0; border-bottom:0">
