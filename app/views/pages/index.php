@@ -318,8 +318,13 @@
           <img src="<?= URLROOT ?>/img/dots.png" alt="">
         </div>
 
+
         <div class="col-md-6">
-          <img src="<?= URLROOT ?>/img/dots.png" alt="">
+        <div class="text-right p-4" style="background:url(<?= URLROOT ?>/img/dots.png)">
+            <img src="<?= URLROOT ?>/img/c7eb8a72-5cac-4bfe-a26e-81ca12dd27c1.png" class="mr-4">
+          </div>
+          <!-- <img src="<?= URLROOT ?>/img/dots.png" alt=""> -->
+          <!-- c7eb8a72-5cac-4bfe-a26e-81ca12dd27c1 -->
         </div>
 
         <div class="col-md-6 pt-5">
