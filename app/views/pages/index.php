@@ -321,7 +321,7 @@
 
         <div class="col-md-6">
         <div class="text-right p-4" style="background:url(<?= URLROOT ?>/img/dots.png)">
-            <img src="<?= URLROOT ?>/img/c7eb8a72-5cac-4bfe-a26e-81ca12dd27c1.png" class="mr-4">
+            <img src="<?= URLROOT ?>/img/c7eb8a72-5cac-4bfe-a26e-81ca12dd27c1.png" class="col">
           </div>
           <!-- <img src="<?= URLROOT ?>/img/dots.png" alt=""> -->
           <!-- c7eb8a72-5cac-4bfe-a26e-81ca12dd27c1 -->
