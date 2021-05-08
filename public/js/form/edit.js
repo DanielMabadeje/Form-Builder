@@ -16,6 +16,7 @@ var optionarray = ``
 var modaloptiondiv = ``;
 
 var modal = document.getElementById('myModal');
+var modal = document.getElementById('settingsModal');
 
 var formarrayform = ``
 
