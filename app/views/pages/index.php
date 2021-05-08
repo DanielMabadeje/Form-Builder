@@ -288,7 +288,10 @@
 
 
         <div class="col-md-6">
-          <img src="<?= URLROOT ?>/img/dots.png" alt="">
+
+          <div class="text-right p-4" style="background:url(<?= URLROOT ?>/img/dots.png)">
+            <img src="<?= URLROOT ?>/img/2167f26a-c717-415f-8620-5ff83266f45e.png" class="mr-4">
+          </div>
         </div>
 
 
