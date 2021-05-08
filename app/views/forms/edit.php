@@ -4,9 +4,10 @@
 <div class="col-12 p-3" style="border-top:1px #fbfafafa solid; background:#fdfcfc;">
     <div class="text-dark container">
         <div class="d-md-flex col-12">
-            <!-- <div class="col-md-7 mr-auto">
-                <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span>
-            </div> -->
+            <div class="col-md-7 mr-auto">
+                <!-- <span class="nav-item"><i class="fa fa-chevron-right"></i>Questions</span> -->
+                <button class="bg-main-color">Share</button>
+            </div>
             <div class="col-md-5 ml-auto pl-0">
                 <div>
                     <nav>
@@ -14,7 +15,8 @@
                             <div class="nav-item col-sm-4 pl-0 pr-0"><a href="<?= URLROOT ?>/forms/edit/<?= $data->form_id; ?>/" class="nav-link">Questions</a></div>
                             <div class="nav-item col-sm-4 pl-0 pr-0"><a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/" class="nav-link">Responses</a></div>
                             <div class="nav-item col-sm-4 pl-0 pr-0">
-                                <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a></div>
+                                <a href="<?= URLROOT ?>/forms/responses/<?= $data->form_id; ?>/chart" class="nav-link">Chart</a>
+                            </div>
                         </ul>
                     </nav>
                 </div>
@@ -117,8 +119,8 @@
             <div class="col-md-7 text-left">
                 <h2>Customize Your Form</h2>
             </div>
-    
-    
+
+
         </div>
 
     </div>
