@@ -16,7 +16,8 @@ var optionarray = ``
 var modaloptiondiv = ``;
 
 var modal = document.getElementById('myModal');
-var modal = document.getElementById('settingsModal');
+var sharemodal = document.getElementById('shareModal');
+var shareBtn=document.getElementById('shareModal');
 
 var formarrayform = ``
 
@@ -1017,7 +1018,7 @@ function showLastSaved(param) {
 
 
 function openShareModal(params) {
-  
+  sharemodal.style.display = "block";
 }
 // console.log(formarray);
 
