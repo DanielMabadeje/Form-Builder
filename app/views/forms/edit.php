@@ -133,7 +133,7 @@
             </div>
 
             <div class="col-md-7 text-left">
-                <h2>Customize Your Form</h2>
+                <h2>Share Your Amazing Form</h2>
             </div>
 
 

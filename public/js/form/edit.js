@@ -1016,7 +1016,9 @@ function showLastSaved(param) {
   savingProgress.innerHTML = 'Last Updated at ' + param
 }
 
-
+document.getElementById("shareBtn").onclick({
+  openShareModal();
+})
 function openShareModal(params) {
   sharemodal.style.display = "block";
 }
