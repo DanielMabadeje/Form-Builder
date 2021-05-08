@@ -1033,10 +1033,11 @@ function openShareModal() {
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == sharemodal) {
       sharemodal.style.display = "none";
       // deleteOptionInput()
     }
+  }
 }
 // console.log(formarray);
 
