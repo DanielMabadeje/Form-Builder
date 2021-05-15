@@ -4,7 +4,7 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'form_builder');
-define('DB_TYPE', 'MYSQL');
+
 //App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 // define('URLROOT', $_ENV['URL_ROOT']);
@@ -27,6 +27,7 @@ if (isset($_ENV['URL_ROOT'])) {
     // define('APPROOT', dirname(__FILE__));
 } else {
 
+    define('DB_TYPE', 'MYSQL');
     define('URLROOT', 'https://localhost/formsystem/');
 }
 //site name
