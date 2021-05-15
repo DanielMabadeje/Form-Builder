@@ -1,9 +1,5 @@
 <?php
-//DB Params
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'form_builder');
+
 
 //App Root
 define('APPROOT', dirname(dirname(__FILE__)));
@@ -26,7 +22,11 @@ if (isset($_ENV['URL_ROOT'])) {
     define('DB_TYPE', 'PGSQL');
     // define('APPROOT', dirname(__FILE__));
 } else {
-
+    //DB Params
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_NAME', 'form_builder');
     define('DB_TYPE', 'MYSQL');
     define('URLROOT', 'https://localhost/formsystem/');
 }
