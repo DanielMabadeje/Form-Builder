@@ -41,6 +41,9 @@ class Database
             $this->error = $e->getMessage();
             echo $this->error;
         }
+        
+         var_dump($this->dbh, $this->error);
+            die;
     }
     public function query($sql)
     {
