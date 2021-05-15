@@ -35,15 +35,13 @@ class Database
         //create PDO instance
         try {
             $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
-            var_dump($this->dbh);
-            die;
+            
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
             echo $this->error;
         }
         
-         var_dump($this->dbh, $this->error, $this->dbtype);
-            die;
+         
     }
     public function query($sql)
     {
