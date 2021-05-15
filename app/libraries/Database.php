@@ -42,7 +42,7 @@ class Database
             echo $this->error;
         }
         
-         var_dump($this->dbh, $this->error);
+         var_dump($this->dbh, $this->error, this->dbtype);
             die;
     }
     public function query($sql)
