@@ -435,6 +435,8 @@ class Forms extends Controller
 
     public function checkmembershipPlan($user_id)
     {
-        # code...
+        $user=$this->userModel->getUserById($user_id);
+        $membership_plan=$user->membership_plan;
+        return $membership_plan;
     }
 }
