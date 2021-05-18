@@ -146,7 +146,7 @@
 
 
                 <div class="col-md-12 mt-4 pt-4">
-                    <h6>Share On Sosial Platforms</h6>
+                    <h6>Share On Social Platforms</h6>
                     <div class="row">
                         <!-- div.col-md-4 -->
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
@@ -159,14 +159,14 @@
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
                             <div class="col-md-12 bg-facebook">
                                 
-                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                                <h6><i class="fa fa-whatsapp social-share-icon"></i> Whatsapp</h6>
                             </div>
                         </a>
 
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
                             <div class="col-md-12 bg-facebook">
                                 
-                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                                <h6><i class="fa fa-twitter social-share-icon"></i> Twitter</h6>
                             </div>
                         </a>
                     </div>
@@ -175,21 +175,21 @@
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
                             <div class="col-md-12 bg-facebook">
                                 
-                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                                <h6><i class="fa fa-telegram"></i> Telegram</h6>
                             </div>
                         </a>
 
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
                             <div class="col-md-12 bg-facebook">
                                 
-                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                                <h6><i class="fa fa-linkedin"></i> LinkedIn</h6>
                             </div>
                         </a>
 
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
                             <div class="col-md-12 bg-facebook">
                                 
-                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                                <h6><i class="fa fa-mail"></i> Email</h6>
                             </div>
                         </a>
                     </div>
