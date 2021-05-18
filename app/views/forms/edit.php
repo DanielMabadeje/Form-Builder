@@ -137,11 +137,26 @@
 
                 <div class="col-md-7 pl-md-0">
                     <!-- <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" disabled value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>"> -->
+                    <h6>Your Form Url</h6>
                     <div class="col p-3 card ml-md-0">
                         <h6><?= URLROOT; ?>/forms/views/<?= $data->form_id ?></h6>
                     </div>
 
                 </div>
+
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <!-- div.col-md-4 -->
+                        <a>
+                            <div class="col-md-4 bg-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <h6>Facebook</h6>
+                            </div>
+                        </a>
+                    <div>
+                </div>
+
             </div>
 
 
