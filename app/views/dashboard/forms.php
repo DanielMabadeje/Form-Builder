@@ -39,11 +39,12 @@
                             <tbody id="order" class="">
                             <?php foreach($data['form'] as $form): ?>
 
+<?php var_dump($form); ?>
 <tr>
     <td><?= $form->form_id ?></td>
     <td><?= $form->form_name ?></td>
     <td><?= $form->description ?></td>
-    <td>Yes</td>
+    <td><?= $form->allowing_responses ?></td>
     <td><?= $form->questionscount ?></td>
     <td>25</td>
     <td><?= $form->created_at ?></td>
