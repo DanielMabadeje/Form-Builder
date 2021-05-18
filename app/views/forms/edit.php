@@ -149,21 +149,21 @@
                     <div class="row mt-4 pt-4">
                         <!-- div.col-md-4 -->
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
-                            <div class="col-md-10 bg-facebook">
+                            <div class="col-md-12 bg-facebook">
                                 
                                 <h6><i class="fa fa-facebook"></i> Facebook</h6>
                             </div>
                         </a>
 
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
-                            <div class="col-md-10">
+                            <div class="col-md-12 bg-facebook">
                                 
                                 <h6><i class="fa fa-facebook"></i> Facebook</h6>
                             </div>
                         </a>
 
                         <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
-                            <div class="col-md-10 bg-facebook">
+                            <div class="col-md-12 bg-facebook">
                                 
                                 <h6><i class="fa fa-facebook"></i> Facebook</h6>
                             </div>
