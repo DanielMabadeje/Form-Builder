@@ -132,11 +132,14 @@
                 <span class="close">x</span>
             </div>
 
-            <div class="col-md-7 text-left">
-                <h2>Share Your Amazing Form</h2>
+            <div class="col-md-12 text-left">
+                <h2>Share Your Amazing Form To The World</h2>
 
-                <div class="col">
-                    <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>">
+                <div class="col-md-7 pl-md-0">
+                    <!-- <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" disabled value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>"> -->
+                    <div class="col p-3 card ml-md-0">
+                        <h6><?= URLROOT; ?>/forms/views/<?= $data->form_id ?></h6>
+                    </div>
 
                 </div>
             </div>
