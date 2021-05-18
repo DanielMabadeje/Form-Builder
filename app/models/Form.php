@@ -591,7 +591,19 @@ class Form
     public function updatenoOfResponses($form_id)
     {
         $form = $this->getForm($form_id);
+        $newResponse = $form->responses + 1;
         $this->db->query('UPDATE questions_options SET responses=:value WHERE form_id= :form_id');
         $this->db->bind(':form_id', $form_id);
+        $this->db->bind(':value', $newResponse);
+
+
+        $data = [
+            'form_id'=>$form_id,
+        ];
+        if ($this->db->execute()) {
+            return $this->getUpdatedAt($data);
+        } else {
+            return false;
+        }
     }
 }
