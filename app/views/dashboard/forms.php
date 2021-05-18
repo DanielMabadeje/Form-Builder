@@ -44,7 +44,13 @@
     <td><?= $form->form_id ?></td>
     <td><?= $form->form_name ?></td>
     <td><?= $form->description ?></td>
-    <td><?= $form->allowing_responses ?></td>
+    <td>
+        <?php if($form->allowing_responses == "1" || $form->allowing_responses="yes"): ?>
+        <?= "Yes" ?>
+        <?php elseif: ?>
+        <?= "No" ?>
+        <?php endif; ?>
+    </td>
     <td><?= $form->questionscount ?></td>
     <td>25</td>
     <td><?= $form->created_at ?></td>
