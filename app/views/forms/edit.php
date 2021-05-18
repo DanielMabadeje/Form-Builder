@@ -146,15 +146,29 @@
 
 
                 <div class="col-md-12">
-                    <div class="row">
+                    <div class="row mt-4 pt-4">
                         <!-- div.col-md-4 -->
-                        <a>
-                            <div class="col-md-4 bg-facebook">
-                                <i class="fa fa-facebook"></i>
-                                <h6>Facebook</h6>
+                        <a class="col-md-4 p-3 bg-facebook text-white">
+                            <div class="col-md-12 bg-facebook">
+                                
+                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
                             </div>
                         </a>
-                    <div>
+
+                        <a class="col-md-4 p-3 bg-facebook text-white">
+                            <div class="col-md-12">
+                                
+                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                            </div>
+                        </a>
+
+                        <a class="col-md-4 p-3 bg-facebook text-white">
+                            <div class="col-md-12 bg-facebook">
+                                
+                                <h6><i class="fa fa-facebook"></i> Facebook</h6>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
             </div>
