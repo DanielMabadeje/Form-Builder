@@ -135,10 +135,10 @@
             <div class="col-md-12 text-left">
                 <h2>Share Your Amazing Form To The World</h2>
 
-                <div class="col-md-7 pl-md-0 mt-4 pt-4 card pb-4">
+                <div class="col-md-12 mt-4 pt-4 card pb-4">
                     <!-- <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" disabled value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>"> -->
                     <h6>Your Form Url</h6>
-                    <div class="col p-3 card ml-md-0">
+                    <div class="col-12 p-2 mt-4 card ">
                         <h6><?= URLROOT; ?>/forms/views/<?= $data->form_id ?></h6>
                     </div>
 
@@ -216,6 +216,59 @@
 
                 <div class="col-md-12 mt-4 pb-4 pt-4">
                     <h6>Your Form Privacy Settings</h6>
+
+                    <div class="col-md-12 p-0 mt-4">
+                        <div class="card p-2">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-11">
+                                    <h6><strong>Public</strong></h6>
+                                    <h6>People can see forms under Public form when they search</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-0 mt-4">
+                        <div class="card p-2">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-11">
+                                    <h6><strong>Unlisted</strong></h6>
+                                    <h6>People can see forms under Public form when they search</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-12 p-0 mt-4">
+                        <div class="card p-2">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-11">
+                                    <h6><strong>Limited</strong></h6>
+                                    <h6>People can see forms under Public form when they search</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-12 p-0 mt-4">
+                        <div class="card p-2">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-11">
+                                    <h6><strong>Private</strong></h6>
+                                    <h6>People can see forms under Public form when they search</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
