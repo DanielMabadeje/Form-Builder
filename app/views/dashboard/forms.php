@@ -39,7 +39,7 @@
                             <tbody id="order" class="">
                             <?php foreach($data['form'] as $form): ?>
 
-<?php var_dump($form); ?>
+
 <tr>
     <td><?= $form->form_id ?></td>
     <td><?= $form->form_name ?></td>
