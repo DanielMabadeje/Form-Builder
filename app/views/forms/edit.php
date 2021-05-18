@@ -135,7 +135,7 @@
             <div class="col-md-12 text-left">
                 <h2>Share Your Amazing Form To The World</h2>
 
-                <div class="col-md-7 pl-md-0 mt-4 pt-4">
+                <div class="col-md-7 pl-md-0 mt-4 pt-4 card">
                     <!-- <input type="text" class="col input-group-text col-12 text-left p-1 mt-4" disabled value="<?= URLROOT; ?>/forms/views/<?= $data->form_id ?>"> -->
                     <h6>Your Form Url</h6>
                     <div class="col p-3 card ml-md-0">
@@ -145,7 +145,7 @@
                 </div>
 
 
-                <div class="col-md-12 mt-4 pt-4">
+                <div class="col-md-12 mt-4 pt-4 card pb-4">
                     <h6>Share On Social Platforms</h6>
                     <div class="row">
                         <!-- div.col-md-4 -->
@@ -192,6 +192,24 @@
                                 <h6><i class="fa fa-mail"></i> Email</h6>
                             </div>
                         </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 mt-4 pt-4 card pb-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card p-4">
+                                <h6><i class="fa fa-code"></i> Embed As Frame</h6>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="card p-4">
+                                <h6><i class="fa fa-code"></i> Generate QR Code</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
