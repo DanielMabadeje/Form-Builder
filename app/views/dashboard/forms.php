@@ -45,10 +45,10 @@
     <td><?= $form->form_name ?></td>
     <td><?= $form->description ?></td>
     <td>
-        <?php if($form->allowing_responses == "1" || $form->allowing_responses="yes"): ?>
-        <?= "Yes" ?>
-        <?php elseif: ?>
-        <?= "No" ?>
+        <?php if($form->allowing_responses == "1" || $form->allowing_responses=="yes"): ?>
+            Yes
+        <?php else: ?>
+            No
         <?php endif; ?>
     </td>
     <td><?= $form->questionscount ?></td>
