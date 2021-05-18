@@ -249,7 +249,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-11">
                                     <h6><strong>Limited</strong></h6>
-                                    <h6>People can see forms under Public form when they search</h6>
+                                    <h6>It is not listed in discover it can only be viewed by people with the link</h6>
                                 </div>
                             </div>
                         </div>
@@ -264,7 +264,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-11">
                                     <h6><strong>Private</strong></h6>
-                                    <h6>People can see forms under Public form when they search</h6>
+                                    <h6>Only People you give access that can see the form</h6>
                                 </div>
                             </div>
                         </div>
