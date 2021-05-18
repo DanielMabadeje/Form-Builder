@@ -568,7 +568,8 @@ class Form
 
 
 
-    public function getFormsByUser($id){
+    public function getFormsByUser($id)
+    {
         $this->db->query("SELECT forms.form_id, forms.form_name,forms.description,forms.responses,forms.allowing_responses,forms.created_at,forms.updated_at, count(form_questions.form_id) AS questionscount FROM forms
                           INNER JOIN form_questions
                           ON forms.form_id=form_questions.form_id
@@ -582,4 +583,15 @@ class Form
         return $data;
     }
 
+
+    public function getNoOfResponses($form_id)
+    {
+        # code...
+    }
+    public function updatenoOfResponses($form_id)
+    {
+        $form = $this->getForm($form_id);
+        $this->db->query('UPDATE questions_options SET responses=:value WHERE form_id= :form_id');
+        $this->db->bind(':form_id', $form_id);
+    }
 }
