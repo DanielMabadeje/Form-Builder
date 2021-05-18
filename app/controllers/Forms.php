@@ -433,7 +433,7 @@ class Forms extends Controller
         return substr(str_shuffle($charset), 0, 8);
     }
 
-    public function checkmembershipPlan($user)
+    public function checkmembershipPlan($user_id)
     {
         # code...
     }
