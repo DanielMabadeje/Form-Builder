@@ -156,8 +156,8 @@
                             </div>
                         </a>
 
-                        <a class="col text-center p-2 border-social-share bg-facebook text-white m-2">
-                            <div class="col-md-12 bg-facebook">
+                        <a class="col text-center p-2 border-social-share bg-whatsapp text-white m-2">
+                            <div class="col-md-12 bg-whatsapp">
                                 
                                 <h6><i class="fa fa-whatsapp social-share-icon"></i> Whatsapp</h6>
                             </div>
