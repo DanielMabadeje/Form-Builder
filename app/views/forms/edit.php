@@ -460,9 +460,8 @@
 </script>
 
 
-<script>
 
-</script>
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
+<script src="<?= URLROOT; ?>/js/form/csscodesandbox.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
