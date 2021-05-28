@@ -362,7 +362,7 @@
 
                 <!-- settings -->
                 <div class="p-2 col-sm-2">
-                    <button class="dropbtn btn  border-radius-none"> <i class="fa fa-cog"></i></button>
+                    <button class="dropbtn btn  border-radius-none" id="settingsBtn"> <i class="fa fa-cog"></i></button>
                 </div>
 
                 <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
