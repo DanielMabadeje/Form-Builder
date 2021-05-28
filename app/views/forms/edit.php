@@ -412,10 +412,22 @@
 
     <div id="cssSandbox" class="sidenavsandbox">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>		
+        <div class="theme">
+
+        </div>
+
+        <div class="bg-light sandbox">
+
+        </div>
+
+        <div class="buttons pt-4">
+            <button class="btn text-main-color">Run</button>
+            <button class="btn bg-main text-white">Update</button>
+        </div>
+        <!-- <a href="#">About</a>		
         <a href="#">Services</a>		
         <a href="#">Clients</a>		
-        <a href="#">Contact</a>			
+        <a href="#">Contact</a>			 -->
     </div>
 </div>
 
