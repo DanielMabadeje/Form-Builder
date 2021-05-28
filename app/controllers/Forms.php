@@ -189,7 +189,7 @@ class Forms extends Controller
                             break;
 
                         default:
-                            # code...
+                        $this->view('forms/templates/rsvp', $data);
                             break;
                     }
                 } else {
