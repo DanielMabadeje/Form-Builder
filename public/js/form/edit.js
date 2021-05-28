@@ -17,6 +17,7 @@ var modaloptiondiv = ``;
 
 var modal = document.getElementById('myModal');
 var sharemodal = document.getElementById('shareModal');
+var settingsmodal = document.getElementById('shareModal');
 var shareBtn=document.getElementById('shareBtn');
 
 var formarrayform = ``
@@ -1021,6 +1022,26 @@ function showLastSaved(param) {
 // })
 shareBtn.addEventListener('click', openShareModal);
 function openShareModal() {
+  sharemodal.style.display = "block";
+
+
+  var span = sharemodal.getElementsByTagName('span')[0]
+
+  span.onclick = function () {
+    sharemodal.style.display = "none";
+    // deleteOptionInput()
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == sharemodal) {
+      sharemodal.style.display = "none";
+      // deleteOptionInput()
+    }
+  }
+}
+
+function openSettingsModal() {
   sharemodal.style.display = "block";
 
 
