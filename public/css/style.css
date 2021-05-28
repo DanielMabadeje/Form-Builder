@@ -84,3 +84,16 @@ body{
       /* height: 40px !important; */
       /* width: 40px !important; */
  }
+
+
+ .bg-black{
+      background-color: black;
+ }
+
+ .bg-green{
+      background-color: green;
+ }
+
+ .bg-blue{
+      background-color: blue;
+ }

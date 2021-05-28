@@ -126,14 +126,12 @@
                     <div class="card bg-light">
                         <div class="card-body">
                             <div class="row">
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-white color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 col bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 col bg-white color-div-settings"></div>
+                                <div class="p-4 m-3 col bg-black color-div-settings"></div>
+                                <div class="p-4 m-3 col bg-blue color-div-settings"></div>
+                                <div class="p-4 m-3 col bg-green color-div-settings"></div>
+                                
                             </div>
                         </div>
                     </div>
