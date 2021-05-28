@@ -420,7 +420,7 @@
 
         </div>
 
-        <div class="buttons pt-4">
+        <div class="buttons pt-4 pl-5 ml-4 text-left">
             <button class="btn text-main-color">Run</button>
             <button class="btn bg-main text-white">Update</button>
         </div>
