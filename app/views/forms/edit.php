@@ -120,6 +120,19 @@
                 <h2>Customize Your Form</h2>
             </div>
 
+            <section class="backgroundColorSetti">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 bg-red"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
 
         </div>
 
