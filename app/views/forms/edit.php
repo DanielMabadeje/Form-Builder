@@ -410,14 +410,16 @@
     </section>
 
 
-    <div id="cssSandbox" class="sidenavsandbox">
+    <div id="cssSandbox" class="sidenavsandbox custom-shadow">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="theme">
 
         </div>
 
         <div class="bg-light sandbox">
-
+            <div class="sandbox-body">
+                
+            </div>
         </div>
 
         <div class="buttons pt-4 pl-5 ml-4 text-left">
