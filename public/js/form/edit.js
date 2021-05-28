@@ -1045,20 +1045,20 @@ function openShareModal() {
 
 settingsBtn.addEventListener('click', openSettingsModal);
 function openSettingsModal() {
-  sharemodal.style.display = "block";
+  settingsmodal.style.display = "block";
 
 
-  var span = sharemodal.getElementsByTagName('span')[0]
+  var span = settingsmodal.getElementsByTagName('span')[0]
 
   span.onclick = function () {
-    sharemodal.style.display = "none";
+    settingsmodal.style.display = "none";
     // deleteOptionInput()
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == sharemodal) {
-      sharemodal.style.display = "none";
+      settingsmodal.style.display = "none";
       // deleteOptionInput()
     }
   }
