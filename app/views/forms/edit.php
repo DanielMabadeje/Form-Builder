@@ -1,6 +1,46 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/forms/inc/editheader.php'; ?>
 
+
+<style>.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}</style>
+
 <div class="col-12 p-3" style="border-top:1px #fbfafafa solid; background:#fdfcfc;">
     <div class="text-dark container">
         <div class="d-md-flex col-12">
@@ -126,11 +166,11 @@
                     <div class="card bg-light">
                         <div class="card-body">
                             <div class="row">
-                                <div class="p-4 m-3 col bg-dark color-div-settings"></div>
-                                <div class="p-4 m-3 col bg-white color-div-settings"></div>
-                                <div class="p-4 m-3 col bg-black color-div-settings"></div>
-                                <div class="p-4 m-3 col bg-blue color-div-settings"></div>
-                                <div class="p-4 m-3 col bg-green color-div-settings"></div>
+                                <div class="p-5 m-3 col-1 bg-dark color-div-settings"></div>
+                                <div class="p-5 m-3 col-1 bg-white color-div-settings"></div>
+                                <div class="p-5 m-3 col-1 bg-black color-div-settings"></div>
+                                <div class="p-5 m-3 col-1 bg-blue color-div-settings"></div>
+                                <div class="p-5 m-3 col-1 bg-green color-div-settings"></div>
                                 
                             </div>
                         </div>
@@ -392,6 +432,10 @@
                     <button class="dropbtn btn  border-radius-none" id="settingsBtn"> <i class="fa fa-cog"></i></button>
                 </div>
 
+                <div class="p-2 col-sm-2">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+                </div>
+
                 <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
                     <div class="p-2 col-sm-2">
                         <button class="dropbtn btn  border-radius-none"> <i class="fa fa-paper"></i></button>
@@ -400,12 +444,31 @@
             </div>
         </div>
     </section>
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>		
+        <a href="#">Services</a>		
+        <a href="#">Clients</a>		
+        <a href="#">Contact</a>			
+    </div>
 </div>
 
 <script>
     var formarray = <?php echo json_encode($data); ?>
 </script>
 
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
