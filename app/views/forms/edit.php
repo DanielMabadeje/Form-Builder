@@ -120,7 +120,8 @@
                 <h2>Customize Your Form</h2>
             </div>
 
-            <section class="backgroundColorSetti">
+            <section class="backgroundColorSettings">
+                <h6>Choose The Background Color You Love</h6>
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
