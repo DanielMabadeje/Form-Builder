@@ -417,7 +417,7 @@
         </div>
 
         <div class="bg-light sandbox">
-            <div class="sandbox-body" contenteditable="true">
+            <div class="sandbox-body text-dark text-left" contenteditable>
 
             </div>
         </div>
@@ -426,10 +426,6 @@
             <button class="btn text-main-color">Run</button>
             <button class="btn bg-main text-white">Update</button>
         </div>
-        <!-- <a href="#">About</a>		
-        <a href="#">Services</a>		
-        <a href="#">Clients</a>		
-        <a href="#">Contact</a>			 -->
     </div>
 </div>
 

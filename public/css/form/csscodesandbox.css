@@ -42,3 +42,7 @@
     overflow: hidden;
     /* position: fixed; */
 }
+
+.sandbox-body{
+    height: 100%;
+}
