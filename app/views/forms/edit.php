@@ -139,8 +139,10 @@
                     </div>
 
                     <div class="card mt-4">
-                        <div class="input color-input">
-                            <input type="color" name="" id="" value="">
+                        <div class="card-body pt-3 pb-3">
+                            <div class="input color-input">
+                                <input type="color" name="" id="" value="">
+                            </div>
                         </div>
                     </div>
 
