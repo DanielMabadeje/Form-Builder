@@ -120,14 +120,27 @@
                 <h2>Customize Your Form</h2>
             </div>
 
-            <section class="backgroundColorSettings">
+            <section class="backgroundColorSettings text-left col-md-12 pt-5 mt-2">
                 <h6>Choose The Background Color You Love</h6>
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-2 bg-red"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-white color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
+                                <div class="p-4 m-3 bg-dark color-div-settings"></div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="input color-input">
+                            <input type="color" name="" id="" value="">
                         </div>
                     </div>
 
