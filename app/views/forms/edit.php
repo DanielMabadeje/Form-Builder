@@ -417,7 +417,7 @@
         </div>
 
         <div class="bg-light sandbox">
-            <div class="sandbox-body">
+            <div class="sandbox-body" contenteditable="true">
 
             </div>
         </div>
