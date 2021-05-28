@@ -396,7 +396,8 @@
                 </div>
 
                 <div class="p-2 col-sm-2">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+                <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()"></span> -->
+                    <button class="dropbtn btn  border-radius-none" id="settingsBtn" onclick="openNav()"> <i class="fa fa-cog"></i></button>
                 </div>
 
                 <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
@@ -409,7 +410,7 @@
     </section>
 
 
-    <div id="cssSandbox" class="sidenavsandboc">
+    <div id="cssSandbox" class="sidenavsandbox">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#">About</a>		
         <a href="#">Services</a>		
