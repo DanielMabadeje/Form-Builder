@@ -409,7 +409,7 @@
     </section>
 
 
-    <div id="mySidenav" class="sidenav">
+    <div id="cssSandbox" class="sidenavsandboc">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#">About</a>		
         <a href="#">Services</a>		
