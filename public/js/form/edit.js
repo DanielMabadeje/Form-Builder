@@ -19,6 +19,7 @@ var modal = document.getElementById('myModal');
 var sharemodal = document.getElementById('shareModal');
 var settingsmodal = document.getElementById('shareModal');
 var shareBtn=document.getElementById('shareBtn');
+var settingsBtn=document.getElementById('settingsBtn');
 
 var formarrayform = ``
 
