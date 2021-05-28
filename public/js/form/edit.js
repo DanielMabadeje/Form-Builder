@@ -1042,6 +1042,8 @@ function openShareModal() {
   }
 }
 
+
+settingsBtn.addEventListener('click', openSettingsModal);
 function openSettingsModal() {
   sharemodal.style.display = "block";
 
