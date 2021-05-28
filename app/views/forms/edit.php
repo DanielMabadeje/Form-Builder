@@ -461,13 +461,7 @@
 
 
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
 </script>
 <script src="<?= URLROOT; ?>/js/jquery.js"></script>
 <script src="<?= URLROOT; ?>/js/form/edit.js"></script>
