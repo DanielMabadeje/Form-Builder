@@ -397,7 +397,7 @@
 
                 <div class="p-2 col-sm-2">
                 <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()"></span> -->
-                    <button class="dropbtn btn  border-radius-none" id="settingsBtn" onclick="openNav()"> <i class="fa fa-cog"></i></button>
+                    <button class="dropbtn btn  border-radius-none" id="settingsBtn" onclick="openNav()"> <i class="fa fa-code"></i></button>
                 </div>
 
                 <?php if ($_SESSION['membership_plan'] == 'premium') : ?>
@@ -418,7 +418,7 @@
 
         <div class="bg-light sandbox">
             <div class="sandbox-body">
-                
+
             </div>
         </div>
 
